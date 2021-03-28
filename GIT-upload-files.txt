@@ -1,0 +1,56 @@
+----------------------
+
+GIT TESTING
+
+Cuenta gmail
+name: repos github
+user: joe.reposgithub@gmail.com
+pass: jkvjadsgGAEH!$!35'*\\
+
+Cuenta github
+name: JoeReposTest
+mail: joe.reposgithub@gmail.com
+pass: 6567hsRTwr"%"&.*gae[[JGVg
+
+------
+
+GIT BASH
+
+git config --global user.mail "joe.reposgithub@gmail.com"
+
+git config --global user.name "joexnztesting"
+
+----
+
+touch README.md
+
+git init
+
+git add .
+
+git commit -m "primer commit"
+
+git branch gh-pages
+
+git checkout gh-pages
+
+git remote add origin https://github.com/joexnztesting/Joe-Repo-0000.git
+
+git push -u origin gh-pages  
+(este menos u determina cual será la rama en donde se hará el commit)
+
+--
+
+agregar el enlace al README.md
+
+git add .
+
+git commit -m "... commit"
+
+git push
+
+--
+DEBERÍA VERSE de one
+pero hay que configurar en los settings del repo
+investigar +
+----------------------

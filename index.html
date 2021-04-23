@@ -1,112 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documente</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>  
 
-    <style>
+  <style>
 
-      *,
-      *::before,
-      *::after{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      
-     
-      .uno{    
-        background-color: #000;  
-        margin: 300px auto; 
-        height: 1px;
-        width: 1px; 
+    *,
+    *::before,
+    *::after{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        animation-name: primer, segund, tercr;
-        animation-delay: 0s, 1s, 1.4s;
-        animation-duration: 1s, .4s, .5s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;   
-        animation-fill-mode: forwards;   
-      }
-      @keyframes primer{
-        0%{                    
-        }
-        100%{
-          height: 5px;
-          width: 400px;        
-          margin: 200px auto;     
-        }
-      }
-      @keyframes segund{
-        0%{
-          margin: 200px auto;
-        }
-        100%{
-          height: 300px;
-          width: 450px;
-          margin: 100px auto
-        }
-      }
-      @keyframes tercr{
-        0%{
-          background-color: #000; 
-        }
-        100%{
-          background-color: blue; 
-          border-radius: 12px;
-        }
-      }
-
-
-
-      
-      .texto1{
-        color: yellow;
-        text-align: center;
-        padding-top: 100px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 2rem;
-        animation-name: cuart;
-        animation-delay: .5s;
-        animation-duration: .8s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: 1;   
-        animation-fill-mode: forwards;
-        opacity: 0;
-      }
-      @keyframes cuart{
-        100%{
-          opacity: 1;
-        }
-      }
-
-      
-  
-      
-    </style>
+    .fondo{
+      height: 100vh;
+      width: 100vw;
+      background: radial-gradient(circle at top left, hsl(55, 93%, 49%), hsl(190, 100%, 68%));
+    }
+    .uno{
+      border: 1px solid red;
+      height: 400px;
+      width: 400px;
+      position: relative;
+    }
+    .prueba1{
+      height: 20px;
+      width: 10px;
+      background: blueviolet;
+      position: absolute;
+      top: 190px;
+      left: 195px;               
+    }
     
+    .anim-pri{ 
+      animation-name: pri, seg;
+      animation-delay: 0s, .6s;
+      animation-duration: .5s, .2s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;   
+      animation-fill-mode: forwards;
+    }
+    @keyframes pri{
+      0%{        
+      }
+      50%{
+        height: 100px;
+        top: 150px;
+      }
+      100%{
+        height: 80px;
+        top: 160px;        
+      }
+    }
+    @keyframes seg{
+      0%{
+      }
+      100%{
+        width: 200px;
+        left: 100px;
+      }
+    }    
+  </style>
+
 </head>
 <body>
+    <div class="fondo">
+      <div class="uno">
+        <div class="prueba1"></div>
+      </div>
+    </div>
 
-  <div class="cero">
-    <div class="uno"></div>
-  </div>  
-
-<script>
-  const d = document
-  d.addEventListener('DOMContentLoaded',(e)=>{
-    setTimeout(() => {
-      d.querySelector('.uno').innerHTML = `
-      <p class="texto1">Hola, khe ase?<br>aguante Boke</p>
-      ` 
-    }, 1900);
-
-        
-  })
-</script>
+  <script>
+    const d = document
+    d.addEventListener('click',(e)=>{
+      d.querySelector('.prueba1').classList.add('anim-pri')
+    })
+  </script>
 
 </body>
-
 </html>

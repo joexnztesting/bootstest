@@ -17,34 +17,47 @@
     }
 
     .fondo{
-      height: 100vh;
-      width: 100vw;
-      background: radial-gradient(circle at top left, hsl(55, 93%, 49%), hsl(190, 100%, 68%));
+      width: 600px;
+      height: 650px;
+      position: relative;
+      background: radial-gradient(circle at top left, hsla(207, 100%, 57%, 1) 25%, hsla(32, 100%, 61%, 1));
+      animation-name: bg-A;
+      animation-delay: .9s;
+      animation-duration: 1.5s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;   
+      animation-fill-mode: forwards;
     }
+    @keyframes bg-A{      
+      100%{
+        background: radial-gradient(circle at top right, hsla(55, 100%, 88%, 1) 25%, hsla(187, 100%, 40%, 1));
+      }
+    }
+
     .uno{
       border: 1px solid red;
       height: 400px;
       width: 400px;
-      position: relative;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      perspective: 500px;
     }
     .prueba1{
       height: 20px;
-      width: 10px;
-      background: blueviolet;
+      width: 4px;
+      background: hsla(257, 100%, 57%, 1);
       position: absolute;
       top: 190px;
-      left: 195px;               
-    }
-    
-    .anim-pri{ 
-      animation-name: pri, seg;
-      animation-delay: 0s, .6s;
-      animation-duration: .5s, .2s;
+      left: 198px;  
+      animation-name: priA, priB, priC;
+      animation-delay: 0s, .6s, 1.4s;
+      animation-duration: .5s, .2s, .2s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: 1;   
       animation-fill-mode: forwards;
-    }
-    @keyframes pri{
+    }    
+    @keyframes priA{
       0%{        
       }
       50%{
@@ -56,14 +69,78 @@
         top: 160px;        
       }
     }
-    @keyframes seg{
+    @keyframes priB{
       0%{
       }
       100%{
         width: 200px;
-        left: 100px;
+        left: 100px;          
       }
-    }    
+    }
+    @keyframes priC{
+      100%{
+        height: 160px;
+        top: 120px;
+        transform: rotateY(45deg);
+        background: radial-gradient(circle at top right, hsla(257, 100%, 80%, 1), hsla(257, 100%, 57%, 1));        
+      }
+    }   
+
+    .prueba2{
+      height: 40px;
+      width: 40px;
+      background: radial-gradient(circle , hsla(27, 100%, 60%, 1), hsla(55, 100%, 67%, 1) 50%);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 70px;
+      right: 10px;
+      animation-name: seg-A, seg-B, seg-C;
+      animation-delay: 0s, 1s, .2s;
+      animation-duration: .5s, .3s, 4s;
+      animation-timing-function: ease, ease-in-out, ease;
+      animation-iteration-count: 2, 1, 1;   
+      animation-fill-mode: forwards;
+    } 
+    .prueba3{
+      height: 4px;
+      width: 70px;
+      background: #000;
+      position: absolute;
+      bottom: 66px;
+      right: 0;
+    }
+    @keyframes seg-A{
+      80%{
+        bottom: 85px;
+      }
+      100%{
+        bottom: 70px;
+      }
+    }
+    @keyframes seg-B{
+      0%{
+        height: 40px;
+        width: 40px;
+        bottom: 70px;
+        right: 10px;
+      }
+      70%{
+        height: 30px;
+        width: 55px;
+        right: 2px;
+      }
+      100%{
+        height: 40px;
+        width: 40px;
+        bottom: 70px;
+        right: 10px;
+      }
+    }
+    @keyframes seg-C{
+      100%{
+        top: 15px;
+      }
+    }
   </style>
 
 </head>
@@ -71,13 +148,16 @@
     <div class="fondo">
       <div class="uno">
         <div class="prueba1"></div>
+      </div>      
+      <div class="dos">
+        <div class="prueba2"></div>
+        <div class="prueba3"></div>
       </div>
     </div>
 
   <script>
     const d = document
     d.addEventListener('click',(e)=>{
-      d.querySelector('.prueba1').classList.add('anim-pri')
     })
   </script>
 

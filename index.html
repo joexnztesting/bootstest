@@ -4,51 +4,85 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documente</title>
+  <title>Biode</title>
+  <link rel="icon" href="./img/logo.svg">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./breakpoints.css">  
 </head>
 <body>
-  <div class="algo1"></div>
 
-  <div class="container">
-
-    <div class="hamburger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
+  <header class="header-img">
+    <div class="h1-fondo">
+      <h1>Productos de Excelente Calidad para el cuidado de tu Hogar y Jardín</h1>
     </div>
-
-    <div class="texto">
-      <h3>texto</h3>
+    <div class="logo-header">
+      <img class="logo" src="./img/logo.svg" alt="logo animado">
     </div>
+  </header>
 
-    <div class="otro"></div>
-    
-    <div class="menu">
-      <a href="#" class="menu-link">Home</a>
-      <a href="#" class="menu-link">Productos</a>
-      <a href="#" class="menu-link">Sumate</a>
-      <a href="#" class="menu-link">Nosotros</a>
-      <a href="#" class="menu-link">Contacto</a>
+  <div class="container-nav">
+    <div class="nav-row">
+      <div class="nav-row-item">
+        <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="nav-row-item">
+        <a href="#">Biode</a>
+      </div>
+      <div class="nav-row-item">
+        <a href="#">Sumate</a>
+      </div>
+      <div class="panel">
+        <div class="menu">
+          <a href="#" class="menu-item">Home</a>
+          <a href="#" class="menu-item">Productos</a>
+          <a href="#" class="menu-item">Sumate</a>
+          <a href="#" class="menu-item">Acerca</a>
+          <a href="#" class="menu-item">Contacto</a>
+        </div>
+      </div>
     </div>
-
   </div>
 
-  <div class="algo2"></div>
-  <div class="algo3"></div>
-  
-  <script> 
-    let hamburger = document.querySelector('.hamburger');
-    let menu = document.querySelector('.menu');
-    let navBar = document.querySelector('.container');
-  
-    hamburger.addEventListener('click', function() {
-      hamburger.classList.toggle('isactive');
-      menu.classList.toggle('menu-active'); 
-    });
+  <main>
 
-   
+    <section class="section-1">
+      <div class="marco">
+        <div class="marco-plantas">
+          <p><i>         
+            Somos una empresa familiar cuya función es buscar alternativas viables, accesibles y económicas, para el cuidado y mantenimiento del hogar frente a plagas y situaciones de desperfectos cotidianos.<br>
+            Nuestra misión es que nuestros productos de excelente calidad lleguen al alcance de todos.
+          </i></p>
+        </div>                
+      </div>
+    </section>
 
-    </script>  
+    <div class="dos"></div>
+    <div class="tres"></div>
+
+  </main>
+
+  
+
+<script> 
+  let hamburger = document.querySelector('.hamburger');
+  let panel = document.querySelector('.panel');
+
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('isactive');
+    panel.classList.toggle('panel-active'); 
+  });
+
+  panel.addEventListener('click', function() {
+    hamburger.classList.toggle('isactive');
+    panel.classList.toggle('panel-active'); 
+  });
+
+ 
+</script> 
+
 </body>
 </html>

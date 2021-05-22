@@ -1,3 +1,0 @@
-# Probando 1,2,3...
-
-- [Visita la Joao Web](https://joexnztesting.github.io/bootstest/)

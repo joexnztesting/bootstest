@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
+
 
 html{
-  box-sizing: border-box;    
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;   
   scroll-behavior: smooth;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 *,
 *:before,
@@ -12,6 +16,7 @@ html{
     padding: 0;
 }    
 body{
+  box-sizing: border-box; 
   margin: 0;
   padding: 0;
   /*overflow-x: hidden;*/
@@ -20,90 +25,232 @@ img{
     max-width: 100%;
     height: auto;
 }
+.dos{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(101, 137, 255);
+}
+.tres{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(108, 240, 147);
+}
 
-/* ***************************** */
+/*    HEADER    */
 
+.header-img{
+  height: 100vh;
+  background-image: url("./img/header.jpg");  
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;     
+  text-align: center;  
+}
+/*
+.logo-header{ 
+  border: 1px solid blue;
+}*/
 
-.container{
-  display: flex;
-  height: 10vh;
-  background-color: hsl(348, 100%, 76%);
+.logo{ /*border: 1px solid blueviolet;*/
+  height: 25vh;
+  margin-top: 27vh;
+  opacity: 0;
+  animation-name: logo-in;
+  animation-delay: .2s;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes logo-in{
+  
+  50%{
+    transform: scale(1.2);
+  }
+  52%{
+    transform: scale(1.);
+  }
+  100%{   
+    opacity: 1;
+  }
+}
+.h1-fondo{ /*border: 1px solid red;*/
+  background: linear-gradient(hsla(0, 0%, 0%, 0), hsla(149, 100%, 7%, .8)80%);
+  width: 100%;
+  opacity: 0;
+  animation-name: texto-in;
+  animation-delay: .2s;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+  position: absolute;
+  bottom: 0;
+  padding: 100px 0 40px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.85);
+}    
+h1{ /*border: 1px solid yellow;*/
+  color: white;
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: .10rem;
+  padding: 0 3rem;
+}
+@keyframes texto-in{
+  100%{
+    opacity: 1;
+  }
+}
+
+/*   NAV-BAR   */
+
+.container-nav{
   position: sticky;
   top: 0;
 }
-
-.hamburger {
-  background-color: hsl(160, 90%, 80%);
-  margin-left: 15px;
-  padding: 0;
-  align-self: center;
-  transition: opacity .3s;
+.nav-row{
+ background-color: rgb(255, 255, 255);
+ width: 100%;
+ height: 7vh;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;  
+}
+.nav-row-item{
+  /*border: 1px solid blue;*/
+  width: 25vw;
+}
+.nav-row-item:nth-child(2){
+  text-align: center;
+}
+.nav-row-item:nth-child(3){
+  text-align: center;
+  padding-right: 12px;
 }
 
+.nav-row-item:nth-child(2) a{
+  font-family: 'Sansita Swashed', cursive;
+  color: green;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+.nav-row-item:nth-child(3) a{  
+  color: green;
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 2px solid rgb(100, 208, 216);
+  text-decoration: none;
+  font-size: .9rem;
+}
+
+.hamburger {
+  /*background-color: hsl(29, 90%, 80%);*/
+  width: 44px;
+  padding: 3px;
+  border-radius: 4px;
+  border: 2px solid rgb(100, 208, 216);
+  margin-left: 15px;
+}
 .hamburger:hover {
   cursor: pointer;
-  opacity: .8;
 }
 
 .hamburger .line{
-  width: 36px;
-  height: 4px;
-  background-color: rgb(177, 8, 8);
-  margin: 6px auto;
-  transition: all 0.2s ease-in-out;
+  background-color: rgba(27, 141, 17, 0.85);
+  width: 30px;
+  height: 3px;
   border-radius: 3px;
+  margin: 5px auto;
+  transition: all 0.2s ease-in-out;
+}
+.hamburger .line:nth-child(1) {
+  margin-top: 0;
+}
+.hamburger .line:nth-child(3) {
+  margin-bottom: 0;
 }
 
 .hamburger.isactive .line:nth-child(2) {
   opacity: 0;
 }
 .hamburger.isactive .line:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 .hamburger.isactive .line:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
-.texto{
-  align-self: center;
+.panel{
+  /*border: 1px solid rgb(122, 255, 122);*/
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 93vh;
+  width: 100%;
+  position: absolute;
+  top: 7vh;
+  transition: all 0.2s ease-in-out;
+  transform: translateX(-100%);
 }
-.otro{
-  width: 36px;
-  height: 36px;
-  margin-right: 15px;
-  align-self: center;
-  background-color: rgb(0, 158, 158);
-}
-
 .menu{
+  background-color: rgb(246, 254, 255);
   display: flex;
   flex-direction: column;
-  height: 90vh;
-  width: 50vw;
-  background-color: hsl(160, 90%, 80%);
-  transition: all 0.2s ease-in-out;
-  transform: translateX(-50vw);
-  position: absolute;
-  top: 10vh;
+  height: 100vh;
+  width: 50vw;  
+  padding: 20vh 10vw ;
 }
-
-.menu-active {
+.menu a{
+  padding: 20px 15px 2px;
+  color: green;
+  border-bottom: 1px solid rgb(100, 208, 216);
+  /*border-radius: 5px;*/
+  text-decoration: none;
+}
+.panel-active {
   transform: translateX(0px);
 }
-/* ***************************** */
 
-.algo1{
+/*    SECTION 1   */
+
+.section-1{
+  height: 105vh;
+  width: 100%;
+  background-image: url("./img/fondo_plantas.svg");
+  background-size: 390%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+.marco{
+  background-color: rgb(255, 255, 255);
   height: 50vh;
-  width: 100vw;
-  background-color: royalblue;
+  width: 50vh;
+  border: 8px solid rgb(255, 201, 23);
 }
-.algo2{
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(225, 65, 105);
+.marco-plantas{
+  background-image: url("./img/fondo_plantas_2.svg");
+  background-size: cover;
+  background-position: center;
+  height: 72vh;
+  width: 72vh;
+  margin-left: -13vh;
+  margin-top: -10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.algo3{
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(65, 225, 65);
+.marco-plantas p{
+  width: 50%;
+  margin-top: -36px;
+  margin-left: 16px;
+  font-size: 1rem;
+  color: rgb(29, 29, 29);/*
+  border-top: 2px solid rgba(255, 201, 23, 0.733);
+  border-bottom: 2px solid rgba(255, 201, 23, 0.733);
+  padding: 10px 0;*/  
 }
+
+
+

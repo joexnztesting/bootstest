@@ -72,6 +72,11 @@
   let hamburger = document.querySelector('.hamburger');
   let panel = document.querySelector('.panel');
 
+  window.addEventListener("load",function() { 
+    setTimeout(function(){ // This hides the address bar: 
+      window.scrollTo(0, 1); }, 0); 
+  }); 
+
   hamburger.addEventListener('click', function() {
     hamburger.classList.toggle('isactive');
     panel.classList.toggle('panel-active'); 

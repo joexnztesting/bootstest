@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./breakpoints.css">  
   <link rel="icon" href="./img/logo.svg">
 </head>
-<body>
+<body class="container-princ">
 
   <header class="header-img">
 
@@ -71,13 +71,12 @@
 <script> 
   let hamburger = document.querySelector('.hamburger');
   let panel = document.querySelector('.panel');
-
+  
   window.addEventListener("load",function() { 
     setTimeout(function(){ // This hides the address bar: 
-      window.scrollTo(0, -1);
-      }, 0); 
+      window.scrollTo(0, -1); }, 0); 
   }); 
-
+  
   hamburger.addEventListener('click', function() {
     hamburger.classList.toggle('isactive');
     panel.classList.toggle('panel-active'); 

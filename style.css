@@ -209,7 +209,9 @@ h1{
 .hamburger.isactive .line:nth-child(3) {
   transform: translateY(-6px) translateX(-1px) rotate(-45deg);
 }
-
+.container-princ{
+  overflow-x: hidden;
+}
 .panel{
   /*border: 1px solid rgb(122, 255, 122);*/
   background-color: rgba(0, 0, 0, 0.3);
@@ -218,7 +220,7 @@ h1{
   position: absolute;
   top: 9vh;
   transition: all 0.2s ease-in-out;
-  transform: translateX(-100%);
+  transform: translateX(-100%);  
 }
 .menu{
   background-color: rgb(246, 254, 255);
@@ -253,14 +255,13 @@ h1{
 }
 .marco{
   background-color: rgb(255, 255, 255);
-  height: 60vh;
   width: 90vw;
   border: 6px solid rgb(255, 201, 23);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 5vw;
+  padding: 7vw 5vw;
 }
 
 .marco-plantas p{

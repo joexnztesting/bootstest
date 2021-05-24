@@ -45,15 +45,16 @@ img{
   background-image: url("https://media.istockphoto.com/photos/lawn-at-home-running-children-in-blur-on-a-sunny-summer-day-picture-id1149062898");  
   background-size: cover;
   background-position: top center;
-  background-repeat: no-repeat;     
+  background-repeat: no-repeat;       
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  height: 91vh;
 }
 
 .logo{ 
-  border: 1px solid blueviolet;
+  order: 2;
+  /*border: 1px solid blueviolet;*/
   height: 25vh;
-  margin-top: 20vh;
   opacity: 0;
   animation-name: logo-in;
   animation-delay: .2s;
@@ -68,11 +69,9 @@ img{
   }
 }
 .h1-fondo{ 
-  border: 1px solid yellow;
-  background: linear-gradient(hsla(0, 0%, 0%, 0), hsla(149, 100%, 7%, .8)80%);
-  width: 100%;
-  display: flex;
-  flex-direction: column-reverse;
+  order: 1;
+  /*border: 1px solid yellow;*/
+  background: linear-gradient(hsla(0, 0%, 0%, 0), hsla(149, 100%, 7%, .8)80%);  
   opacity: 0;
   animation-name: fondo-in;
   animation-delay: .2s;
@@ -96,7 +95,7 @@ h1{
   font-family: 'Public Sans', sans-serif;
   color: white;
   text-align: center;
-  /*font-size: 5.5vh;*/
+  font-size: 7.5vw;
   letter-spacing: .10rem;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
   
@@ -171,9 +170,8 @@ h1{
 }
 
 .hamburger {
-  /*background-color: hsl(29, 90%, 80%);*/
-  width: 44px;
-  padding: 3px;
+  width: 42px;
+  padding: 5px 3px;
   border-radius: 4px;
   border: 2px solid rgb(100, 208, 216);
   margin-left: 15px;
@@ -188,7 +186,7 @@ h1{
   height: 3px;
   border-radius: 3px;
   margin: 5px auto;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-out;
 }
 .hamburger .line:nth-child(1) {
   margin-top: 0;
@@ -197,14 +195,19 @@ h1{
   margin-bottom: 0;
 }
 
+
+.hamburger.isactive{
+  height: 36px;
+  width: 38px;
+}
 .hamburger.isactive .line:nth-child(2) {
   opacity: 0;
 }
 .hamburger.isactive .line:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(10px) translateX(-1px) rotate(45deg);
 }
 .hamburger.isactive .line:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-6px) translateX(-1px) rotate(-45deg);
 }
 
 .panel{

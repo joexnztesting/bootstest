@@ -1,5 +1,14 @@
 
 
+@media (min-width: 460px) {
+  .nav-row{
+    height: 7vh;
+   }
+   .panel{
+    top: 7vh;
+  }  
+}
+
 
 
 @media (min-width: 576px) {
@@ -10,6 +19,10 @@
     font-size: 6vw;
     margin: 0 23vw;
   }
+
+  .marco{
+    width: 70vw;
+  }
 }
 
 
@@ -17,6 +30,10 @@
   h1{
     font-size: 5vw;
     margin: 0 25vw;
+  }
+
+  .marco{
+    width: 60vw;
   }
 }
 
@@ -38,21 +55,6 @@
     font-size: 4vw;
     margin: 0 18vw;
   }
-
-  /*
-  .panel{
-    height: 94vh;
-    transform: translateY(0px);
-    opacity: 0;
-    visibility: hidden;
-  }
-  .panel-active {
-    transform: translateY(0px);
-    opacity: 1;
-    visibility: visible;
-  }
-  */
-
 }
 
 
@@ -66,3 +68,41 @@
   }
 }
 
+/*
+.circleComillas{
+    position: absolute;
+    top: -26px;
+    left: 15px;
+    width: 55px;
+    height: 55px;
+    background: white;
+    border: 1px solid hsla(211,70%,24%,0.40);
+    border-radius: 100%;
+    text-align: center;
+}
+.comillas{
+    position: absolute;
+    top: 35px;
+    left: 00px;
+    font-size: 4em;
+    color: hsla(211,70%,24%,0.40);
+}
+.circleComillasFin{
+    position: absolute;
+    bottom: -26px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background: white;
+    border: 1px solid hsla(211,70%,24%,0.40);
+    border-radius: 100%;
+    text-align: center;
+}
+.comillasFin{
+    position: absolute;
+    bottom: -8px;
+    left: 4px;
+    font-size: 4em;
+    color: hsla(211,70%,24%,0.40);
+}
+*/

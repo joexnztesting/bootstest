@@ -99,8 +99,8 @@ h1{
   letter-spacing: .10rem;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
   
-  margin: 0 12vw;
-  padding: 5vh 2vw;
+  margin: 0 15vw;
+  padding: 5vh 1vw;
 
   font-style: italic;
   transform: translateX(-100vw);
@@ -242,44 +242,48 @@ h1{
 /*    SECTION 1   */
 
 .section-1{
-  height: 105vh;
-  width: 100%;
+  height: 95vh;
   background-image: url("./img/fondo_plantas.svg");
-  background-size: 390%;
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
 }
 .marco{
   background-color: rgb(255, 255, 255);
-  height: 50vh;
-  width: 50vh;
-  border: 8px solid rgb(255, 201, 23);
-}
-.marco-plantas{
-  background-image: url("./img/fondo_plantas_2.svg");
-  background-size: cover;
-  background-position: center;
-  height: 72vh;
-  width: 72vh;
-  margin-left: -13vh;
-  margin-top: -10vh;
+  height: 60vh;
+  width: 90vw;
+  border: 6px solid rgb(255, 201, 23);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding: 5vw;
 }
+
 .marco-plantas p{
-  width: 50%;
-  margin-top: -36px;
-  margin-left: 16px;
-  font-size: 1rem;
-  color: rgb(29, 29, 29);/*
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(53, 53, 53);
+  font-size: 1.2rem;
+  padding: 20px 15px; 
   border-top: 2px solid rgba(255, 201, 23, 0.733);
   border-bottom: 2px solid rgba(255, 201, 23, 0.733);
-  padding: 10px 0;*/  
 }
 
-
-
+.circleComillas{
+  background: white;
+  border: 1px solid hsla(211,70%,24%,0.40);
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  text-align: center;
+  
+}
+.comillas{
+  font-family:'Times New Roman', Times, serif;
+  color: rgb(53, 53, 53);
+  font-size: 5rem;
+  margin-top: -6px;
+}

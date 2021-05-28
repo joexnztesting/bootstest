@@ -4,40 +4,119 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slider</title>
+  <title>Biode</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./breakpoints.css">  
+  <link rel="icon" href="./img/logo.svg">
 </head>
-<body>
+<body class="container-princ">
+  
+  <header class="header-img">
+
+    <img class="logo" src="./img/logo.svg" alt="logo animado">
+
+    <div class="h1-fondo">
+      <h1>Productos de Excelente Calidad para el cuidado de tu Hogar y Jardín</h1>
+    </div>    
+
+  </header>  
+
+  <div class="container-nav">
+
+    <div class="nav-row">
+
+      <div class="nav-row-item">
+        <a href="#">Contacto</a>
+      </div>
+      <div class="nav-row-item">
+        <a href="#">Biode</a>
+      </div>
+      <div class="nav-row-item">
+        <div id="hmb" class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>      
+      
+      <div class="panel"></div>
+      <div class="menu">
+        <a href="#" class="menu-item">Home</a>
+        <a href="#" class="menu-item">Productos</a>
+        <a href="#" class="menu-item">Sumate</a>
+        <a href="#" class="menu-item">Acerca</a>
+        <a href="#" class="menu-item">Contacto</a>
+      </div>      
+
+    </div>
+
+  </div>
+
+  <main>
+
+    <section class="section-1">
+      <div class="marco">
+
+        
+        <div class="marco-plantas">
+          <p><i>         
+            Somos una empresa familiar cuya función es buscar alternativas viables, accesibles y económicas, para el cuidado y mantenimiento del hogar frente a plagas y desperfectos cotidianos de la vivienda.<br>
+            Nuestra misión es que nuestros productos de excelente calidad lleguen al alcance de todos.
+          </i></p>
+        </div><!--                
+        <div class="circleComillas">
+          <p class="comillas">“</p>
+        </div>-->
+      </div>
+    </section>
+
+    <section>
+
+    </section>
+
+    <div class="dos"></div>
+    <div class="tres"></div>
+
+  </main>
 
   
-<div class="wrap">
-    <div class="swipe">
-        <ul id="slider4">
-            <li style="display:block"><img src="./hormig.png" alt="hormiguicida"></li>
-            <li><img src="./cuater.png" alt=""></li>
-            <li><img src="./alacr.png" alt=""></li>
-            <li><img src="./aqui_no.png" alt=""></li>
-            <li><img src="./cipert.png" alt=""></li>
-            <li><img src="./cucas.png" alt=""></li>
-        </ul>
-    </div>
-    <br>
-    <div id="pagenavi">
-        <a href="#" class="active">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">6</a>
-    </div>
-    <br>
-    <button class="btn btn-primary" onclick="t4.pause();">Pause</button>
-    <button class="btn btn-primary" onclick="t4.play();">Play</button>
-    <button class="btn btn-primary" onclick="t4.prev();">Previous</button>
-    <button class="btn btn-primary" onclick="t4.next();">Next</button>
-</div>
 
-<script src="./slider.js"></script>
+<script>
+    const hmbBtn = document.querySelector('.hamburger');
+    const panel = document.querySelector('.panel');
+    const panelMenu = document.querySelector('.menu');
+    const menuItem = document.querySelectorAll('.menu a');
+    
+         
+    
+    function menuOpen(e){
+      hmbBtn.classList.toggle('isactive');      
+      panel.classList.remove('panel-not-active'); 
+      panel.classList.add('panel-active');   
+      panelMenu.classList.remove('menu-not-actv');      
+      panelMenu.classList.add('menu-actv');  
+    }
+    function menuClose(e){
+      if(hmbBtn.classList.contains('isactive')){
+        hmbBtn.classList.toggle('isactive');
+        panel.classList.replace('panel-active', 'panel-not-active');
+        panelMenu.classList.replace('menu-actv', 'menu-not-actv');
+      }
+    };
+    
+    hmbBtn.addEventListener('click', function(e){
+      if(!hmbBtn.classList.contains('isactive')){
+        menuOpen()
+      }else{
+        menuClose()
+      }
+    });
+    panel.addEventListener('click', menuClose);
+    menuItem.forEach(elem=>{
+      elem.addEventListener('click', menuClose)
+    });
+
+</script> 
 
 </body>
 </html>

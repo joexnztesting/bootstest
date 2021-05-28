@@ -48,7 +48,7 @@ img{
   background-repeat: no-repeat;       
   display: flex;
   flex-direction: column-reverse;
-  height: 94vh;
+  height: 88vh;
 }
 
 .logo{ 
@@ -126,12 +126,13 @@ h1{
 
 .container-nav{
  position: sticky;
- top: 94vh;
+ top: 93vh;
+ z-index: 1000;
 }
 .nav-row{
  background-color: rgb(255, 255, 255);
  width: 100%;
- height: 6vh;
+ height: 7vh;
  display: flex;
  justify-content: space-between;
  align-items: center; 
@@ -142,14 +143,14 @@ h1{
 }
 */
 .nav-row-item:nth-child(1){
-  width: 40vw;
+  width: 30vw;
 }
 .nav-row-item:nth-child(2){
   width: 20vw;
   text-align: center;
 }
 .nav-row-item:nth-child(3){
-  width: 40vw;
+  width: 30vw;
   display: flex;
   flex-direction: row-reverse;
   padding-right: 15px;
@@ -215,12 +216,12 @@ h1{
 .panel{
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
-  height: 100vh;
+  height: 93vh;
   position: absolute;
-  top: -100vh;
+  top: -93vh;
+  z-index: 998;
   opacity: 0;
   visibility: hidden;
-  animation: all .8s ease;
 }
 .panel-active {
   animation-name: panel-in;
@@ -259,41 +260,44 @@ h1{
   background-color: rgb(246, 254, 255);
   display: flex;
   flex-direction: column;  
-  padding: 20vh 0vw;
+  justify-content: center;
+  /*padding: 20vh 0vw;*/
   width: 0vw;
-  height: 100vh;
+  height: 93vh;
   position: absolute;
-  top: -100vh;
+  top: -93vh;
+  z-index: 999;
   opacity: 0;
   visibility: hidden;
 }
 .menu a{
-  padding: 35px 15px 2px;
+  padding: 40px 15px 2px;
   color: green;
   border-bottom: 1px solid rgb(100, 208, 216);
   text-decoration: none;
 }
+/*
 .menu a:nth-child(1){
   margin-top: 20vh;
 }
-
+*/
 .menu-actv{
   animation-name: menu-in;
   animation-delay: 0s;
   animation-duration: 2s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
 @keyframes menu-in{
   20%{
-    width: 50vw;
-    padding: 20vh 10vw ;
+    width: 60vw;
+    padding: 0vh 10vw ;
     opacity: 1;
   }
   100%{  
-    width: 50vw;
-    padding: 20vh 10vw ;
+    width: 60vw;
+    padding: 0vh 10vw ;
     opacity: 1;
     visibility: visible;
   }
@@ -308,18 +312,18 @@ h1{
 }
 @keyframes menu-out{
   0%{
-    width: 50vw;
-    padding: 20vh 10vw ;
+    width: 60vw;
+    padding: 0vh 10vw ;
     opacity: 1;
     visibility: visible;
   } 
   40%{
-    padding: 20vh 10vw 20vh 2vw ;
+    padding: 0vh 10vw 0vh 1vw ;
     visibility: hidden;
     opacity: 0;
   }
   100%{
-    padding: 20vh 0vw ;
+    padding: 0vh 0vw ;
     visibility: hidden;
     opacity: 0;
     width: 0vw;
@@ -329,8 +333,7 @@ h1{
 /*    SECTION 1   */
 
 .section-1{
-  height: 95vh;
-  margin-top: -6vh;
+  height: 100vh;
   background-image: url("./img/fondo_plantas.svg");
   background-size: cover;
   background-position: center;

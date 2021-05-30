@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biode</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./breakpoints.css">  
+  <link rel="stylesheet" href="./breakpoints.css">
+  <link rel="stylesheet" href="./slider-style.css">  
   <link rel="icon" href="./img/logo.svg">
 </head>
 <body class="container-princ">
@@ -74,7 +75,33 @@
     </section>
 
     <section>
-
+      <div class="wrap">
+        <div class="swipe">
+            <ul id="slider4">
+                <li style="display:block"><img src="./img/hormig.png" alt="hormiguicida"></li>
+                <li><img src="./img/cuater.png" alt=""></li>
+                <li><img src="./img/alacr.png" alt=""></li>
+                <li><img src="./img/aqui_no.png" alt=""></li>
+                <li><img src="./img/cipert.png" alt=""></li>
+                <li><img src="./img/cucas.png" alt=""></li>
+            </ul>
+        </div>
+        <br>
+        <div id="pagenavi">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+        </div>
+        <br>
+        <button class="btn btn-primary" onclick="t4.pause();">Pause</button>
+        <button class="btn btn-primary" onclick="t4.play();">Play</button>
+        <button class="btn btn-primary" onclick="t4.prev();">Previous</button>
+        <button class="btn btn-primary" onclick="t4.next();">Next</button>
+    </div>
+    
     </section>
 
     <div class="dos"></div>
@@ -120,6 +147,7 @@
     });
 
 </script> 
+<script src="./slider.js"></script>
 
 </body>
 </html>

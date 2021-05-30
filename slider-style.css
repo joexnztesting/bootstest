@@ -1,0 +1,54 @@
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+.wrap {
+  margin: 0 auto;
+  padding: 0;
+  width: 600px;
+}
+
+.swipe {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.swipe ul {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.swipe li div,
+.swipe div div div {
+  padding: 50px 10px;
+  background: #1db1ff;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+.swipe li img {
+  width: 100%;
+}
+.swipe li {
+  margin: 0;
+  padding: 0;
+}
+#slider2 li {
+  width: 230px;
+}
+#slider4 ul {
+  transition: left 800ms ease-in 0;
+}
+#pagenavi a {
+  display: inline-block;
+  width: 80px;
+  height: 60px;
+  background-color: yellow;
+}
+#pagenavi a.active {
+  color: red;
+}

@@ -42,13 +42,14 @@ img{
 /*    HEADER    */
 
 .header-img{
-  background-image: url("https://media.istockphoto.com/photos/lawn-at-home-running-children-in-blur-on-a-sunny-summer-day-picture-id1149062898");  
+  background-image: url("./img/fondo3.jpg");  
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;       
   display: flex;
   flex-direction: column-reverse;
-  height: 88vh;
+  height: 93vh;
+  margin-top: -7vh;
 }
 
 .logo{ 
@@ -95,12 +96,12 @@ h1{
   font-family: 'Public Sans', sans-serif;
   color: white;
   text-align: center;
-  font-size: 8vw;
+  font-size: calc(1.5rem + 3vw);
   letter-spacing: .10rem;
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
   
-  margin: 0 15vw;
-  padding: 5vh 1vw;
+  margin: 0 calc(15vw + 5vw);
+  padding: 4vh 1vw;
 
   font-style: italic;
   transform: translateX(-100vw);
@@ -132,7 +133,8 @@ h1{
 .nav-row{
  background-color: rgb(255, 255, 255);
  width: 100%;
- height: 7vh;
+ /*min-height: 7vh;*/
+ padding: 2vh 0;
  display: flex;
  justify-content: space-between;
  align-items: center; 
@@ -214,7 +216,7 @@ h1{
 
 
 .panel{
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 93vh;
   position: absolute;
@@ -226,8 +228,8 @@ h1{
 .panel-active {
   animation-name: panel-in;
   animation-delay: .2s;
-  animation-duration: .8s;
-  animation-timing-function: ease;
+  animation-duration: .6s;
+  animation-timing-function: linear;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
@@ -240,8 +242,8 @@ h1{
 .panel-not-active{
   animation-name: panel-out;
   animation-delay: 0s;
-  animation-duration: .8s;
-  animation-timing-function: ease;
+  animation-duration: .2s;
+  animation-timing-function: linear;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
@@ -261,74 +263,77 @@ h1{
   display: flex;
   flex-direction: column;  
   justify-content: center;
-  /*padding: 20vh 0vw;*/
-  width: 0vw;
-  height: 93vh;
   position: absolute;
-  top: -93vh;
   z-index: 999;
-  opacity: 0;
-  visibility: hidden;
+  height: 93vh;
+  width: 0vw;
+  top: -93vh;
+  /*padding: 20vh 0vw;*/
 }
-.menu a{
-  padding: 40px 15px 2px;
-  color: green;
-  border-bottom: 1px solid rgb(100, 208, 216);
-  text-decoration: none;
-}
-/*
-.menu a:nth-child(1){
-  margin-top: 20vh;
-}
-*/
 .menu-actv{
   animation-name: menu-in;
   animation-delay: 0s;
-  animation-duration: 2s;
-  animation-timing-function: ease;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
 @keyframes menu-in{
-  20%{
-    width: 60vw;
-    padding: 0vh 10vw ;
-    opacity: 1;
-  }
-  100%{  
-    width: 60vw;
-    padding: 0vh 10vw ;
-    opacity: 1;
-    visibility: visible;
+  100%{
+    width: 50vw;
+    padding: 0 10vw;
   }
 }
 .menu-not-actv{
   animation-name: menu-out;
   animation-delay: 0s;
-  animation-duration: .6s;
+  animation-duration: .4s;
   animation-timing-function: ease;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
 @keyframes menu-out{
   0%{
-    width: 60vw;
-    padding: 0vh 10vw ;
-    opacity: 1;
-    visibility: visible;
-  } 
-  40%{
-    padding: 0vh 10vw 0vh 1vw ;
-    visibility: hidden;
-    opacity: 0;
+    width: 50vw;
   }
   100%{
-    padding: 0vh 0vw ;
-    visibility: hidden;
-    opacity: 0;
     width: 0vw;
   }
 }
+
+.items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.items .menu-item{
+  padding: 40px 15px 2px;
+  color: green;
+  border-bottom: 1px solid rgb(100, 208, 216);
+  text-decoration: none;
+}
+.menu-items-active{
+  animation-name: items-in;
+  animation-delay: .2s;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;  
+}
+@keyframes items-in{
+  100%{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+
+
 
 /*    SECTION 1   */
 

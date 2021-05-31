@@ -17,15 +17,17 @@
     
     <div class="panel"></div>
     <div class="menu">
-      <a href="#" class="menu-item">Home</a>
-      <a href="#" class="menu-item">Productos</a>
-      <a href="#" class="menu-item">Sumate</a>
-      <a href="#" class="menu-item">Acerca</a>
-      <a href="#" class="menu-item">Contacto</a>
+      <div class="items">
+        <a href="#" class="menu-item">Home</a>
+        <a href="#" class="menu-item">Productos</a>
+        <a href="#" class="menu-item">Sumate</a>
+        <a href="#" class="menu-item">Acerca</a>
+        <a href="#" class="menu-item">Contacto</a>
+      </div>
+      
     </div> 
     
     <div class="nav-row">
-
       <div class="nav-row-item">
         <a href="#">Contacto</a>
       </div>
@@ -38,11 +40,8 @@
           <div class="line"></div>
           <div class="line"></div>
         </div>
-      </div>      
-      
-
+      </div>
     </div>
-
   </div>
 
   <header class="header-img">
@@ -74,35 +73,7 @@
       </div>
     </section>
 
-    <section>
-      <div class="wrap">
-        <div class="swipe">
-            <ul id="slider4">
-                <li style="display:block"><img src="./img/hormig.png" alt="hormiguicida"></li>
-                <li><img src="./img/cuater.png" alt=""></li>
-                <li><img src="./img/alacr.png" alt=""></li>
-                <li><img src="./img/aqui_no.png" alt=""></li>
-                <li><img src="./img/cipert.png" alt=""></li>
-                <li><img src="./img/cucas.png" alt=""></li>
-            </ul>
-        </div>
-        <br>
-        <div id="pagenavi">
-            <a href="#" class="active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-        </div>
-        <br>
-        <button class="btn btn-primary" onclick="t4.pause();">Pause</button>
-        <button class="btn btn-primary" onclick="t4.play();">Play</button>
-        <button class="btn btn-primary" onclick="t4.prev();">Previous</button>
-        <button class="btn btn-primary" onclick="t4.next();">Next</button>
-    </div>
-    
-    </section>
+   
 
     <div class="dos"></div>
     <div class="tres"></div>
@@ -115,8 +86,8 @@
     const hmbBtn = document.querySelector('.hamburger');
     const panel = document.querySelector('.panel');
     const panelMenu = document.querySelector('.menu');
-    const menuItem = document.querySelectorAll('.menu a');
-    
+    const menuItem = document.querySelectorAll('.menu-item');  
+    const items = document.querySelector('.items');   
          
     
     function menuOpen(e){
@@ -124,13 +95,15 @@
       panel.classList.remove('panel-not-active'); 
       panel.classList.add('panel-active');   
       panelMenu.classList.remove('menu-not-actv');      
-      panelMenu.classList.add('menu-actv');  
-    }
+      panelMenu.classList.add('menu-actv');
+      items.classList.add('menu-items-active');
+    };
     function menuClose(e){
       if(hmbBtn.classList.contains('isactive')){
         hmbBtn.classList.toggle('isactive');
         panel.classList.replace('panel-active', 'panel-not-active');
         panelMenu.classList.replace('menu-actv', 'menu-not-actv');
+        items.classList.remove('menu-items-active');
       }
     };
     

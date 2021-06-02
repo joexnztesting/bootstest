@@ -48,8 +48,7 @@ img{
   background-repeat: no-repeat;       
   display: flex;
   flex-direction: column-reverse;
-  height: 93vh;/*
-  margin-top: -7vh;*/
+  height: 92vh;
 }
 
 .logo{ 
@@ -124,9 +123,9 @@ h1{
 }
 .titu{
   font-family: 'Sansita Swashed', cursive;
-  color: rgb(243, 22, 63);
-  border-left: 2px solid rgb(216, 216, 216) ;
-  border-right: 2px solid rgb(216, 216, 216) ;
+  color: rgb(74, 189, 39);
+  border-left: 2px solid rgb(248, 132, 23) ;
+  border-right: 2px solid rgb(248, 132, 23) ;
   border-radius: 5px;
   font-size: 2rem;
   font-weight: bolder;
@@ -135,7 +134,7 @@ h1{
   margin: 0 auto 30px;
 }
 .card{
-  width: 90%;
+  width: 80%;
   max-width: 300px;
   margin: auto; 
   border: 2px solid rgb(221, 221, 221);

@@ -6,20 +6,17 @@
 
 }
 
-/*
 
 @media (min-width: 576px) {
- 
-  h1{
-    font-size: 6vw;
-    margin: 0 23vw;
+  .nav-row{
+    height: 7vh;
+   }
+  .header-img{
+    height: 93vh;
   }
-
-  .marco{
-    width: 70vw;
-  }
+  
 }
-
+/*
 
 @media (min-width: 768px) {
   h1{

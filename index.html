@@ -7,7 +7,7 @@
   <title>Biode</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./breakpoints.css">
-  <link rel="stylesheet" href="./slider-style.css">  
+  <link rel="stylesheet" href="./nav-bar.css">  
   <link rel="icon" href="./img/logo.svg">
 </head>
 <body class="container-princ">
@@ -19,9 +19,9 @@
     <div class="menu">
       <div class="items">
         <a href="#" class="menu-item">Home</a>
-        <a href="#" class="menu-item">Productos</a>
+        <a href="#productos" class="menu-item">Productos</a>
         <a href="#" class="menu-item">Sumate</a>
-        <a href="#" class="menu-item">Acerca</a>
+        <a href="#acerca" class="menu-item">Acerca</a>
         <a href="#" class="menu-item">Contacto</a>
       </div>
       
@@ -44,20 +44,69 @@
     </div>
   </div>
 
-  <header class="header-img">
-
-    <img class="logo" src="./img/logo.svg" alt="logo animado">
-
-    <div class="h1-fondo">
-      <h1>Productos de Excelente Calidad para el cuidado de tu Hogar y Jardín</h1>
-    </div>    
-
-  </header>  
 
 
   <main>
 
-    <section class="section-1">
+    <header class="header-img">
+
+      <img class="logo" src="./img/logo.svg" alt="logo animado">
+  
+      <div class="h1-fondo">
+        <h1>Productos de Excelente Calidad para el cuidado de tu Hogar y Jardín</h1>
+      </div>    
+  
+    </header> 
+  
+    <section id="productos" class="los-prod">
+
+      <div class="titu">
+        <p>Nuestros Artículos Disponibles</p>
+      </div>
+
+      <div class="card">
+        <img src="./img/alacr.png" alt="mata alacranes">
+        <div class="figcap">
+          <p>Exclusiva formulación No Tóxica para niños y mascotas</p>
+          <div><p>Más info...</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./img/cucas.png" alt="">
+        <div class="figcap">
+          <p>Elimina y erradica colonias de hogares e industrias</p>
+          <div><p>Más info...</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./img/cuater.png" alt="">
+        <div class="figcap">
+          <p>Listo para usar, de amplio espectro y alta efectividad</p>
+          <div><p>Más info...</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./img/aqui_no.png" alt="">
+        <div class="figcap">
+          <p>Producto muy efectivo para mantener la higiene dentro y fuera de la casa</p>
+          <div><p>Más info...</p></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./img/hormig.png" alt="">
+        <div class="figcap">
+          <p>Producto diseñado para erradicar hormigueros</p>
+          <div><p>Más info...</p></div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="acerca" class="section-1">
       <div class="marco">
 
         
@@ -82,45 +131,7 @@
 
   
 
-<script>
-    const hmbBtn = document.querySelector('.hamburger');
-    const panel = document.querySelector('.panel');
-    const panelMenu = document.querySelector('.menu');
-    const menuItem = document.querySelectorAll('.menu-item');  
-    const items = document.querySelector('.items');   
-         
-    
-    function menuOpen(e){
-      hmbBtn.classList.toggle('isactive');      
-      panel.classList.remove('panel-not-active'); 
-      panel.classList.add('panel-active');   
-      panelMenu.classList.remove('menu-not-actv');      
-      panelMenu.classList.add('menu-actv');
-      items.classList.add('menu-items-active');
-    };
-    function menuClose(e){
-      if(hmbBtn.classList.contains('isactive')){
-        hmbBtn.classList.toggle('isactive');
-        panel.classList.replace('panel-active', 'panel-not-active');
-        panelMenu.classList.replace('menu-actv', 'menu-not-actv');
-        items.classList.remove('menu-items-active');
-      }
-    };
-    
-    hmbBtn.addEventListener('click', function(e){
-      if(!hmbBtn.classList.contains('isactive')){
-        menuOpen()
-      }else{
-        menuClose()
-      }
-    });
-    panel.addEventListener('click', menuClose);
-    menuItem.forEach(elem=>{
-      elem.addEventListener('click', menuClose)
-    });
-
-</script> 
-<script src="./slider.js"></script>
+<script src="./nav-bar.js"></script> 
 
 </body>
 </html>

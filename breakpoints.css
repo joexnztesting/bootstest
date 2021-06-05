@@ -1,22 +1,24 @@
 
 
 @media (min-width: 460px) {
+  .header-img{
+    background-image: url("./img/fondo4.jpg");
+  }
   
-  
-
-}
-
-
-@media (min-width: 576px) {
   .nav-row{
     height: 7vh;
    }
   .header-img{
     height: 93vh;
   }
+
+}
+
+
+/*
+@media (min-width: 576px) {
   
 }
-/*
 
 @media (min-width: 768px) {
   h1{

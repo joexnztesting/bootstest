@@ -1,6 +1,12 @@
 
 
 @media (min-width: 460px) {
+
+  html{
+    width: calc(100% - 30vw);
+    margin: 0 auto;
+  }
+
   .header-img{
     background-image: url("./img/fondo4.jpg");
   }

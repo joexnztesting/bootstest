@@ -9,7 +9,7 @@ html{
   margin: 0;
   padding: 0;   
   scroll-behavior: smooth;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 *,
 *:before,
@@ -70,17 +70,17 @@ h1{
   font-family: 'Public Sans', sans-serif;
   color: #fff;
   text-align: center;
-  font-size: calc(1.1rem + 3vw);
+  font-size: calc(1rem + 3vw);
   letter-spacing: .10rem;
   border-radius: 25px;  
-  background-color: rgba(0, 0, 0, 0.65);
+  background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
   box-shadow: 
-    inset 0px 6px 6px -4px rgba(255, 255, 255, 1),
-    inset 0px -5px 10px -6px rgb(255, 255, 255),
-    inset -6px 0px 10px -6px rgba(255, 255, 255, 1),
-    inset 6px 0px 10px -6px rgba(255, 255, 255, 1);
+    inset 0px 6px 6px -4px #fff,
+    inset 0px -5px 10px -6px #fff,
+    inset -6px 0px 10px -6px #fff,
+    inset 6px 0px 10px -6px #fff;
   margin: 5vh calc(1vw + 8vw) 12vh;
-  padding: 4vh 3vw;
+  padding: 5vw;
   transform: translateX(-100vw);
   animation-name: texto-in;
   animation-delay: 0s;
@@ -106,7 +106,7 @@ h1{
   background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
   font-family: 'Public Sans', sans-serif;
   color: rgb(255, 255, 255);
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bolder;
   padding: 10px 20px;
   margin: 0 auto 30px;
@@ -187,6 +187,24 @@ h1{
 .card:nth-child(6){
   margin-bottom: 0;
 }
+
+
+
+.sepa-row{
+  background-color: rgb(0, 216, 90);
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.sepa-text{
+  font-family: 'Sansita Swashed', cursive;
+  font-size: 2rem;
+  color: #fff;
+}
+
+
+
 
 .section-1{
   height: 100vh;

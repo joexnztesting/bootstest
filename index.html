@@ -44,7 +44,6 @@
   </div>
 
 
-
   <main>
 
     <header class="header-img">
@@ -103,9 +102,14 @@
 
     </section>
 
+    <div class="sepa">
+      <div class="sepa-row">
+        <div class="sepa-text">Envíos a todo el país</div>
+      </div>
+    </div>
+
     <section id="acerca" class="section-1   lastcard2">
       <div class="marco">
-
         
         <div class="marco-plantas">
           <p><i>         
@@ -122,6 +126,10 @@
   
 
     <div class="dos">
+    </div>
+
+    <div class="footer">
+      <di class="footer-text">Sitio Diseñado por Joe de la Ribera</di>
     </div>
 
   </main>
@@ -163,9 +171,9 @@
   console.log(lastCard);
   console.log(tituHeader);
 
-  const observer = new IntersectionObserver(cb, {threshold:0.5});
+  const observer = new IntersectionObserver(cb, {threshold:0.2});
   const observer2 = new IntersectionObserver(cc, {threshold:0.5});
-  const observer3 = new IntersectionObserver(ca, {threshold:0.5});
+  const observer3 = new IntersectionObserver(ca, {threshold:0.2});
 
   lastCard.forEach((el)=>observer.observe(el));
   lastCard2.forEach((el)=>observer2.observe(el));

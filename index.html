@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./breakpoints.css">
   <link rel="stylesheet" href="./nav-bar.css">  
+  <link rel="stylesheet" href="./form.css">
   <link rel="icon" href="./img/logo.svg">
 </head>
 <body class="container-princ"> 
@@ -19,16 +20,15 @@
       <div class="items">
         <a href="#" class="menu-item">Home</a>
         <a href="#productos" class="menu-item">Productos</a>
-        <a href="#" class="menu-item">Sumate</a>
         <a href="#acerca" class="menu-item">Acerca</a>
-        <a href="#" class="menu-item">Contacto</a>
+        <a href="#contacto" class="menu-item">Contacto</a>
       </div>
       
     </div> 
     
     <div class="nav-row">
       <div class="nav-row-item">
-        <a href="#">Contacto</a>
+        <a href="#contacto">Contacto</a>
       </div>
       <div class="nav-row-item">
         <a href="#">Biode</a>
@@ -48,7 +48,7 @@
 
     <header class="header-img">
 
-      <img class="logo" src="./img/logo.svg" alt="logo animado">  
+      <img class="logo" src="./img/logo.svg" alt="logo">  
       
       <h1>Productos de Excelente Calidad para el cuidado de tu Hogar y Jardín</h1>    
   
@@ -56,61 +56,64 @@
   
     <section id="productos" class="los-prod">
 
-      <div class="titu">
+      <div class="titu-prod">
         <p>Productos</p>
       </div>
 
-      <div class="card lastcard1">
-        <img src="./img/alacr.png" alt="mata alacranes">
-        <div class="figcap">
-          <p>Exclusiva formulación No Tóxica para niños y mascotas</p>
-          <div><p>Más info...</p></div>
+      <div class="cards">
+        <div class="card">
+          <img src="./img/alacr.png" alt="mata alacranes">
+          <div class="figcap">
+            <p>No Tóxico para niños y mascotas</p>
+            <div><p>Más info...</p></div>
+          </div>
         </div>
+  
+        <div class="card">
+          <img src="./img/cucas.png" alt="">
+          <div class="figcap">
+            <p>Elimina colonias de hogares e industrias</p>
+            <div><p>Más info...</p></div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="./img/cuater.png" alt="">
+          <div class="figcap">
+            <p>Listo para usar, de amplio espectro</p>
+            <div><p>Más info...</p></div>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img src="./img/aqui_no.png" alt="">
+          <div class="figcap">
+            <p>Mantiene la higiene dentro y fuera de la casa</p>
+            <div><p>Más info...</p></div>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img src="./img/hormig.png" alt="">
+          <div class="figcap">
+            <p>Diseñado para erradicar hormigueros</p>
+            <div><p>Más info...</p></div>
+          </div>
+        </div>  
       </div>
 
-      <div class="card">
-        <img src="./img/cucas.png" alt="">
-        <div class="figcap">
-          <p>Elimina y erradica colonias de hogares e industrias</p>
-          <div><p>Más info...</p></div>
-        </div>
-      </div>
       
-      <div class="card">
-        <img src="./img/cuater.png" alt="">
-        <div class="figcap">
-          <p>Listo para usar, de amplio espectro y alta efectividad</p>
-          <div><p>Más info...</p></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="./img/aqui_no.png" alt="">
-        <div class="figcap">
-          <p>Producto muy efectivo para mantener la higiene dentro y fuera de la casa</p>
-          <div><p>Más info...</p></div>
-        </div>
-      </div>
-
-      <div class="card lastcard3">
-        <img src="./img/hormig.png" alt="">
-        <div class="figcap">
-          <p>Producto diseñado para erradicar hormigueros</p>
-          <div><p>Más info...</p></div>
-        </div>
-      </div>
-
     </section>
 
-    <div class="sepa">
+
+    <div class="titu-envios">
       <div class="sepa-row">
         <div class="sepa-text">Envíos a todo el país</div>
       </div>
     </div>
 
-    <section id="acerca" class="section-1   lastcard2">
-      <div class="marco">
-        
+    <section id="acerca" class="acerca">
+      <div class="marco">        
         <div class="marco-plantas">
           <p><i>         
             Somos una empresa familiar cuya función es buscar alternativas viables, accesibles y económicas, para el cuidado y mantenimiento del hogar frente a plagas y desperfectos cotidianos de la vivienda.<br>
@@ -123,65 +126,47 @@
       </div>
     </section>
 
-  
-
-    <div class="dos">
+    <div id="contacto" class="titu-social">
+      <div class="social-row">
+        <div class="sepa-text">Contacto</div>
+      </div>
     </div>
 
+    <section class="contactenos">
+      <form class="contact-form">
+        <legend>Envíanos tus comentarios</legend>
+    
+        <input type="text" name="name" placeholder="Escribe tu nombre" title="El campo Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+    
+        <input type="email" name="email" placeholder="Escribe tu correo electrónico" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+    
+        <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+    
+        <input type="submit">
+    
+        <div class="contact-form-loader none">
+          <img src="./assets/rings.svg" alt="cargando">
+          <!-- https://samherbert.net/svg-loaders/ -->
+        </div>
+    
+        <div class="contact-form-response none">
+          <p>Los datos han sido enviados</p>
+        </div>
+      </form>
+    </section>
+
+    
+
     <div class="footer">
-      <di class="footer-text">Sitio Diseñado por Joe de la Ribera</di>
+      <di class="footer-text">Sitio Diseñado por JoeRibera.com</di>
     </div>
 
   </main>
 
-  
 
+<script src="app.js"></script>
 <script src="./nav-bar.js"></script> 
-<script>
-
-  const lastCard = document.querySelectorAll('.lastcard1');
-  const lastCard3 = document.querySelectorAll('.lastcard3');
-  const lastCard2 = document.querySelectorAll('.lastcard2');
-  const tituHeader = document.querySelector('.titu');
-
-  const cb = (entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        tituHeader.classList.remove('titu-opac-out')
-        tituHeader.classList.add('titu-header')
-      }
-    })
-  }
-  const ca = (entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        tituHeader.classList.remove('titu-opac-out')
-        tituHeader.classList.add('titu-header')
-      }
-    })
-  }
-  const cc = (entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        tituHeader.classList.add('titu-opac-out')
-      }
-    })
-  }
-
-  console.log(lastCard);
-  console.log(tituHeader);
-
-  const observer = new IntersectionObserver(cb, {threshold:0.2});
-  const observer2 = new IntersectionObserver(cc, {threshold:0.5});
-  const observer3 = new IntersectionObserver(ca, {threshold:0.2});
-
-  lastCard.forEach((el)=>observer.observe(el));
-  lastCard2.forEach((el)=>observer2.observe(el));
-  lastCard3.forEach((el)=>observer3.observe(el));
-
-  
-
-</script>
+<script src="form.js"></script>
 
 </body>
 </html>

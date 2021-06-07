@@ -35,7 +35,7 @@ entries.forEach(entry=>{
 }
 
 const observer1 = new IntersectionObserver(tituIn, {threshold:0.2});
-const observer2 = new IntersectionObserver(tituOut1, {threshold:0.5});
+const observer2 = new IntersectionObserver(tituOut1, {threshold:0.75});
 const observer3 = new IntersectionObserver(tituOut2, {threshold:0.2});
 
 $firstCard.forEach((el)=>observer1.observe(el));

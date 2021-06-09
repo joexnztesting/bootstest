@@ -1,6 +1,10 @@
 /*   NAV-BAR   */
 
 .container-nav{
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
   position: sticky;
   top: 91vh;
   z-index: 1000;

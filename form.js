@@ -47,7 +47,7 @@ function contactForm(){
 
     $loader.classList.remove('none')
     
-    fetch("https://formsubmit.co/ajax/rivajoel2018@gmail.com",{
+    fetch("https://formsubmit.co/ajax/biode.argentina@gmail.com",{
       method:"POST",
       body:new FormData(e.target)
     })

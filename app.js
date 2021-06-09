@@ -14,8 +14,8 @@ $formu = document.querySelectorAll('.contact-form');
 const tituIn = (entries)=>{
 entries.forEach(entry=>{
   if(entry.isIntersecting){
-    $tituloProd.classList.remove('titu-opac-out')
-    $tituloProd.classList.add('titu-header-in')
+    $tituloProd.classList.remove('titu-opac-out');
+    $tituloProd.classList.add('titu-header-in');
   }
 })
 }
@@ -44,3 +44,7 @@ $firstCard.forEach((el)=>observer1.observe(el));
 $lastCard.forEach((el)=>observer1.observe(el));
 $sectionAcerca.forEach((el)=>observer2.observe(el));
 $formu.forEach((el)=>observer3.observe(el));
+
+window.addEventListener('DOMContentLoaded',(e)=>{
+  $tituloProd.classList.add('titu-header-in');
+})

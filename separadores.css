@@ -1,0 +1,62 @@
+
+.titu-header-in{
+  position: sticky;
+  top: 0;
+  animation-name: titu-opc-in;
+  animation-delay: 0s;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes titu-opc-in{
+  100%{
+    opacity: 1;
+  }
+}
+.titu-opac-out{
+  animation-name: titu-opc-out;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes titu-opc-out{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    position: relative;
+  }
+}
+.titu-sticky{
+  position: sticky;
+  top: 0;
+}
+
+.separador{
+  font-family: 'Public Sans', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 1.6rem;
+  font-weight: bolder;
+  padding: 10px 20px;
+}
+
+.titu-prod{
+  background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
+  margin: 0 auto 30px;
+  opacity: 0;  
+}
+
+.titu-acerca{  
+  background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%);
+  text-align: center;  
+}
+
+
+.titu-social{
+  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  text-align: center;
+}

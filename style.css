@@ -51,7 +51,7 @@ img{
 .logo{ 
   order: 2;
   /*border: 1px solid blueviolet;*/
-  height: calc(20vh + 8vw);
+  height: calc(20vh);
   opacity: 0;
   animation-name: logo-in;
   animation-duration: 1.2s;
@@ -247,7 +247,7 @@ h1{
 .marco-plantas p{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: rgb(53, 53, 53);
-  font-size: 1.2rem;
+  font-size: calc(1.2rem + 1vw);
   padding: 20px 15px; 
   border-top: 2px solid rgba(255, 201, 23, 0.733);
   border-bottom: 2px solid rgba(255, 201, 23, 0.733);

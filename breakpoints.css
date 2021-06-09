@@ -2,10 +2,7 @@
 
 @media (min-width: 460px) {
 
-  html{
-    width: calc(100% - 30vw);
-    margin: 0 auto;
-  }
+  
 
   .header-img{
     background-image: url("./img/fondo4.jpg");
@@ -17,46 +14,58 @@
   .header-img{
     height: 93vh;
   }
-
+  
+  h1{
+    margin: 5vh calc(1vw + 15vw) 12vh;
+  }
 }
 
 
-/*
+
 @media (min-width: 576px) {
   
 }
 
 @media (min-width: 768px) {
-  h1{
-    font-size: 5vw;
-    margin: 0 25vw;
+  .logo{
+    height: calc(20vh + 1.5vw);
   }
-
+  
+  h1{
+    font-size: calc(1rem + 2.2vw);
+    padding: calc(5vw - 2vw);
+    margin: 5vh calc(1vw + 25vw) 12vh;
+  }
   .marco{
-    width: 60vw;
+    width: calc(90% - 25vw);
   }
 }
 
 
-@media (min-width: 992px) {
-  h1{
-    font-size: 4.5vw;
-    margin: 0 28vw;
+
+
+@media (min-width: 992px) {  
+  html{
+    width: calc(100% - 30vw);
+    margin: 0 auto;
   }
+  
+  h1{
+    font-size: calc(1rem + 1.5vw);
+    margin: 5vh calc(1vw + 15vw) 12vh;
+  }
+
 }
 
 
 @media (min-width: 1200px) {
-  .container-princ{
-    width: 86%;
-    margin: 0 auto;
-  }
-  h1{
-    font-size: 4vw;
-    margin: 0 18vw;
+
+  .logo{
+    height: calc(20vh + 1vw);
   }
 }
 
+/*
 
 @media (min-width: 1400px) {
   .container-princ{

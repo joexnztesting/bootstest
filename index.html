@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biode</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./breakpoints.css">
   <link rel="stylesheet" href="./separadores.css">
   <link rel="stylesheet" href="./nav-bar.css">  
+  <link rel="stylesheet" href="./breakpoints.css">
   <link rel="stylesheet" href="./form.css">
   <link rel="icon" href="./img/logo.svg">
 </head>
+
 <body class="container-princ"> 
   
   <div class="container-nav">
@@ -48,14 +49,9 @@
   <main>
 
     <header class="header-img">
-
-      <img class="logo" src="./img/logo.svg" alt="logo">  
-      
-      <h1>Productos de Excelente Calidad para el cuidado de tu Hogar y Jardín</h1>    
-  
-    </header>
-
-    
+      <img class="logo" src="./img/logo.svg" alt="logo"> 
+      <h1>Productos de Excelente Calidad para el cuidado de tu Hogar y Jardín</h1>  
+    </header>    
   
     
     <section id="productos" class="los-prod">
@@ -67,7 +63,7 @@
       <div class="cards">
 
         <div class="card">
-          <img src="./img/alacr.png" alt="mata alacranes">
+          <img src="./img/cards/alacr.png" alt="mata alacranes">
           <div class="figcap">
             <p>No Tóxico para niños y mascotas</p>
             <div><p>Más info...</p></div>
@@ -75,36 +71,44 @@
         </div>
   
         <div class="card">
-          <img src="./img/cucas.png" alt="">
+          <img src="./img/cards/cucas.png" alt="">
           <div class="figcap">
             <p>Elimina colonias de hogares e industrias</p>
             <div><p>Más info...</p></div>
           </div>
         </div>
         <div class="card">
-          <img src="./img/hormig.png" alt="">
+          <img src="./img/cards/hormig.png" alt="">
           <div class="figcap">
             <p>Diseñado para erradicar hormigueros</p>
             <div><p>Más info...</p></div>
           </div>
-        </div>  
+        </div>          
         
         <div class="card">
-          <img src="./img/cuater.png" alt="">
+          <img src="./img/cards/primpaso.png" alt="">
           <div class="figcap">
-            <p>Listo para usar, de amplio espectro</p>
+            <p>Muy útil para el mantenimiento de cañerías</p>
             <div><p>Más info...</p></div>
           </div>
         </div>
-  
+
         <div class="card">
-          <img src="./img/aqui_no.png" alt="">
+          <img src="./img/cards/aqui_no.png" alt="">
           <div class="figcap">
             <p>Mantiene la higiene dentro y fuera de la casa</p>
             <div><p>Más info...</p></div>
           </div>
         </div>
-  
+        
+        <div class="card">
+          <img src="./img/cards/cuater.png" alt="">
+          <div class="figcap">
+            <p>Listo para usar, de amplio espectro</p>
+            <div><p>Más info...</p></div>
+          </div>
+        </div>
+        
       </div>
 
       
@@ -138,10 +142,10 @@
     <section class="contactenos">
 
       <div class="row-icons">
-        <div><img src="./img/icon-social-wsp.svg" alt="icon-wsp"></div>
-        <div><img src="./img/icon-social-face.svg" alt="icon-face"></div>
-        <div><img src="./img/icon-social-insta.svg" alt="icon-inst"></div>
-        <div><img src="./img/icon-social-twt.svg" alt="icon-twt"></div>
+        <div><a href="#productos"><img src="./img/icon-social-wsp.svg" alt="icon-wsp"></a></div>
+        <div><a href="#productos"><img src="./img/icon-social-face.svg" alt="icon-face"></a></div>
+        <div><a href="#productos"><img src="./img/icon-social-insta.svg" alt="icon-inst"></a></div>
+        <div><a href="#productos"><img src="./img/icon-social-twt.svg" alt="icon-twt"></a></div>
       </div>
 
       <div class="contacto-sumate">
@@ -149,7 +153,7 @@
       </div>
 
       <form class="contact-form">
-        <legend>Envíanos tus comentarios</legend>
+        <legend>Envíanos tu comentario</legend>
     
         <input type="text" name="name" placeholder="Escribe tu nombre" title="El campo Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
     

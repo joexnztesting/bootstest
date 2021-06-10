@@ -4,24 +4,34 @@
 
   .header-img{
     background-image: url("./img/fondo4.jpg");
-  }
-  
-  .nav-row{
-    height: 7vh;
+    height: 94vh;
+  }  
+  .container-nav{
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
+    position: sticky;
+    top: 94vh;
    }
-  .header-img{
-    height: 93vh;
-  }
-  
+  .nav-row{
+    height: 6vh;
+   }
   h1{
     margin: 5vh calc(1vw + 15vw) 12vh;
   }
-
   
 
   .marco-plantas p{
     font-size: 1.5rem;
     line-height: 1.9rem;
+  }
+
+  .row-icons{
+    padding: 20px calc(10vw + 12vw) 40px;
+  }
+  .row-icons div{
+    width: 40px;
   }
 }
 
@@ -44,6 +54,10 @@
   .card:last-child{
     margin-bottom: 0px;
   }  
+
+  .contact-form{
+    width: 65% !important;
+  }
 }
 
 
@@ -60,6 +74,16 @@
 
   .marco{
     width: calc(90% - 20vw);
+  }
+
+  .row-icons{
+    padding: 20px calc(10vw + 18vw) 40px;
+  }
+  .row-icons div{
+    width: 50px;
+  }
+  .contact-form{
+    width: 55% !important;
   }
 }
 
@@ -89,6 +113,14 @@
     font-size: 1.7rem;
     line-height: 2rem;
   }
+
+  .row-icons{
+    padding: 20px calc(10vw + 12vw) 40px;
+  }
+
+  .contact-form{
+    width: 50% !important;
+  }
 }
 
 
@@ -104,10 +136,15 @@
   .marco{
     width: calc(90% - 15vw);
   }
+
+  
 }
 
 
 @media (min-width: 1400px) {
+  .row-icons{
+    padding: 20px calc(10vw + 15vw) 40px;
+  }
 }
 
 /*

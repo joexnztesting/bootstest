@@ -204,7 +204,11 @@ h1{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5vh 0 20vh; 
+  padding: 5vh 0 20vh;
+  background-image: url("./img/sales.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;  
 }
 .row-icons{
   display: flex;
@@ -218,9 +222,7 @@ h1{
 }
 .contacto-sumate{
   width: 80%;
-  text-align: center;/*
-  font-family: 'Sansita Swashed', cursive;
-  font-size: 1.4rem;*/
+  text-align: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1.4rem;
 }
@@ -234,7 +236,7 @@ h1{
   font-family: 'Public Sans', sans-serif;
   color: rgb(255, 245, 153);
   font-size: 1.1rem;
-  text-align: center;
+  text-align: center;/*
   border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-right-radius: 10px;*/
 }

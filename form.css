@@ -1,5 +1,5 @@
 .contact-form-loader{
-  text-align: center;
+  text-align: center;  
 }
 
 /*-----------   Formularios   --------------------*/
@@ -10,6 +10,8 @@
 margin-left: auto;
 margin-right: auto;
 width: 80%;
+opacity: 0;
+visibility: hidden;
 }
 
 .contact-form > *{
@@ -22,6 +24,7 @@ width: 100%;
 .contact-form textarea{
 resize: none;
 }
+
 
 .contact-form legend,
 .contact-form-response{

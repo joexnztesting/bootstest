@@ -8,6 +8,8 @@ $sectionAcerca = document.querySelectorAll('.acerca'),
 $tituloAcerca = document.querySelector('.titu-acerca'),
 $tituloContacto = document.querySelector('.titu-social'),
 $formu = document.querySelectorAll('.contact-form');
+//$socialIcons = document.querySelector('.row-icons'),
+//$sumate = document.querySelector('.contacto-sumate');
 
 
 
@@ -32,6 +34,8 @@ entries.forEach(entry=>{
   if(entry.isIntersecting){
     $tituloAcerca.classList.remove('titu-sticky');
     $tituloContacto.classList.add('titu-sticky');
+    //$socialIcons.classList.add('titu-sticky');
+    //$sumate.classList.add('titu-sticky');
   }
 })
 }

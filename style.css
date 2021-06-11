@@ -72,12 +72,12 @@ h1{
   font-size: calc(1rem + 3vw);
   letter-spacing: .10rem;
   border-radius: 10px;  
-  background: linear-gradient(45deg, rgba(0,201,43,.65) 0%, rgb(29, 163, 253,.65) 100%);
+  background: linear-gradient(45deg, rgba(0,201,43,.60) 0%, rgb(29, 163, 253,.60) 100%);
   box-shadow: 
-    inset 0px 6px 6px -4px rgb(252, 255, 57),
-    inset -6px 0px 10px -6px rgb(252, 255, 57),
-    inset 0px -5px 10px -6px rgb(252, 255, 57),
-    inset 6px 0px 10px -6px  rgb(252, 255, 57);
+    inset 0px 6px 6px -4px rgb(131, 255, 245),
+    inset -7px 0px 10px -6px rgb(131, 255, 245),
+    inset 0px -7px 10px -6px rgb(131, 255, 245),
+    inset 7px 0px 10px -6px  rgb(131, 255, 245);
   text-shadow: 0 2px 2px #000;
   margin: 5vh calc(1vw + 8vw) 12vh;
   padding: 5vw;
@@ -157,7 +157,7 @@ h1{
   justify-content: center;
 }
 .card:first-child{
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .card:last-child{
   margin-bottom: 0;
@@ -171,7 +171,6 @@ h1{
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 120vh;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -180,58 +179,68 @@ h1{
 }
 .marco{
   background-color: rgb(255, 255, 255);
-  border: 6px solid rgb(255, 201, 23);
-  width: calc(90%);
-  padding: 7vw 5vw;
+  border: 5px solid rgb(255, 201, 23);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 90%;
+  padding: 8vw 7vw;
+  border-radius: 20px;
+  margin: 25vh 0;
 }
 .marco-plantas p{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: rgb(53, 53, 53);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
   padding: 20px 15px; 
   border-top: 2px solid rgba(255, 201, 23, 0.733);
   border-bottom: 2px solid rgba(255, 201, 23, 0.733);
 }
 
 
-
 .contactenos{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
-  padding: 5vh 0 20vh;
-  background-image: url("./img/sales.jpg"); 
+  /*height: 120vh;*/
+  /*padding: 5vh 0 20vh;*/
+  background-image: url("./img/sales-mov2.jpg"); 
   background-size: cover;
-  background-position: center;
+  background-position: top center;
+  background-attachment: fixed;
   background-repeat: no-repeat;  
 }
-.row-icons{
+.row-icons{ /*border: 1px solid red;*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 12vw 40px;
+  padding: 70px 12vw 0px;
+  position: sticky;
+  top: 0;
 }
 .row-icons div{
   width: 40px;
 }
-.contacto-sumate{
+.contacto-sumate{/*border: 1px solid blue;*/
+  margin-top: 20px;  
   width: 80%;
   text-align: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1.4rem;
+  position: sticky;
+  top: 135px;
 }
 
 
 
 
 .footer{
-  padding: 3vh 0 12vh;
+  height: 50px;
+  padding: 3vh 0 17vh;
   background: rgb(2, 0, 136);
   font-family: 'Public Sans', sans-serif;
   color: rgb(255, 245, 153);

@@ -1,9 +1,8 @@
 
 
-@media (min-width: 460px) {  
+@media (min-width: 350px) {  
 
   .header-img{
-    background-image: url("./img/fondo4.jpg");
     height: 94vh;
   }  
   .container-nav{
@@ -21,23 +20,38 @@
     margin: 5vh calc(1vw + 15vw) 12vh;
   }
   
-
+  .marco{
+    width: 85%;
+  }
   .marco-plantas p{
-    font-size: 1.5rem;
-    line-height: 1.9rem;
+    font-size: 1.35rem;
+    line-height: 1.85rem;
   }
 
   .row-icons{
-    padding: 20px calc(10vw + 12vw) 40px;
+    padding: 70px calc(10vw + 12vw) 0px;
   }
   .row-icons div{
     width: 40px;
+  }  
+  .contacto-sumate{ 
+    width: 60%;
+    font-size: 1.6rem;
+  }
+
+
+  .footer{
+    height: 50px;
+    padding: 2vh 0 10.5vh;
   }
 }
 
 
 
 @media (min-width: 520px) {
+  .header-img{
+    background-image: url("./img/fondo4.jpg");
+  } 
   .los-prod{
     padding: 0 0 65px;
   }
@@ -73,7 +87,8 @@
   }
 
   .marco{
-    width: calc(90% - 20vw);
+    width: calc(90% - 25vw);
+    padding: 6vw 5vw;
   }
 
   .row-icons{
@@ -105,10 +120,7 @@
   .acerca{
     width: 80%;
   }
-  .marco{
-    width: calc(90% - 10vw);
-    padding: 5vw 3vw;
-  }
+  
   .marco-plantas p{
     font-size: 1.7rem;
     line-height: 2rem;

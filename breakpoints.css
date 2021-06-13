@@ -3,7 +3,7 @@
 @media (min-width: 350px) {  
 
   .header-img{
-    height: 94vh;
+    height: 93.5vh;
   }  
   .container-nav{
     position: -webkit-sticky;
@@ -11,10 +11,10 @@
     position: -o-sticky;
     position: -ms-sticky;
     position: sticky;
-    top: 94vh;
+    top: 93.5vh;
    }
   .nav-row{
-    height: 6vh;
+    height: 6.5vh;
    }
   h1{
     margin: 5vh calc(1vw + 15vw) 12vh;
@@ -28,21 +28,28 @@
     line-height: 1.85rem;
   }
 
-  .row-icons{
-    padding: 70px calc(10vw + 12vw) 0px;
-  }
-  .row-icons div{
-    width: 40px;
+  .row-icons{ /*border: 1px solid red;*/
+    position: absolute;
+    top: 14vh; 
+    padding: 0px calc(10vw + 4vw) 0px;    
   }  
-  .contacto-sumate{ 
-    width: 60%;
+  .row-icons div{
+    width: 45px;
+  }  
+  .contacto-sumate{/* border: 1px solid blue;*/
+    width: 75%;
     font-size: 1.6rem;
+    position: absolute;
+    top: 27vh;
+    padding: 0;
   }
-
-
+  .btn-cont{
+    margin: 50px 0 160px;
+  }
+  
   .footer{
     height: 50px;
-    padding: 2vh 0 10.5vh;
+    padding: 2vh 0 11vh;
   }
 }
 
@@ -69,9 +76,31 @@
     margin-bottom: 0px;
   }  
 
-  .contact-form{
-    width: 65% !important;
+  .fondo-manos{
+    background-image: url("./img/sales.jpg");
+  }  
+  .row-icons{/* border: 1px solid blue;*/
+    padding: 0px calc(10vw + 15vw) 0px; 
+    top: 12vh;
   }
+  
+  .contacto-sumate{ /*border: 1px solid blue;*/
+    width: 60%;
+    top: 22vh;
+  }
+
+  .formu{
+    opacity: 1;
+    visibility: visible;
+    bottom: 15vh;
+  }  
+  
+  .btn-cont{
+    margin: 50px 0 50px;
+    opacity: 0;
+    visibility: hidden;
+  }
+
 }
 
 
@@ -85,21 +114,26 @@
     padding: calc(5vw - 2vw);
     margin: 5vh calc(1vw + 25vw) 12vh;
   }
-
+  
   .marco{
     width: calc(90% - 25vw);
     padding: 6vw 5vw;
   }
-
-  .row-icons{
-    padding: 20px calc(10vw + 18vw) 40px;
-  }
+  
+  .row-icons{ /*border: 1px solid yellow;*/
+    padding: 0px calc(10vw + 17vw) 0px;    
+  } 
   .row-icons div{
     width: 50px;
   }
-  .contact-form{
-    width: 55% !important;
-  }
+  .contacto-sumate{ /*border: 1px solid blue;*/
+    width: 50%;
+    top: 23vh;
+  } 
+  .formu{
+    bottom: 14vh;
+  }  
+  
 }
 
 
@@ -118,21 +152,29 @@
   }
 
   .acerca{
-    width: 80%;
+    width: 100%;
   }
-  
+  .marco{
+    width: calc(80% - 5vw);
+    padding: 13vw 5vw 3vw;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 0;
+    border: 7px solid rgb(255, 201, 23);
+  }  
   .marco-plantas p{
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     line-height: 2rem;
+    padding: 0px 25px 30px; 
+    border-top: 0;
+    border-bottom: 3px solid rgba(255, 201, 23, 0.733);
   }
 
-  .row-icons{
-    padding: 20px calc(10vw + 12vw) 40px;
-  }
+  .row-icons{ /*border: 1px solid green;*/
+    padding: 0px calc(10vw + 11vw) 0px;    
+  } 
 
-  .contact-form{
-    width: 50% !important;
-  }
+  
 }
 
 
@@ -146,55 +188,33 @@
     width: 75%;
   }
   .marco{
-    width: calc(90% - 15vw);
+    width: calc(85% - 8vw);
+    padding: 13vw 3vw 3vw;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 0;
+  }  
+  .marco-plantas p{
+    padding: 20px 15px; 
   }
+
+  .row-icons{ /*border: 1px solid red;*/
+    padding: 0px calc(10vw + 13vw) 0px;    
+  } 
 
   
 }
 
 
 @media (min-width: 1400px) {
-  .row-icons{
-    padding: 20px calc(10vw + 15vw) 40px;
-  }
+
+  .marco{
+    width: calc(85% - 10vw);
+    padding: 13vw 3vw 3vw;
+  } 
+  .row-icons{/* border: 1px solid blue;*/
+    padding: 0px calc(10vw + 16vw) 0px;    
+  } 
+  
 }
 
-/*
-
-.circleComillas{
-    position: absolute;
-    top: -26px;
-    left: 15px;
-    width: 55px;
-    height: 55px;
-    background: white;
-    border: 1px solid hsla(211,70%,24%,0.40);
-    border-radius: 100%;
-    text-align: center;
-}
-.comillas{
-    position: absolute;
-    top: 35px;
-    left: 00px;
-    font-size: 4em;
-    color: hsla(211,70%,24%,0.40);
-}
-.circleComillasFin{
-    position: absolute;
-    bottom: -26px;
-    right: 25px;
-    width: 55px;
-    height: 55px;
-    background: white;
-    border: 1px solid hsla(211,70%,24%,0.40);
-    border-radius: 100%;
-    text-align: center;
-}
-.comillasFin{
-    position: absolute;
-    bottom: -8px;
-    left: 4px;
-    font-size: 4em;
-    color: hsla(211,70%,24%,0.40);
-}
-*/

@@ -187,6 +187,8 @@ h1{
   width: 90%;
   padding: 8vw 7vw;
   margin: 25vh 0;
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;  
 }
 .marco-plantas p{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -200,10 +202,18 @@ h1{
 
 
 
+
+
+.formu{
+  position: absolute;  
+  opacity: 0;
+  visibility: hidden;
+}
+
 .fondo-manos{
   display: flex;
   flex-direction: column;
-  /*justify-content: center;*/
+  justify-content: flex-end;
   align-items: center;
   height: 100vh;
   /*margin-top: -75px;
@@ -217,26 +227,55 @@ h1{
   top: 0px;
 }
 
-.row-icons{ /*border: 1px solid red;*/
+.row-icons{ /*border: 1px solid red;*/ 
+  position: absolute;
+  top: 10vh; 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 12vw 0px;/*
+  padding: 20px 11vw 0px;/*
   position: sticky;
   top: 0;*/
 }
+
 .row-icons div{
   width: 40px;
 }
+.row-icons div img{
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
+  padding: 3px;
+  border-radius: 50%;
+}
+
 .contacto-sumate{/*border: 1px solid blue;*/
-  margin-top: 20px;  
+  /*margin-top: 20px; */
+  padding-top: 20px; 
   width: 80%;
   text-align: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1.4rem;/*
   position: sticky;
   top: 135px;*/
+}
+
+.btn-cont{
+  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  height: 70px;
+  padding: 5px;
+  border-radius: 25px; 
+  margin: 50px 0 70px;
+}
+.btn-formu{
+  background-color: rgb(255, 255, 255);
+  font-size: 1.45rem;
+  line-height: 60px; 
+  padding: 0 30px;
+  border-radius: 20px;
+}
+.btn-formu a{
+  color: blue;
+  text-decoration: none;
 }
 
 .visi-out{
@@ -268,18 +307,18 @@ h1{
   }
 }
 
-
-
 .footer{
   order: 0;
   height: 50px;
-  padding: 3vh 0 17vh;
+  width: 100%;
+  padding: 3vh 0 16vh;
   background: rgb(2, 0, 136);
   font-family: 'Public Sans', sans-serif;
   color: rgb(255, 245, 153);
   font-size: 1.1rem;
   text-align: center;
-  margin-top: 10px;/*
+  /*
+  margin-top: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;*/
 }

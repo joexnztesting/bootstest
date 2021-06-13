@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biode</title>
   <link rel="stylesheet" href="./nav-bar.css">  
-  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./separadores.css">
+  <link rel="stylesheet" href="./form.css">  
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./breakpoints.css">
-  <link rel="stylesheet" href="./form.css">
   <link rel="icon" href="./img/logo.svg">
 </head>
 
@@ -30,7 +30,7 @@
     
     <div class="nav-row">
       <div class="nav-row-item">
-        <a href="#contacto">Contacto</a>
+        <a href="#contacto"><i>Contacto</i></a>
       </div>
       <div class="nav-row-item">
         <a href="#">Biode</a>
@@ -125,7 +125,7 @@
         <div class="marco-plantas">
           <p><i>         
             Somos una empresa familiar que brinda alternativas accesibles y económicas, para el cuidado del hogar frente a plagas y también para el mantenimiento de la vivienda.<br>
-            Nuestra misión es que estos productos de excelente calidad lleguen al alcance de tu mano.
+            Nuestra misión es que los productos, de excelente calidad, lleguen al alcance de tu mano.
           </i></p>
         </div>
       </div>
@@ -137,7 +137,7 @@
     <div class="fondo-manos">
       
       <div id="contacto" class="separador titu-social">
-        <div class="sepa-text">Contacto</div>
+        <div class="sepa-text">Ventas & Contacto</div>
       </div>
 
       <div class="row-icons">
@@ -149,40 +149,43 @@
 
       <div class="contacto-sumate">
         <div>Te gustaría ser distribuidor y conseguir ingresos extras?</div>
-      </div>      
+      </div>
       
-    </div>
-    
-    <section class="formu">     
-
-      <form class="contact-form">
-        <legend>Envíanos tu comentario</legend>
-    
-        <input class="formu-input" type="text" name="name" placeholder="Escribe tu nombre" title="El campo Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
-    
-        <input class="formu-input" type="email" name="email" placeholder="Escribe tu correo electrónico" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
-    
-        <textarea class="formu-input" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
-    
-        <input class="formu-input" type="submit">
-    
-        <div class="contact-form-loader none">
-          <img src="./assets/rings.svg" alt="cargando">
-          <!-- https://samherbert.net/svg-loaders/ -->
+      <div class="btn-cont">
+        <div class="btn-formu">
+          <a href="formu.html">Sí, Contactar</a>
         </div>
-    
-        <div class="contact-form-response none">
-          <p>Los datos han sido enviados</p>
-        </div>
-      </form>
+      </div>
 
+      <div class="formu">
+        <form class="contact-form">
+          <legend>Envíanos tu comentario</legend>
+      
+          <input class="formu-input" type="text" name="name" placeholder="Escribe tu nombre" title="El campo Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+      
+          <input class="formu-input" type="email" name="email" placeholder="Escribe tu correo electrónico" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+      
+          <textarea class="formu-input" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+          
+          <div class="btn-cont2">
+            <input class="btn-formu2" type="submit">
+          </div>
+      
+          <div class="contact-form-loader none">
+            <img src="./assets/rings.svg" alt="cargando">
+            <!-- https://samherbert.net/svg-loaders/ -->
+          </div>
+      
+          <div class="contact-form-response none">
+            <p>Los datos han sido enviados</p>
+          </div>
+        </form>    
+      </div>
+            
       <div class="footer">
         <div class="footer-text">Sitio Diseñado por Joel Riva</div>
       </div>
-
-    </section>
-
-    
+    </div>   
 
 
   </main>

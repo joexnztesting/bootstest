@@ -8,30 +8,23 @@
 
 .formu{
   position: relative;
-  height: 130vh; 
-  display: flex;
-  flex-direction: column-reverse;
-  border: 1px solid yellow;
+  /*border: 1px solid blue;
+  border-radius: 30px;*/
 }
-/*
-.form-abslt{
-  background-color: aquamarine;
-}*/
 
 .contact-form{
-  order: 1;
 --form-ok-color: #4caf50;
 --form-error-color: #f44336;
 margin-left: auto;
 margin-right: auto;
-width: 80%; /*
+width: 90%; /*
 opacity: 0;
 visibility: hidden; */
 }
 
 .contact-form > *{
-  padding: .5rem;
-  margin: .6rem auto ;
+  padding: .7rem;
+  margin: .6rem auto .8rem;
   display: block;
   width: 100%;
 }
@@ -45,10 +38,12 @@ visibility: hidden; */
 .contact-form-response{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-style: italic;
-  font-size: 1.7rem;
+  font-size: 2rem;
   line-height: 1.6rem;
   font-weight: bold;
   text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px #000;
 }
 
 .contact-form input,
@@ -58,10 +53,28 @@ visibility: hidden; */
   background-color: rgb(255, 255, 255, .65);
 }
 
+
+.btn-cont2{
+  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  width: 50%;
+  height: 70px;
+  padding: 5px;
+  border-radius: 25px; 
+  margin: 50px auto 20px;
+}
+.btn-formu2{
+  padding: 0 30px;
+  border-radius: 20px;
+}
 .contact-form input[type="submit"]{
-width: 50%;
-font-weight: bold;
-cursor: pointer;
+  background-color: #fff;
+  color: blue;
+  font-size: 1.45rem;
+  line-height: 60px; 
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
 }
 
 .contact-form *::placeholder{

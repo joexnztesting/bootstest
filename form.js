@@ -40,7 +40,7 @@ function contactForm(){
   d.addEventListener('submit', (e)=>{
     /* desactivar para el envío // activar para simulacion*/
     e.preventDefault()
-    alert('Enviando Formulario')
+    //alert('Enviando Formulario')
 
     const $loader = d.querySelector('.contact-form-loader'),
     $response = d.querySelector('.contact-form-response')

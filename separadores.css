@@ -1,19 +1,36 @@
-
-.titu-header-in{
+/*
+.titu-sticky{
   position: sticky;
   top: 0;
-  animation-name: titu-opc-in;
-  animation-delay: 0s;
-  animation-duration: .5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;   
-  animation-fill-mode: forwards;
+}*/
+
+.separador{
+  position: sticky;
+  top: 0;
+  font-family: 'Public Sans', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 1.6rem;
+  font-weight: bolder;
+  padding: 10px 20px;
 }
-@keyframes titu-opc-in{
-  100%{
-    opacity: 1;
-  }
+
+.titu-prod{
+  background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
+  margin: 0 auto 0px;  
 }
+
+.titu-acerca{  
+  background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%);
+  text-align: center;  
+}
+
+.titu-social{
+  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  text-align: center;
+  width: 100%;
+}
+
+/*
 .titu-opac-out{
   animation-name: titu-opc-out;
   animation-delay: 0s;
@@ -28,36 +45,20 @@
   }
   100%{
     opacity: 0;
-    position: relative;
+    visibility: hidden;
   }
 }
-.titu-sticky{
-  position: sticky;
-  top: 0;
-}
 
-.separador{
-  font-family: 'Public Sans', sans-serif;
-  color: rgb(255, 255, 255);
-  font-size: 1.6rem;
-  font-weight: bolder;
-  padding: 10px 20px;
+.titu-header-in{
+  animation-name: titu-opc-in;
+  animation-delay: 0s;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
 }
-
-.titu-prod{
-  background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
-  margin: 0 auto 30px;
-  opacity: 0;  
-}
-
-.titu-acerca{  
-  background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%);
-  text-align: center;  
-}
-
-
-.titu-social{
-  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-  text-align: center;
-  width: 100%;
-}
+@keyframes titu-opc-in{  
+  100%{
+    opacity: 1;
+  }
+}*/

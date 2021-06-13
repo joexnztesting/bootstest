@@ -4,39 +4,58 @@
 
 /*-----------   Formularios   --------------------*/
 
+
+
+.formu{
+  position: relative;
+  height: 130vh; 
+  display: flex;
+  flex-direction: column-reverse;
+  border: 1px solid yellow;
+}
+/*
+.form-abslt{
+  background-color: aquamarine;
+}*/
+
 .contact-form{
+  order: 1;
 --form-ok-color: #4caf50;
 --form-error-color: #f44336;
 margin-left: auto;
 margin-right: auto;
-width: 80%;
+width: 80%; /*
 opacity: 0;
-visibility: hidden;
+visibility: hidden; */
 }
 
 .contact-form > *{
-padding: .5rem;
-margin: 1rem auto ;
-display: block;
-width: 100%;
+  padding: .5rem;
+  margin: .6rem auto ;
+  display: block;
+  width: 100%;
 }
 
 .contact-form textarea{
-resize: none;
+  resize: none;
 }
 
 
 .contact-form legend,
 .contact-form-response{
-font-size: 1.5rem;
-font-weight: bold;
-text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+  font-size: 1.7rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .contact-form input,
 .contact-form textarea{
-font-size: 1rem;
-font-family: sans-serif;
+  font-size: 1rem;
+  font-family: sans-serif;
+  background-color: rgb(255, 255, 255, .65);
 }
 
 .contact-form input[type="submit"]{

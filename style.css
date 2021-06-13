@@ -186,7 +186,6 @@ h1{
   align-items: center;
   width: 90%;
   padding: 8vw 7vw;
-  border-radius: 20px;
   margin: 25vh 0;
 }
 .marco-plantas p{
@@ -200,27 +199,32 @@ h1{
 }
 
 
-.contactenos{
+
+.fondo-manos{
   display: flex;
   flex-direction: column;
   /*justify-content: center;*/
   align-items: center;
-  /*height: 120vh;*/
-  /*padding: 5vh 0 20vh;*/
+  height: 100vh;
+  /*margin-top: -75px;
+  padding: 5vh 0 20vh;*/
   background-image: url("./img/sales-mov2.jpg"); 
   background-size: cover;
-  background-position: top center;
-  background-attachment: fixed;
+  background-position: center;
+  /*background-attachment: fixed;*/
   background-repeat: no-repeat;  
+  position: sticky;
+  top: 0px;
 }
+
 .row-icons{ /*border: 1px solid red;*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 70px 12vw 0px;
+  padding: 20px 12vw 0px;/*
   position: sticky;
-  top: 0;
+  top: 0;*/
 }
 .row-icons div{
   width: 40px;
@@ -230,22 +234,52 @@ h1{
   width: 80%;
   text-align: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.4rem;/*
   position: sticky;
-  top: 135px;
+  top: 135px;*/
+}
+
+.visi-out{
+  animation-name: visi-out;
+  animation-delay: 0s;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes visi-out{
+  100%{
+    opacity: 0;
+    visibility: hidden;   
+  }
+}
+.visi-in{
+  animation-name: visi-in;
+  animation-delay: 0s;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes visi-in{
+  100%{
+    opacity: 0;
+    visibility: hidden;   
+  }
 }
 
 
 
-
 .footer{
+  order: 0;
   height: 50px;
   padding: 3vh 0 17vh;
   background: rgb(2, 0, 136);
   font-family: 'Public Sans', sans-serif;
   color: rgb(255, 245, 153);
   font-size: 1.1rem;
-  text-align: center;/*
+  text-align: center;
+  margin-top: 10px;/*
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;*/
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -115,10 +115,9 @@
     </section>
 
 
-    <div class="titu-acerca">
-      <div class="separador">
-        <div class="sepa-text">Acerca de Nosotros</div>
-      </div>
+    
+    <div class="separador titu-acerca">
+      <div class="sepa-text">Acerca de Nosotros</div>
     </div>
 
     <section id="acerca" class="acerca">
@@ -134,14 +133,12 @@
 
     
     
-
-    <div id="contacto" class="titu-social">
-      <div class="separador">
-        <div class="sepa-text">Contacto</div>
-      </div>      
-    </div>
     
-    <section class="contactenos">
+    <div class="fondo-manos">
+      
+      <div id="contacto" class="separador titu-social">
+        <div class="sepa-text">Contacto</div>
+      </div>
 
       <div class="row-icons">
         <div><a href="#productos"><img src="./img/icon-social-wsp.svg" alt="icon-wsp"></a></div>
@@ -149,21 +146,25 @@
         <div><a href="#productos"><img src="./img/icon-social-face.svg" alt="icon-face"></a></div>
         <div><a href="#productos"><img src="./img/icon-social-twt.svg" alt="icon-twt"></a></div>
       </div>
-  
+
       <div class="contacto-sumate">
         <div>Te gustaría ser distribuidor y conseguir ingresos extras?</div>
-      </div>
+      </div>      
+      
+    </div>
+    
+    <section class="formu">     
 
       <form class="contact-form">
         <legend>Envíanos tu comentario</legend>
     
-        <input type="text" name="name" placeholder="Escribe tu nombre" title="El campo Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+        <input class="formu-input" type="text" name="name" placeholder="Escribe tu nombre" title="El campo Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
     
-        <input type="email" name="email" placeholder="Escribe tu correo electrónico" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+        <input class="formu-input" type="email" name="email" placeholder="Escribe tu correo electrónico" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
     
-        <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+        <textarea class="formu-input" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
     
-        <input type="submit">
+        <input class="formu-input" type="submit">
     
         <div class="contact-form-loader none">
           <img src="./assets/rings.svg" alt="cargando">
@@ -174,13 +175,15 @@
           <p>Los datos han sido enviados</p>
         </div>
       </form>
+
+      <div class="footer">
+        <div class="footer-text">Sitio Diseñado por Joel Riva</div>
+      </div>
+
     </section>
 
     
 
-    <div class="footer">
-      <di class="footer-text">Sitio Diseñado por Joel Riva Cortez</di>
-    </div>
 
   </main>
 

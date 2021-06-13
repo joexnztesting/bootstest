@@ -5,7 +5,124 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biode Contacto</title>
-  <link rel="stylesheet" href="./form.css">
+<style>
+
+.contact-form-loader{
+  text-align: center;  
+}
+/*-----------   Formularios   --------------------*/
+
+.formu{
+  position: relative;
+  /*border: 1px solid blue;
+  border-radius: 30px;*/
+}
+
+.contact-form{
+--form-ok-color: #4caf50;
+--form-error-color: #f44336;
+margin-left: auto;
+margin-right: auto;
+width: 90%; /*
+opacity: 0;
+visibility: hidden; */
+}
+
+.contact-form > *{
+  padding: .7rem;
+  margin: .6rem auto .8rem;
+  display: block;
+  width: 100%;
+}
+
+.contact-form textarea{
+  resize: none;
+}
+
+
+.contact-form legend,
+.contact-form-response{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+  font-size: 2rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px #000;
+}
+
+.contact-form input,
+.contact-form textarea{
+  font-size: 1rem;
+  font-family: sans-serif;
+  background-color: rgb(255, 255, 255, .65);
+}
+
+
+.btn-cont2{
+  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  width: 50%;
+  height: 70px;
+  padding: 5px;
+  border-radius: 25px; 
+  margin: 50px auto 20px;
+}
+.btn-formu2{
+  padding: 0 30px;
+  border-radius: 20px;
+}
+.contact-form input[type="submit"]{
+  background-color: #fff;
+  color: blue;
+  font-size: 1.45rem;
+  line-height: 60px; 
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.contact-form *::placeholder{
+color: #000;
+}
+
+.contact-form [required]:valid{
+border: thin solid var(--form-ok-color);
+}
+
+.contact-form [required]:invalid{
+border: thin solid var(--form-error-color);
+}
+
+.contact-form-error{
+margin-top: -1rem;
+font-size: 80%;
+background-color: var(--form-error-color);
+color: #fff;
+transition: all 800ms ease;
+}
+
+.contact-form-error.is-active{
+display: block;
+animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+display: none;
+}
+
+@keyframes show-message{
+0%{
+    visibility: hidden;
+    opacity: 0;
+}
+100%{
+    visibility: visible;
+    opacity: 1;
+}
+}
+</style>
 </head>
 <body>
   <section class="formu">     

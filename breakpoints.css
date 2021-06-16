@@ -15,7 +15,17 @@
    }
   .nav-row{
     height: 6.5vh;
-   }
+  }
+  .panel{
+    height: 93.5vh;
+    position: absolute;
+    top: -93.5vh;
+  }
+  .menu{
+    height: 93.5vh;
+    top: -93.5vh;
+  }
+
   h1{
     margin: 5vh calc(1vw + 15vw) 12vh;
   }

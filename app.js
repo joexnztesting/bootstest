@@ -1,19 +1,23 @@
 
 
 
-const $tituProd = document.querySelector('.titu-prod'),
-$tituAcerca = document.querySelector('.titu-acerca'),
-$tituContacto = document.querySelector('.titu-social'),
-//$firstCard = document.querySelectorAll('.card:first-child'),
-$lastCard = document.querySelectorAll('.card:last-child'),
-$sectionAcerca = document.querySelectorAll('.acerca'),
-$fondoManos = document.querySelectorAll('.fondo-manos'),
-$socialIcons = document.querySelector('.row-icons'),
-$formuinput = document.querySelector('.formu-input'),
-$formu = document.querySelectorAll('.formu'),
-$formuAb = document.querySelector('.formu'),
-$footer = document.querySelectorAll('.footer'),
-$sumate = document.querySelector('.contacto-sumate');
+const $tituProd = document.querySelector('.titu-prod');
+const $tituAcerca = document.querySelector('.titu-acerca');
+const $tituContacto = document.querySelector('.titu-social');
+const $firstCard = document.querySelectorAll('.card:first-child');
+const $lastCard = document.querySelectorAll('.card:last-child');
+const $sectionAcerca = document.querySelectorAll('.acerca');
+const $fondoManos = document.querySelectorAll('.fondo-manos');
+const $socialIcons = document.querySelector('.row-icons');
+const $formuinput = document.querySelector('.formu-input');
+const $formu = document.querySelectorAll('.formu');
+const $formuAb = document.querySelector('.formu');
+const $footer = document.querySelectorAll('.footer');
+const $sumate = document.querySelector('.contacto-sumate');
+
+
+const $infoCards = document.querySelector('.info-cards');
+const $body = document.querySelector('.container-princ');
 
 
 
@@ -33,7 +37,12 @@ $lastCard.forEach((el)=>observer1.observe(el));
 
 
 window.addEventListener('click',(e)=>{
-  if(e.target.matches('.formu-input')){
-    //alert('hi') ;
+  if(e.target.matches('.mas-info')){
+    $infoCards.classList.remove('visib-out');
+    $body.classList.add('no-scroll');
+  }
+  if(e.target.matches('.xclose')){
+    $infoCards.classList.add('visib-out')
+    $body.classList.remove('no-scroll');
   }
 })

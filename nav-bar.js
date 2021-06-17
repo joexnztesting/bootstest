@@ -3,6 +3,7 @@ const panel = document.querySelector('.panel');
 const panelMenu = document.querySelector('.menu');
 const menuItem = document.querySelectorAll('.menu-item');  
 const items = document.querySelector('.items');
+const $bodyy = document.querySelector('.container-princ');
      
 
 function menuOpen(e){
@@ -12,6 +13,7 @@ function menuOpen(e){
   panelMenu.classList.remove('menu-not-actv');      
   panelMenu.classList.add('menu-actv');
   items.classList.add('menu-items-active');
+  $bodyy.classList.add('no-scroll');
 };
 function menuClose(e){
   if(hmbBtn.classList.contains('isactive')){
@@ -19,6 +21,7 @@ function menuClose(e){
     panel.classList.replace('panel-active', 'panel-not-active');
     panelMenu.classList.replace('menu-actv', 'menu-not-actv');
     items.classList.remove('menu-items-active');
+    $body.classList.remove('no-scroll');
   }
 };
 

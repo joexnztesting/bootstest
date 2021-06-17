@@ -17,9 +17,7 @@
 --form-error-color: #f44336;
 margin-left: auto;
 margin-right: auto;
-width: 90%; /*
-opacity: 0;
-visibility: hidden; */
+width: 90%;
 }
 
 .contact-form > *{
@@ -27,6 +25,7 @@ visibility: hidden; */
   margin: .6rem auto .8rem;
   display: block;
   width: 100%;
+  border-radius: 6px;
 }
 
 .contact-form textarea{
@@ -56,11 +55,11 @@ visibility: hidden; */
 
 .btn-cont2{
   background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-  width: 50%;
-  height: 70px;
+  width: 40%;
+  height: 56px;
   padding: 5px;
   border-radius: 25px; 
-  margin: 50px auto 20px;
+  margin: 50px auto 40px;
 }
 .btn-formu2{
   padding: 0 30px;
@@ -70,7 +69,7 @@ visibility: hidden; */
   background-color: #fff;
   color: blue;
   font-size: 1.45rem;
-  line-height: 60px; 
+  line-height: 46px; 
   width: 100%;
   font-weight: bold;
   cursor: pointer;

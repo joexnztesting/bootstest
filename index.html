@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="htemele">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,26 +20,30 @@
     <div class="panel"></div>
     <div class="menu">
       <div class="items">
-        <a href="#" class="menu-item">Home</a>
+        <a href="#" class="menu-item">Inicio</a>
         <a href="#productos" class="menu-item">Productos</a>
         <a href="#acerca" class="menu-item">Acerca</a>
-        <a href="#contacto" class="menu-item">Contacto</a>
+        <a href="#contacto" class="menu-item">Contacto & Ventas</a>
       </div>
       
     </div> 
     
     <div class="nav-row">
       <div class="nav-row-item">
-        <a href="#contacto"><i>Contacto</i></a>
+        <div class="nav-row-item-border">
+          <a href="#contacto"><i>Contacto</i></a>
+        </div>
       </div>
       <div class="nav-row-item">
         <a href="#">Biode</a>
       </div>
       <div class="nav-row-item">
-        <div id="hmb" class="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+        <div class="hamb-container">
+          <div id="hmb" class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -50,7 +54,7 @@
 
     <header class="header-img">
       <img class="logo" src="./img/logo.svg" alt="logo"> 
-      <h1>Productos de Excelente Calidad para el cuidado de tu Hogar y Jardín</h1>  
+      <h1>Productos de excelente calidad para el cuidado de tu Hogar y Jardín</h1>  
     </header>    
   
     
@@ -60,9 +64,9 @@
         <p>Productos</p>
       </div>
 
-      <div>
-        <div class="titu-manten">" Línea Mantenimiento de Hogar y Jardín "</div>
-      </div>
+      
+      <div class="titu-manten"><p>" Línea Mantenimiento de Hogar y Jardín "</p></div>
+      
 
       <div class="cards">
 
@@ -143,11 +147,14 @@
 
     
     <div class="separador titu-acerca">
-      <div class="sepa-text">Acerca de Nosotros</div>
+      <p>Acerca de Nosotros</p>
     </div>
 
     <section id="acerca" class="acerca">
-      <div class="marco">        
+      <div class="marco">
+        <div class="sol">
+          <img src="./img/sol.png" alt="sol">
+        </div>        
         <div class="marco-plantas">
           <p><i>         
             Somos una empresa familiar que brinda alternativas accesibles y económicas, para el cuidado del hogar frente a plagas y también para el mantenimiento de la vivienda.<br>
@@ -163,14 +170,14 @@
     <div class="fondo-manos">
       
       <div id="contacto" class="separador titu-social">
-        <div class="sepa-text">Ventas & Contacto</div>
+        <p>Ventas & Contacto</p>
       </div>
 
       <div class="row-icons">
-        <div><a href="#productos"><img src="./img/icon-social-wsp.svg" alt="icon-wsp"></a></div>
-        <div><a href="#productos"><img src="./img/icon-social-insta.svg" alt="icon-inst"></a></div>
-        <div><a href="#productos"><img src="./img/icon-social-face.svg" alt="icon-face"></a></div>
-        <div><a href="#productos"><img src="./img/icon-social-twt.svg" alt="icon-twt"></a></div>
+        <div><a href="https://api.whatsapp.com/send?phone=5493515118011" target="_blank"><img src="./img/icon-social-wsp.svg" alt="icon-wsp"></a></div>
+        <div><a href="https://api.whatsapp.com/send?phone=5493515118011" target="_blank"><img src="./img/icon-social-insta.svg" alt="icon-inst"></a></div>
+        <div><a href="https://api.whatsapp.com/send?phone=5493515118011" target="_blank"><img src="./img/icon-social-face.svg" alt="icon-face"></a></div>
+        <div><a href="https://api.whatsapp.com/send?phone=5493515118011" target="_blank"><img src="./img/icon-social-twt.svg" alt="icon-twt"></a></div>
       </div>
 
       <div class="contacto-sumate">
@@ -217,9 +224,9 @@
   </main>
 
 
-<script src="app.js"></script>
 <script src="./nav-bar.js"></script> 
 <script src="form.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>

@@ -10,7 +10,7 @@
   z-index: 1000;
  }
  .nav-row{
-  background-color: rgb(241, 255, 255);
+  background-color: rgb(249, 255, 255);
   width: 100%;
   height: 9vh;
   display: flex;
@@ -26,6 +26,7 @@
  */
  .nav-row-item:nth-child(1){
    width: 30vw;
+   padding-left: 15px;
  }
  .nav-row-item:nth-child(2){
    width: 20vw;
@@ -38,14 +39,25 @@
    padding-right: 15px;
  }
  
+ .nav-row-item-border{   
+   background: linear-gradient(45deg, rgba(131,58,180,1)  0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+   /*margin-left: 15px;*/
+   padding: 2px;
+   border-radius: 8px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 27vw;
+ }
  .nav-row-item:nth-child(1) a{  
+   width: 100%;
    color: green;
    padding: 4px 6px;
-   margin-left: 15px;
    border-radius: 6px;
-   border: 2px solid rgb(100, 208, 216);
+   background-color: #fff;
    text-decoration: none;
    font-size: 1rem;
+   text-align: center;
  }
  .nav-row-item:nth-child(2) a{
    font-family: 'Sansita Swashed', cursive;
@@ -54,11 +66,18 @@
    text-decoration: none;
  }
  
+ .hamb-container{
+  background: linear-gradient(45deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 50%, rgba(131,58,180,1) 100%);
+  margin-left: 15px;
+  padding: 2px;
+  border-radius: 6px;
+ }
  .hamburger {
    width: 42px;
    padding: 5px 3px;
    border-radius: 4px;
-   border: 2px solid rgb(100, 208, 216);
+   /*border: 2px solid rgb(100, 208, 216);*/
+   background-color: #fff;
  }
  .hamburger:hover {
    cursor: pointer;
@@ -81,17 +100,18 @@
  
  
  .isactive{
-   height: 36px;
-   width: 38px;
+   height: 33px;
+   width: 36px;
  }
  .hamburger.isactive .line:nth-child(2) {
    opacity: 0;
+   visibility: hidden;
  }
  .hamburger.isactive .line:nth-child(1) {
-   transform: translateY(10px) translateX(-1px) rotate(45deg);
+   transform: translateY(10px) translateX(0px) rotate(45deg);
  }
  .hamburger.isactive .line:nth-child(3) {
-   transform: translateY(-6px) translateX(-1px) rotate(-45deg);
+   transform: translateY(-6px) translateX(0px) rotate(-45deg);
  }
  
  
@@ -190,11 +210,15 @@
    visibility: hidden;
  }
  
- .items .menu-item{
-   padding: 45px 15px 2px;
+ .items .menu-item{ 
+   /*background-color: rgb(231, 253, 255);*/
+   padding: 5px 15px 3px;
+   margin-top: 50px;
    color: green;
    border-bottom: 1px solid rgb(100, 208, 216);
    text-decoration: none;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
  }
  .menu-items-active{
    animation-name: items-in;

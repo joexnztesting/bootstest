@@ -7,11 +7,13 @@
 .separador{
   position: sticky;
   top: 0;
-  font-family: 'Public Sans', sans-serif;
-  color: rgb(255, 255, 255);
-  font-size: 1.6rem;
-  font-weight: bolder;
   padding: 10px 20px;
+}
+.separador p{
+  font-family: 'Public Sans', sans-serif;
+  font-size: calc(1.35rem + 1vw);
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
 }
 
 .titu-prod{

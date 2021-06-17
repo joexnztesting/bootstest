@@ -102,14 +102,20 @@ h1{
   background-attachment: fixed;*/
 }
 
-.titu-manten{
+
+.titu-manten{ /*border: 1px solid red; */
+  text-align: center;
+  padding: 40px calc(10vw + 3vw) 60px;
+}
+.titu-manten p{
   font-family: 'Sansita Swashed', cursive;
   color: green;
-  font-size: 1.4rem;
-  width: 90%;
-  margin: 50px auto;
-  text-align: center;
+  font-size: 1.7rem; 
+  line-height: 2.2rem;
+  border-bottom: 2px solid rgb(173, 209, 173) ;
+  padding-bottom: 16px;
 }
+
 
 .cards{
   display:flex;
@@ -221,6 +227,7 @@ h1{
   position: absolute;
   right: calc(5% - 10px);
   top: calc(10vh - 15px);
+  cursor: pointer;
 }
 .visib-out{
   opacity: 0;
@@ -244,6 +251,12 @@ h1{
   justify-content: center;
   align-items: center;
 }
+.sol{
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+
+}
 .marco{
   background-color: rgb(255, 255, 255);
   border: 5px solid rgb(255, 201, 23);
@@ -253,7 +266,7 @@ h1{
   align-items: center;
   width: 90%;
   padding: 8vw 7vw;
-  margin: 25vh 0;
+  margin: 25vh 0 20vh;
   border-top-left-radius: 35px;
   border-bottom-right-radius: 35px;  
 }
@@ -294,30 +307,28 @@ h1{
   top: 0px;
 }
 
-.row-icons{ /*border: 1px solid red;*/ 
+.row-icons{ /*border: 1px solid red;*/
   position: absolute;
-  top: 10vh; 
+  top: 11vh; 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 20px 11vw 0px;/*
+  padding: 20px 8vw 0px;/*
   position: sticky;
   top: 0;*/
 }
-
 .row-icons div{
-  width: 40px;
+  width: 44px;
 }
 .row-icons div img{
-  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
-  padding: 3px;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2),
+  inset 0px 0px 10px 1px  rgb(255, 255, 255);  
+  padding: 6px;
   border-radius: 50%;
 }
 
-.contacto-sumate{/*border: 1px solid blue;*/
-  /*margin-top: 20px; */
-  padding-top: 20px; 
+.contacto-sumate{ /*border: 1px solid blue;*/
   width: 80%;
   text-align: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -328,24 +339,24 @@ h1{
 
 .btn-cont{
   background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-  height: 70px;
-  padding: 5px;
+  height: 60px;
+  padding: 4px;
   border-radius: 25px; 
-  margin: 50px 0 70px;
+  margin: 56px 0 70px;
 }
 .btn-formu{
   background-color: rgb(255, 255, 255);
-  font-size: 1.45rem;
-  line-height: 60px; 
-  padding: 0 30px;
+  font-size: 1.4rem;
+  line-height: 50px; 
+  padding: 0 20px;
   border-radius: 20px;
 }
 .btn-formu a{
   color: blue;
   text-decoration: none;
 }
-
-.visi-out{
+/*
+.visib-out{
   animation-name: visi-out;
   animation-delay: 0s;
   animation-duration: .5s;
@@ -359,7 +370,7 @@ h1{
     visibility: hidden;   
   }
 }
-.visi-in{
+.visib-in{
   animation-name: visi-in;
   animation-delay: 0s;
   animation-duration: .5s;
@@ -372,20 +383,16 @@ h1{
     opacity: 0;
     visibility: hidden;   
   }
-}
+}*/
 
 .footer{
   order: 0;
   height: 50px;
   width: 100%;
   padding: 3vh 0 16vh;
-  background: rgb(2, 0, 136);
+  background: rgba(0, 85, 64, 0.8);
   font-family: 'Public Sans', sans-serif;
-  color: rgb(255, 245, 153);
+  color: rgb(255, 255, 255);
   font-size: 1.1rem;
   text-align: center;
-  /*
-  margin-top: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;*/
 }

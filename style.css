@@ -22,7 +22,7 @@ body{
   box-sizing: border-box; 
   margin: 0;
   padding: 0;
-  /*overflow-x: hidden;*/  
+  overflow-x: hidden;
 }    
 
 img{
@@ -313,7 +313,7 @@ h1{
     inset 0px -7px 10px -6px rgb(131, 255, 245),
     inset 7px 0px 10px -6px  rgb(131, 255, 245);
   text-shadow: 0 2px 2px #000;
-  margin: 5vh calc(1vw + 8vw) 12vh;
+  margin: 5vh calc(1vw + 8vw) 15vh;
   padding: 5vw;
   transform: translateX(-100vw);
   animation-name: texto-in;

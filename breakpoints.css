@@ -33,7 +33,7 @@
   }
 
   h1{
-    margin: 5vh calc(1vw + 10vw) 12vh;
+    margin: 5vh calc(1vw + 10vw) 16vh;
   }
   .marco{
     width: 85%;
@@ -92,7 +92,7 @@
 
   h1{ /*color: red;*/
     font-size: calc(1rem + 2.5vw);
-    margin: 5vh calc(1vw + 18vw) 12vh;
+    margin: 5vh calc(1vw + 18vw) 14vh;
   }
 
   .los-prod{
@@ -182,7 +182,7 @@
   h1{ /*color: rgb(255, 201, 23);*/
     font-size: calc(1rem + 2.2vw);
     padding: calc(5vw - 2vw);
-    margin: 5vh calc(1vw + 25vw) 12vh;
+    margin: 5vh calc(1vw + 25vw) 14vh;
   }
   
   .marco{
@@ -236,7 +236,7 @@
   
   h1{ /*color: blue;*/
     font-size: calc(1rem + 1.5vw);
-    margin: 5vh calc(1vw + 15vw) 12vh;
+    margin: 5vh calc(1vw + 15vw) 14vh;
   } 
 
   

@@ -7,7 +7,7 @@
   position: -ms-sticky;
   position: fixed;
   width: 100%;
-  top: 91vh;
+  bottom: 9vh;
   z-index: 1000;
  }
  .nav-row{

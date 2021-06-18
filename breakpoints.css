@@ -260,35 +260,27 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 
-
-
-
   .acerca{
     width: 100%;
-  }
-  .sol{
-    height: 20vh;
-    width: 20vh;
-    opacity: 1;
-    visibility: visible;
-    position: relative;
-    margin-bottom: 20px;
-  }
-  .sol img{
-    position: absolute;
-    opacity: .85;
-  }
+  }  
 
   .marco{
-    width: calc(80% - 5vw);
-    padding: 4vw 5vw 3vw;
+    width: calc(80% - 2vw);
+    padding: 5vw 5vw 3vw;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 0;
     border: 7px solid rgb(255, 201, 23);
   }  
+  .sol{
+    height: calc(150px + 1vw);
+    width: calc(150px + 1vw);
+    opacity: .7;
+    visibility: visible;    
+    margin-bottom: calc(20px + 1vw);
+  }
   .marco-plantas p{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 2rem;
     padding: 0px 25px 30px; 
     border-top: 0;
@@ -351,14 +343,15 @@
     width: 75%;
   }
   .marco{
-    width: calc(85% - 8vw);
-    padding: 13vw 3vw 3vw;
+    width: calc(85% - 2vw);
+    padding: 4vw 3vw 2vw;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 0;
   }  
-  .marco-plantas p{
-    padding: 20px 15px; 
+  .marco-plantas p{ /*color: red;*/
+    font-size: 1.7rem;
+    padding: 0 30px 20px; 
   }
 
   .row-icons{ /*border: 1px solid red;*/
@@ -399,12 +392,33 @@
   }
 
   .marco{
-    width: calc(85% - 10vw);
-    padding: 13vw 3vw 3vw;
+    width: calc(85% - 4vw);
+    padding: 4vw 3vw 2vw;
   } 
+
+  .marco-plantas p{ /*color: blue;*/
+    line-height: 2.1rem;
+    padding: 0 30px 25px; 
+  }
+
   .row-icons{ /*border: 1px solid blue;*/
     padding: 0px calc(5vw + 18vw) 0px;    
   } 
+  
+}
+
+
+@media (min-width: 1600px) {
+
+  .marco{
+    width: calc(70%);
+    padding: 4vw 3vw 2vw;
+  } 
+  .marco-plantas p{ /*color: red;*/
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding: 0 30px 25px; 
+  }
   
 }
 

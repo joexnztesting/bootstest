@@ -5,7 +5,7 @@
   position: -moz-sticky;
   position: -o-sticky;
   position: -ms-sticky;
-  position: sticky;
+  position: fixed;
   top: 91vh;
   z-index: 1000;
  }
@@ -51,7 +51,7 @@
  }
  .nav-row-item:nth-child(1) a{  
    width: 100%;
-   color: green;
+   color: rgb(190, 13, 0);
    padding: 4px 6px;
    border-radius: 6px;
    background-color: #fff;
@@ -84,7 +84,7 @@
  }
  
  .hamburger .line{
-   background-color: rgba(27, 141, 17, 0.85);
+   background-color: rgb(233, 16, 0);
    width: 30px;
    height: 3px;
    border-radius: 3px;

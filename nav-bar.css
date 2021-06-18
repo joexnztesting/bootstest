@@ -5,7 +5,7 @@
   position: -moz-sticky;
   position: -o-sticky;
   position: -ms-sticky;
-  position: fixed;
+  position: sticky;
   top: 91vh;
   z-index: 1000;
  }

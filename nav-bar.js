@@ -21,7 +21,7 @@ function menuClose(e){
     panel.classList.replace('panel-active', 'panel-not-active');
     panelMenu.classList.replace('menu-actv', 'menu-not-actv');
     items.classList.remove('menu-items-active');
-    $body.classList.remove('no-scroll');
+    //$bodyy.classList.remove('no-scroll');
   }
 };
 

@@ -2,39 +2,57 @@
 
 
 const $tituProd = document.querySelector('.titu-prod');
-const $tituAcerca = document.querySelector('.titu-acerca');
 const $tituContacto = document.querySelector('.titu-social');
 const $firstCard = document.querySelectorAll('.card:first-child');
 const $lastCard = document.querySelectorAll('.card:last-child');
 const $sectionAcerca = document.querySelectorAll('.acerca');
-const $fondoManos = document.querySelectorAll('.fondo-manos');
-const $socialIcons = document.querySelector('.row-icons');
 const $formuinput = document.querySelector('.formu-input');
 const $formu = document.querySelectorAll('.formu');
-const $formuAb = document.querySelector('.formu');
-const $footer = document.querySelectorAll('.footer');
-const $sumate = document.querySelector('.contacto-sumate');
+const $abc = document.querySelector('.abc');
+const $tituContc = document.querySelector('.titu-contc');
+
+
+
+
 
 
 const $infoCards = document.querySelector('.info-cards');
 const $body = document.querySelector('.container-princ');
 const $docum = document.querySelector('.htemele');
 
+const $socialIcons = document.querySelectorAll('.row-icons');
+const $marcoPlantas = document.querySelectorAll('.marco-plantas');
+const $tituAcerca = document.querySelector('.titu-acerca');
 
 
-const tituIn = (entries)=>{
+const stickyOut = (entries)=>{
 entries.forEach(entry=>{
   if(entry.isIntersecting){
-    //$tituProd.classList.remove('titu-opac-out');
-    //$tituProd.classList.add('titu-header-in');
+    if($tituAcerca.classList.contains('separador')){
+      $tituAcerca.classList.add('ocultar-titu')
+      $tituAcerca.classList.remove('mostrar-titu')
+    }    
+  }
+})
+}
+const stickyIn = (entries)=>{
+entries.forEach(entry=>{
+  if(entry.isIntersecting){
+    if($tituAcerca.classList.contains('ocultar-titu')){
+      $tituAcerca.classList.add('mostrar-titu')
+      $tituAcerca.classList.remove('ocultar-titu')
+    }
+    
   }
 })
 }
 
-const observer1 = new IntersectionObserver(tituIn, {threshold:0.2});
+const observer1 = new IntersectionObserver(stickyOut, {threshold:0.6});
+const observer2 = new IntersectionObserver(stickyIn, {threshold:0.2});
 
-$lastCard.forEach((el)=>observer1.observe(el));
 
+$socialIcons.forEach((el)=>observer1.observe(el));
+$marcoPlantas.forEach((el)=>observer2.observe(el));
 
 
 window.addEventListener('click',(e)=>{

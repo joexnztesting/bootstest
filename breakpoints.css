@@ -42,16 +42,12 @@
     font-size: 1.35rem;
     line-height: 1.85rem;
   }
-
-  .row-icons{ /*border: 1px solid red;*/
-    top: 14vh; 
-    padding: 0px calc(8vw + 1vw) 0px;    
-  }  
+    
   .row-icons div{
     width: 48px;
   }
-
-  .contacto-sumate{/* border: 1px solid blue;*/
+  /*
+  .contacto-sumate{ border: 1px solid blue;
     width: 75%;
     font-size: 1.6rem;
     position: absolute;
@@ -60,11 +56,12 @@
   }
   .btn-cont{
     margin: 50px 0 160px;
+  }*/ 
+  .footer{
+    padding: 2.5vh 0 3vh;
+    margin-bottom: 6vh;
   }
   
-  .footer{
-    padding: 2vh 0 12vh;
-  }
 }
 
 
@@ -123,33 +120,25 @@
   }  
   
   .fondo-manos{
-    background-image: url("./img/sales.jpg");
-  }  
-
-  .row-icons{ /*border: 1px solid blue;*/
-    padding: 0px calc(10vw + 6vw) 0px;
+    background-image: url("./img/fondo3.jpg"); 
   }
   
+  .row-icons{ border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    padding: 20px 0 ;
+  }
+
   .contacto-sumate{ /*border: 1px solid blue;*/
     width: 60%;
-    top: 24vh;
+    /*top: 24vh;*/
   }
-  
-  .formu{
-    opacity: 1;
-    visibility: visible;
-    bottom: 15vh;
-  }  
-  
-  .btn-cont{
-    margin: 50px 0 50px;
-    opacity: 0;
-    visibility: hidden;
-  }
-
+  /*
   .footer{
     padding: 2vh 0 11vh;
-  }
+  }*/
   
 }
 
@@ -190,19 +179,13 @@
     padding: 6vw 5vw;
   }
   
-  .row-icons{ /*border: 1px solid yellow;*/
-    padding: 0px calc(6vw + 18vw) 0px;    
-  } 
+  
   .row-icons div{
     width: 52px;
   }
   .contacto-sumate{ /*border: 1px solid blue;*/
     width: 50%;
-    top: 25vh;
   } 
-  .formu{
-    bottom: 14vh;
-  }  
   
 }
 
@@ -287,9 +270,7 @@
     border-bottom: 3px solid rgba(255, 201, 23, 0.733);
   }
 
-  .row-icons{ /*border: 1px solid green;*/
-    padding: 0px calc(10vw + 8vw) 0px;    
-  } 
+  
 
   
 }
@@ -338,7 +319,6 @@
   }
 
 
-
   .acerca{
     width: 75%;
   }
@@ -353,10 +333,7 @@
     font-size: 1.7rem;
     padding: 0 30px 20px; 
   }
-
-  .row-icons{ /*border: 1px solid red;*/
-    padding: 0px calc(8vw + 13vw) 0px;    
-  } 
+ 
 
   
 }
@@ -401,9 +378,6 @@
     padding: 0 30px 25px; 
   }
 
-  .row-icons{ /*border: 1px solid blue;*/
-    padding: 0px calc(5vw + 18vw) 0px;    
-  } 
   
 }
 

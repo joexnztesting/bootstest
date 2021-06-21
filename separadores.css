@@ -7,32 +7,20 @@
 .separador{
   position: sticky;
   top: 0;
-  padding: 10px 20px;
 }
 .separador p{
   font-family: 'Public Sans', sans-serif;
   font-size: calc(1.35rem + 1vw);
   color: rgb(255, 255, 255);
   font-weight: bolder;
+  padding: 10px 20px;
 }
 
-.titu-prod{
-  background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
-  margin: 0 auto 0px;  
-}
 
-.titu-acerca{  
-  background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%);
-  text-align: center;  
-}
 
-.titu-social{
-  position:absolute; 
-  top: 0;
-  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-  text-align: center;
-  width: 100%;
-}
+
+
+
 
 /*
 .titu-opac-out{

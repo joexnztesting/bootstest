@@ -85,7 +85,7 @@ img{
  }
  .nav-row-item:nth-child(1) a{  
    width: 100%;
-   color: rgb(0, 78, 223);
+   color: green;
    padding: 4px 6px;
    border-radius: 6px;
    background-color: #fff;
@@ -118,7 +118,7 @@ img{
  }
  
  .hamburger .line{
-   background-color: rgb(71, 129, 236);
+   background-color: rgb(29, 122, 29);
    width: 30px;
    height: 3px;
    border-radius: 3px;

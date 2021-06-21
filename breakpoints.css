@@ -123,12 +123,9 @@
     background-image: url("./img/fondo3.jpg"); 
   }
   
-  .row-icons{ border: 1px solid red;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-    padding: 20px 0 ;
+  .row-icons{ /*border: 1px solid red;*/
+    width: 60%;
+    padding: 40px 0 ;
   }
 
   .contacto-sumate{ /*border: 1px solid blue;*/
@@ -179,7 +176,9 @@
     padding: 6vw 5vw;
   }
   
-  
+  .row-icons{ /*border: 1px solid red;*/
+    width: 50%;
+  }
   .row-icons div{
     width: 52px;
   }
@@ -332,6 +331,10 @@
   .marco-plantas p{ /*color: red;*/
     font-size: 1.7rem;
     padding: 0 30px 20px; 
+  }
+
+  .row-icons{ /*border: 1px solid red;*/
+    width: 40%;
   }
  
 

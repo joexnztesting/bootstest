@@ -242,8 +242,7 @@ img{
    height: 50vh;
    opacity: 0;
    visibility: hidden;
- }
- 
+ } 
  .items .menu-item{ 
    /*background-color: rgb(231, 253, 255);*/
    padding: 5px 15px 3px;
@@ -331,17 +330,35 @@ h1{
 
 /*    SECTION 1   */
 
+.separador{
+  position: sticky;
+  top: 0;
+}
+.separador p{
+  font-family: 'Public Sans', sans-serif;
+  font-size: calc(1.35rem + 1vw);
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  padding: 0px 20px;
+}
+
 .titu-prod{
   background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
-  margin: 0 auto 0px;  
+  margin: 0 auto;  
+  line-height: 50px;
+}
+.titu-prod span{
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+.titu-prod-huerta{
+  margin-top: 80px;
 }
 
 .los-prod{
-  padding: 0px 0 60px;
-  position: relative;
-  background-color: rgb(253, 253, 253);/*
-  background-image: url("./img/biologo.svg");
-  background-attachment: fixed;*/
+  /*padding: 0px 0 60px;
+  position: relative;*/
+  background-color: rgb(253, 253, 253);
 }
 
 
@@ -504,11 +521,118 @@ h1{
 }
 
 
+.prod-huerta{
+  margin-bottom: 10vh;
+}
+.carousel-abc{
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.select-left{
+  background-color: rgba(0, 226, 215, 0.5);
+  height: 80px;
+  width: 40px;
+  position: absolute;
+  z-index: 10;
+  margin-left: 6px;
+}
+.select-right{
+  background-color: rgba(0, 226, 215, 0.5);
+  height: 80px;
+  width: 40px;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  margin-right: 6px;
+}
+.new-carousel-container{
+  border: 1px solid purple;
+  width: 90%;
+  margin: 0 auto;
+  overflow-X: hidden;
+  position: sticky;
+  top: 70px;
+}
+.new-carousel{
+  border: 1px solid blue;
+  width: 500%;
+  margin: 0 auto;
+  display: flex;
+}
+.new-slide{
+  border: 1px solid rgb(0, 255, 13);
+  width: 100%;
+}
+.new-slide figcaption{
+  background-color: #fff;
+}
+
+
+/*
+.carousel-container{
+  border: 1px solid purple;
+  position: relative;
+  height: 80vh;
+  width: 90%;
+  margin: 0 auto 50px;
+}
+.carousel{
+  width: 90%;
+  margin: 0 5%;
+  padding: 0px 0;
+  border: 1px solid rgb(0, 255, 55);
+  overflow-X: hidden;
+}
+.carousel input{
+  display: none;
+}
+
+.slides{
+  border: 1px solid red;
+  padding: 30px 0;
+  width: 500%;
+  display: flex;
+  list-style: none;
+  transition: transform .5 ease-in-out;
+}
+.slide{
+  border: 1px solid rgb(95, 83, 255);
+}
+
+.carousel label{
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid blue;
+  border-radius: 50%;
+  cursor: pointer;
+}
+*/
+
+#slide-1:checked ~ .slides {
+  transform: translateX(0%);
+}
+#slide-2:checked ~ .slides {
+  transform: translateX(-20%);
+}
+#slide-3:checked ~ .slides {
+  transform: translateX(-40%);
+}
+#slide-4:checked ~ .slides {
+  transform: translateX(-60%);
+}
+#slide-5:checked ~ .slides {
+  transform: translateX(-80%);
+}
+
 /*  *****  */
 
 .titu-acerca{  
   background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%);
-  text-align: center;  
+  text-align: center; 
+  line-height: 50px; 
 }
 .ocultar-titu{
   animation-name: ocultar-titu;

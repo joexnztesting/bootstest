@@ -74,8 +74,8 @@ const observer4 = new IntersectionObserver(stickyIn2, {threshold:1});
 
 $socialIcons.forEach((el)=>observer1.observe(el));
 $marcoPlantas.forEach((el)=>observer2.observe(el));
-$sectionAcerca.forEach((el)=>observer3.observe(el));
-$lastCard.forEach((el)=>observer4.observe(el));
+//$sectionAcerca.forEach((el)=>observer3.observe(el));
+//$lastCard.forEach((el)=>observer4.observe(el));
 
 
 window.addEventListener('click',(e)=>{

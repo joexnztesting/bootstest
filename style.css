@@ -522,94 +522,277 @@ h1{
 
 
 .prod-huerta{
-  margin-bottom: 10vh;
-}
-.carousel-abc{
-  border: 1px solid red;
-  display: flex;
-  align-items: center;
-  position: relative;
+  /*margin-bottom: 15vh;*/
+  height: 200vh;
 }
 .select-left{
-  background-color: rgba(0, 226, 215, 0.5);
-  height: 80px;
-  width: 40px;
+  background-color: rgba(0, 226, 215, .5);
+  border: 2px solid rgb(142, 255, 249);
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
   position: absolute;
   z-index: 10;
-  margin-left: 6px;
+  margin-left: 2px;
 }
 .select-right{
-  background-color: rgba(0, 226, 215, 0.5);
-  height: 80px;
-  width: 40px;
+  background-color: rgba(0, 226, 215, .5);
+  border: 2px solid rgb(142, 255, 249);
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
   position: absolute;
   z-index: 10;
   right: 0;
-  margin-right: 6px;
+  margin-right: 2px;
 }
-.new-carousel-container{
-  border: 1px solid purple;
-  width: 90%;
-  margin: 0 auto;
-  overflow-X: hidden;
-  position: sticky;
-  top: 70px;
-}
-.new-carousel{
-  border: 1px solid blue;
-  width: 500%;
-  margin: 0 auto;
-  display: flex;
-}
-.new-slide{
-  border: 1px solid rgb(0, 255, 13);
-  width: 100%;
-}
-.new-slide figcaption{
+.borde-bco-l{
   background-color: #fff;
+  height: 100%;
+  width: 5%;
+  position: absolute;
+  z-index: 9;
+  left: 0;
+}
+.borde-bco-r{
+  background-color: #fff;
+  height: 100%;
+  width: 5%;
+  position: absolute;
+  z-index: 9;
+  right: 0;
 }
 
-
-/*
 .carousel-container{
-  border: 1px solid purple;
-  position: relative;
-  height: 80vh;
-  width: 90%;
-  margin: 0 auto 50px;
-}
-.carousel{
-  width: 90%;
-  margin: 0 5%;
-  padding: 0px 0;
-  border: 1px solid rgb(0, 255, 55);
-  overflow-X: hidden;
-}
-.carousel input{
-  display: none;
-}
-
-.slides{
-  border: 1px solid red;
-  padding: 30px 0;
-  width: 500%;
+  border: 1px solid rgb(0, 68, 255);
+  border-radius: 10px;
+  background-color: #fff;
   display: flex;
-  list-style: none;
-  transition: transform .5 ease-in-out;
+  align-items: center;
+  position: sticky;
+  top: 80px;
+  width: 96%;
+  margin: 0 auto;
+  overflow-X: hidden;  
+}
+.slides{
+  width: 90%;
+  margin: 0 auto;
+  padding: 2vh 0;
+  height: 64vh;
 }
 .slide{
-  border: 1px solid rgb(95, 83, 255);
+  position: absolute;
+  height: 60vh;
+  width: 60vw;
+}
+/*
+.slide img{}
+.slide h3{}
+.slide figcaption{}
+*/
+.slide:nth-child(2){
+  margin-left: 10VW;
+}
+.slide:nth-child(3){
+  margin-left: 20VW;
+}
+.slide:nth-child(4){
+  margin-left: 30VW;
+}
+.slide:nth-child(5){
+  margin-left: 40VW;
 }
 
-.carousel label{
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  border: 1px solid blue;
-  border-radius: 50%;
-  cursor: pointer;
+
+.to-left-1{
+  animation-name: to-left-1;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
 }
-*/
+@keyframes to-left-1{
+  100%{
+    transform: translateX(-10vw);
+  }
+}
+.to-left-1b{
+  animation-name: to-left-1b;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}/*
+@keyframes to-left-1b{
+  0%{
+    transform: translateX(0vw);
+  }
+  100%{
+    transform: translateX(-10vw);
+  }
+}*/
+.to-left-2{
+  animation-name: to-left-2;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-left-2{
+  0%{
+    transform: translateX(-10vw);
+  }
+  100%{
+    transform: translateX(-20vw);
+  }
+}
+.to-left-2b{
+  animation-name: to-left-2b;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-left-2b{
+  100%{
+    transform: translateX(-20vw);
+  }
+}
+.to-left-3{
+  animation-name: to-left-3;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-left-3{
+  0%{
+    transform: translateX(-20vw);
+  }
+  100%{
+    transform: translateX(-30vw);
+  }
+}
+.to-left-3b{
+  animation-name: to-left-3b;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-left-3b{
+  100%{
+    transform: translateX(-30vw);
+  }
+}
+.to-left-4{
+  animation-name: to-left-4;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-left-4{
+  0%{
+    transform: translateX(-30vw);
+  }
+  100%{
+    transform: translateX(-40vw);
+  }
+}
+.to-left-4b{
+  animation-name: to-left-4b;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-left-4b{  
+  100%{
+    transform: translateX(-40vw);
+  }
+}
+
+
+
+.to-right-1{
+  animation-name: to-right-1;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;  
+}
+@keyframes to-right-1{
+  0%{
+    transform: translateX(-10vw);
+  }
+  100%{
+    transform: translateX(0vw);
+  }
+}
+.to-right-2{
+  animation-name: to-right-2;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-right-2{
+  0%{
+    transform: translateX(-20vw);
+  }
+  100%{
+    transform: translateX(-10vw);
+  }
+}
+.to-right-2b{
+  animation-name: to-right-2b;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-right-2b{
+  0%{
+    transform: translateX(-20vw);
+  }
+  100%{
+    transform: translateX(0vw);
+  }
+}
+.to-right-3{
+  animation-name: to-right-3;
+  animation-duration: .4s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-right-3{
+  0%{
+    transform: translateX(-10vw);
+  }
+  100%{
+    transform: translateX( 0vw);
+  }
+}
+
+
+
+
+
 
 #slide-1:checked ~ .slides {
   transform: translateX(0%);
@@ -626,6 +809,7 @@ h1{
 #slide-5:checked ~ .slides {
   transform: translateX(-80%);
 }
+*/
 
 /*  *****  */
 

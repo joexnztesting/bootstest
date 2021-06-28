@@ -106,89 +106,218 @@ window.addEventListener('click',(e)=>{
 
 // SLIDER
 
-// slide 5 to left
-$selectLeft.addEventListener('click',(e)=>{
-  if(e.target.matches('.a3')){
-    $slide5.classList.add('to-left-4b')
-    $slide4.classList.remove('to-left-3b')
-    $slide4.classList.add('to-left-4')
-    $slide3.classList.remove('to-left-3')
+const acelgaToCenter = function(e){
+  $slide1.classList.add('to-left1')
+  $slide1.classList.remove('to-right2')  
+}
+const acelgaToLeft = function(e){
+  $slide1.classList.add('to-left2')
+  $slide1.classList.remove('to-left1')
+  $slide1.classList.remove('to-right2') 
+}
+const acelgaToCenter2 = function(e){
+  $slide1.classList.add('to-right2')  
+  $slide1.classList.remove('to-left2')
+}
+
+const sandiaToCenter = function(e){
+  $slide2.classList.add('to-left1')
+  $slide2.classList.remove('to-right1')
+  $slide2.classList.remove('to-right2')
+}
+const sandiaToLeft = function(e){
+  $slide2.classList.add('to-left2')
+  $slide2.classList.remove('to-left1')
+  $slide2.classList.remove('to-right2')
+}
+const sandiaToRight = function(e){
+  $slide2.classList.add('to-right1')  
+  $slide2.classList.remove('to-left1')
+  $slide2.classList.remove('to-left2')
+  $slide2.classList.remove('to-right2')
+}
+const sandiaToCenter2 = function(e){
+  $slide2.classList.add('to-right2')
+  $slide2.classList.remove('to-right1')
+  $slide2.classList.remove('to-left2')
+}
+
+
+const tomateToCenter = function(e){
+  $slide3.classList.add('to-left1')
+  $slide3.classList.remove('to-right1')
+  $slide3.classList.remove('to-right2')
+}
+const tomateToLeft = function(e){
+  $slide3.classList.add('to-left2')
+  $slide3.classList.remove('to-left1')
+  $slide3.classList.remove('to-right2')
+}
+const tomateToRight = function(e){
+  $slide3.classList.add('to-right1')  
+  $slide3.classList.remove('to-left1')
+  $slide3.classList.remove('to-left2')
+  $slide3.classList.remove('to-right2')
+}
+const tomateToCenter2 = function(e){
+  $slide3.classList.add('to-right2')
+  $slide3.classList.remove('to-right1')
+  $slide3.classList.remove('to-left1')
+}
+
+
+const anquitoToCenter = function(e){
+  $slide4.classList.add('to-left1')
+  $slide4.classList.remove('to-right1')
+  $slide4.classList.remove('to-right2')
+}
+const anquitoToRight = function(e){
+  $slide4.classList.add('to-right1')
+  $slide4.classList.remove('to-left1')
+  $slide4.classList.remove('to-left2')
+}
+const anquitoToLeft = function(e){
+  $slide4.classList.add('to-left2')
+  $slide4.classList.remove('to-left1')
+  $slide4.classList.remove('to-right1')
+  $slide4.classList.remove('to-right2')
+}
+
+
+const lastSlideToCenter = function(e){
+  $slide5.classList.add('to-left1')
+  $slide5.classList.remove('to-right1')
+  $slide5.classList.remove('to-right2')
+}
+const lastSlideToRight = function(e){
+  $slide5.classList.add('to-right1')
+  $slide5.classList.remove('to-left1')
+  $slide5.classList.remove('to-left2')
+}
+const lastSlideToleft = function(e){
+  $slide5.classList.add('to-left2')
+  $slide5.classList.remove('to-left1')
+  $slide5.classList.remove('to-right1')
+  $slide5.classList.remove('to-right2')
+}
+
+
+
+$selectRight.addEventListener('click',(e)=>{
+
+  if($selectRight.classList.contains('r0') && $slide3.classList.contains('n3')){    
+    tomateToRight()    
+    sandiaToCenter2() 
+    
+    $slide3.classList.remove('n3')    
+    $slide3.classList.remove('n1')
+    $slide3.classList.add('n4')    
   }
-})
-// slide 4 to left
-$selectLeft.addEventListener('click',(e)=>{
-  if(e.target.matches('.a2')){
-    $slide4.classList.add('to-left-3b')
-    $slide3.classList.remove('to-left-2')
-    $slide3.classList.add('to-left-3')
-    $slide2.classList.remove('to-left-2')
-    $selectLeft.classList.add('a3')    
+  
+  if($selectRight.classList.contains('r0') && $slide3.classList.contains('n2')){
+    anquitoToRight()
+    tomateToCenter2()
+    sandiaToLeft()
+    
+    $slide3.classList.add('n1')
+    $slide3.classList.remove('n2')
+    
+    $slide2.classList.remove('k1')
+    $slide3.classList.add('n3')  
+    $slide3.classList.remove('n4')    
   }
-})
-// slide 3 to left
-$selectLeft.addEventListener('click',(e)=>{
-  if(e.target.matches('.a1')){
-    $slide3.classList.remove('to-right-2b')
-    $slide3.classList.add('to-left-2b')
-    $slide2.classList.remove('to-right-2')
-    $slide2.classList.remove('to-left-1')
-    $slide2.classList.add('to-left-2')
-    $slide1.classList.remove('to-left-1')
-    $selectLeft.classList.add('a2')
-    $selectRight.classList.add('b1')
-    $selectRight.classList.remove('b0') 
+
+  if($selectRight.classList.contains('r0') && $slide2.classList.contains('k12')){
+    sandiaToRight()
+    acelgaToCenter2()
+
+    $slide2.classList.remove('k12')
+    $slide1.classList.add('s1')
   }
-})
-// slide 2 to left
-$selectLeft.addEventListener('click', (e)=>{
-    $slide1.classList.remove('to-right-1')
-    $slide1.classList.add('to-left-1')
-    $slide2.classList.remove('to-right-1')
-    $slide2.classList.add('to-left-1')
-    $selectLeft.classList.add('a1')  
+
+  if($selectRight.classList.contains('r0') && $slide2.classList.contains('k1')){
+    tomateToRight()    
+    sandiaToCenter2()
+
+    $slide2.classList.remove('k1')
+    $slide2.classList.add('k12')
+    $slide3.classList.remove('n1')
+  }
+
+  if($selectRight.classList.contains('r0') && $slide1.classList.contains('s12')){
+    sandiaToRight()
+    acelgaToCenter2()
+    
+    $slide1.classList.add('s1')
+    $slide1.classList.remove('s12')   
+  }
+  
 })
 
-// TO RIGHT
 
-$selectRight.addEventListener('click', (e)=>{
-  $slide2.classList.remove('to-left-1')
-  $slide2.classList.add('to-right-1')
-  $slide1.classList.remove('to-left-1')
-  $slide1.classList.add('to-right-1') 
-  $selectLeft.classList.remove('a1')  
+$selectLeft.addEventListener('click',(e)=>{
+
+  if($selectLeft.classList.contains('l0') && $slide4.classList.contains('d1')){
+    anquitoToLeft()
+
+    $slide4.classList.remove('d1')  
+  }
+  
+  if($selectLeft.classList.contains('l0') && $slide3.classList.contains('n5')){
+    anquitoToCenter()
+    tomateToLeft()
+
+    
+    $slide4.classList.add('d1')  
+  }
+  
+  if($selectLeft.classList.contains('l0') && $slide3.classList.contains('n4')){
+    tomateToCenter()
+    sandiaToLeft()
+
+    $slide3.classList.remove('n4') 
+    $slide3.classList.add('n5') 
+  }
+
+  if($selectLeft.classList.contains('l0') && $slide3.classList.contains('n1')){
+    anquitoToCenter()
+    tomateToLeft()
+
+    $slide3.classList.remove('n1')
+    $slide2.classList.remove('k1')
+    $slide3.classList.add('n2')
+  }
+
+  if($selectLeft.classList.contains('l0') && $slide2.classList.contains('k12')){
+    tomateToCenter()
+    sandiaToLeft()
+
+    $slide1.classList.add('s12')
+    $slide2.classList.remove('k12')   
+  } 
+  
+  if($selectLeft.classList.contains('l0') && $slide1.classList.contains('s12')){
+    tomateToCenter()
+    sandiaToLeft()
+    
+    $slide1.classList.remove('s12')
+    $slide2.classList.add('k1')
+    $slide3.classList.add('n1')
+  } 
+  
+  if($selectLeft.classList.contains('l0') && $slide1.classList.contains('s1')){
+    acelgaToLeft()
+    sandiaToCenter()
+    
+    $slide1.classList.add('s12')
+    $slide1.classList.remove('s1') 
+    
+  }
 })
 
- // slide 3 to 1 back
-$selectLeft.addEventListener('click', (e)=>{
-  if(e.target.matches('.a0')){
-    $slide1.classList.remove('to-right-3')
-    $slide1.classList.remove('to-right-2')    
-    $slide2.classList.remove('to-right-2')
-    $slide2.classList.remove('to-right-3')             
-  }
-}) 
-// slide 3 to 1
-$selectRight.addEventListener('click', (e)=>{
-  if(e.target.matches('.b0')){
-    $slide2.classList.remove('to-left-2')
-    $slide2.classList.add('to-right-3')
-    $slide1.classList.remove('to-left-1')
-    $slide1.classList.add('to-right-3')
-    $selectRight.classList.remove('b1') 
-    $selectLeft.classList.add('a0')  
-  }
-}) 
-// slide 3 to 2
-$selectRight.addEventListener('click', (e)=>{
-  if(e.target.matches('.b1')){
-    $slide3.classList.remove('to-left-2b')
-    $slide3.classList.add('to-right-2b')
-    $slide2.classList.remove('to-right-1')
-    $slide2.classList.add('to-right-2')    
-    $slide1.classList.remove('to-right-1')
-    $slide1.classList.add('to-right-2')
-    $selectLeft.classList.remove('a2')
-    $selectLeft.classList.add('a1')
-    $selectRight.classList.add('b0')
-  }
+
+window.addEventListener('DOMContentLoaded',(e)=>{
+    acelgaToCenter()  
+    $slide1.classList.add('s1')
 })
+

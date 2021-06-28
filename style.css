@@ -533,7 +533,6 @@ h1{
   border-radius: 50%;
   position: absolute;
   z-index: 10;
-  margin-left: 2px;
 }
 .select-right{
   background-color: rgba(0, 226, 215, .5);
@@ -544,10 +543,10 @@ h1{
   position: absolute;
   z-index: 10;
   right: 0;
-  margin-right: 2px;
 }
 .borde-bco-l{
-  background-color: #fff;
+  /*background-color: #fff;*/
+  border: thin solid red;
   height: 100%;
   width: 5%;
   position: absolute;
@@ -555,7 +554,8 @@ h1{
   left: 0;
 }
 .borde-bco-r{
-  background-color: #fff;
+  /*background-color: #fff;*/
+  border: thin solid red;
   height: 100%;
   width: 5%;
   position: absolute;
@@ -563,237 +563,137 @@ h1{
   right: 0;
 }
 
+
 .carousel-container{
-  border: 1px solid rgb(0, 68, 255);
-  border-radius: 10px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
   position: sticky;
-  top: 80px;
+  top: 75px;
+}
+.carousel{
+  border: 1px solid rgb(0, 68, 255);
+  background-color: #fff;
+  border-radius: 10px;
+  height: 80vh;
   width: 96%;
   margin: 0 auto;
-  overflow-X: hidden;  
+  display: flex;
+  align-items: center;
+  overflow-X: hidden;
+  position: relative;
 }
-.slides{
+.slides-container{  
+  height: 80vh;
   width: 90%;
   margin: 0 auto;
-  padding: 2vh 0;
-  height: 64vh;
+  display: flex;
+  align-items: center;
 }
 .slide{
   position: absolute;
-  height: 60vh;
-  width: 60vw;
+  width: 90%;
 }
 /*
 .slide img{}
 .slide h3{}
 .slide figcaption{}
 */
+.slide:nth-child(1){
+  margin-left: 90%;
+}
 .slide:nth-child(2){
-  margin-left: 10VW;
+  margin-left: 90%;
 }
 .slide:nth-child(3){
-  margin-left: 20VW;
+  margin-left: 90%;
 }
 .slide:nth-child(4){
-  margin-left: 30VW;
+  margin-left: 90%;
 }
 .slide:nth-child(5){
-  margin-left: 40VW;
+  margin-left: 90%;
 }
 
 
-.to-left-1{
-  animation-name: to-left-1;
+
+.to-left1{
+  animation-name: to-left1;
   animation-duration: .4s;
   animation-timing-function: ease;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
-@keyframes to-left-1{
+@keyframes to-left1{
   100%{
-    transform: translateX(-10vw);
+    transform: translateX(-100%);
   }
 }
-.to-left-1b{
-  animation-name: to-left-1b;
+.to-left2{
+  animation-name: to-left2;
   animation-duration: .4s;
   animation-timing-function: ease;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
-}/*
-@keyframes to-left-1b{
+}
+@keyframes to-left2{
   0%{
-    transform: translateX(0vw);
+    transform: translateX(-100%);
   }
   100%{
-    transform: translateX(-10vw);
+    transform: translateX(-200%);
   }
-}*/
-.to-left-2{
-  animation-name: to-left-2;
+}
+
+.to-right1{
+  animation-name: to-right1;
   animation-duration: .4s;
   animation-timing-function: ease;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
-@keyframes to-left-2{
+@keyframes to-right1{
   0%{
-    transform: translateX(-10vw);
+    transform: translateX(-100%);
   }
   100%{
-    transform: translateX(-20vw);
+    transform: translateX(0%);
   }
 }
-.to-left-2b{
-  animation-name: to-left-2b;
+.to-right2{
+  animation-name: to-right2;
   animation-duration: .4s;
   animation-timing-function: ease;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
-@keyframes to-left-2b{
-  100%{
-    transform: translateX(-20vw);
-  }
-}
-.to-left-3{
-  animation-name: to-left-3;
-  animation-duration: .4s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;   
-  animation-fill-mode: forwards;
-}
-@keyframes to-left-3{
+@keyframes to-right2{
   0%{
-    transform: translateX(-20vw);
+    transform: translateX(-200%);
   }
   100%{
-    transform: translateX(-30vw);
+    transform: translateX(-100%);
   }
 }
-.to-left-3b{
-  animation-name: to-left-3b;
+.to-right3{
+  animation-name: to-right3;
   animation-duration: .4s;
   animation-timing-function: ease;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
-@keyframes to-left-3b{
-  100%{
-    transform: translateX(-30vw);
-  }
-}
-.to-left-4{
-  animation-name: to-left-4;
-  animation-duration: .4s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;   
-  animation-fill-mode: forwards;
-}
-@keyframes to-left-4{
+@keyframes to-right3{
   0%{
-    transform: translateX(-30vw);
+    transform: translateX(-100%);
   }
   100%{
-    transform: translateX(-40vw);
-  }
-}
-.to-left-4b{
-  animation-name: to-left-4b;
-  animation-duration: .4s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;   
-  animation-fill-mode: forwards;
-}
-@keyframes to-left-4b{  
-  100%{
-    transform: translateX(-40vw);
+    transform: translateX(0%);
   }
 }
 
-
-
-.to-right-1{
-  animation-name: to-right-1;
-  animation-duration: .4s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;   
-  animation-fill-mode: forwards;  
-}
-@keyframes to-right-1{
-  0%{
-    transform: translateX(-10vw);
-  }
-  100%{
-    transform: translateX(0vw);
-  }
-}
-.to-right-2{
-  animation-name: to-right-2;
-  animation-duration: .4s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;   
-  animation-fill-mode: forwards;
-}
-@keyframes to-right-2{
-  0%{
-    transform: translateX(-20vw);
-  }
-  100%{
-    transform: translateX(-10vw);
-  }
-}
-.to-right-2b{
-  animation-name: to-right-2b;
-  animation-duration: .4s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;   
-  animation-fill-mode: forwards;
-}
-@keyframes to-right-2b{
-  0%{
-    transform: translateX(-20vw);
-  }
-  100%{
-    transform: translateX(0vw);
-  }
-}
-.to-right-3{
-  animation-name: to-right-3;
-  animation-duration: .4s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;   
-  animation-fill-mode: forwards;
-}
-@keyframes to-right-3{
-  0%{
-    transform: translateX(-10vw);
-  }
-  100%{
-    transform: translateX( 0vw);
-  }
-}
-
-
-
-
-
-
+/*
 #slide-1:checked ~ .slides {
   transform: translateX(0%);
 }

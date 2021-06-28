@@ -136,7 +136,7 @@ const centerToRight = function(e){
 
 
 $selectRight.addEventListener('click',(e)=>{
-  
+    
   if($slide2.classList.contains('on-center')){
     centerToRight($slide2)
     leftToCenter($slide1)

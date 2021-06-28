@@ -546,7 +546,7 @@ h1{
 }
 .borde-bco-l{
   /*background-color: #fff;*/
-  border: thin solid red;
+  /*border: thin solid red;*/
   height: 100%;
   width: 5%;
   position: absolute;
@@ -555,7 +555,7 @@ h1{
 }
 .borde-bco-r{
   /*background-color: #fff;*/
-  border: thin solid red;
+  /*border: thin solid red;*/
   height: 100%;
   width: 5%;
   position: absolute;
@@ -569,7 +569,7 @@ h1{
   top: 75px;
 }
 .carousel{
-  border: 1px solid rgb(0, 68, 255);
+  /*border: 1px solid rgb(0, 68, 255);*/
   background-color: #fff;
   border-radius: 10px;
   height: 80vh;
@@ -590,15 +590,11 @@ h1{
 .slide{
   position: absolute;
   width: 90%;
+  left: 100%;
 }
+
+
 /*
-.slide img{}
-.slide h3{}
-.slide figcaption{}
-*/
-.slide:nth-child(1){
-  margin-left: 90%;
-}
 .slide:nth-child(2){
   margin-left: 90%;
 }
@@ -611,50 +607,50 @@ h1{
 .slide:nth-child(5){
   margin-left: 90%;
 }
-
+*/
 
 
 .to-left1{
   animation-name: to-left1;
   animation-duration: .4s;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
 @keyframes to-left1{
   100%{
-    transform: translateX(-100%);
+    transform: translateX(-105.5%);
   }
 }
 .to-left2{
   animation-name: to-left2;
   animation-duration: .4s;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
 @keyframes to-left2{
   0%{
-    transform: translateX(-100%);
+    transform: translateX(-105.5%);
   }
   100%{
-    transform: translateX(-200%);
+    transform: translateX(-211%);
   }
 }
 
 .to-right1{
   animation-name: to-right1;
   animation-duration: .4s;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
 @keyframes to-right1{
   0%{
-    transform: translateX(-100%);
+    transform: translateX(-105.5%);
   }
   100%{
     transform: translateX(0%);
@@ -663,35 +659,24 @@ h1{
 .to-right2{
   animation-name: to-right2;
   animation-duration: .4s;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
 @keyframes to-right2{
   0%{
-    transform: translateX(-200%);
+    transform: translateX(-211%);
   }
   100%{
-    transform: translateX(-100%);
+    transform: translateX(-105.5%);
   }
 }
-.to-right3{
-  animation-name: to-right3;
-  animation-duration: .4s;
-  animation-timing-function: ease;
-  animation-delay: 0s;
-  animation-iteration-count: 1;   
-  animation-fill-mode: forwards;
+
+.select-visibOut{
+  opacity: 0;
 }
-@keyframes to-right3{
-  0%{
-    transform: translateX(-100%);
-  }
-  100%{
-    transform: translateX(0%);
-  }
-}
+
 
 /*
 #slide-1:checked ~ .slides {

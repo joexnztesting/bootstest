@@ -106,218 +106,80 @@ window.addEventListener('click',(e)=>{
 
 // SLIDER
 
-const acelgaToCenter = function(e){
-  $slide1.classList.add('to-left1')
-  $slide1.classList.remove('to-right2')  
+const rightToCenter = function(e){
+   e.classList.add('to-left1')
+   e.classList.remove('to-right1')
+   e.classList.remove('to-right2')
+   e.classList.add('on-center')
 }
-const acelgaToLeft = function(e){
-  $slide1.classList.add('to-left2')
-  $slide1.classList.remove('to-left1')
-  $slide1.classList.remove('to-right2') 
+const centerToLeft = function(e){
+  e.classList.add('to-left2')
+  e.classList.remove('to-left1')
+  e.classList.remove('to-right1')
+  e.classList.remove('to-right2')
+  e.classList.remove('on-center')
 }
-const acelgaToCenter2 = function(e){
-  $slide1.classList.add('to-right2')  
-  $slide1.classList.remove('to-left2')
+const leftToCenter = function(e){
+  e.classList.add('to-right2')
+  e.classList.remove('to-right1')
+  e.classList.remove('to-left1')
+  e.classList.remove('to-left2')
+  e.classList.add('on-center')
 }
-
-const sandiaToCenter = function(e){
-  $slide2.classList.add('to-left1')
-  $slide2.classList.remove('to-right1')
-  $slide2.classList.remove('to-right2')
+const centerToRight = function(e){
+  e.classList.add('to-right1')
+  e.classList.remove('to-right2')
+  e.classList.remove('to-left1')
+  e.classList.remove('to-left2')
+  e.classList.remove('on-center')
 }
-const sandiaToLeft = function(e){
-  $slide2.classList.add('to-left2')
-  $slide2.classList.remove('to-left1')
-  $slide2.classList.remove('to-right2')
-}
-const sandiaToRight = function(e){
-  $slide2.classList.add('to-right1')  
-  $slide2.classList.remove('to-left1')
-  $slide2.classList.remove('to-left2')
-  $slide2.classList.remove('to-right2')
-}
-const sandiaToCenter2 = function(e){
-  $slide2.classList.add('to-right2')
-  $slide2.classList.remove('to-right1')
-  $slide2.classList.remove('to-left2')
-}
-
-
-const tomateToCenter = function(e){
-  $slide3.classList.add('to-left1')
-  $slide3.classList.remove('to-right1')
-  $slide3.classList.remove('to-right2')
-}
-const tomateToLeft = function(e){
-  $slide3.classList.add('to-left2')
-  $slide3.classList.remove('to-left1')
-  $slide3.classList.remove('to-right2')
-}
-const tomateToRight = function(e){
-  $slide3.classList.add('to-right1')  
-  $slide3.classList.remove('to-left1')
-  $slide3.classList.remove('to-left2')
-  $slide3.classList.remove('to-right2')
-}
-const tomateToCenter2 = function(e){
-  $slide3.classList.add('to-right2')
-  $slide3.classList.remove('to-right1')
-  $slide3.classList.remove('to-left1')
-}
-
-
-const anquitoToCenter = function(e){
-  $slide4.classList.add('to-left1')
-  $slide4.classList.remove('to-right1')
-  $slide4.classList.remove('to-right2')
-}
-const anquitoToRight = function(e){
-  $slide4.classList.add('to-right1')
-  $slide4.classList.remove('to-left1')
-  $slide4.classList.remove('to-left2')
-}
-const anquitoToLeft = function(e){
-  $slide4.classList.add('to-left2')
-  $slide4.classList.remove('to-left1')
-  $slide4.classList.remove('to-right1')
-  $slide4.classList.remove('to-right2')
-}
-
-
-const lastSlideToCenter = function(e){
-  $slide5.classList.add('to-left1')
-  $slide5.classList.remove('to-right1')
-  $slide5.classList.remove('to-right2')
-}
-const lastSlideToRight = function(e){
-  $slide5.classList.add('to-right1')
-  $slide5.classList.remove('to-left1')
-  $slide5.classList.remove('to-left2')
-}
-const lastSlideToleft = function(e){
-  $slide5.classList.add('to-left2')
-  $slide5.classList.remove('to-left1')
-  $slide5.classList.remove('to-right1')
-  $slide5.classList.remove('to-right2')
-}
-
 
 
 $selectRight.addEventListener('click',(e)=>{
-
-  if($selectRight.classList.contains('r0') && $slide3.classList.contains('n3')){    
-    tomateToRight()    
-    sandiaToCenter2() 
-    
-    $slide3.classList.remove('n3')    
-    $slide3.classList.remove('n1')
-    $slide3.classList.add('n4')    
-  }
   
-  if($selectRight.classList.contains('r0') && $slide3.classList.contains('n2')){
-    anquitoToRight()
-    tomateToCenter2()
-    sandiaToLeft()
-    
-    $slide3.classList.add('n1')
-    $slide3.classList.remove('n2')
-    
-    $slide2.classList.remove('k1')
-    $slide3.classList.add('n3')  
-    $slide3.classList.remove('n4')    
+  if($slide2.classList.contains('on-center')){
+    centerToRight($slide2)
+    leftToCenter($slide1)
+    $selectRight.classList.add('select-visibOut')
   }
-
-  if($selectRight.classList.contains('r0') && $slide2.classList.contains('k12')){
-    sandiaToRight()
-    acelgaToCenter2()
-
-    $slide2.classList.remove('k12')
-    $slide1.classList.add('s1')
+  if($slide3.classList.contains('on-center')){
+    centerToRight($slide3)
+    leftToCenter($slide2)
   }
-
-  if($selectRight.classList.contains('r0') && $slide2.classList.contains('k1')){
-    tomateToRight()    
-    sandiaToCenter2()
-
-    $slide2.classList.remove('k1')
-    $slide2.classList.add('k12')
-    $slide3.classList.remove('n1')
+  if($slide4.classList.contains('on-center')){
+    centerToRight($slide4)
+    leftToCenter($slide3)
   }
-
-  if($selectRight.classList.contains('r0') && $slide1.classList.contains('s12')){
-    sandiaToRight()
-    acelgaToCenter2()
-    
-    $slide1.classList.add('s1')
-    $slide1.classList.remove('s12')   
+  if($slide5.classList.contains('on-center')){
+    centerToRight($slide5)
+    leftToCenter($slide4)
+    $selectLeft.classList.remove('select-visibOut')
   }
-  
 })
-
 
 $selectLeft.addEventListener('click',(e)=>{
-
-  if($selectLeft.classList.contains('l0') && $slide4.classList.contains('d1')){
-    anquitoToLeft()
-
-    $slide4.classList.remove('d1')  
+  if($slide4.classList.contains('on-center')){
+    centerToLeft($slide4)
+    rightToCenter($slide5)
+    $selectLeft.classList.add('select-visibOut')
   }
-  
-  if($selectLeft.classList.contains('l0') && $slide3.classList.contains('n5')){
-    anquitoToCenter()
-    tomateToLeft()
-
-    
-    $slide4.classList.add('d1')  
+  if($slide3.classList.contains('on-center')){
+    centerToLeft($slide3)
+    rightToCenter($slide4)
   }
-  
-  if($selectLeft.classList.contains('l0') && $slide3.classList.contains('n4')){
-    tomateToCenter()
-    sandiaToLeft()
-
-    $slide3.classList.remove('n4') 
-    $slide3.classList.add('n5') 
+  if($slide2.classList.contains('on-center')){
+    centerToLeft($slide2)
+    rightToCenter($slide3)
   }
-
-  if($selectLeft.classList.contains('l0') && $slide3.classList.contains('n1')){
-    anquitoToCenter()
-    tomateToLeft()
-
-    $slide3.classList.remove('n1')
-    $slide2.classList.remove('k1')
-    $slide3.classList.add('n2')
-  }
-
-  if($selectLeft.classList.contains('l0') && $slide2.classList.contains('k12')){
-    tomateToCenter()
-    sandiaToLeft()
-
-    $slide1.classList.add('s12')
-    $slide2.classList.remove('k12')   
-  } 
-  
-  if($selectLeft.classList.contains('l0') && $slide1.classList.contains('s12')){
-    tomateToCenter()
-    sandiaToLeft()
-    
-    $slide1.classList.remove('s12')
-    $slide2.classList.add('k1')
-    $slide3.classList.add('n1')
-  } 
-  
-  if($selectLeft.classList.contains('l0') && $slide1.classList.contains('s1')){
-    acelgaToLeft()
-    sandiaToCenter()
-    
-    $slide1.classList.add('s12')
-    $slide1.classList.remove('s1') 
-    
+  if($slide1.classList.contains('on-center')){
+    centerToLeft($slide1)
+    rightToCenter($slide2)
+    $selectRight.classList.remove('select-visibOut')
   }
 })
 
-
-window.addEventListener('DOMContentLoaded',(e)=>{
-    acelgaToCenter()  
-    $slide1.classList.add('s1')
+window.addEventListener('DOMContentLoaded',(e)=>{  
+  rightToCenter($slide1)
+  $selectRight.classList.add('select-visibOut')
 })
 

@@ -30,6 +30,7 @@ const $tituAcerca = document.querySelector('.titu-acerca');
 //const $carousel = document.querySelector('.carousel-container');
 const $selectLeft = document.querySelector('.select-left');
 const $selectRight = document.querySelector('.select-right');
+const $slidesCont = document.querySelector('.slides-container');
 const $slide1 = document.querySelector('.slide:nth-child(1)');
 const $slide2 = document.querySelector('.slide:nth-child(2)');
 const $slide3 = document.querySelector('.slide:nth-child(3)');
@@ -106,80 +107,96 @@ window.addEventListener('click',(e)=>{
 
 // SLIDER
 
-const rightToCenter = function(e){
-   e.classList.add('to-left1')
-   e.classList.remove('to-right1')
-   e.classList.remove('to-right2')
-   e.classList.add('on-center')
+const s2focus = function(e){
+  e.classList.add('left1')  
+  e.classList.remove('right0')
 }
-const centerToLeft = function(e){
-  e.classList.add('to-left2')
-  e.classList.remove('to-left1')
-  e.classList.remove('to-right1')
-  e.classList.remove('to-right2')
-  e.classList.remove('on-center')
+const s3focus = function(e){
+  e.classList.add('left2')
+  e.classList.remove('left1')
+  e.classList.remove('right1')
 }
-const leftToCenter = function(e){
-  e.classList.add('to-right2')
-  e.classList.remove('to-right1')
-  e.classList.remove('to-left1')
-  e.classList.remove('to-left2')
-  e.classList.add('on-center')
+const s4focus = function(e){
+  e.classList.add('left3')
+  e.classList.remove('left2')
+  e.classList.remove('right2')
 }
-const centerToRight = function(e){
-  e.classList.add('to-right1')
-  e.classList.remove('to-right2')
-  e.classList.remove('to-left1')
-  e.classList.remove('to-left2')
-  e.classList.remove('on-center')
+const s5focus = function(e){
+  e.classList.add('left4')
+  e.classList.remove('left3')
+  e.classList.remove('right3')
+}
+// ***********
+const s4focusBack = function(e){
+  e.classList.add('right3')
+  e.classList.remove('right2')
+  e.classList.remove('left4')
+}
+const s3focusBack = function(e){
+  e.classList.add('right2')
+  e.classList.remove('right3')
+  e.classList.remove('left3')
+}
+const s2focusBack = function(e){
+  e.classList.add('right1')
+  e.classList.remove('right2')
+  e.classList.remove('left2')
+}
+const s1focusBack = function(e){
+  e.classList.add('right0') 
+  e.classList.remove('right1')
+  e.classList.remove('left1')
 }
 
 
 $selectRight.addEventListener('click',(e)=>{
     
   if($slide2.classList.contains('on-center')){
-    centerToRight($slide2)
-    leftToCenter($slide1)
-    $selectRight.classList.add('select-visibOut')
+    s1focusBack($slidesCont)
+    $slide2.classList.remove('on-center') 
+    $slide1.classList.add('on-center') 
   }
   if($slide3.classList.contains('on-center')){
-    centerToRight($slide3)
-    leftToCenter($slide2)
+    s2focusBack($slidesCont)
+    $slide3.classList.remove('on-center') 
+    $slide2.classList.add('on-center') 
   }
   if($slide4.classList.contains('on-center')){
-    centerToRight($slide4)
-    leftToCenter($slide3)
+    s3focusBack($slidesCont)
+    $slide4.classList.remove('on-center') 
+    $slide3.classList.add('on-center') 
   }
   if($slide5.classList.contains('on-center')){
-    centerToRight($slide5)
-    leftToCenter($slide4)
-    $selectLeft.classList.remove('select-visibOut')
+    s4focusBack($slidesCont)
+    $slide5.classList.remove('on-center') 
+    $slide4.classList.add('on-center') 
   }
 })
 
 $selectLeft.addEventListener('click',(e)=>{
   if($slide4.classList.contains('on-center')){
-    centerToLeft($slide4)
-    rightToCenter($slide5)
-    $selectLeft.classList.add('select-visibOut')
+    s5focus($slidesCont)
+    $slide4.classList.remove('on-center') 
+    $slide5.classList.add('on-center') 
   }
   if($slide3.classList.contains('on-center')){
-    centerToLeft($slide3)
-    rightToCenter($slide4)
+    s4focus($slidesCont)
+    $slide3.classList.remove('on-center') 
+    $slide4.classList.add('on-center') 
   }
   if($slide2.classList.contains('on-center')){
-    centerToLeft($slide2)
-    rightToCenter($slide3)
+    s3focus($slidesCont)
+    $slide2.classList.remove('on-center') 
+    $slide3.classList.add('on-center') 
   }
   if($slide1.classList.contains('on-center')){
-    centerToLeft($slide1)
-    rightToCenter($slide2)
-    $selectRight.classList.remove('select-visibOut')
+    s2focus($slidesCont)
+    $slide1.classList.remove('on-center') 
+    $slide2.classList.add('on-center') 
   }
 })
 
-window.addEventListener('DOMContentLoaded',(e)=>{  
-  rightToCenter($slide1)
-  $selectRight.classList.add('select-visibOut')
+window.addEventListener('DOMContentLoaded',(e)=>{ 
+  $slide1.classList.add('on-center') 
 })
 

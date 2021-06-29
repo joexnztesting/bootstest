@@ -242,6 +242,11 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 
+
+  .prod-huerta{
+    height: 130vh;
+  }
+
   .acerca{
     width: 100%;
   }  

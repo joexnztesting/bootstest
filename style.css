@@ -546,7 +546,130 @@ h1{
   z-index: 10;
 }
 .carousel-container{
-  /*border: 1px solid green;*/
+  border: 1px solid green;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel{
+  background: linear-gradient(45deg, rgba(252,176,69,.7) 0%, rgba(253,29,29,.7) 50%, rgba(131,58,180,.7) 100%);
+  box-shadow: 0px 4px 12px 0px rgba(90, 67, 67, 0.5);
+  border: 1px solid blue;  
+  position: relative;
+  display: flex;
+  align-items: center;    
+  justify-content: center;
+  overflow-x: hidden;
+  width: 316px;  
+}
+.slides-container{ 
+  border: 1px solid yellow;  
+  display: flex;
+  align-items: center;    
+  justify-content: center;
+  height: 478px;
+  width: 300px;   
+}
+.slide{
+  position: absolute;  
+  border: 1px solid blue;  
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  margin-left: 200%;
+  /*opacity: 0;*/
+}
+
+
+
+.to-center{
+  animation-name: to-center;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-center{
+  0%{
+    margin-left: 200%;
+  }
+  100%{
+    margin-left: 0%;
+  }
+}
+.to-left{
+  animation-name: to-left;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-left{
+  0%{
+    margin-left: 0%;
+  }
+  100%{
+    margin-left: -200%;
+  }
+}
+.to-center2{
+  animation-name: to-center2;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-center2{
+  0%{
+    margin-left: -200%;
+  }
+  100%{
+    margin-left: 0%;
+  }
+}
+.to-right{
+  animation-name: to-right;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes to-right{
+  0%{
+    margin-left: 0%;
+  }
+  100%{
+    margin-left: 200%;
+  }
+}
+
+.opacity-out{
+  opacity: 0;
+}
+.opacity-in{
+  opacity: 1;
+}
+
+
+/*
+.slide img{
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 3px;
+}
+*/
+/*
+.carousel-container{
   background-color: #fff;
   position: relative;
   display: flex;
@@ -562,18 +685,16 @@ h1{
   box-shadow: 0px 4px 12px 0px rgba(90, 67, 67, 0.5);
 }
 .slides-container{
-  /*border: 1px solid red;*/
   display: flex;  
   width: 500%;
 }
+
 .slide img{
   display: flex;
   align-items: center;
   border-radius: 12px;
   padding: 3px;
 }
-
-
 .left1{
   animation-name: to-left1;
   animation-duration: .4s;
@@ -705,7 +826,7 @@ h1{
 }
 .to-start{
   animation-name: to-start;
-  animation-duration: .4s;
+  animation-duration: .2s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;   
@@ -719,6 +840,7 @@ h1{
     transform: translateX(0%);
   }
 }
+*/
 
 
 /*  *****  */

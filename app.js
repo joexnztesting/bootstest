@@ -151,187 +151,194 @@ const toRight = function(e){
 
 
 
-
-
-
-
 window.addEventListener('DOMContentLoaded',(e)=>{
+  
+  const leftTocenter = function(e){
+    e.classList.add('opacity-in') 
+    e.classList.add('left-to-center') 
+    e.classList.remove('right-to-center')
+    e.classList.remove('center-to-left') 
+  }
+  const rightTocenterOut = function(e){
+    e.classList.remove('opacity-in') 
+    e.classList.add('right-to-center') 
+    e.classList.remove('center-to-right')
+  }
+  const centerToright = function(e){
+    e.classList.add('center-to-right') 
+    e.classList.remove('left-to-center')
+    e.classList.remove('right-to-center')
+  }
 
-  
 
-  $selectRight.addEventListener('click',(e)=>{
-    if($selectLeft.classList.contains('l1') && $slide2.classList.contains('to-center2')){    
-      $slide2.classList.add('to-right')
-      $slide2.classList.remove('to-center2')
-      $slide1.classList.add('to-center2')
-      $slide1.classList.remove('to-left')
-      $slide1.classList.remove('opacity-out')
-      $slide5.classList.add('to-left')
-      $slide5.classList.remove('to-right')
-      $slide4.classList.remove('to-right')
-      $slide3.classList.add('opacity-out')
-      $slide1.classList.add('fk')
-    } 
-    if($selectLeft.classList.contains('l1') && $slide3.classList.contains('to-center2')){    
-      $slide3.classList.add('to-right')
-      $slide3.classList.remove('to-center2')
-      $slide2.classList.add('to-center2') 
-      $slide2.classList.remove('to-left')
-      $slide2.classList.remove('opacity-out')
-      $slide1.classList.remove('to-right')
-      $slide1.classList.add('to-left')    
-      $slide4.classList.add('opacity-out')
-    } 
-    if($selectLeft.classList.contains('l1') && $slide4.classList.contains('to-center2')){    
-      $slide4.classList.add('to-right')
-      $slide4.classList.remove('to-center2')   
-      $slide3.classList.remove('opacity-out')
-      $slide3.classList.add('to-center2')
-      $slide3.classList.remove('to-left')    
-      $slide2.classList.add('to-left')     
-      $slide2.classList.remove('to-right')    
-      $slide5.classList.add('opacity-out')
-    } 
-    if($selectLeft.classList.contains('l1') && $slide5.classList.contains('to-center2')){    
-      $slide5.classList.add('to-right')
-      $slide5.classList.remove('to-center2')    
-      $slide4.classList.remove('opacity-out')
-      $slide4.classList.add('to-center2') 
-      $slide4.classList.remove('to-left')    
-      $slide3.classList.add('to-left')     
-      $slide3.classList.remove('to-right')
-      $slide1.classList.add('opacity-out')
-    } 
+  const c1fl = function(e){  
+    leftTocenter($slide1)  
+    centerToright($slide2)  
+    rightTocenterOut($slide3)     
+  }
+  const c5fl = function(e){
+    leftTocenter($slide5)
+    centerToright($slide1)
+    rightTocenterOut($slide2)     
+    $slide5.classList.remove('center-to-left') /* aux because start */      
+    $slide1.classList.remove('right-to-center') /* aux because start */       
+    $slide4.classList.remove('left-to-center') /* aux because start */
+  }
+  const c4fl = function(e){
+    leftTocenter($slide4)      
+    centerToright($slide5)
+    rightTocenterOut($slide1)     
+  }
+  const c3fl = function(e){
+    leftTocenter($slide3)     
+    centerToright($slide4)
+    rightTocenterOut($slide5)     
+  }
+  const c2fl = function(e){
+    leftTocenter($slide2)
+    centerToright($slide3)     
+    rightTocenterOut($slide4)     
+  }
   
-    if($selectLeft.classList.contains('l1') && $slide1.classList.contains('to-center22')){    
-      $slide1.classList.add('to-right')
-      $slide1.classList.remove('to-center')
-      $slide1.classList.remove('to-center2')
-      $slide5.classList.add('to-center2')
-      $slide5.classList.remove('to-left')
-      $slide5.classList.remove('opacity-out')    
-      $slide4.classList.add('to-left')     
-      $slide4.classList.remove('to-right')
-      $slide2.classList.add('opacity-out')
-      $slide1.classList.remove('to-center22')    
-    }
+  const c1fr = function(e){
+    $slide1.classList.add('opacity-in') 
+    $slide1.classList.add('right-to-center') 
+    $slide1.classList.remove('center-to-left')
+    $slide5.classList.add('center-to-left') 
+    $slide5.classList.remove('right-to-center')  
+    $slide4.classList.remove('opacity-in')
+    $slide4.classList.add('left-to-center') 
+    $slide4.classList.remove('center-to-left')
+  }
+  const c2fr = function(e){
+    $slide2.classList.add('opacity-in') 
+    $slide2.classList.add('right-to-center') 
+    $slide2.classList.remove('center-to-left')      
+    $slide5.classList.remove('opacity-in')
+    $slide5.classList.add('left-to-center') 
+    $slide5.classList.remove('center-to-left')
+    $slide1.classList.add('center-to-left') 
+    $slide1.classList.remove('right-to-center') 
+  }
+  const c3fr = function(e){
+    $slide3.classList.add('opacity-in') 
+    $slide3.classList.add('right-to-center') 
+    $slide3.classList.remove('center-to-left')
+    $slide2.classList.add('center-to-left') 
+    $slide2.classList.remove('right-to-center')
+    $slide1.classList.remove('opacity-in')
+    $slide1.classList.add('left-to-center') 
+    $slide1.classList.remove('center-to-left')
+  }
+  const c4fr = function(e){
+    $slide4.classList.add('opacity-in') 
+    $slide4.classList.add('right-to-center') 
+    $slide4.classList.remove('center-to-left')
+    $slide3.classList.add('center-to-left') 
+    $slide3.classList.remove('right-to-center')
+    $slide2.classList.remove('opacity-in')
+    $slide2.classList.add('left-to-center') 
+    $slide2.classList.remove('center-to-left')
+  }
+  const c5fr = function(e){
+    $slide5.classList.add('opacity-in') 
+    $slide5.classList.add('right-to-center') 
+    $slide5.classList.remove('center-to-left')      
+    $slide4.classList.add('center-to-left') 
+    $slide4.classList.remove('right-to-center')      
+    $slide3.classList.remove('opacity-in')
+    $slide3.classList.add('left-to-center') 
+    $slide3.classList.remove('center-to-left')
+  }
   
-    if($slide1.classList.contains('fk')){    
-      $slide1.classList.remove('fk')
-      $slide1.classList.add('to-center22')    
-    }
-  })
   // *************************************************
-  $selectLeft.addEventListener('click',(e)=>{
+  
+  $selectRight.addEventListener('click',(e)=>{
+
+    if($selectRight.classList.contains('r4')){      
+      c2fl()
+      $selectRight.classList.remove('r4')
+      $selectRight.classList.add('fk')
+    } 
+    if($selectRight.classList.contains('r3')){      
+      c3fl()
+      $selectRight.classList.remove('r3')
+      $selectRight.classList.add('r4')
+    } 
+    if($selectRight.classList.contains('r2')){      
+      c4fl()
+      $selectRight.classList.remove('r2')
+      $selectRight.classList.add('r3')
+    } 
+
     
-    if($selectRight.classList.contains('r0')  && $slide5.classList.contains('to-center')){      
-      
-      $slide5.classList.add('to-left')
-      $slide5.classList.remove('to-center')
-
-      $slide1.classList.add('to-center')    
-      $slide1.classList.remove('opacity-out')  
-      $slide1.classList.remove('to-right')
-  
-      $slide3.classList.add('opacity-out')
-      $slide3.classList.add('to-right')
-      $slide3.classList.remove('to-left')
-
-      $slide1.classList.add('af')
-  
+    if($selectRight.classList.contains('r1')){      
+      c5fl()   
+      $selectRight.classList.remove('r1')
+      $selectRight.classList.add('r2')
     }
-    if($selectRight.classList.contains('r0')  && $slide4.classList.contains('to-center')){
-      
-      $slide5.classList.remove('opacity-out')
-      $slide5.classList.add('to-center')
-      $slide5.classList.remove('to-right')
-      
-  
-      $slide4.classList.add('to-left')
-      $slide4.classList.remove('to-center')
-  
-      $slide3.classList.add('opacity-out')
-      $slide3.classList.add('to-right')
-      $slide3.classList.remove('to-left')
-  
+    
+    if($selectRight.classList.contains('r11')){ 
+      $selectRight.classList.remove('r11')   
+      $selectRight.classList.add('r0')  
+      //$selectRight.classList.remove('r1')
+      //$selectRight.classList.add('r2')
     }
-    if($selectRight.classList.contains('r0')  && $slide3.classList.contains('to-center')){
-      
-      $slide3.classList.add('to-left')
-      $slide3.classList.remove('to-center')
-      
-      $slide4.classList.remove('opacity-out')
-      $slide4.classList.add('to-center')
-      $slide4.classList.remove('to-right')   
-      
-      $slide2.classList.add('opacity-out')
-      $slide2.classList.add('to-right')
-      $slide2.classList.remove('to-left')
+    
+    if($selectRight.classList.contains('r0')){
+      c1fl()
+      $selectRight.classList.remove('r0')
+      $selectRight.classList.add('r1')
+    }    
+
+    if($selectRight.classList.contains('fk')){    
+      $selectRight.classList.remove('fk')
+      $selectRight.classList.add('r0')    
     }
-    if($selectRight.classList.contains('r0')  && $slide2.classList.contains('to-center')){  
-      
-      $slide3.classList.add('to-center')
-      $slide3.classList.remove('to-right')
-      $slide3.classList.remove('opacity-out')    
-      
-      $slide2.classList.add('to-left')
-      $slide2.classList.remove('to-center')
-            
-      $slide1.classList.add('to-right')    
-      $slide1.classList.remove('to-left')
-      $slide1.classList.add('opacity-out')    
-    }/*
-    if($selectRight.classList.contains('r0')  && $slide1.classList.contains('to-center')){ 
 
-      $slide5.classList.add('opacity-out')   
-      $slide5.classList.add('to-right')
-      $slide5.classList.remove('to-left')
-  
-      $slide1.classList.add('to-left')
-      $slide1.classList.remove('to-center') 
-  
-      $slide2.classList.add('to-center')
-      $slide2.classList.remove('to-right')   
-      $slide2.classList.remove('opacity-out')   
-
-      $slide2.classList.remove('to-center11')         
-      
-    }  */
-    if($selectRight.classList.contains('r0')  && $slide1.classList.contains('to-center11')){ 
-
-      
-  
-      $slide1.classList.add('to-left')
-      $slide1.classList.remove('to-center') 
-  
-      $slide2.classList.add('to-center')
-      $slide2.classList.remove('to-right')   
-      $slide2.classList.remove('opacity-out')   
-
-      $slide2.classList.remove('to-center11')         
-      
-    }  
-    if($slide1.classList.contains('af')){
-      $slide1.classList.remove('af')
-      $slide1.classList.add('to-center11')
-    }
   })
 
 
+  $selectLeft.addEventListener('click',(e)=>{    
+    if($selectLeft.classList.contains('l4')){
+      c5fr()      
+      $selectLeft.classList.remove('l4')
+      $selectLeft.classList.add('fk')
+    }
+    if($selectLeft.classList.contains('l3')){
+      c4fr()
+      $selectLeft.classList.remove('l3')
+      $selectLeft.classList.add('l4')
+    }
+    if($selectLeft.classList.contains('l2')){      
+      c3fr()
+      $selectLeft.classList.remove('l2')
+      $selectLeft.classList.add('l3')
+    }
+    if($selectLeft.classList.contains('l1')){
+      c2fr()
+      $selectLeft.classList.remove('l1')
+      $selectLeft.classList.add('l2')
+      $selectLeft.classList.remove('l0') /* aux because start */
 
-  // clase habilitadora
-  $slide1.classList.add('to-center')
-  // clases auxiliares
-  $slide1.classList.add('to-center22')
-  $slide1.classList.add('to-center11')
+      $selectRight.classList.add('r11') /* * */
+      $selectRight.classList.remove('r1') /* * */
+      
+    }    
+    if($selectLeft.classList.contains('l0')){      
+      c1fr() 
+      $selectLeft.classList.remove('l0')
+      $selectLeft.classList.add('l1')
+    }
+    if($selectLeft.classList.contains('fk')){
+      $selectLeft.classList.remove('fk')
+      $selectLeft.classList.add('l0')
+    }
+  })
 
-  $slide5.classList.add('opacity-out')    
-  $slide4.classList.add('opacity-out')    
-  $slide3.classList.add('opacity-out')    
-  $slide2.classList.add('opacity-out') 
-  
-  $selectLeft.classList.add('l1') // cuenta como que ya dio una vuelta
-  $selectRight.classList.add('r0')
+  c1fr()  /* to start  */
+  $selectLeft.classList.add('l1') /* to start  */
+  $selectRight.classList.add('r1') /* to start */
 })
 
 // FIN SLIDER  ***************************************************

@@ -272,7 +272,7 @@ img{
 /*    HEADER    */
 
 .header-img{
-  background-image: url("./img/header1.5B.jpg");  
+  background-image: url("./img/header1.12B.jpg");  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;       
@@ -581,37 +581,37 @@ h1{
   display: flex;
   justify-content: center;
   width: 300px;
-  margin-left: 200%;
-  /*opacity: 0;*/
+  opacity: 0;
 }
 
 
 
-.to-center{
-  animation-name: to-center;
+
+.left-to-center{
+  animation-name: left-to-center;
   animation-duration: .4s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
-@keyframes to-center{
+@keyframes left-to-center{
   0%{
-    margin-left: 200%;
+    margin-left: -200%;
   }
   100%{
     margin-left: 0%;
   }
 }
-.to-left{
-  animation-name: to-left;
+.center-to-left{
+  animation-name: center-to-left;
   animation-duration: .4s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
-@keyframes to-left{
+@keyframes center-to-left{
   0%{
     margin-left: 0%;
   }
@@ -619,7 +619,7 @@ h1{
     margin-left: -200%;
   }
 }
-.to-center2{
+.right-to-center{
   animation-name: to-center2;
   animation-duration: .4s;
   animation-timing-function: ease-in-out;
@@ -635,15 +635,15 @@ h1{
     margin-left: 0%;
   }
 }
-.to-right{
-  animation-name: to-right;
+.center-to-right{
+  animation-name: center-to-right;
   animation-duration: .4s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
-@keyframes to-right{
+@keyframes center-to-right{
   0%{
     margin-left: 0%;
   }
@@ -651,10 +651,23 @@ h1{
     margin-left: 200%;
   }
 }
-
-.opacity-out{
-  opacity: 0;
+.right-to-center{
+  animation-name: right-to-center;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
 }
+@keyframes right-to-center{
+  0%{
+    margin-left: 200%;
+  }
+  100%{
+    margin-left: 0%;
+  }
+}
+
 .opacity-in{
   opacity: 1;
 }

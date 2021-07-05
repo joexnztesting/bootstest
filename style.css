@@ -271,22 +271,26 @@ img{
 
 /*    HEADER    */
 
-.header-img{/*
+.header-container{/*
   background-image: url("./img/header1.12B.jpg");  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;  */     
   display: flex;
-  flex-direction: column-reverse;
-  height: 92vh;
+  justify-content: center;
+  align-items: center;
+  height: 92vh; /* 92 */
   position: relative;
+  overflow-x: hidden;
 }
-.header-img img{
-  position: absolute;
+.imagen-header{ 
+  /*border: 1px solid red;*/
+  transform: scale(1.42);
 }
 
 .logo{ 
-  order: 2;
+  position: absolute;
+  top: 15vh;  
   /*border: 1px solid blueviolet;*/
   height: calc(20vh);
   opacity: 0;
@@ -302,21 +306,23 @@ img{
   }
 }
 
-h1{ 
+h1{  
+  position: absolute;
+  top: 40vh;
   font-family: 'Public Sans', sans-serif;
   color: #fff;
   text-align: center;
   font-size: calc(1rem + 3vw);
   letter-spacing: .10rem;
   border-radius: 10px;  
-  background: linear-gradient(45deg, rgba(0,201,43,.60) 0%, rgb(29, 163, 253,.60) 100%);
+  background: linear-gradient(45deg, rgba(0,201,43,.55) 0%, rgb(29, 163, 253,.55) 100%);
   box-shadow: 
     inset 0px 6px 6px -4px rgb(131, 255, 245),
     inset -7px 0px 10px -6px rgb(131, 255, 245),
     inset 0px -7px 10px -6px rgb(131, 255, 245),
     inset 7px 0px 10px -6px  rgb(131, 255, 245);
   text-shadow: 0 2px 2px #000;
-  margin: 5vh calc(1vw + 8vw) 15vh;
+  margin: 0 calc(1vw + 8vw);
   padding: 5vw;
   transform: translateX(-100vw);
   animation-name: texto-in;

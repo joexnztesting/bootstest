@@ -196,9 +196,13 @@
     }
   }
 
+
+  /*
   .header-img{
     background-image: url("./img/fondo4.jpg");
   } 
+  */
+
   .logo{
     height: calc(20vh + 1.5vw);
   }

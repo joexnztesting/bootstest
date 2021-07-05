@@ -522,7 +522,7 @@ h1{
 
 
 .prod-huerta{
-  height: 140vh;
+  height: 180vh;
 }
 
 .select-left{
@@ -552,7 +552,9 @@ h1{
   width: 98%;
   max-width: 600px;
   margin: 0 auto;
-  position: relative;
+  position: sticky;
+  top: 65px;
+  margin-bottom: 60px;
 }
 
 .carousel{

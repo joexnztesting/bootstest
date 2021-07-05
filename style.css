@@ -522,7 +522,7 @@ h1{
 
 
 .prod-huerta{
-  height: 150vh;
+  height: 140vh;
 }
 
 .select-left{
@@ -532,7 +532,7 @@ h1{
   width: 48px;
   border-radius: 50%;
   position: absolute;
-  left: 8px;
+  left: 0px;
   z-index: 10;
 }
 .select-right{
@@ -542,46 +542,52 @@ h1{
   width: 48px;
   border-radius: 50%;
   position: absolute;
-  right: 8px;
+  right: 0px;
   z-index: 10;
 }
 .carousel-container{
-  border: 1px solid green;
-  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 98%;
   max-width: 600px;
   margin: 0 auto;
   position: relative;
 }
+
 .carousel{
-  background: linear-gradient(45deg, rgba(252,176,69,.7) 0%, rgba(253,29,29,.7) 50%, rgba(131,58,180,.7) 100%);
+  background: rgba(245, 245, 245);
   box-shadow: 0px 4px 12px 0px rgba(90, 67, 67, 0.5);
-  border: 1px solid blue;  
+  border-radius: 8px;  
   position: relative;
   display: flex;
   align-items: center;    
   justify-content: center;
   overflow-x: hidden;
-  width: 316px;  
+  height: calc(370px + 5vw);
+  width: calc(250px + 5vw);  
 }
 .slides-container{ 
-  border: 1px solid yellow;  
   display: flex;
   align-items: center;    
   justify-content: center;
-  height: 478px;
-  width: 300px;   
+  height: 100%;
+  width: 100%;   
 }
 .slide{
-  position: absolute;  
-  border: 1px solid blue;  
+  position: absolute; 
+  width: calc(214px + 5vw);
+  opacity: 0;
+}
+.marco-img{
+  background:  linear-gradient(45deg, rgba(252,176,69) 0%, rgba(253,29,29) 50%, rgba(131,58,180) 100%);
   display: flex;
   justify-content: center;
-  width: 300px;
-  opacity: 0;
+  padding: 4px;
+  border-radius: 8px;
+}
+.marco-img img{
+  border-radius: 4px;
 }
 
 .opacity-in{

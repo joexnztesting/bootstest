@@ -13,7 +13,7 @@ function menuOpen(e){
   panelMenu.classList.remove('menu-not-actv');      
   panelMenu.classList.add('menu-actv');
   items.classList.add('menu-items-active');
-  $bodyy.classList.add('no-scroll');
+  //$bodyy.classList.add('no-scroll');
 };
 function menuClose(e){
   if(hmbBtn.classList.contains('isactive')){

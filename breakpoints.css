@@ -35,6 +35,25 @@
   h1{
     margin: 5vh calc(1vw + 10vw) 16vh;
   }
+
+
+  .prod-huerta{
+    height: 120vh;
+  }
+
+  .carousel-container{
+    width: 94%;
+  }
+  .carousel{
+    height: calc(420px + 8vw);
+    width: calc(280px + 8vw);  
+  }
+  .slide{
+    width: calc(240px + 8vw);
+  }
+
+
+
   .marco{
     width: 85%;
   }
@@ -117,7 +136,26 @@
   }
   .card:last-child{
     margin-bottom: 0px;
-  }  
+  }
+  
+  .prod-huerta{
+    height: 100vh;
+  }
+
+  .carousel-container{
+    width: calc(85% - 10vw);
+  }
+  .carousel{
+    height: calc(500px + 10vw);
+    width: calc(330px + 10vw);  
+  }
+  .slide{
+    width: calc(270px + 10vw);
+  }/*
+  .marco-img img{
+    width: calc(380px + 10vw);
+  }*/
+
   
   .fondo-manos{
     background-image: url("./img/fondo3.jpg"); 
@@ -170,6 +208,25 @@
     padding: calc(5vw - 2vw);
     margin: 5vh calc(1vw + 25vw) 14vh;
   }
+
+
+
+  .carousel-container{
+    width: calc(80% - 10vw);
+  }
+  .carousel{
+    height: calc(520px + 15vw);
+    width: calc(350px + 15vw);  
+  }
+  .slide{
+    width: calc(270px + 15vw);
+  }
+  .marco-img img{
+    width: calc(300px + 10vw);
+  } 
+
+
+
   
   .marco{
     width: calc(90% - 25vw);
@@ -246,6 +303,20 @@
   .prod-huerta{
     height: 130vh;
   }
+
+
+  .carousel-container{
+    width: calc(80% - 10vw);
+  }
+  .carousel{
+    height: calc(520px + 15vw);
+    width: calc(350px + 15vw);  
+  }
+  .slide{
+    width: calc(290px + 10vw);
+  }
+
+
 
   .acerca{
     width: 100%;

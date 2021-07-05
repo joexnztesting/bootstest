@@ -271,14 +271,18 @@ img{
 
 /*    HEADER    */
 
-.header-img{
+.header-img{/*
   background-image: url("./img/header1.12B.jpg");  
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;       
+  background-repeat: no-repeat;  */     
   display: flex;
   flex-direction: column-reverse;
   height: 92vh;
+  position: relative;
+}
+.header-img img{
+  position: absolute;
 }
 
 .logo{ 

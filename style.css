@@ -351,10 +351,6 @@ h1{
   font-size: 1.1rem;
   margin-left: 10px;
 }
-.titu-prod-huerta{
-  margin-top: 80px;
-}
-
 .los-prod{
   /*padding: 0px 0 60px;
   position: relative;*/
@@ -524,7 +520,15 @@ h1{
 .prod-huerta{
   height: 180vh;
 }
-
+.titu-huerta{
+  background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
+  margin: 85px auto 0;  
+  line-height: 50px;
+}
+.titu-huerta span{
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
 .select-left{
   background-color: rgba(255, 255, 255, 0.75);
   border: 2px solid rgb(142, 255, 249);
@@ -554,7 +558,6 @@ h1{
   margin: 0 auto;
   position: sticky;
   top: 65px;
-  margin-bottom: 60px;
 }
 
 .carousel{
@@ -683,6 +686,7 @@ h1{
   background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%);
   text-align: center; 
   line-height: 50px; 
+  margin-top: 80px;
 }
 .ocultar-titu{
   animation-name: ocultar-titu;

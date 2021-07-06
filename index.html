@@ -64,41 +64,44 @@
     </div>
     
     <section id="productos" class="los-prod">            
-      <div class="titu-manten"><p>" Mantenimiento de Hogar y Jardín "</p></div>
+      <div class="titu-manten"><p>" Mantenimiento de Hogar y Jardín "</p></div>      
+      
+      <div class="info-cards-container"></div>
+      
       <div class="cards">
         <div class="card">
           <img src="./img/cards/alacr.png" alt="mata alacranes">
           <div class="figcap">
             <p>No Tóxico para niños y mascotas</p>
-            <div><p class="mas-info">Más info...</p></div>
+            <div><a href="./assets/card_alacran_info.html" class="mas-info">Más info...</a></div>
           </div>
         </div>
         <div class="card">
           <img src="./img/cards/cucas.png" alt="">
           <div class="figcap">
             <p>Elimina colonias de hogares e industrias</p>
-            <div><p class="mas-info">Más info...</p></div>
+            <div><a href="./assets/card_cuca_info.html" class="mas-info">Más info...</a></div>
           </div>
         </div>
         <div class="card">
           <img src="./img/cards/hormig.png" alt="">
           <div class="figcap">
             <p>Diseñado para erradicar hormigueros</p>
-            <div><p class="mas-info">Más info...</p></div>
+            <div><a href="./assets/card_hormig_info.html"  class="mas-info">Más info...</a></div>
           </div>
         </div>        
         <div class="card">
           <img src="./img/cards/primpaso.png" alt="">
           <div class="figcap">
             <p>Muy útil para el mantenimiento de cañerías</p>
-            <div><p class="mas-info">Más info...</p></div>
+            <div><a href="./assets/card_primpaso_info.html"  class="mas-info">Más info...</a></div>
           </div>
         </div>
         <div class="card">
           <img src="./img/cards/aqui_no.png" alt="">
           <div class="figcap">
             <p>Mantiene la higiene dentro y fuera de la casa</p>
-            <div><p class="mas-info">Más info...</p></div>
+            <div><a href="./assets/card_aquino_info.html"  class="mas-info">Más info...</a></div>
           </div>
         </div> 
         <span class="span-2"></span>       
@@ -106,11 +109,12 @@
           <img src="./img/cards/cuater.png" alt="">
           <div class="figcap">
             <p>Listo para usar, de amplio espectro</p>
-            <div><p class="mas-info">Más info...</p></div>
+            <div><a href="./assets/card_cuater_info.html"  class="mas-info">Más info...</a></div>
           </div>
         </div>        
       </div>            
     </section>
+
 
         
     <div class="separador titu-huerta">
@@ -160,36 +164,7 @@
             </div>
           </div>
       </div>    
-
-    </section>
-    
-    <div class="info-cards-container"></div>
-
-    <!-- HACERLO CON AJAX 
-    <div class="info-cards visib-out">
-      <div class="info-card-fondo">        
-        <div class="xclose">x</div>        
-        <div class="info-card">
-          <div class="info-row">
-            <img src="./img/cards/alacr-info.jpg" alt="">
-            <div class="img-info">MATA ALACRAN<br>x 150gr (polvo)</div>            
-          </div>
-          <div class="info-card-info">            
-            <div>Exclusiva formulación <b>no tóxica para niños ni mascotas.</b> Elimina y previene la presencia de alacranes en el hogar, industria, etc...
-            </div>
-            <div><div>Modo de uso:</div>Espolvorear MATA ALACRAN sobre rejillas y rincones o espacios humedos y oscuros donde se alojan dichos insectos. Colocar también bajo puertas y espacios donde pueda ingresar el alacran.
-            Como efecto residual mata también todo tipo de insecto rastrero que pase por dicho producto.</div>
-            <div><div>Compuesto Principal:</div>  Tierra de Diatomeas</div>
-            <div>Su función es dañar la capa cerosa del insecto, su exoesqueleto. Absorbe sus liquidos corporales logrando la desidratacion del insecto.
-            Dicho producto esta aprobado por senasa.</div>           
-            
-            <div><div>Mata y seca las siguientes clases de alacranes:</div>Tityus trivittatus (Familia Buthiidae)T. bahiensis, T. confluens T. trivittatus Bothriurus bonariensis.</div>            
-          </div>
-        </div>  
-      </div>
-    </div>    
-     HACERLO CON AJAX -->
-    
+    </section>       
 
     <div class="separador titu-acerca">
       <p>Acerca de Nosotros</p>
@@ -215,7 +190,7 @@
       <p>Ventas</p>
     </div>
 
-    <div class="social-icons">      
+    <section class="social-icons">      
       <div class="contacto-envios">
         <div>" Hacemos envíos a todo el país "</div>
       </div>      
@@ -225,7 +200,7 @@
         <div><a href="https://api.whatsapp.com/send?phone=5493515118011" target="_blank"><img src="./img/icon-social-face.svg" alt="icon-face"></a></div>
         <div><a href="https://api.whatsapp.com/send?phone=5493515118011" target="_blank"><img src="./img/icon-social-twt.svg" alt="icon-twt"></a></div>
       </div>
-    </div>
+    </section>
     
     <div class="separador titu-contc">
       <p>Contacto</p>
@@ -270,60 +245,11 @@
   </main>
 
 
+<script src="./card-info-insert.js"></script> 
 <script src="./nav-bar.js"></script> 
 <script src="form.js"></script>
-<script src="app.js"></script>
 <script src="slider.js"></script>
-
-<script>
-
-const d = document,
-$cardInfo = d.querySelector(".info-cards-container")
-
-const getHTML = (options)=>{
-    let {url, success, error} = options;
-    
-    const xhr = new XMLHttpRequest()
-
-    xhr.addEventListener("readystatechange", e=>{
-        if(xhr.readyState !== 4)return;
-
-        if(xhr.status >= 200 && xhr.status < 300){
-            let html = xhr.responseText;
-            success(html)
-        }else{
-            let message = xhr.statusText || "Ocurrió un error";
-            error(`Error: ${xhr.status}:${message}`)
-        }
-    });
-
-    xhr.open("GET", url);
-
-    xhr.setRequestHeader("Content-type", "text/html; charset=utf-8");
-
-    xhr.send();
-}
-
-d.addEventListener("DOMContentLoaded", e=>{
-    getHTML({
-        url:"assets/card_alacran_info.html",
-        success:(html)=>$cardInfo.innerHTML = html,
-        error:(err)=> $cardInfo.innerHTML = `<h1>${err}</h1>`
-    })
-})
-
-d.addEventListener("click", e=>{
-    if(e.target.matches(".menu a")){
-        e.preventDefault();
-        getHTML({
-        url: e.target.href,
-        success:(html)=>$cardInfo.innerHTML = html,
-        error:(err)=> $cardInfo.innerHTML = `<h1>${err}</h1>`
-    })
-    }
-})
-
-</script>
+<script src="app.js"></script>
 
 </body>
 </html>

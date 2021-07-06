@@ -92,7 +92,7 @@ $span4.forEach((el)=>observer6.observe(el));
 
 
 // DETALLE INFO CARDS
-
+/*
 const $infoCards = document.querySelector('.info-cards');
 const $body = document.querySelector('.container-princ');
 const $docum = document.querySelector('.htemele');
@@ -109,3 +109,4 @@ window.addEventListener('click',(e)=>{
     $docum.classList.remove('fondo-htemele');
   }  
 })
+*/

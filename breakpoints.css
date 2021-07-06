@@ -1,10 +1,7 @@
 
 
-@media (min-width: 350px) { 
-  
-  .header-img{
-    height: 93.5vh;
-  }  
+@media (min-width: 350px) {   
+   
   .container-nav{
     position: -webkit-sticky;
     position: -moz-sticky;
@@ -32,8 +29,19 @@
     top: -93.5vh;
   }
 
+
+  .header-container{
+    height: 93.5vh;
+  }
+  .imagen-header{
+    transform: scale(1.65); 
+  }
+  .logo{
+    top: 20vh; 
+    height: calc(19vh);
+  }
   h1{
-    margin: 5vh calc(1vw + 10vw) 16vh;
+    top: 45vh;
   }
 
 
@@ -106,10 +114,27 @@
     }
   }
 
-  h1{ /*color: red;*/
-    font-size: calc(1rem + 2.5vw);
-    margin: 5vh calc(1vw + 18vw) 14vh;
+  
+  .header-container{
+    height: 95vh;    
   }
+  .imagen-header{
+    opacity: 0;
+  }
+  .imagen-header-desk{
+    transform: scale(1.45);
+    opacity: 1; 
+  }
+  .logo{
+    top: 25vh; 
+    height: calc(20vh);
+  }
+  h1{ /*color: red;*/
+    top: 50vh;
+    width: 70%;
+    font-size: calc(1.5rem + 2.5vw);
+  }  
+
 
   .los-prod{
     padding: 0 0 65px;
@@ -197,22 +222,22 @@
   }
 
 
-  /*
-  .header-img{
-    background-image: url("./img/fondo4.jpg");
-  } 
-  */
-
+  .header-container{
+    height: 93.5vh;    
+  }
+  .imagen-header-desk{
+    transform: scale(1.15);
+    opacity: 1; 
+  }
   .logo{
+    top: 20vh; 
     height: calc(20vh + 1.5vw);
   }
-  
-  h1{ /*color: rgb(255, 201, 23);*/
-    font-size: calc(1rem + 2.2vw);
-    padding: calc(5vw - 2vw);
-    margin: 5vh calc(1vw + 25vw) 14vh;
+  h1{ /*  color: rgb(255, 201, 23);*/
+    top: 47vh;
+    width: 65%;
+    font-size: calc(1.6rem + 2.5vw);
   }
-
 
 
   .carousel-container{
@@ -255,7 +280,7 @@
 @media (min-width: 992px) {  
 
   html{
-    width: calc(100% - 25vw);
+    width: calc(100% - 20vw);
     margin: 0 auto;
     box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.15);
   }
@@ -276,18 +301,33 @@
       padding: 0 3vw 0 5vw;
     }
   }
-  
-  h1{ /*color: blue;*/
-    font-size: calc(1rem + 1.5vw);
-    margin: 5vh calc(1vw + 15vw) 14vh;
-  } 
 
-  
+
+  .header-container{
+    height: 94.5vh;    
+  }
+  .images{
+    transform: scale(1.35);
+  }
+  .imagen-header-desk{
+    transform: scale(.9);
+  }
+  .logo{
+    top: calc(20vh + 4vw);
+    height: calc(19vh + 1.5vw);
+  }
+  h1{  /*color: yellow;*/
+    top: calc(46vh + 4vw);
+    width: 60%;
+    font-size: calc(1.3rem + 2.3vw);
+    padding: 3vw 6vw;
+  }  
+
   .info-card-fondo{
     width: calc(100% - 25vw);
     padding: 8vh 0;
   }
-  .info-card{ border: 1px solid red;
+  .info-card{ /*border: 1px solid red;*/
     height: 82vh;
     width: 80%;
   }
@@ -374,20 +414,32 @@
     }
   }
 
-  /*
-  h1{
-    color: salmon;
-  }*/
 
-  .logo{
-    height: calc(20vh + 1vw);
+  .header-container{
+    height: 94vh;    
   }
+  .images{
+    transform: scale(1.25);
+  }
+  .imagen-header-desk{
+    transform: scale(.8);
+  }
+  .logo{
+    top: calc(18vh + 4vw);
+    height: calc(17vh + 1.3vw);
+  }
+  h1{  /*color: salmon;*/
+    top: calc(42vh + 4vw);
+    width: 55%;
+    font-size: calc(1.3rem + 2vw);
+    padding: 3vw 6vw;
+  }  
 
 
   .info-card-fondo{
     padding: 10vh 0;
   }
-  .info-card{ border: 1px solid red;
+  .info-card{ /*border: 1px solid red;*/
     height: 80vh;
     width: 70%;
   }
@@ -434,15 +486,33 @@
     }
   }
   
-  /*
-  h1{
-    color: rgb(241, 93, 209);
-  }*/
+
+  .header-container{
+    height: 94vh;    
+  }
+  .images{
+    transform: scale(1.25);
+  }
+  .imagen-header-desk{
+    transform: scale(.8);
+  }
+  .logo{
+    top: calc(18vh + 4vw);
+    height: calc(20vh + 1.3vw);
+  }
+  h1{  /*color: #fff;*/
+    top: calc(44vh + 4vw);
+    width: 50%;
+    font-size: calc(1.3rem + 2vw);
+    padding: 3vw 6vw;
+  }  
+
+
 
   .info-card-fondo{
     padding: 12vh 0;
   }
-  .info-card{ border: 1px solid red;
+  .info-card{
     height: 76vh;
     width: 60%;
   }
@@ -466,6 +536,26 @@
 
 
 @media (min-width: 1600px) {
+
+  .header-container{
+    height: 94vh;    
+  }
+  .images{
+    transform: scale(.9);
+  }
+  .imagen-header-desk{
+    transform: scale(1);
+  }
+  .logo{
+    top: calc(16vh + 4vw);
+    height: calc(19vh + 1vw);
+  }
+  h1{  /*color:red;*/
+    top: calc(42vh + 4vw);
+    width: 47%;
+    font-size: calc(1.3rem + 2vw);
+    padding: 3vw 6vw;
+  } 
 
   .marco{
     width: calc(70%);

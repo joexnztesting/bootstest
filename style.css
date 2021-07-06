@@ -277,21 +277,32 @@ img{
   background-position: center;
   background-repeat: no-repeat;  */     
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
-  height: 92vh; /* 92 */
+  height: 92vh;
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
-.imagen-header{ 
-  /*border: 1px solid red;*/
-  transform: scale(1.42);
+.images{ /*border: 1px solid red;*/
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagen-header{
+  position: absolute;
+  transform: scale(1.42); 
+}
+.imagen-header-desk{
+  /*border: 1px solid blue;*/
+  opacity: 0;
 }
 
 .logo{ 
   position: absolute;
-  top: 15vh;  
-  /*border: 1px solid blueviolet;*/
+  top: 15vh; 
   height: calc(20vh);
   opacity: 0;
   animation-name: logo-in;
@@ -309,21 +320,21 @@ img{
 h1{  
   position: absolute;
   top: 40vh;
+  width: 80%;
+  padding: 5vw 7vw;
   font-family: 'Public Sans', sans-serif;
   color: #fff;
   text-align: center;
   font-size: calc(1rem + 3vw);
-  letter-spacing: .10rem;
-  border-radius: 10px;  
+  letter-spacing: .12rem;
+  text-shadow: 0 2px 2px #000;
   background: linear-gradient(45deg, rgba(0,201,43,.55) 0%, rgb(29, 163, 253,.55) 100%);
   box-shadow: 
-    inset 0px 6px 6px -4px rgb(131, 255, 245),
-    inset -7px 0px 10px -6px rgb(131, 255, 245),
-    inset 0px -7px 10px -6px rgb(131, 255, 245),
-    inset 7px 0px 10px -6px  rgb(131, 255, 245);
-  text-shadow: 0 2px 2px #000;
-  margin: 0 calc(1vw + 8vw);
-  padding: 5vw;
+  inset 0px 6px 6px -4px rgb(131, 255, 245),
+  inset -7px 0px 10px -6px rgb(131, 255, 245),
+  inset 0px -7px 10px -6px rgb(131, 255, 245),
+  inset 7px 0px 10px -6px  rgb(131, 255, 245);
+  border-radius: 10px;  
   transform: translateX(-100vw);
   animation-name: texto-in;
   animation-delay: 0s;
@@ -338,8 +349,8 @@ h1{
   }
 }
 
-/*    SECTION 1   */
 
+/* *****  SEPARADORES TITU  ***** */
 .separador{
   position: sticky;
   top: 0;
@@ -351,23 +362,74 @@ h1{
   font-weight: bolder;
   padding: 0px 20px;
 }
-
+.separador span{
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
 .titu-prod{
   background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
   margin: 0 auto;  
   line-height: 50px;
 }
-.titu-prod span{
-  font-size: 1.1rem;
-  margin-left: 10px;
+.titu-huerta{
+  background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
+  margin: 85px auto 0;  
+  line-height: 50px;
 }
+.titu-acerca{  
+  background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%);
+  text-align: center; 
+  line-height: 53px; 
+  margin-top: 80px;
+}
+.titu-ventas, .titu-contc{
+  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgb(223, 24, 24) 40%, rgba(252,176,69,1) 95%);
+  text-align: center;
+  line-height: 53px;
+}
+
+.ocultar-titu{
+  animation-name: ocultar-titu;
+  animation-delay: 0s;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes ocultar-titu{
+  100%{
+    opacity: 0;
+    visibility: hidden; 
+  }
+}
+.mostrar-titu{
+  animation-name: mostrar-titu;
+  animation-delay: 0s;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes mostrar-titu{
+  0%{
+    opacity: 0;
+    visibility: hidden; 
+  }
+  100%{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* *****  FIN SEPARADORES TITU  ***** */
+
+
+
+/*    SECTION 1   */
 .los-prod{
   /*padding: 0px 0 60px;
   position: relative;*/
   background-color: rgb(253, 253, 253);
 }
-
-
 .titu-manten{ /*border: 1px solid red; */
   text-align: center;
   padding: 40px calc(10vw + 3vw) 60px;
@@ -380,15 +442,12 @@ h1{
   border-bottom: 2px solid rgb(173, 209, 173) ;
   padding-bottom: 16px;
 }
-
-
 .cards{
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .card{
   width: 80%;
   max-width: 300px;
@@ -530,15 +589,6 @@ h1{
 .prod-huerta{
   height: 180vh;
 }
-.titu-huerta{
-  background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
-  margin: 85px auto 0;  
-  line-height: 50px;
-}
-.titu-huerta span{
-  font-size: 1.1rem;
-  margin-left: 10px;
-}
 .select-left{
   background-color: rgba(255, 255, 255, 0.75);
   border: 2px solid rgb(142, 255, 249);
@@ -569,7 +619,6 @@ h1{
   position: sticky;
   top: 65px;
 }
-
 .carousel{
   background: rgba(245, 245, 245);
   box-shadow: 0px 4px 12px 0px rgba(90, 67, 67, 0.5);
@@ -604,7 +653,6 @@ h1{
 .marco-img img{
   border-radius: 4px;
 }
-
 .opacity-in{
   opacity: 1;
 }
@@ -690,47 +738,7 @@ h1{
   }
 }
 
-/*  *****  */
-
-.titu-acerca{  
-  background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%);
-  text-align: center; 
-  line-height: 50px; 
-  margin-top: 80px;
-}
-.ocultar-titu{
-  animation-name: ocultar-titu;
-  animation-delay: 0s;
-  animation-duration: .5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;   
-  animation-fill-mode: forwards;
-}
-@keyframes ocultar-titu{
-  100%{
-    opacity: 0;
-    visibility: hidden; 
-  }
-}
-.mostrar-titu{
-  animation-name: mostrar-titu;
-  animation-delay: 0s;
-  animation-duration: .5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;   
-  animation-fill-mode: forwards;
-}
-@keyframes mostrar-titu{
-  0%{
-    opacity: 0;
-    visibility: hidden; 
-  }
-  100%{
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
+/*  ***** SECTION ACERCA *****  */
 
 .acerca{
   background-image: url("./img/fondo01.jpg");  
@@ -777,16 +785,6 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.titu-ventas{
-  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgb(223, 24, 24) 40%, rgba(252,176,69,1) 95%);
-  text-align: center;
-  width: 100%;
-  font-family: 'Public Sans', sans-serif;
-  font-size: calc(1.35rem + 1vw);
-  color: rgb(255, 255, 255);
-  font-weight: bolder;
-  line-height: 50px;
 }
 .contacto-envios{/*border: 1px solid blue;*/
   font-family: 'Sansita Swashed', cursive;

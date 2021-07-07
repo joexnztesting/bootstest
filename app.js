@@ -1,13 +1,13 @@
-const $span1 = document.querySelectorAll('.span-1');
-const $span2 = document.querySelectorAll('.span-2');
-const $span3 = document.querySelectorAll('.span-3');
-const $span4 = document.querySelectorAll('.span-4');
+const $span1 = document.querySelectorAll('.bq-semillas');
+const $span2 = document.querySelectorAll('.card:nth-child(5)');
+const $span3 = document.querySelectorAll('.titu-acerca');
+
 const $tituProd = document.querySelector('.titu-prod');
 const $tituHuerta = document.querySelector('.titu-huerta');
+const $tituAcerca = document.querySelector('.titu-acerca');
 
 const $socialIcons = document.querySelectorAll('.row-icons');
 const $marcoPlantas = document.querySelectorAll('.marco-plantas');
-const $tituAcerca = document.querySelector('.titu-acerca');
 
 
 const stickyOut = (entries)=>{
@@ -16,26 +16,6 @@ entries.forEach(entry=>{
     if($tituAcerca.classList.contains('separador')){
       $tituAcerca.classList.add('ocultar-titu')
       $tituAcerca.classList.remove('mostrar-titu')
-    }    
-  }
-})
-}
-const stickyOut2 = (entries)=>{
-entries.forEach(entry=>{
-  if(entry.isIntersecting){
-    if($tituProd.classList.contains('separador')){
-      $tituProd.classList.add('ocultar-titu')
-      $tituProd.classList.remove('mostrar-titu')
-    }    
-  }
-})
-}
-const stickyOut3 = (entries)=>{
-entries.forEach(entry=>{
-  if(entry.isIntersecting){
-    if($tituHuerta.classList.contains('separador')){
-      $tituHuerta.classList.add('ocultar-titu')
-      $tituHuerta.classList.remove('mostrar-titu')
     }    
   }
 })
@@ -50,12 +30,32 @@ entries.forEach(entry=>{
   }
 })
 }
-const stickyIn2 = (entries)=>{
+const stickyOut2 = (entries)=>{
 entries.forEach(entry=>{
   if(entry.isIntersecting){
-    if($tituProd.classList.contains('ocultar-titu')){
-      $tituProd.classList.add('mostrar-titu')
-      $tituProd.classList.remove('ocultar-titu')
+    if($tituProd.classList.contains('separador')){
+      $tituProd.classList.add('ocultar-titu')
+      $tituProd.classList.remove('mostrar-titu')
+    }    
+  }
+})
+}
+const stickyIn2 = (entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      if($tituProd.classList.contains('ocultar-titu')){
+        $tituProd.classList.add('mostrar-titu')
+        $tituProd.classList.remove('ocultar-titu')
+      }    
+    }
+  })
+}
+const stickyOut3 = (entries)=>{
+entries.forEach(entry=>{
+  if(entry.isIntersecting){
+    if($tituHuerta.classList.contains('separador')){
+      $tituHuerta.classList.add('ocultar-titu')
+      $tituHuerta.classList.remove('mostrar-titu')
     }    
   }
 })
@@ -76,20 +76,56 @@ const observer2 = new IntersectionObserver(stickyIn, {threshold:0.3});
 
 const observer3 = new IntersectionObserver(stickyOut2, {threshold:0.5});
 const observer4 = new IntersectionObserver(stickyIn2, {threshold:0.5});
-const observer5 = new IntersectionObserver(stickyOut3, {threshold:0.5});
-const observer6 = new IntersectionObserver(stickyIn3, {threshold:0.5});
+const observer5 = new IntersectionObserver(stickyOut3, {threshold:0.1});
+const observer6 = new IntersectionObserver(stickyIn3, {threshold:0.1});
 
 $socialIcons.forEach((el)=>observer1.observe(el));
 $marcoPlantas.forEach((el)=>observer2.observe(el));
-
 $span1.forEach((el)=>observer3.observe(el));
 $span2.forEach((el)=>observer4.observe(el));
 $span3.forEach((el)=>observer5.observe(el));
-$span4.forEach((el)=>observer6.observe(el));
+$span1.forEach((el)=>observer6.observe(el));
 
 
 
+/*
+// SLIDER
+window.addEventListener('DOMContentLoaded', (e)=>{
 
+    const $nextBtn = document.querySelector('.slider-btns .next'),
+        $prevBtn = document.querySelector('.slider-btns .prev'),
+        $slides = document.querySelectorAll('.slider2-slide');
+
+        let i = 0;
+
+        document.addEventListener('click',(e)=>{
+            if(e.target===$prevBtn){
+                e.preventDefault()
+                $slides[i].classList.remove('active')
+
+                i--   
+
+                if(i<0){
+                    i = $slides.length - 1
+                }
+                $slides[i].classList.add('active')
+            }
+            if(e.target===$nextBtn){
+                e.preventDefault()
+                $slides[i].classList.remove('active')
+                
+                i++
+                
+                if(i>=$slides.length){
+                    i = 0
+                }
+                $slides[i].classList.add('active')
+            }
+        })
+
+})
+// FIN SLIDER
+*/
 
 // DETALLE INFO CARDS
 /*

@@ -1,20 +1,19 @@
-const d = document
 
 function contactForm(){
-  const $form = d.querySelector('.contact-form'),
-    $inputs = d.querySelectorAll('.contact-form [required]') 
+  const $form = document.querySelector('.contact-form'),
+    $inputs = document.querySelectorAll('.contact-form [required]') 
 
   //console.log($inputs);
 
   $inputs.forEach((input)=>{
-      const $span = d.createElement('span')
+      const $span = document.createElement('span')
       $span.id = input.name
       $span.textContent = input.title
       $span.classList.add('contact-form-error', 'none')
       input.insertAdjacentElement('afterend', $span)
   })
 
-  d.addEventListener('keyup',(e)=>{
+  document.addEventListener('keyup',(e)=>{
     if(e.target.matches('.contact-form [required]')){
         let $input = e.target,
         pattern = $input.pattern || $input.dataset.pattern
@@ -25,25 +24,25 @@ function contactForm(){
             //console.log('El input tiene pattern');
             let regex = new RegExp(pattern)
             return !regex.exec($input.value)
-            ? d.getElementById($input.name).classList.add('is-active')
-            : d.getElementById($input.name).classList.remove('is-active')
+            ? document.getElementById($input.name).classList.add('is-active')
+            : document.getElementById($input.name).classList.remove('is-active')
         }
         if(!pattern){
             //console.log('El input NO tiene pattern');
             return $input.value === ""
-            ? d.getElementById($input.name).classList.add('is-active')
-            : d.getElementById($input.name).classList.remove('is-active')
+            ? document.getElementById($input.name).classList.add('is-active')
+            : document.getElementById($input.name).classList.remove('is-active')
         }
     }
   })
 
-  d.addEventListener('submit', (e)=>{
+  document.addEventListener('submit', (e)=>{
     /* desactivar para el envío // activar para simulacion*/
     e.preventDefault()
     //alert('Enviando Formulario')
 
-    const $loader = d.querySelector('.contact-form-loader'),
-    $response = d.querySelector('.contact-form-response')
+    const $loader = document.querySelector('.contact-form-loader'),
+    $response = document.querySelector('.contact-form-response')
 
     $loader.classList.remove('none')
     
@@ -74,4 +73,4 @@ function contactForm(){
   })
 }
 
-d.addEventListener("DOMContentLoaded", contactForm())
+document.addEventListener("DOMContentLoaded", contactForm())

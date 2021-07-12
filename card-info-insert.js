@@ -44,3 +44,9 @@ d.addEventListener("click", e=>{
     })
   }
 })
+d.addEventListener("click", e=>{
+  if(e.target.matches(".xclose")){
+    e.preventDefault();
+    window.location.reload()
+  }
+})

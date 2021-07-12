@@ -274,11 +274,7 @@ img{
 
 /*    HEADER    */
 
-.header-container{/*
-  background-image: url("./img/header1.12B.jpg");  
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;  */     
+.header-container{ 
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
@@ -295,12 +291,7 @@ img{
   align-items: center;
 }
 .imagen-header{
-  position: absolute;
   transform: scale(1.42); 
-}
-.imagen-header-desk{
-  /*border: 1px solid blue;*/
-  opacity: 0;
 }
 
 .logo{ 
@@ -844,11 +835,6 @@ h1{
   margin: 25vh 0 20vh;
   border-top-left-radius: 35px;
   border-bottom-right-radius: 35px;  
-}
-.sol{
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
 }
 .marco-plantas p{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

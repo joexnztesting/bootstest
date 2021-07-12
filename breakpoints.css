@@ -118,15 +118,17 @@
 
   
   .header-container{
-    height: 95vh;    
+    height: 95vh;      
+    background-image: url("./img/header-desk.jpg");  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .imagen-header{
     opacity: 0;
   }
-  .imagen-header-desk{
-    transform: scale(1.45);
-    opacity: 1; 
-  }
+
+
   .logo{
     top: 25vh; 
     height: calc(20vh);
@@ -222,10 +224,7 @@
   .header-container{
     height: 93.5vh;    
   }
-  .imagen-header-desk{
-    transform: scale(1.15);
-    opacity: 1; 
-  }
+
   .logo{
     top: 20vh; 
     height: calc(20vh + 1.5vw);
@@ -306,9 +305,7 @@
   .images{
     transform: scale(1.35);
   }
-  .imagen-header-desk{
-    transform: scale(.9);
-  }
+
   .logo{
     top: calc(20vh + 4vw);
     height: calc(19vh + 1.5vw);
@@ -370,13 +367,6 @@
     border-top-right-radius: 50%;
     border-bottom-right-radius: 0;
     border: 7px solid rgb(255, 201, 23);
-  }  
-  .sol{
-    height: calc(150px + 1vw);
-    width: calc(150px + 1vw);
-    opacity: .7;
-    visibility: visible;    
-    margin-bottom: calc(20px + 1vw);
   }
   .marco-plantas p{
     font-size: 1.6rem;
@@ -418,9 +408,7 @@
   .images{
     transform: scale(1.25);
   }
-  .imagen-header-desk{
-    transform: scale(.8);
-  }
+
   .logo{
     top: calc(18vh + 4vw);
     height: calc(17vh + 1.3vw);
@@ -490,9 +478,7 @@
   .images{
     transform: scale(1.25);
   }
-  .imagen-header-desk{
-    transform: scale(.8);
-  }
+
   .logo{
     top: calc(18vh + 4vw);
     height: calc(20vh + 1.3vw);
@@ -540,9 +526,7 @@
   .images{
     transform: scale(.9);
   }
-  .imagen-header-desk{
-    transform: scale(1);
-  }
+
   .logo{
     top: calc(16vh + 4vw);
     height: calc(19vh + 1vw);

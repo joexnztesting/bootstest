@@ -103,14 +103,14 @@ const observer6 = new IntersectionObserver(stickyIn3, {threshold:0.1});
 const observer7 = new IntersectionObserver(stickyOut4, {threshold:0.1});
 const observer8 = new IntersectionObserver(stickyIn4, {threshold:0.1});
 
-$span4.forEach((el)=>observer1.observe(el));
-$span5.forEach((el)=>observer2.observe(el));
-$span1.forEach((el)=>observer3.observe(el));
-$span2.forEach((el)=>observer4.observe(el));
-$span3.forEach((el)=>observer5.observe(el));
-$span1.forEach((el)=>observer6.observe(el));
-$span6.forEach((el)=>observer7.observe(el));
-$span7.forEach((el)=>observer8.observe(el));
+//$span4.forEach((el)=>observer1.observe(el));
+//$span5.forEach((el)=>observer2.observe(el));
+//$span1.forEach((el)=>observer3.observe(el));
+//$span2.forEach((el)=>observer4.observe(el));
+//$span3.forEach((el)=>observer5.observe(el));
+//$span1.forEach((el)=>observer6.observe(el));
+//$span6.forEach((el)=>observer7.observe(el));
+//$span7.forEach((el)=>observer8.observe(el));
 
 
 

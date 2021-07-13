@@ -40,7 +40,7 @@
     top: 20vh; 
     height: calc(19vh);
   }
-  h1{
+  h1{ /*color: blueviolet;*/
     top: 45vh;
   }
 
@@ -116,9 +116,9 @@
     }
   }
 
-  
-  .header-container{
-    height: 95vh;      
+
+  .img-head{ /*border: 1px solid yellowgreen;*/
+    height: 93.5vh;
     background-image: url("./img/header-desk.jpg");  
     background-size: cover;
     background-position: center;
@@ -221,15 +221,16 @@
   }
 
 
-  .header-container{
-    height: 93.5vh;    
+  .img-head{ /*border: 1px solid red;    */
+    width: 100%;
+    background-size: cover;
   }
 
   .logo{
     top: 20vh; 
     height: calc(20vh + 1.5vw);
   }
-  h1{ /*  color: rgb(255, 201, 23);*/
+  h1{ /* color: rgb(255, 201, 23);*/
     top: 47vh;
     width: 65%;
     font-size: calc(1.6rem + 2.5vw);
@@ -299,18 +300,14 @@
   }
 
 
-  .header-container{
-    height: 94.5vh;    
-  }
-  .images{
-    transform: scale(1.35);
+  .img-head{ /*border: 1px solid blue;    */
   }
 
   .logo{
     top: calc(20vh + 4vw);
     height: calc(19vh + 1.5vw);
   }
-  h1{  /*color: yellow;*/
+  h1{ /* color: yellow;*/
     top: calc(46vh + 4vw);
     width: 60%;
     font-size: calc(1.3rem + 2.3vw);
@@ -402,18 +399,12 @@
   }
 
 
-  .header-container{
-    height: 94vh;    
-  }
-  .images{
-    transform: scale(1.25);
-  }
 
   .logo{
     top: calc(18vh + 4vw);
     height: calc(17vh + 1.3vw);
   }
-  h1{  /*color: salmon;*/
+  h1{ /* color: salmon;*/
     top: calc(42vh + 4vw);
     width: 55%;
     font-size: calc(1.3rem + 2vw);
@@ -471,19 +462,15 @@
     }
   }
   
-
-  .header-container{
-    height: 94vh;    
-  }
-  .images{
-    transform: scale(1.25);
+  .img-head{ /*border: 1px solid red;*/
+    background-size: calc(90% - 5vw);
   }
 
   .logo{
     top: calc(18vh + 4vw);
     height: calc(20vh + 1.3vw);
   }
-  h1{  /*color: #fff;*/
+  h1{ /* color: #fff;*/
     top: calc(44vh + 4vw);
     width: 50%;
     font-size: calc(1.3rem + 2vw);
@@ -520,18 +507,15 @@
 
 @media (min-width: 1600px) {
 
-  .header-container{
-    height: 94vh;    
-  }
-  .images{
-    transform: scale(.9);
+  .img-head{ /*border: 1px solid red;  */ 
+    background-size: calc(85% - 8vw);
   }
 
   .logo{
     top: calc(16vh + 4vw);
     height: calc(19vh + 1vw);
   }
-  h1{  /*color:red;*/
+  h1{ /* color:red;*/
     top: calc(42vh + 4vw);
     width: 47%;
     font-size: calc(1.3rem + 2vw);

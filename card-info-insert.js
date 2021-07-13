@@ -1,6 +1,7 @@
 
 const d = document,
 $cardInfo = d.querySelector(".info-cards-container");
+const $body = document.querySelector('.container-princ');
 
 const getHTML = (options)=>{
   let {url, success, error} = options;
@@ -42,11 +43,13 @@ d.addEventListener("click", e=>{
       success:(html)=>$cardInfo.innerHTML = html,
       error:(err)=> $cardInfo.innerHTML = `<h1>${err}</h1>`
     })
+    $body.classList.add('no-scroll');
   }
 })
 d.addEventListener("click", e=>{
   if(e.target.matches(".xclose")){
-    e.preventDefault();
-    window.location.reload()
+    //e.preventDefault();
+    window.location.reload()    
+    $body.classList.remove('no-scroll');
   }
 })

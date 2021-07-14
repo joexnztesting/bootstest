@@ -40,11 +40,9 @@
     top: 20vh; 
     height: calc(19vh);
   }
-  h1{ /*color: blueviolet;*/
+  h1{ /*  color: red; */
     top: 45vh;
   }
-
-
 
   .info-card-fondo{
     padding: 10vh 0;
@@ -73,12 +71,9 @@
     right: 8px;
     top: -15px;
   }
-
-
-
   
   .prod-huerta{
-    height: 100vh;
+    height: 110vh;
   }
   .carousel-container{
     width: 94%;
@@ -110,10 +105,15 @@
   
 }
 
+/* Only for J7*/
 @media (min-width: 370px) {
-  .formu-container{ height: 80vh;
+  .formu-container{ height: 80vh;}
+  .prod-huerta{
+    height: 100vh;
   }
 }
+/* Only for J7*/
+
 
 @media (min-width: 520px) {
 
@@ -135,7 +135,9 @@
       padding: 0 4vw 0 6vw;
     }
   }
-
+  .imagen-header{
+    opacity: 0;
+  }
   .img-head{ /*border: 1px solid yellowgreen;*/
     height: 93.5vh;
     background-image: url("./img/header-desk.jpg");  
@@ -143,19 +145,15 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-  .imagen-header{
-    opacity: 0;
-  }
   .logo{
-    top: 25vh; 
+    top: 20vh; 
     height: calc(20vh);
   }
-  h1{ /*color: red;*/
-    top: 50vh;
-    width: 70%;
-    font-size: calc(1.5rem + 2.5vw);
+  h1{ /*  color: blue;  */
+    top: 45vh;
+    width: 65%;
+    font-size: calc(1.7rem + 2vw);
   }  
-
 
   .los-prod{
     padding: 0 0 65px;
@@ -239,10 +237,17 @@
     right: -15px;
     top: -15px;
   }
-
   
   .prod-huerta{
-    height: 100vh;
+    height: 85vh;
+  }
+  .bq-semillas{ 
+    padding: 60px calc(10vw + 10vw);
+  }
+  .bq-semillas{
+    font-size: calc(1.9rem + .2vw);
+    line-height: 2.7rem;
+    padding-bottom: 50px;
   }
 
   .carousel-container{
@@ -286,7 +291,6 @@
     }
   }
 
-
   .img-head{ /*border: 1px solid red;    */
     width: 100%;
     background-size: cover;
@@ -294,13 +298,13 @@
 
   .logo{
     top: 20vh; 
-    height: calc(20vh + 1.5vw);
+    height: calc(20vh);
   }
-  h1{ /* color: rgb(255, 201, 23);*/
-    top: 47vh;
-    width: 65%;
-    font-size: calc(1.6rem + 2.5vw);
-  }
+  h1{ /*  color: red; */
+    top: 45vh;
+    width: 60%;
+    font-size: calc(1.7rem + 1.5vw);
+  } 
  
 
   .prod-huerta{
@@ -327,8 +331,6 @@
     width: 60%;
     /*top: 24vh;*/
   }
-
-
 
 
   .carousel-container{
@@ -394,16 +396,13 @@
   .img-head{ /*border: 1px solid blue;    */
   }
 
-  .logo{
-    top: calc(20vh + 4vw);
-    height: calc(19vh + 1.5vw);
-  }
-  h1{ /* color: yellow;*/
-    top: calc(46vh + 4vw);
-    width: 60%;
-    font-size: calc(1.3rem + 2.3vw);
-    padding: 3vw 6vw;
-  }  
+
+  h1{   color: blue; 
+    top: 45vh;
+    width: 55%;
+    font-size: calc(1.7rem + 1vw);
+  } 
+
 
   .info-card-fondo{
     width: calc(100% - 20vw);
@@ -471,7 +470,7 @@
     top: calc(18vh + 4vw);
     height: calc(17vh + 1.3vw);
   }
-  h1{ /* color: salmon;*/
+  h1{  color: red;
     top: calc(42vh + 4vw);
     width: 55%;
     font-size: calc(1.3rem + 2vw);
@@ -522,14 +521,12 @@
     top: calc(18vh + 4vw);
     height: calc(20vh + 1.3vw);
   }
-  h1{ /* color: #fff;*/
+  h1{  color: blue;
     top: calc(44vh + 4vw);
     width: 50%;
     font-size: calc(1.3rem + 2vw);
     padding: 3vw 6vw;
   }  
-
-
   .marco{
     width: calc(85% - 4vw);
     padding: 4vw 3vw 2vw;
@@ -554,7 +551,7 @@
     top: calc(12vh + 3vw);
     height: calc(19vh + 1vw);
   }
-  h1{ /* color:red;*/
+  h1{  color:red;
     top: calc(37vh + 3vw);
     width: 47%;
     font-size: calc(1.3rem + 2vw);

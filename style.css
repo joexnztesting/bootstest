@@ -386,7 +386,7 @@ h1{
   background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%);
   text-align: center; 
   line-height: 53px; 
-  margin-top: 80px;
+  /*margin-top: 80px;*/
 }
 .titu-ventas, .titu-contc{
   background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgb(223, 24, 24) 40%, rgba(252,176,69,1) 95%);
@@ -645,14 +645,47 @@ h1{
 }
 
 
+.btn-prueba{
+  background-color: aquamarine;
+  padding: 15px;
+  width: 100px;
+  margin: 50px auto;
+  border: none;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-prueba:hover{
+  background-color: rgb(149, 160, 255);
+}
+.btn-prueba:focus{
+  background-color: rgb(255, 176, 147); 
+  outline: 0; 
+}
+.btn-prueba:active{
+  background-color: rgb(255, 115, 225);
+}
 
 
 /* *********  CAROUSEL  ************  */
 
-.prod-huerta{
-  height: 110vh;
+.prod-huerta{ /*  border: 1px solid green; */
+  background-color: #fff;
+  height: 130vh;
   display: flex;
-  flex-direction: column-reverse;  
+  flex-direction: column;  
+  position: relative;
+}
+.bq-semillas{ /*border: 1px solid red; */
+  text-align: center;
+  padding: 40px calc(10vw + 3vw);
+}
+.bq-semillas p{
+  font-family: 'Sansita Swashed', cursive;
+  color: green;
+  font-size: 1.7rem; 
+  line-height: 2.2rem;
+  border-bottom: 2px solid rgb(173, 209, 173) ;
+  padding-bottom: 16px;
 }
 .carousel-container{
   display: flex;
@@ -662,26 +695,6 @@ h1{
   max-width: 600px;
   margin: 0 auto;
   position: relative;
-}
-.select-left{
-  background-color: rgba(255, 255, 255, 0.75);
-  border: 2px solid rgb(142, 255, 249);
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0px;
-  z-index: 10;
-}
-.select-right{
-  background-color: rgba(255, 255, 255, 0.75);
-  border: 2px solid rgb(142, 255, 249);
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  position: absolute;
-  right: 0px;
-  z-index: 10;
 }
 .carousel{
   background: rgba(245, 245, 245);
@@ -719,6 +732,26 @@ h1{
 }
 .opacity-in{
   opacity: 1;
+}
+.select-left{
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 2px solid rgb(142, 255, 249);
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  z-index: 10;
+}
+.select-right{
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 2px solid rgb(142, 255, 249);
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  z-index: 10;
 }
 
 .left-to-center{

@@ -37,10 +37,10 @@ img{
 /*   NAV-BAR   */
 
 .container-nav{
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -o-sticky;
-  position: -ms-sticky;
+  position: -webkit-fixed;
+  position: -moz-fixed;
+  position: -o-fixed;
+  position: -ms-fixed;
   position: fixed;
   width: 100%;
   bottom: 9vh;
@@ -156,6 +156,10 @@ img{
    background-color: rgba(0, 0, 0, 0.25);
    width: 100%;
    height: 93vh;
+   position: -webkit-absolute;
+   position: -moz-absolute;
+   position: -o-absolute;
+   position: -ms-absolute;
    position: absolute;
    top: -93vh;
    z-index: 998;
@@ -200,6 +204,10 @@ img{
    display: flex;
    flex-direction: column;  
    justify-content: center;
+   position: -webkit-absolute;
+   position: -moz-absolute;
+   position: -o-absolute;
+   position: -ms-absolute;   
    position: absolute;
    z-index: 999;
    height: 93vh;
@@ -295,6 +303,10 @@ img{
 }
 
 .logo{ 
+  position: -webkit-absolute;
+  position: -moz-absolute;
+  position: -o-absolute;
+  position: -ms-absolute;  
   position: absolute;
   top: 15vh; 
   height: calc(20vh);
@@ -532,54 +544,79 @@ h1{
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
-  padding: 10vh 0;
+  padding: 5vh 0;
+}
+.info-card-container{
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
 }
 .info-card{ 
   font-family: 'Public Sans', sans-serif;
   border: 3px solid rgb(152, 246, 253);
   border-radius: 20px;
-  height: 80vh;
+  height: 90vh;
   background-color: #fff;
   width: 90%;
   margin: 0vh auto;
   overflow: hidden;
+  position: relative;
 }
+
 .info-row{ 
   border-bottom: 2px solid rgb(186, 250, 255);
   margin-left: 20px;
   margin-right: 20px;
   background-color: #fff;
+  height: 35%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; 
-  padding: 15px 0;
+  align-items: center;
 }
 .info-row img{
   border: 3px solid rgb(152, 246, 253);
-  width: 52%;
+  width: 50%;
   border-radius: 50%;
 }
 .img-info{
   font-weight: bold;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.6rem;
   color: green;
+  padding: 0 10px;
 }
+.img-info-cuca{
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
 .info-card-info{
-  height: 70%;
+  height: 65%;
   overflow: scroll;
   padding: 10px 25px;
 }
-.info-card-info div{
+.card-info-1{
   padding: 15px 10px;
-  border-top: 2px dotted rgb(211, 211, 211);
   font-size: 1.2rem;
-}
-.info-card-info div:first-child{
-  border: none;
   color: green;
+}
+.card-info-2, 
+.card-info-3,
+.card-info-4,
+.card-info-5{
+  padding: 15px 10px;
+  font-size: 1.15rem;
+  border-top: 2px dotted rgb(211, 211, 211);
+}
+.card-info-2 div, 
+.card-info-3 div,
+.card-info-4 div,
+.card-info-5 div{
+  color: green;
+  font-size: 1.25rem;
+  margin-bottom: 5px;
 }
 .xclose{
   border: 2px solid rgb(255, 166, 64);
@@ -593,9 +630,10 @@ h1{
   background-color: rgb(255, 36, 36);
   color: #fff;
   position: absolute;
-  right: calc(5% - 10px);
-  top: calc(10vh - 15px);
+  right: 4px;
+  top: -12px;
   cursor: pointer;
+  z-index: 3000;
 }
 .visib-out{
   opacity: 0;
@@ -605,70 +643,6 @@ h1{
   height: 100%;
   overflow: hidden;
 }
-
-/* 
-.slider2{
-  position: relative;
-  width: 80%;
-  margin: 1rem auto;
-  text-align: center;
-}
-
-.slider2-slides{
-  position: relative;
-  height: 850px;
-}
-
-.slider2-slide{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease;
-}
-
-.slider2-slide img{
-    height: inherit;
-    width: inherit;
-    object-fit: cover;
-    object-position: 50% 0%;
-    border: thin solid #000;
-}
-
-.slider2-slide.active{
-    opacity: 1;
-    visibility: visible;    
-}
-
-.slider-btns{
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 3rem;
-}
-
-.slider2 a{
-    display: block;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    border: thin solid #000;
-    text-decoration: none;
-    background-color: #fff;
-    color: #000;
-    transition: all .3s ease;
-}
-
-.slider2 a:hover{
-    color: #4d4d4d;
-}*/
-
-
 
 
 

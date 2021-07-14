@@ -44,6 +44,38 @@
     top: 45vh;
   }
 
+
+
+  .info-card-fondo{
+    padding: 10vh 0;
+  }
+  .info-card{
+    height: 80vh;
+    width: 88%;
+  }  
+  .info-row img{
+    width: 50%;
+    margin-left: 6px;
+  }
+  .img-info{
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+  }
+  .img-info-cuca{
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+  .xclose{
+    width: 32px;
+    height: 32px;
+    line-height: 24px;
+    font-size: 1.25rem;
+    right: 8px;
+    top: -15px;
+  }
+
+
+
   
   .prod-huerta{
     height: 100vh;
@@ -59,8 +91,6 @@
     width: calc(240px + 8vw);
   }
 
-
-
   .marco{
     width: 85%;
   }
@@ -72,17 +102,7 @@
   .row-icons div{
     width: 48px;
   }
-  /*
-  .contacto-sumate{ border: 1px solid blue;
-    width: 75%;
-    font-size: 1.6rem;
-    position: absolute;
-    top: 27vh;
-    padding: 0;
-  }
-  .btn-cont{
-    margin: 50px 0 160px;
-  }*/ 
+
   .footer{
     padding: 2.5vh 0 3vh;
     margin-bottom: 6vh;
@@ -116,7 +136,6 @@
     }
   }
 
-
   .img-head{ /*border: 1px solid yellowgreen;*/
     height: 93.5vh;
     background-image: url("./img/header-desk.jpg");  
@@ -127,8 +146,6 @@
   .imagen-header{
     opacity: 0;
   }
-
-
   .logo{
     top: 25vh; 
     height: calc(20vh);
@@ -166,6 +183,63 @@
   .card:last-child{
     margin-bottom: 0px;
   }
+
+
+  .info-card-fondo{
+    padding: 14vh 0;
+  }
+  .info-card-container{
+    width: 430px;
+  }
+  .info-card{
+    height: 70vh;
+    width: 430px;
+  }  
+  .info-row{
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .info-row img{
+    width: 18vh;
+    height: 18vh;
+    margin-left: 0px;
+    margin-right: 6px;
+  }
+  .img-info{
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+  }
+  .img-info-cuca{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }  
+  .info-card-info{
+    padding: 10px 50px;
+  }
+  .card-info-1{
+    font-size: 1.35rem;
+  }  
+  .card-info-2, 
+  .card-info-3,
+  .card-info-4,
+  .card-info-5{
+    font-size: 1.25rem;
+  }
+  .card-info-2 div, 
+  .card-info-3 div,
+  .card-info-4 div,
+  .card-info-5 div{
+    font-size: 1.35rem;
+  }
+  .xclose{
+    width: 34px;
+    height: 34px;
+    line-height: 25px;
+    font-size: 1.4rem;
+    right: -15px;
+    top: -15px;
+  }
+
   
   .prod-huerta{
     height: 100vh;
@@ -180,10 +254,7 @@
   }
   .slide{
     width: calc(270px + 10vw);
-  }/*
-  .marco-img img{
-    width: calc(380px + 10vw);
-  }*/
+  }
  
   .row-icons{ /*border: 1px solid red;*/
     width: 60%;
@@ -194,11 +265,6 @@
     width: 60%;
     /*top: 24vh;*/
   }
-  /*
-  .footer{
-    padding: 2vh 0 11vh;
-  }*/
-  
 }
 
 
@@ -235,6 +301,34 @@
     width: 65%;
     font-size: calc(1.6rem + 2.5vw);
   }
+ 
+
+  .prod-huerta{
+    height: 100vh;
+  }
+
+  .carousel-container{
+    width: calc(85% - 10vw);
+  }
+  .carousel{
+    height: calc(500px + 10vw);
+    width: calc(330px + 10vw);  
+  }
+  .slide{
+    width: calc(270px + 10vw);
+  }
+ 
+  .row-icons{ /*border: 1px solid red;*/
+    width: 60%;
+    padding: 40px 0 ;
+  }
+
+  .contacto-sumate{ /*border: 1px solid blue;*/
+    width: 60%;
+    /*top: 24vh;*/
+  }
+
+
 
 
   .carousel-container{
@@ -250,8 +344,6 @@
   .marco-img img{
     width: calc(300px + 10vw);
   } 
-
-
 
   
   .marco{
@@ -299,7 +391,6 @@
     }
   }
 
-
   .img-head{ /*border: 1px solid blue;    */
   }
 
@@ -315,30 +406,13 @@
   }  
 
   .info-card-fondo{
-    width: calc(100% - 25vw);
-    padding: 8vh 0;
+    width: calc(100% - 20vw);
+    margin: 0 auto;
   }
-  .info-card{ /*border: 1px solid red;*/
-    height: 82vh;
-    width: 80%;
-  }
-  .xclose{
-    width: 35px;
-    height: 35px;
-    line-height: 30px;
-    font-size: 1.5rem;
-    right: calc(10% - 17px);
-    top: calc(8vh - 17px);
-  }
-  .fondo-htemele{
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
 
   .prod-huerta{
     height: 130vh;
   }
-
 
   .carousel-container{
     width: calc(80% - 10vw);
@@ -350,8 +424,6 @@
   .slide{
     width: calc(290px + 10vw);
   }
-
-
 
   .acerca{
     width: 100%;
@@ -371,11 +443,7 @@
     padding: 0px 25px 30px; 
     border-top: 0;
     border-bottom: 3px solid rgba(255, 201, 23, 0.733);
-  }
-
-  
-
-  
+  }    
 }
 
 
@@ -399,7 +467,6 @@
   }
 
 
-
   .logo{
     top: calc(18vh + 4vw);
     height: calc(17vh + 1.3vw);
@@ -410,21 +477,6 @@
     font-size: calc(1.3rem + 2vw);
     padding: 3vw 6vw;
   }  
-
-
-  .info-card-fondo{
-    padding: 10vh 0;
-  }
-  .info-card{ /*border: 1px solid red;*/
-    height: 80vh;
-    width: 70%;
-  }
-  .xclose{
-    line-height: 30px;
-    right: calc(15% - 17px);
-    top: calc(10vh - 17px);
-  }
-
 
   .acerca{
     width: 75%;
@@ -478,19 +530,6 @@
   }  
 
 
-
-  .info-card-fondo{
-    padding: 12vh 0;
-  }
-  .info-card{
-    height: 76vh;
-    width: 60%;
-  }
-  .xclose{
-    right: calc(20% - 17px);
-    top: calc(12vh - 17px);
-  }
-
   .marco{
     width: calc(85% - 4vw);
     padding: 4vw 3vw 2vw;
@@ -512,11 +551,11 @@
   }
 
   .logo{
-    top: calc(16vh + 4vw);
+    top: calc(12vh + 3vw);
     height: calc(19vh + 1vw);
   }
   h1{ /* color:red;*/
-    top: calc(42vh + 4vw);
+    top: calc(37vh + 3vw);
     width: 47%;
     font-size: calc(1.3rem + 2vw);
     padding: 3vw 6vw;

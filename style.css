@@ -756,7 +756,7 @@ h1{
 
 .left-to-center{
   animation-name: left-to-center;
-  animation-duration: .4s;
+  animation-duration: .6s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;   

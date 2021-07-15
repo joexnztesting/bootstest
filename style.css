@@ -645,27 +645,6 @@ h1{
 }
 
 
-.btn-prueba{
-  background-color: aquamarine;
-  padding: 15px;
-  width: 100px;
-  margin: 50px auto;
-  border: none;
-  border-radius: 5px;
-  -webkit-tap-highlight-color: transparent;
-}
-.btn-prueba:hover{
-  background-color: rgb(149, 160, 255);
-}
-.btn-prueba:focus{
-  background-color: rgb(255, 176, 147); 
-  outline: 0; 
-}
-.btn-prueba:active{
-  background-color: rgb(255, 115, 225);
-}
-
-
 /* *********  CAROUSEL  ************  */
 
 .prod-huerta{ /*  border: 1px solid green; */
@@ -848,7 +827,6 @@ h1{
   justify-content: center;
   align-items: center;
 }
-
 .marco{
   background-color: rgb(255, 255, 255);
   border: 5px solid rgb(255, 201, 23);
@@ -856,16 +834,16 @@ h1{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  padding: 8vw 7vw;
-  margin: 25vh 0 20vh;
+  width: 94%;
+  padding: 10vw 7vw;
+  margin: 30vh 0 20vh;
   border-top-left-radius: 35px;
   border-bottom-right-radius: 35px;  
 }
 .marco-plantas p{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: rgb(53, 53, 53);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.4rem;
   padding: 20px 15px; 
   border-top: 2px solid rgba(255, 201, 23, 0.733);

@@ -11,59 +11,22 @@
   align-items: center;  
   background-image: url("./img/fondo2.jpg"); 
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
 }
-.titu-contc{
-  background: linear-gradient(-45deg, rgba(131,58,180,1) 0%, rgb(223, 24, 24) 40%, rgba(252,176,69,1) 95%);
-  text-align: center;
-  width: 100%;
-  padding: 0px 20px;
-  position: sticky;
-  top: 0;
-}
 
-.titu-contc p{
-  font-family: 'Public Sans', sans-serif;
-  font-size: calc(1.35rem + 1vw);
-  color: rgb(255, 255, 255);
-  font-weight: bolder;
-  line-height: 50px;
-}
-.contacto-sumate2{ /*border: 1px solid blue;*/
+.contacto-sumate{ /*border: 1px solid blue;*/
   padding: 20px 40px;  
   text-align: center;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1.4rem;
+  background-color: rgb(255, 255, 255, .75);
+  border-radius: 6px;
 }
-
 
 .formu{
   /*border: 1px solid green;*/
 }
-
-.contact-form{
-  --form-ok-color: #4caf50;
-  --form-error-color: #f44336;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-}
-
-.contact-form > *{
-  padding: .7rem;
-  margin: .7rem auto;
-  display: block;
-  width: 100%;
-  border-radius: 6px;
-}
-
-.contact-form textarea{
-  resize: none;
-}
-
-
-
 .contact-form legend,
 .contact-form-response{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -77,14 +40,29 @@
   margin-bottom: 15px;  
   /*border: 1px solid green;*/
 }
-
+.contact-form{
+  --form-ok-color: #4caf50;
+  --form-error-color: #f44336;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+.contact-form > *{
+  padding: .7rem;
+  margin: .7rem auto;
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+}
+.contact-form textarea{
+  resize: none;
+}
 .contact-form input,
 .contact-form textarea{
   font-size: 1rem;
   font-family: sans-serif;
   background-color: rgb(255, 255, 255, .65);
 }
-
 
 .btn-cont{
   background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
@@ -98,7 +76,6 @@
   height: 34px;
   border-radius: 20px;
 }
-
 .contact-form input[type="submit"]{
   background-color: #fff;
   color: blue;

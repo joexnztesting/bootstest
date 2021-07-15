@@ -1,7 +1,6 @@
 
 
-@media (min-width: 350px) {   
-   
+@media (min-width: 350px) {     
   .container-nav{
     position: -webkit-sticky;
     position: -moz-sticky;
@@ -28,8 +27,6 @@
     height: 93.5vh;
     top: -93.5vh;
   }
-
-
   .header-container{
     height: 93.5vh;
   }
@@ -43,7 +40,6 @@
   h1{ /*  color: red; */
     top: 45vh;
   }
-
   .info-card-fondo{
     padding: 10vh 0;
   }
@@ -70,8 +66,7 @@
     font-size: 1.25rem;
     right: 8px;
     top: -15px;
-  }
-  
+  }  
   .prod-huerta{
     height: 110vh;
   }
@@ -85,38 +80,54 @@
   .slide{
     width: calc(240px + 8vw);
   }
-
   .marco{
     width: 85%;
+    padding: 10vw 7vw;
+    margin: 20vh 0 20vh;
   }
   .marco-plantas p{
     font-size: 1.35rem;
     line-height: 1.85rem;
+    padding: 20px 15px; 
+  }  
+  .contacto-envios{
+    padding: 35px 0 0px;
   }
-    
+  .row-icons{
+    padding: 35px 0;
+  }  
   .row-icons div{
     width: 48px;
   }
-
+  .contacto-sumate{ /*border: 1px solid blue;*/
+    padding: 30px 20px 10px;
+    font-size: 1.5rem;
+  }
   .footer{
     padding: 2.5vh 0 3vh;
     margin-bottom: 6vh;
-  }
-  
+  }  
 }
 
 /* Only for J7*/
 @media (min-width: 370px) {
-  .formu-container{ height: 80vh;}
   .prod-huerta{
     height: 100vh;
+  }
+  .contacto-envios{
+    padding: 40px 0 0px;
+  }
+  .row-icons{
+    padding: 40px 0;
+  }
+  .formu-container{ 
+    height: 80vh;
   }
 }
 /* Only for J7*/
 
 
 @media (min-width: 520px) {
-
   .nav-row-item-border{
     width: calc(19vw - 3.5vw);
   }
@@ -153,12 +164,10 @@
     top: 45vh;
     width: 65%;
     font-size: calc(1.7rem + 2vw);
-  }  
-
+  }
   .los-prod{
     padding: 0 0 65px;
   }
-
   .titu-manten{ 
     padding: 50px calc(10vw + 10vw);
   }
@@ -167,7 +176,6 @@
     line-height: 2.7rem;
     padding-bottom: 20px;
   }
-
   .cards{
     display:flex;
     flex-direction: row;
@@ -181,8 +189,6 @@
   .card:last-child{
     margin-bottom: 0px;
   }
-
-
   .info-card-fondo{
     padding: 14vh 0;
   }
@@ -236,20 +242,15 @@
     font-size: 1.4rem;
     right: -15px;
     top: -15px;
-  }
-  
+  }  
   .prod-huerta{
     height: 85vh;
-  }
-  .bq-semillas{ 
-    padding: 60px calc(10vw + 10vw);
   }
   .bq-semillas{
     font-size: calc(1.9rem + .2vw);
     line-height: 2.7rem;
-    padding-bottom: 50px;
+    padding: 60px calc(10vw + 10vw) 50px;;
   }
-
   .carousel-container{
     width: calc(85% - 10vw);
   }
@@ -259,22 +260,57 @@
   }
   .slide{
     width: calc(270px + 10vw);
+  } 
+  .marco{
+    width: 450px;
+    padding: 50px 30px;
+    margin: 18vh 0;
   }
- 
-  .row-icons{ /*border: 1px solid red;*/
-    width: 60%;
-    padding: 40px 0 ;
+  .marco-plantas p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 25px 30px; 
+  }  
+  .contacto-envios{
+    font-size: calc(1.9rem + .2vw);
+    line-height: 2.7rem;
+    padding: 50px 0 0px;
   }
-
-  .contacto-sumate{ /*border: 1px solid blue;*/
-    width: 60%;
-    /*top: 24vh;*/
+  .row-icons{
+    padding: 50px 0;
+    width: 350px;
+  }
+  .row-icons div{
+    width: 50px;
+  } 
+  .contacto-sumate{ /*border: 1px solid red;*/
+    width: 400px;
+    font-size: 1.8rem;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+  }
+  .contact-form legend,
+  .contact-form-response{
+    font-size: 2rem;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  .contact-form > *{
+    padding: .8rem;
+    margin: 1rem auto;
+  } 
+  .btn-cont{
+    height: 40px;
+    padding: 3px;
+    margin: 40px auto 0px;
+  }
+  .btn-formu{
+    height: 34px;
   }
 }
 
 
 @media (min-width: 768px) {
-
   .nav-row-item-border{
     width: calc(18vw - 5vw);
   }
@@ -290,12 +326,10 @@
       padding: 0 3vw 0 5vw;
     }
   }
-
   .img-head{ /*border: 1px solid red;    */
     width: 100%;
     background-size: cover;
   }
-
   .logo{
     top: 20vh; 
     height: calc(20vh);
@@ -305,12 +339,9 @@
     width: 60%;
     font-size: calc(1.7rem + 1.5vw);
   } 
- 
-
   .prod-huerta{
     height: 100vh;
   }
-
   .carousel-container{
     width: calc(85% - 10vw);
   }
@@ -320,66 +351,24 @@
   }
   .slide{
     width: calc(270px + 10vw);
-  }
- 
-  .row-icons{ /*border: 1px solid red;*/
-    width: 60%;
-    padding: 40px 0 ;
-  }
-
-  .contacto-sumate{ /*border: 1px solid blue;*/
-    width: 60%;
-    /*top: 24vh;*/
-  }
-
-
-  .carousel-container{
-    width: calc(80% - 10vw);
-  }
-  .carousel{
-    height: calc(520px + 15vw);
-    width: calc(350px + 15vw);  
-  }
-  .slide{
-    width: calc(270px + 15vw);
-  }
-  .marco-img img{
-    width: calc(300px + 10vw);
+  }  
+  .marco-plantas p{
+    font-size: 1.6rem;
   } 
-
-  
-  .marco{
-    width: calc(90% - 25vw);
-    padding: 6vw 5vw;
-  }
-  
-  .row-icons{ /*border: 1px solid red;*/
-    width: 50%;
-  }
-  .row-icons div{
-    width: 52px;
-  }
-  .contacto-sumate{ /*border: 1px solid blue;*/
-    width: 50%;
-  } 
-  
 }
 
 
 /* HTML con MARGEN  */
 
 @media (min-width: 992px) {  
-
   html{
     width: calc(100% - 20vw);
     margin: 0 auto;
     box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.15);
   }
-
   .nav-row-item-border{
     width: calc(20vw - 9vw);
   }
-
   .nav-row-item:nth-child(1){
     padding-left: calc(25px + .5vw);
   }
@@ -392,27 +381,20 @@
       padding: 0 3vw 0 5vw;
     }
   }
-
   .img-head{ /*border: 1px solid blue;    */
   }
-
-
   h1{   color: blue; 
     top: 45vh;
     width: 55%;
     font-size: calc(1.7rem + 1vw);
   } 
-
-
   .info-card-fondo{
     width: calc(100% - 20vw);
     margin: 0 auto;
   }
-
   .prod-huerta{
     height: 130vh;
   }
-
   .carousel-container{
     width: calc(80% - 10vw);
   }
@@ -423,35 +405,16 @@
   .slide{
     width: calc(290px + 10vw);
   }
-
-  .acerca{
-    width: 100%;
-  }  
-
-  .marco{
-    width: calc(80% - 2vw);
-    padding: 5vw 5vw 3vw;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 0;
-    border: 7px solid rgb(255, 201, 23);
-  }
-  .marco-plantas p{
-    font-size: 1.6rem;
-    line-height: 2rem;
-    padding: 0px 25px 30px; 
-    border-top: 0;
-    border-bottom: 3px solid rgba(255, 201, 23, 0.733);
-  }    
 }
 
 
 @media (min-width: 1200px) {
-
+  html{
+    width: calc(100% - 25vw);
+  }
   .nav-row-item-border{
     width: calc(19vw - 11vw);
   }
-
   .nav-row-item:nth-child(1){
     padding-left: calc(25px + 2vw);
   }
@@ -464,8 +427,6 @@
       padding: 0 3vw 0 5vw ;
     }
   }
-
-
   .logo{
     top: calc(18vh + 4vw);
     height: calc(17vh + 1.3vw);
@@ -475,34 +436,14 @@
     width: 55%;
     font-size: calc(1.3rem + 2vw);
     padding: 3vw 6vw;
-  }  
-
-  .acerca{
-    width: 75%;
   }
-  .marco{
-    width: calc(85% - 2vw);
-    padding: 4vw 3vw 2vw;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 0;
-  }  
-  .marco-plantas p{ /*color: red;*/
-    font-size: 1.7rem;
-    padding: 0 30px 20px; 
-  }
-
-  .row-icons{ /*border: 1px solid red;*/
-    width: 40%;
-  }
- 
-
-  
 }
 
 
 @media (min-width: 1400px) {
-
+  html{
+    width: calc(100% - 30vw);
+  }
   .nav-row-item-border{
     width: calc(18.5vw - 12vw);
   }
@@ -512,11 +453,9 @@
       padding: 0 2vw 0 5vw ;
     }
   }
-  
   .img-head{ /*border: 1px solid red;*/
     background-size: calc(90% - 5vw);
   }
-
   .logo{
     top: calc(18vh + 4vw);
     height: calc(20vh + 1.3vw);
@@ -526,27 +465,14 @@
     width: 50%;
     font-size: calc(1.3rem + 2vw);
     padding: 3vw 6vw;
-  }  
-  .marco{
-    width: calc(85% - 4vw);
-    padding: 4vw 3vw 2vw;
-  } 
-
-  .marco-plantas p{ /*color: blue;*/
-    line-height: 2.1rem;
-    padding: 0 30px 25px; 
   }
-
-  
 }
 
 
 @media (min-width: 1600px) {
-
   .img-head{ /*border: 1px solid red;  */ 
     background-size: calc(85% - 8vw);
   }
-
   .logo{
     top: calc(12vh + 3vw);
     height: calc(19vh + 1vw);
@@ -556,17 +482,6 @@
     width: 47%;
     font-size: calc(1.3rem + 2vw);
     padding: 3vw 6vw;
-  } 
-
-  .marco{
-    width: calc(70%);
-    padding: 4vw 3vw 2vw;
-  } 
-  .marco-plantas p{ /*color: red;*/
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    padding: 0 30px 25px; 
   }
-  
 }
 

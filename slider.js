@@ -8,6 +8,7 @@ const $slide2 = document.querySelector('.slide:nth-child(2)');
 const $slide3 = document.querySelector('.slide:nth-child(3)');
 const $slide4 = document.querySelector('.slide:nth-child(4)');
 const $slide5 = document.querySelector('.slide:nth-child(5)');
+const $iniTouch = document.querySelector('.carousel-container');
 
 const leftTocenter = function(e){
   e.classList.add('centrado')
@@ -45,20 +46,20 @@ const centerToright = function(e){
 const c1fl = function(e){  
   leftTocenter($slide1)  
   centerToright($slide2)
-  $selectRight.classList.remove('r0')
 }
 const c2fl = function(e){
   leftTocenter($slide2)
   centerToright($slide3)
-  $selectRight.classList.add('fk')   
+  $selectRight.classList.add('fk')  
+  $selectRight.classList.remove('r0') 
 }
 const c3fl = function(e){
   leftTocenter($slide3)     
   centerToright($slide4)
 }
 const c4fl = function(e){
-leftTocenter($slide4)      
-centerToright($slide5)  
+  leftTocenter($slide4)      
+  centerToright($slide5)  
 }
 const c5fl = function(e){
   leftTocenter($slide5)
@@ -69,7 +70,6 @@ const c5fl = function(e){
 const c1fr = function(e){
   rightTocenter($slide1)
   centerToleft($slide5)
-  $selectLeft.classList.remove('l0')
 }
 const c2fr = function(e){
   rightTocenter($slide2)
@@ -79,7 +79,6 @@ const c2fr = function(e){
 const c3fr = function(e){
   rightTocenter($slide3)
   centerToleft($slide2)
-  $selectRight.classList.remove('r0')
 }
 const c4fr = function(e){
   rightTocenter($slide4)
@@ -89,6 +88,7 @@ const c5fr = function(e){
   rightTocenter($slide5)
   centerToleft($slide4)
   $selectLeft.classList.add('fk')
+  $selectLeft.classList.remove('l0')
 }
 
 window.addEventListener('DOMContentLoaded',(e)=>{ 
@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
 
   $selectLeft.addEventListener('click',(e)=>{
     if($slide4.classList.contains('centrado')){
-      c5fr()      
+      c5fr()
     }
     if($slide3.classList.contains('centrado')){
       c4fr()
@@ -143,5 +143,74 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $selectLeft.classList.add('l0')
 
 })
+
+$iniTouch.addEventListener("touchstart", startTouch, false);
+$iniTouch.addEventListener("touchmove", moveTouch, false);
+ 
+// Swipe Left / Right
+var initialX = null;
+ 
+function startTouch(e) {
+  initialX = e.touches[0].clientX;
+};
+ 
+function moveTouch(e) {
+  if (initialX === null) {
+    return;
+  }
+ 
+  var currentX = e.touches[0].clientX;
+ 
+  var diffX = initialX - currentX;
+ 
+  if (Math.abs(diffX)) {
+    if (diffX > 0 && $slide5.classList.contains('centrado')) {
+      c1fr()  
+      $slide1.classList.add('centrado2')
+      $slide1.classList.remove('centrado')    
+    }
+    if (diffX > 0 && $slide4.classList.contains('centrado')) {
+      c5fr() 
+    }  
+    if (diffX > 0 && $slide3.classList.contains('centrado')) {
+      c4fr() 
+    }
+    if (diffX > 0 && $slide2.classList.contains('centrado')) {
+      c3fr()      
+    }     
+    if (diffX > 0 && $slide1.classList.contains('centrado')) {
+      c2fr()
+    }    
+    if ($slide1.classList.contains('centrado2')) {   
+      $slide1.classList.add('centrado')
+      $slide1.classList.remove('centrado2')
+    }
+    if (diffX < 0 && $slide2.classList.contains('centrado')) {
+      c1fl()
+      $slide1.classList.add('centrado2')
+      $slide1.classList.remove('centrado') 
+    }
+    if (diffX < 0 && $slide3.classList.contains('centrado')) {
+      c2fl()
+    }
+    if (diffX < 0 && $slide4.classList.contains('centrado')) {
+      c3fl()
+    }
+    if (diffX < 0 && $slide5.classList.contains('centrado')) {
+      c4fl()
+    }
+    if (diffX < 0 && $slide1.classList.contains('centrado')) {
+      c5fl()
+    }
+    if ($slide1.classList.contains('centrado2')) {   
+      $slide1.classList.add('centrado')
+      $slide1.classList.remove('centrado2')
+    }
+  }
+ 
+  initialX = null;
+   
+  e.preventDefault();
+};
 
 // FIN SLIDER  ***************************************************

@@ -735,7 +735,7 @@ h1{
 
 .left-to-center{
   animation-name: left-to-center;
-  animation-duration: .3s;
+  animation-duration: .2s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;   
@@ -767,7 +767,7 @@ h1{
 }
 .right-to-center{
   animation-name: right-to-center;
-  animation-duration: .3s;
+  animation-duration: .2s;
   animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: 1;   

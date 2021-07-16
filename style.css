@@ -733,10 +733,12 @@ h1{
   z-index: 10;
 }
 
+
+
 .left-to-center{
   animation-name: left-to-center;
   animation-duration: .4s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-out;
   animation-delay: 0s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
@@ -769,7 +771,7 @@ h1{
   animation-name: center-to-left;
   animation-duration: .4s;
   animation-timing-function: ease-in;
-  animation-delay: 0s;
+  animation-delay: .2s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
@@ -784,8 +786,8 @@ h1{
 .center-to-right{
   animation-name: center-to-right;
   animation-duration: .4s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
+  animation-timing-function: ease-in;
+  animation-delay: .2s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }

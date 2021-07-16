@@ -2,8 +2,9 @@ const hmbBtn = document.querySelector('.hamburger');
 const panel = document.querySelector('.panel');
 const panelMenu = document.querySelector('.menu');
 const menuItem = document.querySelectorAll('.menu-item');  
+const navItem = document.querySelectorAll('.n-r-item');  
 const items = document.querySelector('.items');
-const $bodyy = document.querySelector('.container-princ');
+//const $bodyy = document.querySelector('.container-princ');
      
 
 function menuOpen(e){
@@ -25,6 +26,20 @@ function menuClose(e){
   }
 };
 
+hmbBtn.addEventListener('touchstart', function(e){
+  if(!hmbBtn.classList.contains('isactive')){
+    menuOpen()
+  }else{
+    menuClose()
+  }
+});
+panel.addEventListener('touchstart', menuClose);
+menuItem.forEach(elem=>{
+  elem.addEventListener('touchstart', menuClose)
+});
+navItem.forEach(elem=>{
+  elem.addEventListener('touchstart', menuClose)
+});
 hmbBtn.addEventListener('click', function(e){
   if(!hmbBtn.classList.contains('isactive')){
     menuOpen()
@@ -34,5 +49,8 @@ hmbBtn.addEventListener('click', function(e){
 });
 panel.addEventListener('click', menuClose);
 menuItem.forEach(elem=>{
+  elem.addEventListener('click', menuClose)
+});
+navItem.forEach(elem=>{
   elem.addEventListener('click', menuClose)
 });

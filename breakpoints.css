@@ -261,6 +261,70 @@
   .slide{
     width: calc(270px + 10vw);
   } 
+  .left-to-center{
+    animation-name: left-to-center;
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;   
+    animation-fill-mode: forwards;
+  }
+  @keyframes left-to-center{
+    0%{
+      margin-left: -200%;
+    }
+    100%{
+      margin-left: 0%;
+    }
+  }
+  .right-to-center{
+    animation-name: right-to-center;
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;   
+    animation-fill-mode: forwards;
+  }
+  @keyframes right-to-center{
+    0%{
+      margin-left: 200%;
+    }
+    100%{
+      margin-left: 0%;
+    }
+  }
+  .center-to-left{
+    animation-name: center-to-left;
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;   
+    animation-fill-mode: forwards;
+  }
+  @keyframes center-to-left{
+    0%{
+      margin-left: 0%;
+    }
+    100%{
+      margin-left: -200%;
+    }
+  }
+.center-to-right{
+  animation-name: center-to-right;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes center-to-right{
+  0%{
+    margin-left: 0%;
+  }
+  100%{
+    margin-left: 200%;
+  }
+}
   .marco{
     width: 450px;
     padding: 50px 30px;

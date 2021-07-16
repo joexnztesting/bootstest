@@ -26,6 +26,7 @@ function menuClose(e){
   }
 };
 
+
 hmbBtn.addEventListener('touchstart', function(e){
   if(!hmbBtn.classList.contains('isactive')){
     menuOpen()
@@ -40,17 +41,19 @@ menuItem.forEach(elem=>{
 navItem.forEach(elem=>{
   elem.addEventListener('touchstart', menuClose)
 });
-hmbBtn.addEventListener('click', function(e){
+
+
+hmbBtn.addEventListener('mousedown', function(e){
   if(!hmbBtn.classList.contains('isactive')){
     menuOpen()
   }else{
     menuClose()
   }
 });
-panel.addEventListener('click', menuClose);
+panel.addEventListener('mousedown', menuClose);
 menuItem.forEach(elem=>{
-  elem.addEventListener('click', menuClose)
+  elem.addEventListener('mousedown', menuClose)
 });
 navItem.forEach(elem=>{
-  elem.addEventListener('click', menuClose)
+  elem.addEventListener('mousedown', menuClose)
 });

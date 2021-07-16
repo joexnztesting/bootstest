@@ -769,9 +769,9 @@ h1{
 }
 .center-to-left{
   animation-name: center-to-left;
-  animation-duration: .4s;
+  animation-duration: .3s;
   animation-timing-function: ease-in;
-  animation-delay: .2s;
+  animation-delay: .1s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }
@@ -785,9 +785,9 @@ h1{
 }
 .center-to-right{
   animation-name: center-to-right;
-  animation-duration: .4s;
+  animation-duration: .3s;
   animation-timing-function: ease-in;
-  animation-delay: .2s;
+  animation-delay: .1s;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;
 }

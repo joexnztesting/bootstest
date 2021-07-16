@@ -33,27 +33,27 @@ hmbBtn.addEventListener('touchstart', function(e){
   }else{
     menuClose()
   }
-});
-panel.addEventListener('touchstart', menuClose);
+},true);
+panel.addEventListener('touchstart', menuClose,true);
 menuItem.forEach(elem=>{
-  elem.addEventListener('touchstart', menuClose)
+  elem.addEventListener('touchstart', menuClose,true)
 });
 navItem.forEach(elem=>{
-  elem.addEventListener('touchstart', menuClose)
+  elem.addEventListener('touchstart', menuClose,true)
 });
 
-
+/*
 hmbBtn.addEventListener('mousedown', function(e){
   if(!hmbBtn.classList.contains('isactive')){
     menuOpen()
   }else{
     menuClose()
   }
-});
-panel.addEventListener('mousedown', menuClose);
+},true);
+panel.addEventListener('mousedown', menuClose,true);
 menuItem.forEach(elem=>{
-  elem.addEventListener('mousedown', menuClose)
+  elem.addEventListener('mousedown', menuClose,true)
 });
 navItem.forEach(elem=>{
-  elem.addEventListener('mousedown', menuClose)
-});
+  elem.addEventListener('mousedown', menuClose,true)
+});*/

@@ -27,14 +27,14 @@ function menuClose(e){
 };
 
 
-document.addEventListener("click", e=>{
-  if(e.target.matches(".hamburger") || e.target.matches(".line")){
-    if(!hmbBtn.classList.contains('isactive')){
-      menuOpen()
-    }else{
-      menuClose()
-    }
+hmbBtn.addEventListener("click", e=>{
+  if(!hmbBtn.classList.contains('isactive')){
+    menuOpen()
+  }else{
+    menuClose()
   }
+})
+document.addEventListener("click", e=>{
   if(!e.target.matches(".hamburger") || e.target.matches(".line")){
       menuClose()    
   }

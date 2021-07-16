@@ -131,6 +131,9 @@
 
 /* Only for J7*/
 @media (min-width: 370px) {
+  .imagen-header{
+    transform: scale(1.8); 
+  }
   .prod-huerta{
     height: 100vh;
   }
@@ -168,9 +171,11 @@
   }
   .imagen-header{
     opacity: 0;
+    visibility: hidden;
   }
-  .img-head{ /*border: 1px solid yellowgreen;*/
+  .img-head{ border: 1px solid yellowgreen;
     height: 93.5vh;
+    width: 100%;
     background-image: url("./img/header-desk.jpg");  
     background-size: cover;
     background-position: center;
@@ -346,10 +351,6 @@
       padding: 0 3vw 0 5vw;
     }
   }
-  .img-head{ /*border: 1px solid red;    */
-    width: 100%;
-    background-size: cover;
-  }
   .logo{
     top: 20vh; 
     height: calc(20vh);
@@ -400,8 +401,6 @@
       width: 35vw;
       padding: 0 3vw 0 5vw;
     }
-  }
-  .img-head{ /*border: 1px solid blue;    */
   }
   h1{   color: blue; 
     top: 45vh;
@@ -473,8 +472,8 @@
       padding: 0 2vw 0 5vw ;
     }
   }
-  .img-head{ /*border: 1px solid red;*/
-    background-size: calc(90% - 5vw);
+  .img-head{
+    background-size: calc(90% + 4vw);
   }
   .logo{
     top: calc(18vh + 4vw);
@@ -490,8 +489,8 @@
 
 
 @media (min-width: 1600px) {
-  .img-head{ /*border: 1px solid red;  */ 
-    background-size: calc(85% - 8vw);
+  .img-head{
+    background-size: calc(93% - 6vw);
   }
   .logo{
     top: calc(12vh + 3vw);

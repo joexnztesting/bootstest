@@ -27,33 +27,15 @@ function menuClose(e){
 };
 
 
-hmbBtn.addEventListener('touchstart', function(e){
-  if(!hmbBtn.classList.contains('isactive')){
-    menuOpen()
-  }else{
-    menuClose()
+document.addEventListener("click", e=>{
+  if(e.target.matches(".hamburger") || e.target.matches(".line")){
+    if(!hmbBtn.classList.contains('isactive')){
+      menuOpen()
+    }else{
+      menuClose()
+    }
   }
-},true);
-panel.addEventListener('touchstart', menuClose,true);
-menuItem.forEach(elem=>{
-  elem.addEventListener('touchstart', menuClose,true)
-});
-navItem.forEach(elem=>{
-  elem.addEventListener('touchstart', menuClose,true)
-});
-
-/*
-hmbBtn.addEventListener('mousedown', function(e){
-  if(!hmbBtn.classList.contains('isactive')){
-    menuOpen()
-  }else{
-    menuClose()
+  if(!e.target.matches(".hamburger") || e.target.matches(".line")){
+      menuClose()    
   }
-},true);
-panel.addEventListener('mousedown', menuClose,true);
-menuItem.forEach(elem=>{
-  elem.addEventListener('mousedown', menuClose,true)
-});
-navItem.forEach(elem=>{
-  elem.addEventListener('mousedown', menuClose,true)
-});*/
+})

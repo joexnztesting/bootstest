@@ -80,6 +80,26 @@
   .slide{
     width: calc(240px + 8vw);
   }
+  .left-to-center{
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+  }
+  .right-to-center{
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+  }
+  .center-to-left{
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+  }
+  .center-to-right{
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+  }
   .marco{
     width: 85%;
     padding: 10vw 7vw;
@@ -260,26 +280,6 @@
   }
   .slide{
     width: calc(270px + 10vw);
-  } 
-  .left-to-center{
-    animation-duration: .4s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-  }
-  .right-to-center{
-    animation-duration: .4s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-  }
-  .center-to-left{
-    animation-duration: .4s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-  }
-  .center-to-right{
-    animation-duration: .4s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
   }
   .marco{
     width: 450px;

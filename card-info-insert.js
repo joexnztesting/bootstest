@@ -26,15 +26,7 @@ const getHTML = (options)=>{
   
   xhr.send();
 }
-/*
-d.addEventListener("DOMContentLoaded", e=>{
-  getHTML({
-    url:"assets/card_alacran_info.html",
-    success:(html)=>$cardInfo.innerHTML = html,
-    error:(err)=> $cardInfo.innerHTML = `<h1>${err}</h1>`
-  })
-})
-*/
+
 d.addEventListener("click", e=>{
   if(e.target.matches(".mas-info")){
     e.preventDefault();

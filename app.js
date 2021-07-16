@@ -1,3 +1,5 @@
+
+/*
 const $span1 = document.querySelectorAll('.bq-semillas');
 const $span2 = document.querySelectorAll('.card:nth-child(5)');
 const $span3 = document.querySelectorAll('.titu-acerca');
@@ -112,64 +114,4 @@ $span1.forEach((el)=>observer6.observe(el));
 $span6.forEach((el)=>observer7.observe(el));
 $span7.forEach((el)=>observer8.observe(el));
 
-
-
-/*  BORRAR DE ACÁ HACIA ABAJO
-
-// SLIDER
-window.addEventListener('DOMContentLoaded', (e)=>{
-
-    const $nextBtn = document.querySelector('.slider-btns .next'),
-        $prevBtn = document.querySelector('.slider-btns .prev'),
-        $slides = document.querySelectorAll('.slider2-slide');
-
-        let i = 0;
-
-        document.addEventListener('click',(e)=>{
-            if(e.target===$prevBtn){
-                e.preventDefault()
-                $slides[i].classList.remove('active')
-
-                i--   
-
-                if(i<0){
-                    i = $slides.length - 1
-                }
-                $slides[i].classList.add('active')
-            }
-            if(e.target===$nextBtn){
-                e.preventDefault()
-                $slides[i].classList.remove('active')
-                
-                i++
-                
-                if(i>=$slides.length){
-                    i = 0
-                }
-                $slides[i].classList.add('active')
-            }
-        })
-
-})
-// FIN SLIDER
-*/
-
-// DETALLE INFO CARDS
-/*
-const $infoCards = document.querySelector('.info-cards');
-const $body = document.querySelector('.container-princ');
-const $docum = document.querySelector('.htemele');
-
-window.addEventListener('click',(e)=>{
-  if(e.target.matches('.mas-info')){
-    $infoCards.classList.remove('visib-out');
-    $body.classList.add('no-scroll');
-    $docum.classList.add('fondo-htemele');
-  }
-  if(e.target.matches('.xclose')){
-    $infoCards.classList.add('visib-out')
-    $body.classList.remove('no-scroll');
-    $docum.classList.remove('fondo-htemele');
-  }  
-})
 */

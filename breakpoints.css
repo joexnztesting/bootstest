@@ -35,10 +35,13 @@
   }
   .logo{
     top: 20vh; 
-    height: calc(19vh);
+    height: 19vh;
   }
   h1{ /*  color: red; */
-    top: 45vh;
+    top: 44vh;
+    width: 80%; /**/
+    font-size: 1.8rem;
+    padding: 7vw; /**/
   }
   .info-card-fondo{
     padding: 10vh 0;
@@ -134,6 +137,12 @@
   .imagen-header{
     transform: scale(1.8); 
   }
+  h1{
+    top: 43vh;
+    width: 80%; /**/
+    font-size: 2rem;
+    padding: 7vw; /**/
+  }
   .prod-huerta{
     height: 100vh;
   }
@@ -142,7 +151,7 @@
   }
   .row-icons{
     padding: 40px 0;
-  }
+  }  
   .formu-container{ 
     height: 80vh;
   }
@@ -182,13 +191,14 @@
     background-repeat: no-repeat;
   }
   .logo{
-    top: 20vh; 
-    height: calc(20vh);
+    top: calc(20vh + 2vw); 
+    height: 200px;
   }
-  h1{ /*  color: blue;  */
-    top: 45vh;
-    width: 65%;
-    font-size: calc(1.7rem + 2vw);
+  h1{  /* color: blue;  */
+    top: calc(44vh + 3vw);
+    width: 450px;
+    font-size: 2.7rem;
+    padding: 2.2rem 2.4rem;
   }
   .los-prod{
     padding: 0 0 65px;
@@ -351,15 +361,6 @@
       padding: 0 3vw 0 5vw;
     }
   }
-  .logo{
-    top: 20vh; 
-    height: calc(20vh);
-  }
-  h1{ /*  color: red; */
-    top: 45vh;
-    width: 60%;
-    font-size: calc(1.7rem + 1.5vw);
-  } 
   .prod-huerta{
     height: 100vh;
   }
@@ -402,11 +403,6 @@
       padding: 0 3vw 0 5vw;
     }
   }
-  h1{   color: blue; 
-    top: 45vh;
-    width: 55%;
-    font-size: calc(1.7rem + 1vw);
-  } 
   .info-card-fondo{
     width: calc(100% - 20vw);
     margin: 0 auto;
@@ -446,16 +442,6 @@
       padding: 0 3vw 0 5vw ;
     }
   }
-  .logo{
-    top: calc(18vh + 4vw);
-    height: calc(17vh + 1.3vw);
-  }
-  h1{  color: red;
-    top: calc(42vh + 4vw);
-    width: 55%;
-    font-size: calc(1.3rem + 2vw);
-    padding: 3vw 6vw;
-  }
 }
 
 
@@ -475,32 +461,12 @@
   .img-head{
     background-size: calc(90% + 4vw);
   }
-  .logo{
-    top: calc(18vh + 4vw);
-    height: calc(20vh + 1.3vw);
-  }
-  h1{  color: blue;
-    top: calc(44vh + 4vw);
-    width: 50%;
-    font-size: calc(1.3rem + 2vw);
-    padding: 3vw 6vw;
-  }
 }
 
 
 @media (min-width: 1600px) {
   .img-head{
     background-size: calc(93% - 6vw);
-  }
-  .logo{
-    top: calc(12vh + 3vw);
-    height: calc(19vh + 1vw);
-  }
-  h1{  color:red;
-    top: calc(37vh + 3vw);
-    width: 47%;
-    font-size: calc(1.3rem + 2vw);
-    padding: 3vw 6vw;
   }
 }
 

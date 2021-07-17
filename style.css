@@ -327,11 +327,11 @@ h1{
   position: absolute;
   top: 40vh;
   width: 80%;
-  padding: 5vw 7vw;
+  padding: 7vw;
   font-family: 'Public Sans', sans-serif;
   color: #fff;
   text-align: center;
-  font-size: calc(1rem + 3vw);
+  font-size: 1.55rem;
   letter-spacing: .12rem;
   text-shadow: 0 2px 2px #000;
   background: linear-gradient(45deg, rgba(0,201,43,.55) 0%, rgb(29, 163, 253,.55) 100%);

@@ -48,6 +48,22 @@ body{
 .menu-active {
   transform: translateX(0%);    
 }
+.panel{
+  background-color: rgb(228, 229, 157);
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.panel-item{
+  margin: 20px 0;
+}
+.panel-item a{
+  padding: 10px;
+  border: 2px solid #fff;
+}
 .nav-row{
   position: fixed;
   bottom: 0;
@@ -104,13 +120,21 @@ btn-hamb .line:nth-child(3) {
 <body>
 
     <div class="nav-container">
-      <div class="nav-menu"></div>
+      <div class="nav-menu">
+        <div class="panel">
+          <div class="panel-item"><a class="item" href="#verde">verde</a></div>
+          <div class="panel-item"><a class="item" href="#azul">azul</a></div>
+          <div class="panel-item"><a class="item" href="#verde">verde</a></div>
+          <div class="panel-item"><a class="item" href="#azul">azul</a></div>
+          <div class="panel-item"><a class="item" href="#verde">verde</a></div>
+        </div>
+      </div>
       <div class="nav-row">
         <div class="nav-row-item">
-          <a href="">1</a>
+          <a href="#verde">verde</a>
         </div>
         <div class="nav-row-item">
-          <a href="">2</a>
+          <a href="#azul">azul</a>
         </div>
         <div class="nav-row-item">
           <div class="btn-hamb">
@@ -122,18 +146,22 @@ btn-hamb .line:nth-child(3) {
       </div>
     </div>
 
-<div class="cuerpo1"></div>
-<div class="cuerpo2"></div>
+<div id="verde" class="cuerpo1"></div>
+<div id="azul" class="cuerpo2"></div>
   
 </body>
 <script>
   $navPanel = document.querySelector('.nav-menu');
   $btnHamb = document.querySelector('.btn-hamb');
+  $navRowItem = document.querySelectorAll('.nav-row-item a');  
   
   document.addEventListener('click', e=>{
-    if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.menu-active')){
+    if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.menu-active') || e.target.matches('.item')){
       $navPanel.classList.toggle('menu-active');
       $btnHamb.classList.toggle('isactive');
+      $navRowItem.forEach((itm)=>{
+        itm.classList.toggle('item')
+      });
     }
   })
 </script>

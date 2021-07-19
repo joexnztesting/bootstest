@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    html{
+html{
   box-sizing: border-box;   
   padding: 0;   
   scroll-behavior: smooth;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
 }
 *,
 *:before,
@@ -27,107 +28,100 @@ body{
   margin: 0 auto;
   background-color: rgb(255, 238, 140);
 } 
-    .cuerpo1{
-      height: 100vh;
-      background-color: rgb(129, 230, 120);
-    }
-    .cuerpo2{
-      height: 100vh;
-      background-color: rgb(75, 102, 255);
-    }
+.cuerpo1{
+  height: 100vh;
+  background-color: rgb(129, 230, 120);
+}
+.cuerpo2{
+  height: 100vh;
+  background-color: rgb(75, 102, 255);
+}
+.nav-container{
+}
+.nav-menu{
+  position: fixed;
+  height: 90vh;
+  width: 90%;
+  background-color: rgba(255, 62, 62, .7);
+  transition: all .2s ease-in-out;
+  transform: translateY(-100%);
+}
+.menu-active {
+  transform: translateY(0%);    
+}
+.nav-row{
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+  width: 90%;
+  background-color: cornsilk;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.nav-row-item{
+  width: 30%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-row a{
+  border: 1px solid blue;
+}
+.btn-hamb{
+  border: 1px solid rgb(98, 250, 255);
+  padding: 5px;
+}
+.btn-hamb .line{
+  background-color: rgb(29, 122, 29);
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  margin: 5px auto;
+  transition: all 0.2s ease-out;
+}
+btn-hamb .line:nth-child(1) {
+  margin-top: 0;
+}
+btn-hamb .line:nth-child(3) {
+  margin-bottom: 0;
+}
+.btn-hamb.isactive .line:nth-child(2) {
+  opacity: 0;
+  visibility: hidden;
+}
+.btn-hamb.isactive .line:nth-child(1) {
+  transform: translateY(8px) translateX(0px) rotate(45deg);
+}
+.btn-hamb.isactive .line:nth-child(3) {
+  transform: translateY(-8px) translateX(0px) rotate(-45deg);
+}
 
-    .nav-container{
-      position: fixed;
-      border: 1px solid blue;
-      width: 80%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-    }
-    .nav-menu{
-      height: 90vh;
-      width: 100%;
-      background-color: rgba(255, 62, 62, .7);
-      transform: translateX(-50%);
-    }
-    .nav-row{
-      height: 10vh;
-      width: 100%;
-      background-color: cornsilk;
-      display: flex;
-      flex-direction: row;
-      justify-content:space-between;
-    }
-    .nav-row-item{
-      width: 30%;
-      border: 1px solid red;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .nav-row a{
-      border: 1px solid blue;
-    }
-    .btn-hamb{
-      border: 1px solid rgb(98, 250, 255);
-    }
-    .btn-hamb .line{
-      background-color: rgb(29, 122, 29);
-      width: 30px;
-      height: 3px;
-      border-radius: 3px;
-      margin: 5px auto;
-      transition: all 0.3s ease-out;
-    }
-   .btn-hamb .line:nth-child(1) {
-      margin-top: 0;
-    }
-   .btn-hamb .line:nth-child(3) {
-      margin-bottom: 0;
-    }
-
-    .panel-active { 
-      animation-name: panel-in;
-      animation-delay: 0s;
-      animation-duration: .2s;
-      animation-timing-function: linear;
-      animation-iteration-count: 1;   
-      animation-fill-mode: forwards;
-    }
-    @keyframes panel-in{
-      100%{
-        transform: translateX(0%);
-      }
-    }
     
 
   </style>
 </head>
 <body>
 
-  <div class="nav-container">
-
-    <div class="nav-menu"></div>
-
-    <div class="nav-row">
-      <div class="nav-row-item">
-        <a href="">1</a>
-      </div>
-      <div class="nav-row-item">
-        <a href="">2</a>
-      </div>
-      <div class="nav-row-item">
-        <div class="btn-hamb">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+    <div class="nav-container">
+      <div class="nav-menu"></div>
+      <div class="nav-row">
+        <div class="nav-row-item">
+          <a href="">1</a>
         </div>
-      </div>      
+        <div class="nav-row-item">
+          <a href="">2</a>
+        </div>
+        <div class="nav-row-item">
+          <div class="btn-hamb">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>      
+      </div>
     </div>
-
-  </div>
-
 
 <div class="cuerpo1"></div>
 <div class="cuerpo2"></div>
@@ -135,10 +129,12 @@ body{
 </body>
 <script>
   $navPanel = document.querySelector('.nav-menu');
+  $btnHamb = document.querySelector('.btn-hamb');
   
   document.addEventListener('click', e=>{
     if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *')){
-      $navPanel.classList.toggle('panel-active');
+      $navPanel.classList.toggle('menu-active');
+      $btnHamb.classList.toggle('isactive');
     }
   })
 </script>

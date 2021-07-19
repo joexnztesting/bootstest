@@ -24,8 +24,7 @@ body{
   box-sizing: border-box;
   padding: 0;
   overflow-x: hidden;
-  width: 90%;
-  margin: 0 auto;
+  margin: 0;
   background-color: rgb(255, 238, 140);
 } 
 .cuerpo1{
@@ -41,19 +40,19 @@ body{
 .nav-menu{
   position: fixed;
   height: 90vh;
-  width: 90%;
+  width: 100%;
   background-color: rgba(255, 62, 62, .7);
   transition: all .2s ease-in-out;
-  transform: translateY(-100%);
+  transform: translateX(-100%);
 }
 .menu-active {
-  transform: translateY(0%);    
+  transform: translateX(0%);    
 }
 .nav-row{
   position: fixed;
   bottom: 0;
   height: 10vh;
-  width: 90%;
+  width: 100%;
   background-color: cornsilk;
   display: flex;
   flex-direction: row;
@@ -132,7 +131,7 @@ btn-hamb .line:nth-child(3) {
   $btnHamb = document.querySelector('.btn-hamb');
   
   document.addEventListener('click', e=>{
-    if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *')){
+    if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.menu-active')){
       $navPanel.classList.toggle('menu-active');
       $btnHamb.classList.toggle('isactive');
     }

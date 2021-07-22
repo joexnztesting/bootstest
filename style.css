@@ -649,7 +649,7 @@ h1{
 
 .prod-huerta{ /*  border: 1px solid green; */
   background-color: #fff;
-  height: 130vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;  
   position: relative;

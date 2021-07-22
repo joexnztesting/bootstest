@@ -13,7 +13,7 @@
 <style>
 .carousel-containerB{
   border: 1px solid blue;
-  width: 600px;
+  width: 250px;
   margin: 80px auto;
   display: flex;
   flex-direction: row;
@@ -26,67 +26,34 @@
   border-radius: 50%;
 }
 .carouselB{
-  border: 1px solid blue;
-  /* overflow-x: hidden; */
-  width: 100px;
+  /* border: 1px solid blue; */
+  overflow-x: hidden;
+  width: 110px;
   margin: 0 auto;
 }
 .carousel-slides{
-  border: 1px solid red;
-  width: 500px;
-  height: 600px;
+  /* border: 1px solid red; */
+  width: 550px;
+  height: 200px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   transition: all .3s ease-in-out;
 } 
 .slideB{
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all .3s ease-in-out;
 }
-.slideB img{ border: 1px solid green;
+.slideB img{ 
+  /* border: 1px solid green; */
   width: 100px;
   height: auto;
   transition: all .3s ease-in-out;
-}
-
-.to-right{
-  transform: translateX(100%);
-}
-.to-left{
-  transform: translateX(-100%);
-}
-
-.visib-no{
-  opacity: 0;
-}
-.visib-si{
-  opacity: 1;
-}
-
-.ord-0{
-  order: 0;
-}
-.ord-1{
-  order: 1;
-}
-.ord-2{
-  order: 2;
-}
-.ord-3{
-  order: 3;
-}
-.ord-4{
-  order: 4;
-}
-.ord-5{
-  order: 5;
-}
-
-
-.centrado{
-  border: 4px solid red;
 }
 
   </style>
@@ -361,36 +328,97 @@
 <script src="app.js"></script>
 
 <script>
-  $slides = document.querySelector('.carousel-slides');
+
   $slide = document.querySelectorAll('.slideB');
-  $slideLast = document.querySelector('.slideB:last-child');
-  $slideFirst = document.querySelector('.slideB:first-child');
-
-
-  function aa(){    
-    if($slideLast.classList.contains('centrado')){ 
-      $slideLast.classList.remove('centrado')
-      $slideFirst.classList.add('centrado')
-    }
-    if($slide[i].classList.contains('centrado')){
-      $slide[i].classList.remove('centrado')
-      i++
-      $slide[i].classList.add('centrado')      
-    }     
-    if($slideFirst.classList.contains('centrado')){ 
-      i=0
-    }     
-  }
   
   let i = 0;
+  let ii = $slide.length-1  
+
   $slide[i].classList.add('centrado')
+  
+  $slide[ii-1].style.opacity = '0';    
+
+  if($slide[i].classList.contains('centrado')){
+    $slide[ii].style.opacity = '0';    
+    $slide[ii].style.transform = `translateX(-${$slide.length}00%)`;
+    $slide[ii].classList.add('on-left');
+  }
+  
+  
+  function btnLeft(){
+    $slide.forEach((slid)=>{
+      if(slid.classList.contains('on-left')){ 
+        slid.style.opacity = '0'
+        slid.classList.remove('on-left')
+      }
+    })
+    if($slide[i].classList.contains('centrado')){ 
+      $slide[i].classList.remove('centrado');
+      $slide[i].classList.add('on-left');
+      $slide[i].style.transform = `translateX(-${i+1}00%)`;
+      i++;      
+      if(i===$slide.length){
+        i=0
+      };
+      ii++
+      if(ii===$slide.length){
+        ii=0
+      };
+      $slide[i].style.opacity = '1';
+      $slide[i].classList.add('centrado');
+      $slide[i].style.transform = `translateX(-${i}00%)`;
+      if(i<$slide.length-1){
+        $slide[i+1].style.transform = `translateX(-${i}00%)`;
+      };      
+      if(i===$slide.length-2){
+        $slide[0].style.transform = `translateX(100%)`;
+      };
+    };        
+    console.log(ii);
+    console.log(i);
+  }
+  
+  function btnRight(){
+    if($slide[ii].classList.contains('on-left')){
+      
+      $slide[ii].classList.remove('on-left');
+      $slide[ii].classList.add('centrado');
+      $slide[ii].style.opacity = '1';
+      $slide[ii].style.transform = `translateX(-${ii}00%)`;
+      ii--      
+      
+      if(i>0){
+        $slide[i].classList.remove('centrado');
+        $slide[i].style.transform = `translateX(-${i-1}00%)`; 
+      }
+      if(i===0){
+        $slide[i].classList.remove('centrado');
+        $slide[i].style.transform = `translateX(${i+1}00%)`;
+        i=$slide.length
+      }
+      i-- 
+      
+      if(ii<0){
+        ii=$slide.length-1
+      }
+      $slide[ii].style.opacity = '0'; 
+      $slide[ii].style.transform = `translateX(-${ii+1}00%)`;
+      $slide[ii].classList.add('on-left');       
+    }
+  }
+
   
   document.addEventListener('click', e=>{     
     if(e.target.matches('.btn-carousel-l')){      
+      e.preventDefault();      
+      btnLeft()
+    }
+    if(e.target.matches('.btn-carousel-r')){      
       e.preventDefault(); 
-      aa()
+      btnRight()
     }
   })
+  
 </script>
 
 </body>

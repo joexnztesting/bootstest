@@ -69,10 +69,13 @@
     font-size: 1.25rem;
     right: 8px;
     top: -15px;
-  }  
+  }
+  /*  
   .prod-huerta{
     height: 110vh;
   }
+  */
+  /*
   .carousel-container{
     width: 94%;
   }
@@ -102,7 +105,7 @@
     animation-duration: .4s;
     animation-timing-function: ease-in-out;
     animation-delay: 0s;
-  }
+  }*/
   .marco{
     width: 85%;
     padding: 10vw 7vw;
@@ -143,9 +146,11 @@
     font-size: 2rem;
     padding: 7vw; /**/
   }
+  /*
   .prod-huerta{
     height: 100vh;
   }
+  */
   .contacto-envios{
     padding: 40px 0 0px;
   }
@@ -278,6 +283,7 @@
     right: -15px;
     top: -15px;
   }  
+  /*
   .prod-huerta{
     height: 85vh;
   }
@@ -286,6 +292,7 @@
     line-height: 2.7rem;
     padding: 60px calc(10vw + 10vw) 50px;;
   }
+  */
   .marco{
     width: 450px;
     padding: 50px 30px;

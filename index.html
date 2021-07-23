@@ -10,53 +10,6 @@
   <link rel="stylesheet" href="./breakpoints.css">
   <link rel="icon" href="./img/logo.svg">
 
-<style>
-.carousel-containerB{
-  border: 1px solid blue;
-  width: 250px;
-  margin: 80px auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.btn-carousel-r, .btn-carousel-l{
-  height: 50px;
-  width: 50px;
-  border: 1px solid green;
-  border-radius: 50%;
-}
-.carouselB{
-  /* border: 1px solid blue; */
-  overflow-x: hidden;
-  width: 110px;
-  margin: 0 auto;
-}
-.carousel-slides{
-  /* border: 1px solid red; */
-  width: 550px;
-  height: 200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow-x: hidden;
-  transition: all .3s ease-in-out;
-} 
-.slideB{
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all .3s ease-in-out;
-}
-.slideB img{ 
-  /* border: 1px solid green; */
-  width: 100px;
-  height: auto;
-  transition: all .3s ease-in-out;
-}
-
-  </style>
 </head>
 
 <body class="container-princ"> 
@@ -176,74 +129,35 @@
     <div class="separador titu-huerta">
       <p>Productos<span>~ Huerta ~</span></p>
     </div>
-
-
-    <div class="carousel-containerB">
-      <div class="btn-carousel-l"></div>
-      <div class="carouselB">
-        <div class="carousel-slides">
-          <div class="slideB">
-            <img src="./img/carousel/acelga.jpg" alt="#">
-          </div>
-          <div class="slideB">
-            <img src="./img/carousel/sandia.jpg" alt="$">
-          </div>
-          <div class="slideB">
-            <img src="./img/carousel/calabacin.jpg" alt="#">
-          </div>
-          <div class="slideB">
-            <img src="./img/carousel/tomate.jpg" alt="">
-          </div>
-          <div class="slideB">
-            <img src="./img/carousel/lastSlide.jpg" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="btn-carousel-r"></div>    
-    </div>
-
-    <!--
+    
+    
     <section id="huerta" class="prod-huerta">         
       
-      <div class="bq-semillas"><p>" Gran Variedad de Semillas "</p></div> 
-
-      <div class="carousel-container">                
-
-        <div class="select-left"></div>
-        <div class="select-right"></div>
-        
-        <div class="carousel">  
-            <div class="slides-container">
-              <div class="slide">
-                <div class="marco-img">
-                  <img class="avatar" src="./img/carousel/acelga.jpg" alt="carousel">
-                </div>
-              </div>
-              <div class="slide">
-                <div class="marco-img">
-                  <img class="avatar" src="./img/carousel/sandia.jpg" alt="carousel">
-                </div>
-              </div>
-              <div class="slide">
-                <div class="marco-img">
-                  <img class="avatar" src="./img/carousel/tomate.jpg" alt="carousel">
-                </div>
-              </div>
-              <div class="slide">
-                <div class="marco-img">
-                  <img class="avatar" src="./img/carousel/calabacin.jpg" alt="carousel">
-                </div>
-              </div>
-              <div class="slide">
-                <div class="marco-img">
-                  <img class="avatar" src="./img/carousel/lastSlide.jpg" alt="carousel">
-                </div>
-              </div>
+      <div class="carousel-containerB">
+        <div class="btn-carousel-l"></div>
+        <div class="carouselB">
+          <div class="carousel-slides">
+            <div class="slideB">
+              <img src="./img/carousel/acelga.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/sandia.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/calabacin.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/tomate.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/lastSlide.jpg" alt="#">
             </div>
           </div>
-      </div>  
-      
-    </section> --> 
+        </div>
+        <div class="btn-carousel-r"></div>    
+      </div>
+            
+    </section>
 
     
     <div class="separador titu-acerca">
@@ -334,28 +248,28 @@
   let i = 0;
   let ii = $slide.length-1  
 
-  $slide[i].classList.add('centrado')
-  
-  $slide[ii-1].style.opacity = '0';    
+  $slide.forEach((slid)=>{
+        slid.style.opacity = '0'
+        slid.style.visibility = 'hidden'
+    })
 
-  if($slide[i].classList.contains('centrado')){
-    $slide[ii].style.opacity = '0';    
+  $slide[i].classList.add('centrado')
+  $slide[i].style.opacity = '1'
+  $slide[i].style.visibility = 'visible'   
+
+  if($slide[i].classList.contains('centrado')){   
     $slide[ii].style.transform = `translateX(-${$slide.length}00%)`;
     $slide[ii].classList.add('on-left');
   }
   
   
   function btnLeft(){
-    $slide.forEach((slid)=>{
-      if(slid.classList.contains('on-left')){ 
-        slid.style.opacity = '0'
-        slid.classList.remove('on-left')
-      }
-    })
     if($slide[i].classList.contains('centrado')){ 
       $slide[i].classList.remove('centrado');
-      $slide[i].classList.add('on-left');
+      $slide[i].style.opacity = '0'
+      $slide[i].style.visibility = 'hidden'
       $slide[i].style.transform = `translateX(-${i+1}00%)`;
+      $slide[i].classList.add('on-left');
       i++;      
       if(i===$slide.length){
         i=0
@@ -366,6 +280,8 @@
       };
       $slide[i].style.opacity = '1';
       $slide[i].classList.add('centrado');
+      $slide[i].style.opacity = '1'
+      $slide[i].style.visibility = 'visible'
       $slide[i].style.transform = `translateX(-${i}00%)`;
       if(i<$slide.length-1){
         $slide[i+1].style.transform = `translateX(-${i}00%)`;
@@ -373,27 +289,30 @@
       if(i===$slide.length-2){
         $slide[0].style.transform = `translateX(100%)`;
       };
-    };        
-    console.log(ii);
-    console.log(i);
+    };
   }
-  
+
   function btnRight(){
     if($slide[ii].classList.contains('on-left')){
       
       $slide[ii].classList.remove('on-left');
       $slide[ii].classList.add('centrado');
-      $slide[ii].style.opacity = '1';
+      $slide[ii].style.opacity = '1'
+      $slide[ii].style.visibility = 'visible'     
       $slide[ii].style.transform = `translateX(-${ii}00%)`;
       ii--      
       
       if(i>0){
         $slide[i].classList.remove('centrado');
         $slide[i].style.transform = `translateX(-${i-1}00%)`; 
+        $slide[i].style.opacity = '0'
+        $slide[i].style.visibility = 'hidden'
       }
       if(i===0){
         $slide[i].classList.remove('centrado');
         $slide[i].style.transform = `translateX(${i+1}00%)`;
+        $slide[i].style.opacity = '0'
+        $slide[i].style.visibility = 'hidden'
         i=$slide.length
       }
       i-- 
@@ -401,7 +320,6 @@
       if(ii<0){
         ii=$slide.length-1
       }
-      $slide[ii].style.opacity = '0'; 
       $slide[ii].style.transform = `translateX(-${ii+1}00%)`;
       $slide[ii].classList.add('on-left');       
     }

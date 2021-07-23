@@ -14,7 +14,7 @@
 
 <body class="container-princ"> 
   
-  <div class="container-nav">    
+  <!-- <div class="container-nav">    
     <div class="panel"></div>
     <div class="menu">
       <div class="items">
@@ -44,12 +44,38 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+  
 
-  <main>
+    <div class="nav-container5">
+      <div class="nav-menu5">
+        <div class="panel5">
+          <div class="panel-item5"><a class="item5" href="#huerta">huerta</a></div>
+          <div class="panel-item5"><a class="item5" href="#">home</a></div>
+          <div class="panel-item5"><a class="item5" href="#huerta">huerta</a></div>
+          <div class="panel-item5"><a class="item5" href="#">home</a></div>
+          <div class="panel-item5"><a class="item5" href="#huerta">huerta</a></div>
+        </div>
+      </div>
+      <div class="nav-row5">
+        <div class="nav-row-item5">
+          <a href="#contacto">contacto</a>
+        </div>
+        <div class="nav-row-item5">
+          <a href="#">Biode</a>
+        </div>
+        <div class="nav-row-item5">
+          <div class="btn-hamb5">
+            <div class="line5"></div>
+            <div class="line5"></div>
+            <div class="line5"></div>
+          </div>
+        </div>      
+      </div>
+    </div>
 
 
-    
+  <main>    
     <header class="header-container">
       
       <div class="img-conteiner">
@@ -235,13 +261,17 @@
   </main>
 
 
-<script src="./nav-bar.js"></script> 
+<!-- <script src="./nav-bar.js"></script>  -->
 <script src="./card-info-insert.js"></script> 
 <script src="form.js"></script>
 <!-- <script src="slider.js"></script> -->
 <script src="app.js"></script>
 
 <script>
+
+  $navPanel = document.querySelector('.nav-menu5');
+  $btnHamb = document.querySelector('.btn-hamb5');
+  $navRowItem = document.querySelectorAll('.nav-row-item5 a');
 
   $slide = document.querySelectorAll('.slideB');
   
@@ -326,7 +356,16 @@
   }
 
   
-  document.addEventListener('click', e=>{     
+  document.addEventListener('click', e=>{
+    
+    if(e.target.matches('.btn-hamb5') || e.target.matches('.btn-hamb5 *') || e.target.matches('.menu-active5') || e.target.matches('.item5')){
+      $navPanel.classList.toggle('menu-active5');
+      $btnHamb.classList.toggle('isactive5');
+      $navRowItem.forEach((itm)=>{
+        itm.classList.toggle('item5')
+      });
+    }
+
     if(e.target.matches('.btn-carousel-l')){      
       e.preventDefault();      
       btnLeft()

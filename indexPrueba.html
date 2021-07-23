@@ -182,32 +182,7 @@ btn-hamb .line:nth-child(3) {
   <div id="verde" class="cuerpo1"></div>
   <div id="blanco" class="cuerpo3"></div>
 
-  <div class="carousel-container">
-    <div class="btn-carousel-l"></div>
-    <div class="carousel">
-      <div class="carousel-slides">
-        <div class="slide">
-          <img src="./img/carousel/acelga.jpg" alt="#">
-        </div>
-        <div class="slide">
-          <img src="./img/carousel/sandia.jpg" alt="$">
-        </div>
-        <div class="slide">
-          <img src="./img/carousel/calabacin.jpg" alt="#">
-        </div>
-        <div class="slide">
-          <img src="./img/carousel/tomate.jpg" alt="">
-        </div>
-        <div class="slide">
-          <img src="./img/carousel/lastSlide.jpg" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="btn-carousel-r"></div>    
-  </div>
-
-
-    <div class="nav-container">
+      <div class="nav-container">
       <div class="nav-menu">
         <div class="panel">
           <div class="panel-item"><a class="item" href="#verde">verde</a></div>
@@ -246,14 +221,9 @@ btn-hamb .line:nth-child(3) {
 <script>
   $navPanel = document.querySelector('.nav-menu');
   $btnHamb = document.querySelector('.btn-hamb');
-  $navRowItem = document.querySelectorAll('.nav-row-item a');  
-  $slides = document.querySelector('.carousel-slides');
-  $slide = document.querySelectorAll('.slide');
+  $navRowItem = document.querySelectorAll('.nav-row-item a');
 
 
-  let i = 0;
-
-  $slide[i].classList.add('active')
   
   document.addEventListener('click', e=>{
     if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.menu-active') || e.target.matches('.item')){
@@ -262,33 +232,8 @@ btn-hamb .line:nth-child(3) {
       $navRowItem.forEach((itm)=>{
         itm.classList.toggle('item')
       });
-    }   
+    }  
     
-    
-    
-    if(e.target.matches('.btn-carousel-l')){
-      e.preventDefault(); 
-
-      console.log(i);      
-      console.log($slide[i]);      
-
-      /*
-      if($slide[i].classList.contains('active')){
-        $slide.forEach(slide=>{
-          slide.classList.add('to-left')
-        })
-      }
-      */
-
-      $slide[i].classList.remove('active')
-      i++  
-      $slide[i].classList.add('active') 
-
-      
-
-      console.log(i);
-      console.log($slide[i]); 
-    }
   })
 </script>
 </html>

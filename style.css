@@ -647,43 +647,45 @@ h1{
 
 /* *********  CAROUSEL  ************  */
 .prod-huerta{
-  background-color: rgb(219, 243, 221);
-  height: 60vh;
+  background-color: rgb(255, 255, 255);
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
-  /* position: relative; */
+  align-items: center;
 }
 .carousel-containerB{
   border: 1px solid blue;
-  width: 250px;
-  margin: 80px auto;
+  padding: 25px 10px;
+  border-radius: 25px;
+  width: 55vh;
+  margin: 0px auto;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .btn-carousel-l{
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border: 1px solid green;
   border-radius: 50%;
 }
 .btn-carousel-r{
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border: 1px solid green;
   border-radius: 50%;
 }
 .carouselB{
   border: 1px solid rgb(68, 208, 250);
-  /* overflow-x: hidden; */
-  width: 17.7vh;
+  width: 30vh;
   margin: 0 auto;
+  overflow-x: hidden;
 }
-.carousel-slides{ border: 1px solid yellow; 
-  width: 85vh;
-  height: 200px;
+.carousel-slides{ 
+  /* border: 1px solid yellow;  */
+  width: 150vh;
+  height: auto;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -691,15 +693,17 @@ h1{
   /* overflow-x: hidden; */
   transition: all .3s ease-in-out;
 } 
-.slideB{ border: 1px solid red;
-  padding: 1vh;
+.slideB{ 
+  /*border: 1px solid red;*/
+  padding: 0vh;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all .3s ease-in-out;
 }
-.slideB img{  border: 1px solid rgb(68, 34, 255); 
-  width: 15vh;
+.slideB img{  
+  /* border: 1px solid rgb(68, 34, 255);  */
+  width: 30vh;
   height: auto;
   transition: all .3s ease-in-out;
 }

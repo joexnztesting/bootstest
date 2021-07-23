@@ -70,6 +70,10 @@
     right: 8px;
     top: -15px;
   }
+  .carousel-containerB{
+    padding: 30px 15px;
+    width: 50vh;
+  }
   /*  
   .prod-huerta{
     height: 110vh;
@@ -145,6 +149,10 @@
     width: 80%; /**/
     font-size: 2rem;
     padding: 7vw; /**/
+  }
+  .carousel-containerB{
+    padding: 25px 10px;
+    width: 48vh;
   }
   /*
   .prod-huerta{

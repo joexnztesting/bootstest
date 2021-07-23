@@ -1,32 +1,6 @@
 
 
-@media (min-width: 350px) {     
-  .container-nav{
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -o-sticky;
-    position: -ms-sticky;
-    position: sticky;
-    top: 93.5vh;
-   }
-  .nav-row{
-    height: 6.5vh;
-  }
-  .nav-row-item:nth-child(1){
-    padding-left: 15px;
-  }
-  .nav-row-item:nth-child(3){
-    padding-right: 22px;
-  }
-  .panel{
-    height: 93.5vh;
-    position: absolute;
-    top: -93.5vh;
-  }
-  .menu{
-    height: 93.5vh;
-    top: -93.5vh;
-  }
+@media (min-width: 350px) {
   .header-container{
     height: 93.5vh;
   }
@@ -74,42 +48,6 @@
     padding: 30px 15px;
     width: 50vh;
   }
-  /*  
-  .prod-huerta{
-    height: 110vh;
-  }
-  */
-  /*
-  .carousel-container{
-    width: 94%;
-  }
-  .carousel{
-    height: calc(420px + 8vw);
-    width: calc(280px + 8vw);  
-  }
-  .slide{
-    width: calc(240px + 8vw);
-  }
-  .left-to-center{
-    animation-duration: .4s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-  }
-  .right-to-center{
-    animation-duration: .4s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-  }
-  .center-to-left{
-    animation-duration: .4s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-  }
-  .center-to-right{
-    animation-duration: .4s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-  }*/
   .marco{
     width: 85%;
     padding: 10vw 7vw;
@@ -150,15 +88,16 @@
     font-size: 2rem;
     padding: 7vw; /**/
   }
+  
+  .prod-huerta{
+    height: 97vh;
+  }
   .carousel-containerB{
     padding: 25px 10px;
     width: 48vh;
   }
-  /*
-  .prod-huerta{
-    height: 100vh;
-  }
-  */
+
+
   .contacto-envios{
     padding: 40px 0 0px;
   }
@@ -173,29 +112,17 @@
 
 
 @media (min-width: 520px) {
-  .nav-row-item-border{
-    width: calc(19vw - 3.5vw);
+  
+  .panel5{
+    width: 40%;
   }
-  .nav-row-item:nth-child(1){
-    padding-left: calc(25px + 1vw);
-  }
-  .nav-row-item:nth-child(3){
-    padding-right: calc(22px + 1vw);
-  }
-  .nav-row-item:nth-child(2) a{
-    font-size: 1.6rem;
-  }
-  @keyframes menu-in{
-    100%{
-      width: 50vw;
-      padding: 0 4vw 0 6vw;
-    }
-  }
+
   .imagen-header{
     opacity: 0;
     visibility: hidden;
   }
-  .img-head{ border: 1px solid yellowgreen;
+  .img-head{ 
+    /* border: 1px solid yellowgreen; */
     height: 93.5vh;
     width: 100%;
     background-image: url("./img/header-desk.jpg");  
@@ -291,16 +218,16 @@
     right: -15px;
     top: -15px;
   }  
-  /*
+  
   .prod-huerta{
-    height: 85vh;
+    height: 87vh;
   }
   .bq-semillas{
     font-size: calc(1.9rem + .2vw);
     line-height: 2.7rem;
     padding: 60px calc(10vw + 10vw) 50px;;
   }
-  */
+
   .marco{
     width: 450px;
     padding: 50px 30px;
@@ -351,20 +278,8 @@
 
 
 @media (min-width: 768px) {
-  .nav-row-item-border{
-    width: calc(18vw - 5vw);
-  }
-  .nav-row-item:nth-child(1){
-    padding-left: calc(25px + 2vw);
-  }
-  .nav-row-item:nth-child(3){
-    padding-right: calc(22px + 2vw);
-  }
-  @keyframes menu-in{
-    100%{
-      width: 43vw;
-      padding: 0 3vw 0 5vw;
-    }
+  .prod-huerta{
+    height: 85vh;
   }
   .marco-plantas p{
     font-size: 1.6rem;
@@ -375,63 +290,33 @@
 /* HTML con MARGEN  */
 
 @media (min-width: 992px) {  
-  html{
+  html,
+  .nav-container5,
+  .panel-fondo,
+  .nav-row5{
     width: calc(100% - 20vw);
     margin: 0 auto;
-    box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.15);
-  }
-  .nav-row-item-border{
-    width: calc(20vw - 9vw);
-  }
-  .nav-row-item:nth-child(1){
-    padding-left: calc(25px + .5vw);
-  }
-  .nav-row-item:nth-child(3){
-    padding-right: calc(22px + .5vw);
-  }
-  @keyframes menu-in{
-    100%{
-      width: 35vw;
-      padding: 0 3vw 0 5vw;
-    }
+    
   }
 }
 
 
 @media (min-width: 1200px) {
-  html{
+  html,
+  .nav-container5,
+  .panel-fondo,
+  .nav-row5{
     width: calc(100% - 25vw);
-  }
-  .nav-row-item-border{
-    width: calc(19vw - 11vw);
-  }
-  .nav-row-item:nth-child(1){
-    padding-left: calc(25px + 2vw);
-  }
-  .nav-row-item:nth-child(3){
-    padding-right: calc(22px + 2vw);
-  }
-  @keyframes menu-in{
-    100%{
-      width: 33vw;
-      padding: 0 3vw 0 5vw ;
-    }
   }
 }
 
 
 @media (min-width: 1400px) {
-  html{
+  html,
+  .nav-container5,
+  .panel-fondo,
+  .nav-row5{
     width: calc(100% - 30vw);
-  }
-  .nav-row-item-border{
-    width: calc(18.5vw - 12vw);
-  }
-  @keyframes menu-in{
-    100%{
-      width: 35vw;
-      padding: 0 2vw 0 5vw ;
-    }
   }
   .img-head{
     background-size: calc(90% + 4vw);

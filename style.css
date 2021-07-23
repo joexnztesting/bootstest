@@ -757,7 +757,7 @@ h1{
 }
 .carousel-slides{ 
   /* border: 1px solid yellow;  */
-  width: 150vh;
+  width: 300vh;
   height: auto;
   margin: 0 auto;
   display: flex;

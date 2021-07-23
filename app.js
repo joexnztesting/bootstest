@@ -1,117 +1,118 @@
 
-/*
-const $span1 = document.querySelectorAll('.bq-semillas');
-const $span2 = document.querySelectorAll('.card:nth-child(5)');
-const $span3 = document.querySelectorAll('.titu-acerca');
-const $span4 = document.querySelectorAll('.row-icons');
-const $span5 = document.querySelectorAll('.marco-plantas');
-const $span6 = document.querySelectorAll('.btn-cont');
-const $span7 = document.querySelectorAll('.contacto-envios');
+document.addEventListener('DOMContentLoaded',(e)=>{
+  // INICIADORES NAV
+  $panelFondo = document.querySelector('.panel-fondo');
+  $navPanel = document.querySelector('.panel5');
+  $btnHamb = document.querySelector('.btn-hamb5');
+  $navRowItem = document.querySelectorAll('.nav-row-item5 a');
+  // FIN INICIADORES NAV
 
-const $tituProd = document.querySelector('.titu-prod');
-const $tituHuerta = document.querySelector('.titu-huerta');
-const $tituAcerca = document.querySelector('.titu-acerca');
-const $tituVentas = document.querySelector('.titu-ventas');
-
-
-
-const stickyOut = (entries)=>{
-entries.forEach(entry=>{
-  if(entry.isIntersecting){
-    if($tituAcerca.classList.contains('separador')){
-      $tituAcerca.classList.add('ocultar-titu')
-      $tituAcerca.classList.remove('mostrar-titu')
-    }    
+  // INICIADORES CAROUSEL
+  $slide = document.querySelectorAll('.slideB');   
+  let i = 0;
+  let ii = $slide.length-1  
+  $slide.forEach((slid)=>{
+    slid.style.opacity = '0'
+    slid.style.visibility = 'hidden'
+  })  
+  $slide[i].classList.add('centrado')
+  $slide[i].style.opacity = '1'
+  $slide[i].style.visibility = 'visible'  
+  if($slide[i].classList.contains('centrado')){   
+    $slide[ii].style.transform = `translateX(-${$slide.length}00%)`;
+    $slide[ii].classList.add('on-left');
   }
-})
-}
-const stickyIn = (entries)=>{
-entries.forEach(entry=>{
-  if(entry.isIntersecting){
-    if($tituAcerca.classList.contains('ocultar-titu')){
-      $tituAcerca.classList.add('mostrar-titu')
-      $tituAcerca.classList.remove('ocultar-titu')
-    }    
+    
+  function btnLeft(){
+    if($slide[i].classList.contains('centrado')){ 
+      $slide[i].classList.remove('centrado');
+      $slide[i].style.opacity = '0'
+      $slide[i].style.visibility = 'hidden'
+      $slide[i].style.transform = `translateX(-${i+1}00%)`;
+      $slide[i].classList.add('on-left');
+      i++;      
+      if(i===$slide.length){
+        i=0
+      };
+      ii++
+      if(ii===$slide.length){
+        ii=0
+      };
+      $slide[i].style.opacity = '1';
+      $slide[i].classList.add('centrado');
+      $slide[i].style.opacity = '1'
+      $slide[i].style.visibility = 'visible'
+      $slide[i].style.transform = `translateX(-${i}00%)`;
+      if(i<$slide.length-1){
+        $slide[i+1].style.transform = `translateX(-${i}00%)`;
+      };      
+      if(i===$slide.length-2){
+        $slide[0].style.transform = `translateX(100%)`;
+      };
+    };
   }
-})
-}
-const stickyOut2 = (entries)=>{
-entries.forEach(entry=>{
-  if(entry.isIntersecting){
-    if($tituProd.classList.contains('separador')){
-      $tituProd.classList.add('ocultar-titu')
-      $tituProd.classList.remove('mostrar-titu')
-    }    
-  }
-})
-}
-const stickyIn2 = (entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      if($tituProd.classList.contains('ocultar-titu')){
-        $tituProd.classList.add('mostrar-titu')
-        $tituProd.classList.remove('ocultar-titu')
-      }    
+
+  function btnRight(){
+    if($slide[ii].classList.contains('on-left')){
+      
+      $slide[ii].classList.remove('on-left');
+      $slide[ii].classList.add('centrado');
+      $slide[ii].style.opacity = '1'
+      $slide[ii].style.visibility = 'visible'     
+      $slide[ii].style.transform = `translateX(-${ii}00%)`;
+      ii--      
+      
+      if(i>0){
+        $slide[i].classList.remove('centrado');
+        $slide[i].style.transform = `translateX(-${i-1}00%)`; 
+        $slide[i].style.opacity = '0'
+        $slide[i].style.visibility = 'hidden'
+      }
+      if(i===0){
+        $slide[i].classList.remove('centrado');
+        $slide[i].style.transform = `translateX(${i+1}00%)`;
+        $slide[i].style.opacity = '0'
+        $slide[i].style.visibility = 'hidden'
+        i=$slide.length
+      }
+      i-- 
+      
+      if(ii<0){
+        ii=$slide.length-1
+      }
+      $slide[ii].style.transform = `translateX(-${ii+1}00%)`;
+      $slide[ii].classList.add('on-left');       
     }
+  }
+  // FIN INICIADORES CAROUSEL
+  
+
+  // **********************************************************
+  
+  document.addEventListener('click', e=>{
+    // NAV
+    if(e.target.matches('.btn-hamb5') || e.target.matches('.btn-hamb5 *') || e.target.matches('.item5') || e.target.matches('.panel-fondo')){
+      $panelFondo.classList.toggle('fondo-active');
+      $navPanel.classList.toggle('panel-active5');
+      $btnHamb.classList.toggle('isactive5');
+      $navRowItem.forEach((itm)=>{
+        itm.classList.toggle('item5')
+      });
+    }
+    // FIN NAV
+
+    // CAROUSEL
+    if(e.target.matches('.btn-carousel-l')){      
+      e.preventDefault();      
+      btnLeft()
+    }
+    if(e.target.matches('.btn-carousel-r')){      
+      e.preventDefault(); 
+      btnRight()
+    }
+    // FIN CAROUSEL
   })
-}
-const stickyOut3 = (entries)=>{
-entries.forEach(entry=>{
-  if(entry.isIntersecting){
-    if($tituHuerta.classList.contains('separador')){
-      $tituHuerta.classList.add('ocultar-titu')
-      $tituHuerta.classList.remove('mostrar-titu')
-    }    
-  }
-})
-}
-const stickyIn3 = (entries)=>{
-entries.forEach(entry=>{
-  if(entry.isIntersecting){
-    if($tituHuerta.classList.contains('ocultar-titu')){
-      $tituHuerta.classList.add('mostrar-titu')
-      $tituHuerta.classList.remove('ocultar-titu')
-    }    
-  }
-})
-}
-const stickyOut4 = (entries)=>{
-entries.forEach(entry=>{
-  if(entry.isIntersecting){
-    if($tituVentas.classList.contains('separador')){
-      $tituVentas.classList.add('ocultar-titu')
-      $tituVentas.classList.remove('mostrar-titu')
-    }    
-  }
-})
-}
-const stickyIn4 = (entries)=>{
-entries.forEach(entry=>{
-  if(entry.isIntersecting){
-    if($tituVentas.classList.contains('ocultar-titu')){
-      $tituVentas.classList.add('mostrar-titu')
-      $tituVentas.classList.remove('ocultar-titu')
-    }    
-  }
-})
-}
 
-const observer1 = new IntersectionObserver(stickyOut, {threshold:0.5});
-const observer2 = new IntersectionObserver(stickyIn, {threshold:0.9});
-const observer3 = new IntersectionObserver(stickyOut2, {threshold:0.5});
-const observer4 = new IntersectionObserver(stickyIn2, {threshold:0.5});
-const observer5 = new IntersectionObserver(stickyOut3, {threshold:0.1});
-const observer6 = new IntersectionObserver(stickyIn3, {threshold:0.1});
-const observer7 = new IntersectionObserver(stickyOut4, {threshold:0.1});
-const observer8 = new IntersectionObserver(stickyIn4, {threshold:0.1});
+  // **********************************************************
 
-$span4.forEach((el)=>observer1.observe(el));
-$span5.forEach((el)=>observer2.observe(el));
-$span1.forEach((el)=>observer3.observe(el));
-$span2.forEach((el)=>observer4.observe(el));
-$span3.forEach((el)=>observer5.observe(el));
-$span1.forEach((el)=>observer6.observe(el));
-$span6.forEach((el)=>observer7.observe(el));
-$span7.forEach((el)=>observer8.observe(el));
-
-*/
+})

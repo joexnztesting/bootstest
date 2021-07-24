@@ -1,251 +1,112 @@
 <!DOCTYPE html>
-<html lang="es" class="htemele">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biode</title>
-  <link rel="stylesheet" href="./form.css">
-  <link rel="stylesheet" href="./style.css">
-  <!-- <link rel="stylesheet" href="./breakpoints.css"> -->
-  <link rel="icon" href="./img/logo.svg">
+  <title>Document</title>
+
+  <style>
+    html{
+      box-sizing: border-box; 
+      margin: 0;
+      padding: 0;   
+      scroll-behavior: smooth;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      overflow-x: hidden;
+      box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.15);
+    }
+    *,
+    *:before,
+    *:after{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }    
+    body{
+      box-sizing: border-box; 
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .caja{
+      width: 250px;
+      height: 250px;
+      margin: 50px auto;
+      background-color: rgb(255, 255, 255);
+      border: 4px solid rgb(255, 230, 0);
+    }
+    .row{
+      width: 100%;
+      padding: 10px 0;
+      background-color: turquoise;
+      margin: 30px auto;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .row-item{
+      padding: 10px;
+      background-color: whitesmoke;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .item{
+      padding: 10px;
+      background-color: rgb(182, 255, 65);
+      cursor: pointer;
+      text-align: center;
+    }
+    .azul{
+      background-color: blue;
+    }
+    .verde{
+      background-color: green;
+    }
+    .rojo{
+      background-color: red;
+    }
+    .celeste{
+      background-color: rgb(89, 222, 255);
+    }
+    .lima{
+      background-color: rgb(151, 235, 41);
+    }
+    .naranja{
+      background-color: rgb(255, 151, 15);
+    }
+  </style>
 
 </head>
+<body>
 
-<body class="container-princ"> 
+  <div class="caja"></div>
 
-  <div class="nav-container5">
-    <div class="panel-fondo"></div>
-    <div class="nav-menu5">
-      <div class="panel5">
-        <div class="panel-item5"><a class="item5" href="#huerta">huerta</a></div>
-        <div class="panel-item5"><a class="item5" href="#header">home</a></div>
-        <div class="panel-item5"><a class="item5" href="#huerta">huerta</a></div>
-        <div class="panel-item5"><a class="item5" href="#header">home</a></div>
-        <div class="panel-item5"><a class="item5" href="#huerta">huerta</a></div>
-      </div>
+  <div class="row">
+    <div class="row-item">
+      <div class="item item-1">Azul<br>'click'</div>
+    </div>
+    <div class="row-item">
+      <div class="item item-2">Verde<br>'tchst true'</div>
+    </div>
+    <div class="row-item">
+      <div class="item item-3">Rojo<br>'tchst false'</div>
     </div>
   </div>
-  <div class="nav-row5">
-    <div class="nav-row-item5">
-      <a href="#contacto">Ventas</a>
+  <div class="row row2">
+    <div class="row-item">
+      <div class="item item-4">Celeste</div>
     </div>
-    <div class="nav-row-item5">
-      <a href="#">Biode</a>
+    <div class="row-item">
+      <div class="item item-5">Lima</div>
     </div>
-    <div class="nav-row-item5">
-      <div class="btn-hamb5">
-        <div class="line5"></div>
-        <div class="line5"></div>
-        <div class="line5"></div>
-      </div>
-    </div>      
+    <div class="row-item">
+      <div class="item item-6">Naranja</div>
+    </div>
   </div>
 
-  <main>    
-    <header id="header" class="header-container">      
-      <div class="img-conteiner">
-        <img class="imagen-header" src="./img/header.jpg" alt="fondo header">
-        <div class="img-head"></div>
-      </div> 
-      <img class="logo" src="./img/logo.svg" alt="logo">
-      <h1>Productos de excelente calidad para el cuidado de tu Hogar y Jardín</h1>
-    </header>
-    
-    <div class="separador titu-prod">
-      <p>Productos<span>~ Hogar & Jardín ~</span></p>
-    </div>
-    
-    <section id="productos" class="los-prod">            
-      <div class="titu-manten"><p>" Mantenimiento de Hogar y Jardín "</p></div>      
-      
-      <div class="info-cards-container"></div>
-      
-      <div class="cards">
-        <div class="card">
-          <img src="./img/cards/alacr.png" alt="mata alacranes">
-          <div class="figcap">
-            <p>No Tóxico para niños y mascotas</p>
-            <div><a href="./assets/card_alacran_info.html" class="mas-info">Más info...</a></div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./img/cards/cucas.png" alt="">
-          <div class="figcap">
-            <p>Elimina colonias de hogares e industrias</p>
-            <div><a href="./assets/card_alacran_info.html" class="mas-info">Más info...</a></div>
-            <!-- <div><a href="./assets/card_cuca_info.html" class="mas-info">Más info...</a></div> -->
-          </div>
-        </div>
-        <div class="card">
-          <img src="./img/cards/hormig.png" alt="">
-          <div class="figcap">
-            <p>Diseñado para erradicar hormigueros</p>
-            <div><a href="./assets/card_alacran_info.html" class="mas-info">Más info...</a></div>
-            <!-- <div><a href="./assets/card_hormig_info.html"  class="mas-info">Más info...</a></div> -->
-          </div>
-        </div>        
-        <div class="card">
-          <img src="./img/cards/primpaso.png" alt="">
-          <div class="figcap">
-            <p>Muy útil para el mantenimiento de cañerías</p>
-            <div><a href="./assets/card_alacran_info.html" class="mas-info">Más info...</a></div>
-            <!-- <div><a href="./assets/card_primpaso_info.html"  class="mas-info">Más info...</a></div> -->
-          </div>
-        </div>
-        <div class="card">
-          <img src="./img/cards/aqui_no.png" alt="">
-          <div class="figcap">
-            <p>Mantiene la higiene dentro y fuera de la casa</p>
-            <div><a href="./assets/card_alacran_info.html" class="mas-info">Más info...</a></div>
-            <!-- <div><a href="./assets/card_aquino_info.html"  class="mas-info">Más info...</a></div> -->
-          </div>
-        </div>              
-        <div class="card">
-          <img src="./img/cards/cuater.png" alt="">
-          <div class="figcap">
-            <p>Listo para usar, de amplio espectro</p>
-            <div><a href="./assets/card_alacran_info.html" class="mas-info">Más info...</a></div>
-            <!-- <div><a href="./assets/card_cuater_info.html"  class="mas-info">Más info...</a></div> -->
-          </div>
-        </div>        
-      </div>            
-    </section>      
-    
-    
-    <section id="huerta" class="prod-huerta"> 
-      
-      <div class="carousel-containerB">
-        <div class="btn-carousel-l"></div>
-        <div class="carouselB">
-          <div class="carousel-slides">
-
-            <div class="slideB">
-              <img src="./img/carousel/acelga.jpg" alt="#">
-            </div>
-            <div class="slideB">
-              <img src="./img/carousel/acelga - copia.jpg" alt="#">
-            </div>
-            <div class="slideB">
-              <img src="./img/carousel/sandia.jpg" alt="#">
-            </div>
-            <div class="slideB">
-              <img src="./img/carousel/sandia - copia.jpg" alt="#">
-            </div>
-            <div class="slideB">
-              <img src="./img/carousel/calabacin.jpg" alt="#">
-            </div>
-            <div class="slideB">
-              <img src="./img/carousel/calabacin - copia.jpg" alt="#">
-            </div>
-            <div class="slideB">
-              <img src="./img/carousel/tomate.jpg" alt="#">
-            </div>
-            <div class="slideB">
-              <img src="./img/carousel/tomate - copia.jpg" alt="#">
-            </div>
-            <div class="slideB">
-              <img src="./img/carousel/lastSlide.jpg" alt="#">
-            </div>
-            <div class="slideB">
-              <img src="./img/carousel/lastSlide - copia.jpg" alt="#">
-            </div>
-
-          </div>
-        </div>
-        <div class="btn-carousel-r"></div>    
-      </div>
-
-      <div class="bq-semillas"><p>" Gran Variedad de Semillas "</p></div> 
-
-      <div class="separador titu-huerta">
-        <p>Productos<span>~ Huerta ~</span></p>
-      </div>
-            
-    </section>
-
-    
-    <div class="separador titu-acerca">
-      <p>Acerca de Nosotros</p>
-    </div>
-
-
-    <section id="acerca" class="acerca">
-      <div class="marco">       
-        <div class="marco-plantas">
-          <p><i>         
-            Somos una empresa familiar que brinda alternativas accesibles y económicas, para el cuidado del hogar frente a plagas y también para el mantenimiento de la vivienda.<br>
-            Nuestra misión es que los productos, de excelente calidad, lleguen fácilmente al alcance de tu mano.
-          </i></p>
-        </div>
-      </div>
-    </section>
-
-    <div id="contacto" class="separador titu-ventas">
-      <p>Ventas</p>
-    </div>
-
-    <section class="social-icons">      
-      <div class="contacto-envios">
-        <p>" Hacemos envíos a todo el país "</p>
-      </div>      
-      <div class="row-icons">
-        <div><a href="https://api.whatsapp.com/send?phone=5493515118011" target="_blank"><img src="./img/icon-social-wsp.svg" alt="icon-wsp"></a></div>
-        <div><a href="https://www.instagram.com/biodeargentina/" target="_blank"><img src="./img/icon-social-insta.svg" alt="icon-inst"></a></div>
-        <div><a href="https://www.facebook.com/BIODE-437954180031617" target="_blank"><img src="./img/icon-social-face.svg" alt="icon-face"></a></div>
-        <div><a href="mailto:biode.argentina@gmail.com" target="_blank"><img src="./img/icon-social-mail.svg" alt="icon-twt"></a></div>
-      </div>
-    </section>
-    
-    <div class="separador titu-contc">
-      <p>Contacto</p>
-    </div>
-    
-    <section class="formu-container">      
-
-      <div class="contacto-sumate">
-        <div>Te gustaría ser distribuidor y conseguir ingresos extras?</div>
-      </div>
-
-      <div class="formu">
-        <form class="contact-form">
-          <legend>Envíanos tu comentario</legend>
-      
-          <input class="formu-input" type="text" name="name" placeholder="Escribe tu nombre" title="El campo Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
-      
-          <input class="formu-input" type="email" name="email" placeholder="Escribe tu correo electrónico" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
-      
-          <textarea class="formu-input" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
-          
-          <div class="btn-cont">
-            <input class="btn-formu" type="submit">
-          </div>
-      
-          <div class="contact-form-loader none">
-            <img src="./assets/rings.svg" alt="cargando">
-            <!-- https://samherbert.net/svg-loaders/ -->
-          </div>
-      
-          <div class="contact-form-response none">
-            <p>Los datos han sido enviados</p>
-          </div>
-        </form>    
-      </div>      
-    </section>   
-
-    <div class="footer">
-      <div class="footer-text">Sitio Diseñado por Joel Riva</div>
-    </div>
-
-  </main>
-
-
-<!-- <script src="./nav-bar.js"></script>  -->
-<!-- <script src="slider.js"></script> -->
-<script src="./card-info-insert.js"></script> 
-<script src="form.js"></script>
-<script src="app.js"></script>
-
-
+  <script src="./app.js"></script>
 </body>
 </html>

@@ -1,72 +1,74 @@
 document.addEventListener('DOMContentLoaded',(e)=>{
 
-  $cuadrado = document.querySelector('.caja');
+  $caja = document.querySelector('.sct-0');
   
   document.addEventListener('click', (e)=>{
     if(e.target.matches('.item-1')){      
-      $cuadrado.classList.toggle('azul')
+      $caja.classList.toggle('azul')
       setTimeout(function(){
-        $cuadrado.classList.toggle('azul')
+        $caja.classList.toggle('azul')
       },200);
     }
   });
 
   document.addEventListener('touchstart', (e)=>{
     if(e.target.matches('.item-2')){
-      $cuadrado.classList.toggle('verde')
+      $caja.classList.toggle('verde')
       setTimeout(function(){
-        $cuadrado.classList.toggle('verde')
+        $caja.classList.toggle('verde')
       },200);
     }
   }, true);
 
   document.addEventListener('touchstart', (e)=>{
     if(e.target.matches('.item-3')){
-      $cuadrado.classList.toggle('rojo')
+      $caja.classList.toggle('rojo')
       setTimeout(function(){
-        $cuadrado.classList.toggle('rojo')
+        $caja.classList.toggle('rojo')
       },200);
     }
   }, false);
   
   if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
-    var elements = document.querySelectorAll('.item');
+    var $naranja = document.querySelector('.item-6');
     var emptyFunction = function() {
-      $cuadrado.classList.toggle('naranja')
+      $caja.classList.toggle('naranja')
       setTimeout(function(){
-        $cuadrado.classList.toggle('naranja')
+        $caja.classList.toggle('naranja')
       },200);
     };
-    for(var i = 0; i < elements.length; i++) {
-      elements[i].addEventListener('touchstart', emptyFunction, false);
-    }
+    $naranja.addEventListener('touchstart', emptyFunction, false);
   };
 
   e.preventDefault();
 })
 
+
+var $celeste = document.querySelector('.item-4');
+var $amarillo = document.querySelector('.item-5');
+
+
 window.onload = function() {
   if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
-    document.body.addEventListener('touchstart', function() {
-      $cuadrado.classList.toggle('celeste')
+    $celeste.addEventListener('touchstart', function() {
+      $caja.classList.toggle('celeste')
       setTimeout(function(){
-        $cuadrado.classList.toggle('celeste')
+        $caja.classList.toggle('celeste')
       },200);
     }, false);
   }
 };
 
+
+
 window.onload = function() {
   if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
-    var elements = document.querySelectorAll('.item');
     var emptyFunction = function() {
-      $cuadrado.classList.toggle('lima')
+      $caja.classList.toggle('amarillo')
       setTimeout(function(){
-        $cuadrado.classList.toggle('lima')
+        $caja.classList.toggle('amarillo')
       },200);
     };
-    for(var i = 0; i < elements.length; i++) {
-      elements[i].addEventListener('touchstart', emptyFunction, false);
-    }
+    $amarillo.addEventListener('touchstart', emptyFunction, false);
   }
 };

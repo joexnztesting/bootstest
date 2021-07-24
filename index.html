@@ -8,13 +8,12 @@
 
   <style>
     html{
-      box-sizing: border-box; 
-      margin: 0;
-      padding: 0;   
-      scroll-behavior: smooth;
+      border: 2px solid blue;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      overflow-x: hidden;
-      box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
     }
     *,
     *:before,
@@ -24,88 +23,169 @@
       padding: 0;
     }    
     body{
+      border: 2px solid rgb(255, 201, 201);
+      width: 88%;
       box-sizing: border-box; 
-      margin: 0;
+      margin: 0 auto;
       padding: 0;
       overflow-x: hidden;
     }
-
-    .caja{
-      width: 250px;
-      height: 250px;
-      margin: 50px auto;
-      background-color: rgb(255, 255, 255);
-      border: 4px solid rgb(255, 230, 0);
-    }
+    /* main{
+      position: relative;
+    } */
+  
     .row{
-      width: 100%;
-      padding: 10px 0;
-      background-color: turquoise;
-      margin: 30px auto;
+      background-color: rgb(255, 244, 196);
+      border: 2px solid rgb(250, 215, 60);
+      width: 47vh;
+      height: 50vh;
+      padding: 10px;
+      margin: 0px auto;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-evenly;
-      align-items: center;
+      align-content: space-around;
     }
     .row-item{
-      padding: 10px;
-      background-color: whitesmoke;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: rgb(231, 231, 231);
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .item{
       padding: 10px;
-      background-color: rgb(182, 255, 65);
+      background-color: rgb(255, 255, 255);
       cursor: pointer;
       text-align: center;
     }
+    /* 
+    .iz::before {
+      content: 'Bokee';
+    } 
+    */
+
     .azul{
-      background-color: blue;
+      background-color: rgb(79, 79, 236);
     }
     .verde{
-      background-color: green;
+      background-color: rgb(91, 212, 91);
     }
     .rojo{
-      background-color: red;
+      background-color: rgb(255, 85, 85);
     }
     .celeste{
-      background-color: rgb(89, 222, 255);
+      background-color: rgb(119, 228, 255);
     }
-    .lima{
-      background-color: rgb(151, 235, 41);
+    .amarillo{
+      background-color: rgb(255, 251, 29);
     }
     .naranja{
-      background-color: rgb(255, 151, 15);
+      background-color: rgb(255, 177, 75);
     }
+
+
+    section{
+      height: 100vh;    
+    }
+    .sct-0{
+     height: 56vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+    .sct-1{
+     background-color: rgb(255, 138, 167);
+     position: relative; 
+     overflow-x: hidden;
+    }
+    .sct-2{
+     background-color: rgb(170, 255, 227); 
+    }
+    .sct-3{
+     background-color: rgb(151, 161, 255);     
+    }
+    .sct-4{
+     background-color: rgb(253, 255, 151); 
+    }
+
+    .separador{
+      height: 10vh;
+      width: 100%;      
+    }
+    .sep-1{
+      background-color: rgb(179, 40, 243);
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+    .sep-2{
+      background-color: rgb(243, 240, 40);
+      position: sticky;
+      top: 0;
+    }
+    .sep-3{
+      background-color: rgb(243, 40, 118);
+      position: fixed;
+      bottom: 0;
+    }
+    .sep-4{
+      background-color: rgb(40, 243, 142);
+    }
+
+
+
+
   </style>
 
 </head>
 <body>
 
-  <div class="caja"></div>
+  <main>
+    
+    <section class="sct-0">
+      <div class="row">
+        <div class="row-item">
+          <div class="item item-1">Azul</div>
+        </div>
+        <div class="row-item">
+          <div class="item item-2">Verde</div>
+        </div>
+        <div class="row-item">
+          <div class="item item-3">Rojo</div>
+        </div>
+        <div class="row-item">
+          <div class="item item-4">Celeste</div>
+        </div>
+        <div class="row-item">
+          <div class="item item-5">amarillo</div>
+        </div>
+        <div class="row-item">
+          <div class="item item-6">Naranja</div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="sct-1">
+      <div class="separador sep-1"></div>
+      <div class="algo"></div>
+    </section>
+    <section class="sct-2">
+      <div class="separador sep-2"></div>
+      <div class="algo"></div>
+    </section>
+    <section class="sct-3">
+      <div class="separador sep-3"></div>
+      <div class="algo"></div>
+    </section>
+    <section class="sct-4">
+      <div class="separador sep-4"></div>
+      <div class="algo"></div>
+    </section>
 
-  <div class="row">
-    <div class="row-item">
-      <div class="item item-1">Azul</div>
-    </div>
-    <div class="row-item">
-      <div class="item item-2">Verde</div>
-    </div>
-    <div class="row-item">
-      <div class="item item-3">Rojo</div>
-    </div>
-  </div>
-  <div class="row row2">
-    <div class="row-item">
-      <div class="item item-4">Celeste</div>
-    </div>
-    <div class="row-item">
-      <div class="item item-5">Lima</div>
-    </div>
-    <div class="row-item">
-      <div class="item item-6">Naranja</div>
-    </div>
-  </div>
+  </main>
+
 
   <script src="./app.js"></script>
 </body>

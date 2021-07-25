@@ -1,131 +1,113 @@
+
+
+/*
+
+function reportWindowSize() {
+  console.log('Hight: ' + window.innerHeight);
+  console.log('Width: ' + window.innerWidth);
+}
+
+window.onresize = reportWindowSize;
+
+$slideImg = document.querySelectorAll('.slideB img')[0];
+console.log($slideImg);
+$style = window.getComputedStyle($slideImg);
+$width = $style.getPropertyValue('width');
+console.log($width);
+
+*/
+
+
+
 document.addEventListener('DOMContentLoaded',(e)=>{
 
   $panelFondo = document.querySelector('.panel-fondo');
-  $navPanel = document.querySelector('.panel5');
-  $btnHamb = document.querySelector('.btn-hamb5');
-  $navRowItem = document.querySelectorAll('.nav-row-item5 a');
+  $navPanel = document.querySelector('.panel');
+  $btnHamb = document.querySelector('.btn-hamb');
+  $navRowItem = document.querySelectorAll('.nav-row-item a');
 
   $caja = document.querySelector('.sct-0');
 
 
   
-  document.addEventListener('click', (e)=>{
-    if(e.target.matches('.item-1')){      
-      $caja.classList.toggle('azul')
-      setTimeout(function(){
-        $caja.classList.toggle('azul')
-      },200);
+  document.addEventListener('click', (e)=>{    
+    // NAV
+    if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
+      $panelFondo.classList.toggle('fondo-active');
+      $navPanel.classList.toggle('panel-active');
+      $btnHamb.classList.toggle('isactive');
+      $navRowItem.forEach((itm)=>{
+        itm.classList.toggle('item')
+      });
     }
+    // FIN NAV
   });
 
   document.addEventListener('touchstart', (e)=>{
-    if(e.target.matches('.item-2')){
-      $caja.classList.toggle('verde')
-      setTimeout(function(){
-        $caja.classList.toggle('verde')
-      },200);
+    // NAV
+    if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
+      $panelFondo.classList.toggle('fondo-active');
+      $navPanel.classList.toggle('panel-active');
+      $btnHamb.classList.toggle('isactive');
+      $navRowItem.forEach((itm)=>{
+        itm.classList.toggle('item')
+      });
     }
-
-      // NAV
-  if(e.target.matches('.btn-hamb5') || e.target.matches('.btn-hamb5 *') || e.target.matches('.item5') || e.target.matches('.panel-fondo')){
-    $panelFondo.classList.toggle('fondo-active');
-    $navPanel.classList.toggle('panel-active5');
-    $btnHamb.classList.toggle('isactive5');
-    $navRowItem.forEach((itm)=>{
-      itm.classList.toggle('item5')
-    });
-  }
-  // FIN NAV
-
+    // FIN NAV  
   }, true);
-
-  document.addEventListener('touchstart', (e)=>{
-    if(e.target.matches('.item-3')){
-      $caja.classList.toggle('rojo')
-      setTimeout(function(){
-        $caja.classList.toggle('rojo')
-      },200);
-    }
-  }, false);
-  
-  if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
-    var $naranja = document.querySelector('.item-6');
-    var emptyFunction = function() {
-      $caja.classList.toggle('naranja')
-      setTimeout(function(){
-        $caja.classList.toggle('naranja')
-      },200);
-    };
-    $naranja.addEventListener('touchstart', emptyFunction, false);
-  };
 
   e.preventDefault();
 })
 
 
-var $celeste = document.querySelector('.item-4');
-var $amarillo = document.querySelector('.item-5');
 
-
-window.onload = function() {
-  if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
-    $celeste.addEventListener('touchstart', function() {
-      $caja.classList.toggle('celeste')
-      setTimeout(function(){
-        $caja.classList.toggle('celeste')
-      },200);
-    }, false);
-  }
-};
-
-
-
-window.onload = function() {
-  if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
-    var emptyFunction = function() {
-      $caja.classList.toggle('amarillo')
-      setTimeout(function(){
-        $caja.classList.toggle('amarillo')
-      },200);
-    };
-    $amarillo.addEventListener('touchstart', emptyFunction, false);
-  }
-};
 
 
 window.addEventListener('DOMContentLoaded',(e)=>{
-
-  // INICIADORES CAROUSEL
-  $carousel = document.querySelector('.carousel-slides');   
-  $slide = document.querySelectorAll('.slideB');
 
   //console.log($carousel.firstElementChild);
   //console.log($carousel.lastElementChild); 
   //console.log($carousel.firstElementChild.nextElementSibling);
   //console.log($carousel.lastElementChild.previousElementSibling);
 
+  // INICIADORES CAROUSEL
+  $carousel = document.querySelector('.carousel-slides');   
+  $slide = document.querySelectorAll('.slideB');
+  
+
+
   $slide.forEach((slid)=>{
     slid.classList.toggle('pos-absolute')
+    slid.classList.toggle('visib-0')
+    slid.classList.toggle('opac-0')
   }); 
   
   let i = 0;
   
   $slidePrev = $slide[i].previousElementSibling;
-  $slideNext = $slide[i].nextElementSibling;
+  $slideNext = $slide[i].nextElementSibling;  
   
+  let vh = 32
   
-  
-  // $carousel.lastElementChild.style.margin = `0 0 0 -${i+1}00%`;
+  $carousel.lastElementChild.style.margin = `0 0 0 -${vh*3}vh`;
   $carousel.lastElementChild.classList.toggle('pos-absolute');
-  $carousel.lastElementChild.classList.toggle('order-0');
+  $carousel.lastElementChild.classList.toggle('visib-0')
+  $carousel.lastElementChild.classList.toggle('opac-0')
+  // $carousel.lastElementChild.classList.toggle('order-0');
+  
+  $slide[i].style.margin = `0 0 0 -${vh}vh`;
+  $slide[i].classList.toggle('pos-absolute');
+  $slide[i].classList.toggle('visib-0')
+  $slide[i].classList.toggle('opac-0')
+  // $carousel.firstElementChild.classList.toggle('order-1');
+  
+  $slide[i].nextElementSibling.classList.toggle('pos-absolute');
+  $slide[i].nextElementSibling.classList.toggle('visib-0')
+  $slide[i].nextElementSibling.classList.toggle('opac-0')
+  // $carousel.firstElementChild.nextElementSibling.classList.toggle('order-2');
 
-  $carousel.firstElementChild.classList.toggle('pos-absolute');
-  $carousel.firstElementChild.classList.toggle('order-1');
 
-  $carousel.firstElementChild.nextElementSibling.classList.toggle('pos-absolute');
-  $carousel.firstElementChild.nextElementSibling.classList.toggle('order-2');
 
-  // $carousel.firstElementChild.nextElementSibling.style.margin = `0 0 0 -${i+1}00%`;
   
   // $slide.forEach((slid)=>{
   //   slid.style.opacity = '0'
@@ -140,15 +122,17 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   // }
     
   function btnLeft(){
-    
-    $slide[i].style.margin = `0 0 0 -${i+1}00%`;
-
+    $carousel.lastElementChild.style.margin = `0 0 0 ${0}vh`;
+    $slide[i].style.margin = `0 0 0 -${0}vh`;
+    // $slide[i].nextElementSibling.classList.toggle('opac-0');
   };
-
-  function btnRight(){
-  };
-
   
+  function btnRight(){
+    $carousel.lastElementChild.style.margin = `0 0 0 ${0}vh`;
+    $slide[i].style.margin = `0 0 0 ${vh}vh`;
+    // $carousel.lastElementChild.classList.toggle('opac-0');
+    $slide[i].nextElementSibling.style.margin = `0 0 0 -${vh*3}vh`;
+  };
 
 // **********************************************************
   

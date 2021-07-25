@@ -4,142 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
   <title>Document</title>
-
-  <style>
-    html{
-      border: 2px solid blue;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-    *,
-    *:before,
-    *:after{
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }    
-    body{
-      border: 2px solid rgb(255, 201, 201);
-      width: 88%;
-      box-sizing: border-box; 
-      margin: 0 auto;
-      padding: 0;
-      overflow-x: hidden;
-    }
-    /* main{
-      position: relative;
-    } */
-  
-    .row{
-      background-color: rgb(255, 244, 196);
-      border: 2px solid rgb(250, 215, 60);
-      width: 47vh;
-      height: 50vh;
-      padding: 10px;
-      margin: 0px auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      align-content: space-around;
-    }
-    .row-item{
-      padding: 8px;
-      border-radius: 5px;
-      background-color: rgb(231, 231, 231);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .item{
-      padding: 10px;
-      background-color: rgb(255, 255, 255);
-      cursor: pointer;
-      text-align: center;
-    }
-    /* 
-    .iz::before {
-      content: 'Bokee';
-    } 
-    */
-
-    .azul{
-      background-color: rgb(79, 79, 236);
-    }
-    .verde{
-      background-color: rgb(91, 212, 91);
-    }
-    .rojo{
-      background-color: rgb(255, 85, 85);
-    }
-    .celeste{
-      background-color: rgb(119, 228, 255);
-    }
-    .amarillo{
-      background-color: rgb(255, 251, 29);
-    }
-    .naranja{
-      background-color: rgb(255, 177, 75);
-    }
-
-
-    section{
-      height: 100vh;    
-    }
-    .sct-0{
-     height: 56vh;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-    }
-    .sct-1{
-     background-color: rgb(255, 138, 167);
-     position: relative; 
-     overflow-x: hidden;
-    }
-    .sct-2{
-     background-color: rgb(170, 255, 227); 
-    }
-    .sct-3{
-     background-color: rgb(151, 161, 255);     
-    }
-    .sct-4{
-     background-color: rgb(253, 255, 151); 
-    }
-
-    .separador{
-      height: 10vh;
-      width: 100%;      
-    }
-    .sep-1{
-      background-color: rgb(179, 40, 243);
-      position: absolute;
-      top: 15px;
-      left: 15px;
-    }
-    .sep-2{
-      background-color: rgb(243, 240, 40);
-      position: sticky;
-      top: 0;
-    }
-    .sep-3{
-      background-color: rgb(243, 40, 118);
-      position: fixed;
-      bottom: 0;
-      width: 80%;
-    }
-    .sep-4{
-      background-color: rgb(40, 243, 142);
-    }
-
-
-
-
-  </style>
-
 </head>
 <body>
 
@@ -168,21 +34,61 @@
       </div>
     </section>
   
-    <section class="sct-1">
+    <!-- <section class="sct-1">
       <div class="separador sep-1"></div>
-      <div class="algo"></div>
-    </section>
+    </section> -->
+    <div class="separador sep-2"></div>
     <section class="sct-2">
-      <div class="separador sep-2"></div>
-      <div class="algo"></div>
+
+      <div class="btn-carousel-l"></div>
+      <div class="carousel-containerB">
+
+
+          <div class="carousel-slides">
+  
+            <div class="slideB">
+              <img src="./img/carousel/acelga.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/acelga - copia.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/sandia.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/sandia - copia.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/calabacin.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/calabacin - copia.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/tomate.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/tomate - copia.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/lastSlide.jpg" alt="#">
+            </div>
+            <div class="slideB">
+              <img src="./img/carousel/lastSlide - copia.jpg" alt="#">
+            </div>
+  
+          </div>
+        <div class="btn-carousel-r"></div>    
+      </div>
+
     </section>
+
+
     <section class="sct-3">
       <div class="separador sep-3"></div>
-      <div class="algo"></div>
     </section>
     <section class="sct-4">
       <div class="separador sep-4"></div>
-      <div class="algo"></div>
     </section>
 
   </main>

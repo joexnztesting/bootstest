@@ -72,3 +72,82 @@ window.onload = function() {
     $amarillo.addEventListener('touchstart', emptyFunction, false);
   }
 };
+
+
+window.addEventListener('DOMContentLoaded',(e)=>{
+
+  // INICIADORES CAROUSEL
+  $carousel = document.querySelector('.carousel-slides');   
+  $slide = document.querySelectorAll('.slideB');
+
+  //console.log($carousel.firstElementChild);
+  //console.log($carousel.lastElementChild); 
+  //console.log($carousel.firstElementChild.nextElementSibling);
+  //console.log($carousel.lastElementChild.previousElementSibling);
+
+  $slide.forEach((slid)=>{
+    slid.classList.toggle('pos-absolute')
+  }); 
+  
+  let i = 0;
+  
+  $slidePrev = $slide[i].previousElementSibling;
+  $slideNext = $slide[i].nextElementSibling;
+  
+  
+  
+  // $carousel.lastElementChild.style.margin = `0 0 0 -${i+1}00%`;
+  $carousel.lastElementChild.classList.toggle('pos-absolute');
+  $carousel.lastElementChild.classList.toggle('order-0');
+
+  $carousel.firstElementChild.classList.toggle('pos-absolute');
+  $carousel.firstElementChild.classList.toggle('order-1');
+
+  $carousel.firstElementChild.nextElementSibling.classList.toggle('pos-absolute');
+  $carousel.firstElementChild.nextElementSibling.classList.toggle('order-2');
+
+  // $carousel.firstElementChild.nextElementSibling.style.margin = `0 0 0 -${i+1}00%`;
+  
+  // $slide.forEach((slid)=>{
+  //   slid.style.opacity = '0'
+  //   slid.style.visibility = 'hidden'
+  // })  
+  //$slide[i].classList.add('centrado')
+  //$slide[i].style.opacity = '1'
+  //$slide[i].style.visibility = 'visible'  
+  // if($slide[i].classList.contains('centrado')){   
+  //   $slide[ii].style.transform = `translateX(-${$slide.length}00%)`;
+  //   $slide[ii].classList.add('on-left');
+  // }
+    
+  function btnLeft(){
+    
+    $slide[i].style.margin = `0 0 0 -${i+1}00%`;
+
+  };
+
+  function btnRight(){
+  };
+
+  
+
+// **********************************************************
+  
+  document.addEventListener('click', e=>{
+
+    if(e.target.matches('.btn-carousel-l')){      
+      e.preventDefault();      
+      btnLeft();
+    };
+    if(e.target.matches('.btn-carousel-r')){      
+      e.preventDefault(); 
+      btnRight();
+    };
+  });
+  
+});
+// FIN CAROUSEL
+
+
+
+

@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded',(e)=>{
 
+  $panelFondo = document.querySelector('.panel-fondo');
+  $navPanel = document.querySelector('.panel5');
+  $btnHamb = document.querySelector('.btn-hamb5');
+  $navRowItem = document.querySelectorAll('.nav-row-item5 a');
+
   $caja = document.querySelector('.sct-0');
+
+
   
   document.addEventListener('click', (e)=>{
     if(e.target.matches('.item-1')){      
@@ -9,6 +16,19 @@ document.addEventListener('DOMContentLoaded',(e)=>{
         $caja.classList.toggle('azul')
       },200);
     }
+
+  // NAV
+  if(e.target.matches('.btn-hamb5') || e.target.matches('.btn-hamb5 *') || e.target.matches('.item5') || e.target.matches('.panel-fondo')){
+    $panelFondo.classList.toggle('fondo-active');
+    $navPanel.classList.toggle('panel-active5');
+    $btnHamb.classList.toggle('isactive5');
+    $navRowItem.forEach((itm)=>{
+      itm.classList.toggle('item5')
+    });
+  }
+  // FIN NAV
+
+
   });
 
   document.addEventListener('touchstart', (e)=>{

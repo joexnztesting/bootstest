@@ -25,6 +25,121 @@ body{
   position: relative;
 } */
 
+
+.nav-container5{
+  position: fixed;
+  height: 90vh;
+  width: 100%;
+  overflow-x: hidden;
+  visibility: hidden;
+  z-index: 1000;
+}
+.panel-fondo{
+  position: fixed;
+  height: 90vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  transition: all .4s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+.fondo-active{
+  opacity: 1;   
+  visibility: visible;
+}
+.panel5{
+  background-color: rgb(206, 254, 255);
+  width: 60%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all .3s ease-out;
+  transform: translateX(-100%);
+  z-index: 1000;
+  visibility: visible;
+}
+.panel-active5 {
+  transform: translateX(0%);    
+}
+
+.panel-item5{
+  margin: 25px 0;
+}
+.panel-item5 a{  
+  padding: 10px;
+  border: 2px solid rgb(123, 227, 235);
+  background-color: rgb(242, 251, 255);
+  border-radius: 3px;
+  font-size: 1.1rem;
+  color: rgb(0, 21, 141);
+  text-decoration: none;
+}
+.nav-row5{
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  /* border-top: 2px solid rgb(123, 227, 235); */
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  z-index: 1000;
+}
+.nav-row-item5{
+  width: 30%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-row-item5:nth-child(1) a{
+  margin-left: 10px;
+}
+.nav-row5 a{
+  border: 2px solid rgb(123, 227, 235);
+  background-color: rgb(242, 251, 255);
+  font-size: 1.1rem;
+  color: rgb(0, 21, 141);
+  text-decoration: none;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+.btn-hamb5{
+  border: 2px solid rgb(123, 227, 235);
+  background-color: rgb(242, 251, 255);
+  padding: 6px;
+  border-radius: 6px;
+}
+.btn-hamb5 .line5{
+  background-color:rgb(0, 21, 141, .8);
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+.btn-hamb5 .line5:nth-child(1) {
+  margin-top: 0;
+}
+.btn-hamb5 .line5:nth-child(3) {
+  margin-bottom: 0;
+}
+.btn-hamb5.isactive5 .line5:nth-child(2) {
+  opacity: 0;
+  visibility: hidden;
+}
+.btn-hamb5.isactive5 .line5:nth-child(1) {
+  transform: translateY(8px) translateX(0px) rotate(45deg);
+}
+.btn-hamb5.isactive5 .line5:nth-child(3) {
+  transform: translateY(-8px) translateX(0px) rotate(-45deg);
+}
+
 .row{
   background-color: rgb(255, 244, 196);
   border: 2px solid rgb(250, 215, 60);

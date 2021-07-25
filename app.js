@@ -16,8 +16,17 @@ document.addEventListener('DOMContentLoaded',(e)=>{
         $caja.classList.toggle('azul')
       },200);
     }
+  });
 
-  // NAV
+  document.addEventListener('touchstart', (e)=>{
+    if(e.target.matches('.item-2')){
+      $caja.classList.toggle('verde')
+      setTimeout(function(){
+        $caja.classList.toggle('verde')
+      },200);
+    }
+
+      // NAV
   if(e.target.matches('.btn-hamb5') || e.target.matches('.btn-hamb5 *') || e.target.matches('.item5') || e.target.matches('.panel-fondo')){
     $panelFondo.classList.toggle('fondo-active');
     $navPanel.classList.toggle('panel-active5');
@@ -28,16 +37,6 @@ document.addEventListener('DOMContentLoaded',(e)=>{
   }
   // FIN NAV
 
-
-  });
-
-  document.addEventListener('touchstart', (e)=>{
-    if(e.target.matches('.item-2')){
-      $caja.classList.toggle('verde')
-      setTimeout(function(){
-        $caja.classList.toggle('verde')
-      },200);
-    }
   }, true);
 
   document.addEventListener('touchstart', (e)=>{

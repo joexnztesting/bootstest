@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded',(e)=>{
         $contenedor.style.marginLeft=`${margin}%`;
       }
     },3)
+    e.preventDefault();
   };
 
   toRight = ()=>{
@@ -87,7 +88,33 @@ document.addEventListener('DOMContentLoaded',(e)=>{
         $contenedor.style.marginLeft=`${margin}%`;
       }
     },3)
+    e.preventDefault();
   }// FIN INICIADORES CAROUSEL
+
+  // Swipe Left / Right
+  var initialX = null; 
+  function startTouch(e) {
+    initialX = e.touches[0].clientX;
+  }; 
+  function moveTouch(e) {
+    if (initialX === null) {
+      return;
+    } 
+    var currentX = e.touches[0].clientX; 
+    var diffX = initialX - currentX; 
+    if (Math.abs(diffX)) {
+      if (diffX > 0) {
+        toLeft()  
+      }
+      if (diffX < 0) {
+        toRight()
+      }
+    } 
+    initialX = null;   
+    e.preventDefault();
+  };// FINSwipe Left / Right  
+
+
 
 // *********************************************************************
 d=document, n=navigator, ua=n.userAgent;
@@ -164,7 +191,11 @@ function userDeviceInfo(id){
       if(e.target.matches('.btn-carousel-r')){
         toRight()
       }// fin carousel
-    });
+
+      e.preventDefault();
+    });    
+    $contenedor.addEventListener("touchstart", startTouch, false);
+    $contenedor.addEventListener("touchmove", moveTouch, false);
   }
 
   if(isMobile.ios()){
@@ -181,8 +212,12 @@ function userDeviceInfo(id){
       if(e.target.matches('.btn-carousel-r')){
         toRight()
       }// fin carousel
-  
+      
+      e.preventDefault();  
     }, true);
+    
+    $contenedor.addEventListener("touchstart", startTouch, false);
+    $contenedor.addEventListener("touchmove", moveTouch, false);
   }       
   //redireccionando
   //if(isMobile.android()){

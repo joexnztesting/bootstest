@@ -282,8 +282,6 @@ section{
 }
 .sep-2{
   background-color: rgb(243, 240, 40);
-  position: sticky;
-  top: 0;
 }
 .sct-1{
   height: 70vh;

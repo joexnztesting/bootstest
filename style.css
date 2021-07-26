@@ -133,7 +133,6 @@ table {
 */
 
 html{
-  border: 2px solid blue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-sizing: border-box;
   margin: 0;
@@ -148,8 +147,6 @@ html{
   padding: 0;
 }    
 body{
-  border: 2px solid rgb(255, 201, 201);
-  width: 88%;
   box-sizing: border-box; 
   margin: 0 auto;
   padding: 0;
@@ -273,20 +270,14 @@ body{
 
 
 
+
+
+/* ********************** */
 section{
   height: 100vh;    
 }
-.sct-2{
- background-color: rgb(170, 255, 227); 
- display: flex;
- justify-content: center;
- align-items: center;
-}
-.sct-3{
- background-color: rgb(151, 161, 255);     
-}
 .separador{
-  height: 10vh;
+  height: 8vh;
   width: 100%;      
 }
 .sep-2{
@@ -294,58 +285,71 @@ section{
   position: sticky;
   top: 0;
 }
+.sct-2{
+ background-color: rgb(170, 255, 227); 
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ overflow: hidden;
+}
 .sep-3{
   background-color: rgb(243, 40, 118);
 }
+.sct-3{
+ background-color: rgb(151, 161, 255);     
+}
+/* ********************** */
+
+
+
 
 /* CAROUSEL */
 
 .carousel-container{
   background-color: rgb(145, 220, 255);
-  width: 400px;
-  padding: 30px 10px;
-  border-radius: 25px;
+  padding: 20px 0;
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 275px;
 }
 .carousel{
-  width: 300px;
   overflow: hidden;
-  margin-left: -300px;
+  width: 220px; /* img.width + slide.margin*2 */ 
+  margin-left: -225px; /*  -(this.width + btn-r.margin-left) */
 }
 .slides-container{ 
-  background-color: rgb(255, 255, 255);
   display: flex;
-  width: 1000%;
-  margin-left: -100%;
+  width: 1000%; /* no cambiar valor */
+  margin-left: -100%; /* no cambiar valor */
+  background-color: rgb(255, 255, 255);
 } 
 .slide{
-  margin: 5px;
+  margin: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .slide img{ 
-  width: 290px;
+  width: 206px;
 }
 .btn-carousel-l{
   border: 1px solid rgb(255, 0, 0);
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
   text-align: center;
-  line-height: 50px;
-  margin-left: -400px;
+  line-height: 45px;
+  margin-left: -320px; /* -(img.width + slide.margin*2 + btn-r.width*2 + btn-r.margin-left*2) */
 }
 .btn-carousel-r{
   border: 1px solid rgb(0, 110, 255);
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
   text-align: center;
-  line-height: 50px;
-  margin-left: 0px;
+  line-height: 45px;
+  margin-left: 5px;
 }
-
 /* FIN CAROUSEL */

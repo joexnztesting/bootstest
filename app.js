@@ -1,6 +1,7 @@
 
 
 /*
+// **************************
 
 function reportWindowSize() {
   console.log('Hight: ' + window.innerHeight);
@@ -9,147 +10,125 @@ function reportWindowSize() {
 
 window.onresize = reportWindowSize;
 
+// **************************
+
 $slideImg = document.querySelectorAll('.slideB img')[0];
 console.log($slideImg);
 $style = window.getComputedStyle($slideImg);
 $width = $style.getPropertyValue('width');
 console.log($width);
 
+for(i=0; i<$slide.length; i++){     
+  //$style = window.getComputedStyle(slid);
+  //$order = $style.getPropertyValue('order');
+  //console.log($order);    
+  $slide[i].style.setProperty('order', `${i}`, 'important');    
+  $last.style.setProperty('order', `${-1}`, 'important');   
+  console.log($slide[i]);
+}
+
+// **************************
 */
 
 
 
 document.addEventListener('DOMContentLoaded',(e)=>{
 
+  // INICIADORES NAV
   $panelFondo = document.querySelector('.panel-fondo');
   $navPanel = document.querySelector('.panel');
   $btnHamb = document.querySelector('.btn-hamb');
   $navRowItem = document.querySelectorAll('.nav-row-item a');
+  navShowOnOff = ()=>{
+    $panelFondo.classList.toggle('fondo-active');
+    $navPanel.classList.toggle('panel-active');
+    $btnHamb.classList.toggle('isactive');
+    $navRowItem.forEach((itm)=>{
+      itm.classList.toggle('item')
+    });
+  }
+  // FIN INICIADORES NAV
 
-  $caja = document.querySelector('.sct-0');
+  // INICIADORES CAROUSEL
+  $contenedor = document.querySelector(".slides-container");
+  $btnL = document.querySelector(".btn-carousel-l");
+  $btnR = document.querySelector(".btn-carousel-r");  
+  let margin=-100;
+  let max=margin*2;
+  toLeft = ()=>{
+    let id= setInterval(()=>{
+      margin--;
+      $contenedor.style.marginLeft=`${margin}%`;
+      if(margin<=max){
+        clearInterval(id);
+        let hijo=$contenedor.firstElementChild;
+        let clon=hijo.cloneNode(true);
+        $contenedor.appendChild(clon);
+        $contenedor.removeChild(hijo);
+        margin=-100;
+        $contenedor.style.marginLeft=`${margin}%`;
+      }
+    },5)
+  };
+  toRight = ()=>{
+    let id= setInterval(()=>{
+      margin++;
+      $contenedor.style.marginLeft=`${margin}%`;
+      if(margin>=0){
+        clearInterval(id);
+        let hijo=$contenedor.lastElementChild;
+        let clon=hijo.cloneNode(true);
+        $contenedor.insertBefore(clon,$contenedor.firstElementChild);
+        $contenedor.removeChild(hijo);
+        margin=-100;
+        $contenedor.style.marginLeft=`${margin}%`;
+      }
+    },5)
+  }// FIN INICIADORES CAROUSEL
 
 
-  
-  document.addEventListener('click', (e)=>{    
-    // NAV
+  // ***********************************
+
+  // LLAMADORES
+
+  document.addEventListener('click', (e)=>{ 
+    // nav
     if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
-      $panelFondo.classList.toggle('fondo-active');
-      $navPanel.classList.toggle('panel-active');
-      $btnHamb.classList.toggle('isactive');
-      $navRowItem.forEach((itm)=>{
-        itm.classList.toggle('item')
-      });
+      navShowOnOff()
+    }// fin nav    
+    
+    // carousel
+    if(e.target.matches('.btn-carousel-l')){
+      toLeft()
     }
-    // FIN NAV
+    if(e.target.matches('.btn-carousel-r')){
+      toRight()
+    }// fin carousel
   });
 
+
   document.addEventListener('touchstart', (e)=>{
-    // NAV
+    // nav
     if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
-      $panelFondo.classList.toggle('fondo-active');
-      $navPanel.classList.toggle('panel-active');
-      $btnHamb.classList.toggle('isactive');
-      $navRowItem.forEach((itm)=>{
-        itm.classList.toggle('item')
-      });
+      navShowOnOff()
+    }// fin nav
+
+    // carousel
+    if(e.target.matches('.btn-carousel-l')){
+      toLeft()
     }
-    // FIN NAV  
+    if(e.target.matches('.btn-carousel-r')){
+      toRight()
+    }// fin carousel
+
   }, true);
+
 
   e.preventDefault();
 })
 
+// ***************************************
 
-
-
-
-window.addEventListener('DOMContentLoaded',(e)=>{
-
-  //console.log($carousel.firstElementChild);
-  //console.log($carousel.lastElementChild); 
-  //console.log($carousel.firstElementChild.nextElementSibling);
-  //console.log($carousel.lastElementChild.previousElementSibling);
-
-  // INICIADORES CAROUSEL
-  $carousel = document.querySelector('.carousel-slides');   
-  $slide = document.querySelectorAll('.slideB');
-  
-
-
-  $slide.forEach((slid)=>{
-    slid.classList.toggle('pos-absolute')
-    slid.classList.toggle('visib-0')
-    slid.classList.toggle('opac-0')
-  }); 
-  
-  let i = 0;
-  
-  $slidePrev = $slide[i].previousElementSibling;
-  $slideNext = $slide[i].nextElementSibling;  
-  
-  let vh = 32
-  
-  $carousel.lastElementChild.style.margin = `0 0 0 -${vh*3}vh`;
-  $carousel.lastElementChild.classList.toggle('pos-absolute');
-  $carousel.lastElementChild.classList.toggle('visib-0')
-  $carousel.lastElementChild.classList.toggle('opac-0')
-  // $carousel.lastElementChild.classList.toggle('order-0');
-  
-  $slide[i].style.margin = `0 0 0 -${vh}vh`;
-  $slide[i].classList.toggle('pos-absolute');
-  $slide[i].classList.toggle('visib-0')
-  $slide[i].classList.toggle('opac-0')
-  // $carousel.firstElementChild.classList.toggle('order-1');
-  
-  $slide[i].nextElementSibling.classList.toggle('pos-absolute');
-  $slide[i].nextElementSibling.classList.toggle('visib-0')
-  $slide[i].nextElementSibling.classList.toggle('opac-0')
-  // $carousel.firstElementChild.nextElementSibling.classList.toggle('order-2');
-
-
-
-  
-  // $slide.forEach((slid)=>{
-  //   slid.style.opacity = '0'
-  //   slid.style.visibility = 'hidden'
-  // })  
-  //$slide[i].classList.add('centrado')
-  //$slide[i].style.opacity = '1'
-  //$slide[i].style.visibility = 'visible'  
-  // if($slide[i].classList.contains('centrado')){   
-  //   $slide[ii].style.transform = `translateX(-${$slide.length}00%)`;
-  //   $slide[ii].classList.add('on-left');
-  // }
-    
-  function btnLeft(){
-    $carousel.lastElementChild.style.margin = `0 0 0 ${0}vh`;
-    $slide[i].style.margin = `0 0 0 -${0}vh`;
-    // $slide[i].nextElementSibling.classList.toggle('opac-0');
-  };
-  
-  function btnRight(){
-    $carousel.lastElementChild.style.margin = `0 0 0 ${0}vh`;
-    $slide[i].style.margin = `0 0 0 ${vh}vh`;
-    // $carousel.lastElementChild.classList.toggle('opac-0');
-    $slide[i].nextElementSibling.style.margin = `0 0 0 -${vh*3}vh`;
-  };
-
-// **********************************************************
-  
-  document.addEventListener('click', e=>{
-
-    if(e.target.matches('.btn-carousel-l')){      
-      e.preventDefault();      
-      btnLeft();
-    };
-    if(e.target.matches('.btn-carousel-r')){      
-      e.preventDefault(); 
-      btnRight();
-    };
-  });
-  
-});
-// FIN CAROUSEL
 
 
 

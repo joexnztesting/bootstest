@@ -312,7 +312,7 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 275px;
+  width: 265px;
 }
 .carousel{
   overflow: hidden;
@@ -321,7 +321,7 @@ section{
 }
 .slides-container{ 
   display: flex;
-  width: 1000%; /* no cambiar valor */
+  width: 2200px; /* img.width + slide.margin*10 */
   margin-left: -100%; /* no cambiar valor */
   background-color: rgb(255, 255, 255);
 } 

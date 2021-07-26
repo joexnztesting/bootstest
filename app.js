@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded',(e)=>{
   $btnR = document.querySelector(".btn-carousel-r");  
   let margin=-100;
   let max=margin*2;
+
+
   toLeft = ()=>{
     let id= setInterval(()=>{
       margin--;
@@ -68,8 +70,9 @@ document.addEventListener('DOMContentLoaded',(e)=>{
         margin=-100;
         $contenedor.style.marginLeft=`${margin}%`;
       }
-    },5)
+    },3)
   };
+
   toRight = ()=>{
     let id= setInterval(()=>{
       margin++;
@@ -83,7 +86,7 @@ document.addEventListener('DOMContentLoaded',(e)=>{
         margin=-100;
         $contenedor.style.marginLeft=`${margin}%`;
       }
-    },5)
+    },3)
   }// FIN INICIADORES CAROUSEL
 
 
@@ -109,17 +112,17 @@ document.addEventListener('DOMContentLoaded',(e)=>{
 
   document.addEventListener('touchstart', (e)=>{
     // nav
-    if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
-      navShowOnOff()
-    }// fin nav
+    //if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches//('.item') || e.target.matches('.panel-fondo')){
+    //  navShowOnOff()
+    //}// fin nav
 
     // carousel
-    if(e.target.matches('.btn-carousel-l')){
-      toLeft()
-    }
-    if(e.target.matches('.btn-carousel-r')){
-      toRight()
-    }// fin carousel
+    //if(e.target.matches('.btn-carousel-l')){
+    //  toLeft()
+    //}
+    //if(e.target.matches('.btn-carousel-r')){
+    //  toRight()
+    //}// fin carousel
 
   }, true);
 

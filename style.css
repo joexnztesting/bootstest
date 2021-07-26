@@ -277,7 +277,7 @@ section{
   height: 100vh;    
 }
 .separador{
-  height: 8vh;
+  height: 9vh;
   width: 100%;      
 }
 .sep-2{
@@ -285,6 +285,11 @@ section{
   position: sticky;
   top: 0;
 }
+.sct-1{
+  height: 70vh;
+  padding: 20px; 
+}
+
 .sct-2{
  background-color: rgb(170, 255, 227); 
  display: flex;

@@ -4,83 +4,107 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="./bootstrap.css">
+  <title>Con Bootstrap</title>
+  <style>
+    html{
+      box-sizing: border-box; 
+      margin: 0;
+      padding: 0;   
+      scroll-behavior: smooth;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    *,
+    *:before,
+    *:after{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }    
+    body{
+      box-sizing: border-box; 
+      margin: 0 auto;
+      padding: 0;
+      /* overflow-x: hidden; */
+      box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.15);
+    }
+
+
+    .aa{
+      background: rgb(255, 136, 136);
+    }
+    .ab{
+      background: rgb(140, 219, 93);
+      border: 2px solid blue;
+    }
+
+    .sep-1{
+      height: 80vh;
+      width: 80%;
+      margin: 0 auto;
+      background-color: rgb(255, 239, 174);
+    }
+    .sep-2{
+      height: 10vh;
+      width: 80%;
+      margin: 0 auto;
+      background-color: rgb(255, 81, 81);
+    }
+    .sep-3{
+      height: 200vh;
+      width: 80%;
+      margin: 0 auto;
+      background-color: rgb(174, 255, 191);
+    }
+
+
+
+  </style>
 </head>
 <body>
 
-  <main>
-
-
-
-    <div class="nav-container">
-      <div class="panel-fondo"></div>
-        <div class="panel">
-          <div class="panel-item"><a class="item" href="#huerta">huerta</a></div>
-          <div class="panel-item"><a class="item" href="#header">home</a></div>
-          <div class="panel-item"><a class="item" href="#huerta">huerta</a></div>
-          <div class="panel-item"><a class="item" href="#header">home</a></div>
-          <div class="panel-item"><a class="item" href="#huerta">huerta</a></div>
+  <main class="container">
+    
+    <div class="sep-1"></div>
+    <div class="sep-2 sticky-top"></div>
+  
+    <div id="carouselExampleControls" class="carousel slide w-50 mx-auto" data-bs-interval="false" style="border: 1px solid blue;">
+      <!-- data-bs-ride="carousel" ESTO, LA LÍNEA DE ARRIBA, LO HACE MOVERSE AUTOM -->
+      <div class="carousel-inner" >
+        <div class="carousel-item active">
+          <img src="./img/1.jpg" class="d-block w-100" alt="#">
         </div>
-    </div>
-    <div class="nav-row">
-      <div class="nav-row-item">
-        <a href="#contacto">Ventas</a>
+        <div class="carousel-item">
+          <img src="./img/2.jpg" class="d-block w-100" alt="#">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/3.jpg" class="d-block w-100" alt="#">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/4.jpg" class="d-block w-100" alt="#">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/5.jpg" class="d-block w-100" alt="#">
+        </div>
       </div>
-      <div class="nav-row-item">
-        <a href="#">Biode</a>
-      </div>
-      <div class="nav-row-item">
-        <div class="btn-hamb">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </div>      
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true" style="border: 1px solid red;"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true" style="border: 1px solid red;"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-
-
-
-    <section class="sct-2">
-      
-      <div class="carousel-container">
-        <div class="carousel">        
-          <div class="slides-container">
-            <div class="slide">
-              <img src="./img/carousel/lastSlide.jpg" alt="#">
-            </div>
-            <div class="slide">
-              <img src="./img/carousel/sandia.jpg" alt="#">
-            </div>
-            <div class="slide">
-              <img src="./img/carousel/calabacin.jpg" alt="#">
-            </div>
-            <div class="slide">
-              <img src="./img/carousel/tomate.jpg" alt="#">
-            </div>
-            <div class="slide">
-              <img src="./img/carousel/acelga.jpg" alt="#">
-            </div>          
-          </div>        
-        </div>
-        <div class="btn-carousel-r"></div>
-        <div class="btn-carousel-l"></div>   
-      </div>      
-
-
-      
-    </section>
-
-
-
-
-    <section class="sct-3">
-      <div class="separador sep-3"></div>
-    </section>
+    
+    <div class="sep-3"></div>
 
   </main>
 
+  
+<script src="./bootstrap.bundle.js"></script>
+<script>
 
-  <script src="./app.js"></script>
+</script>
 </body>
 </html>

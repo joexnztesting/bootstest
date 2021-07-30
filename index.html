@@ -29,47 +29,17 @@
       box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.15);
     }
 
-
-    .aa{
-      background: rgb(255, 136, 136);
+    .carousel-control-next-icon{
+      background-color: blue;
     }
-    .ab{
-      background: rgb(140, 219, 93);
-      border: 2px solid blue;
-    }
-
-    .sep-1{
-      height: 80vh;
-      width: 80%;
-      margin: 0 auto;
-      background-color: rgb(255, 239, 174);
-    }
-    .sep-2{
-      height: 10vh;
-      width: 80%;
-      margin: 0 auto;
-      background-color: rgb(255, 81, 81);
-    }
-    .sep-3{
-      height: 200vh;
-      width: 80%;
-      margin: 0 auto;
-      background-color: rgb(174, 255, 191);
-    }
-
-
 
   </style>
 </head>
 <body>
 
   <main class="container">
-    
-    <div class="sep-1"></div>
-    <div class="sep-2 sticky-top"></div>
   
-    <div id="carouselExampleControls" class="carousel slide w-50 mx-auto" data-bs-interval="false" style="border: 1px solid blue;">
-      <!-- data-bs-ride="carousel" ESTO, LA LÍNEA DE ARRIBA, LO HACE MOVERSE AUTOM -->
+    <div id="carouselExampleControls" class="carousel slide w-70 mx-auto" data-bs-interval="false" style="border: 1px solid blue;">
       <div class="carousel-inner" >
         <div class="carousel-item active">
           <img src="./img/1.jpg" class="d-block w-100" alt="#">
@@ -87,17 +57,15 @@
           <img src="./img/5.jpg" class="d-block w-100" alt="#">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true" style="border: 1px solid red;"></span>
+      <button style="border: 1px solid red;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true" style="border: 1px solid red;"></span>
+      <button style="border: 1px solid red;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    
-    <div class="sep-3"></div>
 
   </main>
 

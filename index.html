@@ -29,8 +29,9 @@
       box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.15);
     }
 
-    .carousel-control-next-icon{
+    .carousel-control-next-icon, .carousel-control-prev-icon{
       background-color: blue;
+      border-radius: 50%;
     }
 
   </style>
@@ -39,7 +40,7 @@
 
   <main class="container">
   
-    <div id="carouselExampleControls" class="carousel slide w-70 mx-auto" data-bs-interval="false" style="border: 1px solid blue;">
+    <div id="carouselExampleControls" class="carousel slide w-70 mx-auto" data-bs-ride="carousel" data-bs-interval="false" style="border: 1px solid blue;">
       <div class="carousel-inner" >
         <div class="carousel-item active">
           <img src="./img/1.jpg" class="d-block w-100" alt="#">
@@ -57,11 +58,11 @@
           <img src="./img/5.jpg" class="d-block w-100" alt="#">
         </div>
       </div>
-      <button style="border: 1px solid red;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button style="border: 1px solid red;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>

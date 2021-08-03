@@ -1,88 +1,140 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Con Bootstrap</title>
-  <link rel="stylesheet" href="./css/bootstrap.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="./img/logo.svg">
+  <title>Document</title>
+  <style>    
+    html{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    *,
+    *:before,
+    *:after{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }    
+    body{
+      box-sizing: border-box; 
+      margin: 0 auto;
+      padding: 0;
+    }
+    /*  ***************************************  */
 
-  <style>
-  </style>
+
+
+    .cards{
+      background-color:rgb(210, 255, 255) ;
+      min-height: 250px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .card{
+      border: 1px solid red;
+      display: inline-block;
+      opacity: 0;
+      animation-name: show-card;
+      animation-duration: .5s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;   
+      animation-fill-mode: forwards;
+    }
+    @keyframes show-card{
+      100%{   
+        opacity: 1;
+      }
+    }
+
+    .card img{
+      height: 200px;
+    }
+
+    .btns{
+      background-color: blanchedalmond;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .btn{
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: brown;
+      margin: 15px 10px;
+      color: white;
+      text-align: center;
+      line-height: 20px;
+      font-size: .8rem;
+    }
+</style>
 </head>
-<body>
 
-  <main class="container">
-    
 
-    <div class="row prod-huerta">
-
-      <div class="bq-semillas"><p>" Gran Variedad de Semillas "</p></div> 
-
-      <div class="carousl mx-auto">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
-          <div class="carousel-inner" >
-            <div class="carousel-item active">
-              <img src="./img/1.jpg" class="d-block w-100" alt="#">
-            </div>
-            <div class="carousel-item">
-              <img src="./img/2.jpg" class="d-block w-100" alt="#">
-            </div>
-            <div class="carousel-item">
-              <img src="./img/3.jpg" class="d-block w-100" alt="#">
-            </div>
-            <div class="carousel-item">
-              <img src="./img/4.jpg" class="d-block w-100" alt="#">
-            </div>
-            <div class="carousel-item">
-              <img src="./img/5.jpg" class="d-block w-100" alt="#">
-            </div>
-          </div>
-          <button class="carousel-control-prev carousl-ctrl-L" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next carousl-ctrl-R" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <nav class="navbar fixed-bottom navbar-dark bg-dark">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </nav>  
-
-  </main>
-
+<body>  
   
-<script src="./js/bootstrap.bundle.js"></script>
-<script>
+  <section class="cards">
+    <template id="template-card">
+      <figure class="card">
+        <img alt="#">
+        <figcaption class="cerrar"></figcaption>
+      </figure>
+    </template>
+  </section>
 
-</script>
+  <section class="btns">
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+    <div class="btn"></div>
+  </section>
+
+
+<script>
+  const $btns = document.querySelectorAll('.btn'),
+  $cardContent = [],  
+  $cards = document.querySelector('.cards'),
+  $template = document.getElementById('template-card').content,
+  $fragment = document.createDocumentFragment(),
+  $cerrar = document.querySelector('.cerrar');
+
+
+  function btn_i(value, index, array){
+    i=index;
+    $btns[i].setAttribute('index', i);    
+    $cardContent.push({title:`Img ${1+i}`, img :`./img/${i}.jpg`});
+    $btns[i].innerText = `Img 
+    ${1+i}`
+    ;
+  };
+  $btns.forEach(btn_i);
+
+  document.addEventListener('click', e=>{
+    if(e.target.matches('.btn')){
+      const btnIndx = e.target.getAttribute('index');      
+      $template.querySelector('img').setAttribute('src', $cardContent[btnIndx].img);
+      $template.querySelector('figcaption').textContent = $cardContent[btnIndx].title; 
+      let $clone = document.importNode($template, true);
+      $fragment.appendChild($clone); 
+      $cards.appendChild($fragment); 
+    }
+    if(e.target.matches('.cerrar')){
+      $cards.removeChild($cards.lastElementChild);
+    }
+  });   
+  
+</script>  
 </body>
 </html>

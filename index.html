@@ -28,9 +28,7 @@
     section{
       font-family: 'Open Sans', sans-serif;
     }
-    /*  ***************************************  */
-
-    /*    SECTION 1   */
+    /*  ***************************************  */ 
 
     /* .los-prod{
       background-color: rgb(222, 252, 198);
@@ -109,7 +107,7 @@
       align-items: center;
       opacity: 0;
       animation-name: show-card;
-      animation-duration: .5s;
+      animation-duration: .3s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: 1;   
       animation-fill-mode: forwards;
@@ -121,6 +119,18 @@
     }
     .info-card-container{
       position: relative;
+      margin-top: -100vh;
+      animation-name: fade-card;
+      animation-delay: .2s;
+      animation-duration: .4s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;   
+      animation-fill-mode: forwards;
+    }
+    @keyframes fade-card{
+      100%{
+        margin-top: 0;
+      }
     }
     .info-card-elem{ 
       background-color: #fff;
@@ -148,7 +158,7 @@
     .info-header-h1{
       font-weight: bold;
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       line-height: 1.6rem;
       color: green;
       padding: 0 10px;
@@ -165,7 +175,8 @@
     }
     .info-section{
       padding: 15px 10px;
-      font-size: 1.15rem;
+      font-size: 1rem;
+      line-height: 1.4rem;
       border-top: 2px dotted rgb(211, 211, 211);
     }
     .titu-2{
@@ -315,6 +326,7 @@
   
   const $btns = document.querySelectorAll('.btn'),
   $cardContent = [], 
+  infoJson = './img_cards/info/info-cards.json',
   $cards = document.querySelector('.info-cards'), // conteiner gral
   $template = document.getElementById('template-info-card').content, // template contenido
   $fragment = document.createDocumentFragment();
@@ -323,22 +335,18 @@
   /////////////
 
 
-  let infoJson = './img_cards/info/info-cards.json';
 
   async function loadCards(url){
       try{
         let res = await fetch(url),
-        json = await res.json()
-                
-        console.log(json);
-
+        json = await res.json()                
+        // console.log(json);
         for(let i=0; i<json.length; i++){
-          console.log(json[i]);
-          
+          // console.log(json[i]);          
           $cardContent.push({
           img :`${json[i].img}`, 
           h1 : `${json[i].h1}`, 
-          titu1 : `${json[i].h1}`,
+          titu1 : `${json[i].titulo}`,
           titu2 : `${json[i].titu2}`,
           titu2txt : `${json[i].titu2text}`
           }); 
@@ -364,28 +372,23 @@
   document.addEventListener('click', e=>{
     if(e.target.matches('.btn')){
 
-      const btnIndx = e.target.getAttribute('index');  
+      const i = e.target.getAttribute('index');  
 
-      $template.querySelector('img').setAttribute('src', $cardContent[btnIndx].img);
-      $template.querySelector('.info-header-h1').textContent = $cardContent[btnIndx].h1;
-      $template.querySelector('.titulo-1').textContent = $cardContent[btnIndx].titu1;
-      $template.querySelector('.titu-2').textContent = $cardContent[btnIndx].titu2;
-      $template.querySelector('.titu-2-text').textContent = $cardContent[btnIndx].titu2txt;
+      $template.querySelector('img').setAttribute('src', $cardContent[i].img);
+      $template.querySelector('.info-header-h1').textContent = $cardContent[i].h1;
+      $template.querySelector('.titulo-1').textContent = $cardContent[i].titu1;
+      $template.querySelector('.titu-2').textContent = $cardContent[i].titu2;
+      $template.querySelector('.titu-2-text').textContent = $cardContent[i].titu2txt;
 
       let $clone = document.importNode($template, true);
 
       $fragment.appendChild($clone); 
       $cards.appendChild($fragment); 
     }
-    if(e.target.matches('.xclose')){
+    if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
       $cards.removeChild($cards.lastElementChild);
     }
-    if(e.target.matches('.card')){
-      console.log('hola');
-    }
   }); 
-
-
 
 
   // const $btns = document.querySelectorAll('.btn'),
@@ -406,9 +409,9 @@
 
   // document.addEventListener('click', e=>{
   //   if(e.target.matches('.btn')){
-  //     const btnIndx = e.target.getAttribute('index');      
-  //     $template.querySelector('img').setAttribute('src', $cardContent[btnIndx].img);
-  //     $template.querySelector('figcaption').textContent = $cardContent[btnIndx].title; 
+  //     const i = e.target.getAttribute('index');      
+  //     $template.querySelector('img').setAttribute('src', $cardContent[i].img);
+  //     $template.querySelector('figcaption').textContent = $cardContent[i].title; 
   //     let $clone = document.importNode($template, true);
   //     $fragment.appendChild($clone); 
   //     $cards.appendChild($fragment); 

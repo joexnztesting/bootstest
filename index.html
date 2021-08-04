@@ -314,20 +314,52 @@
   
   
   const $btns = document.querySelectorAll('.btn'),
-  $cardContent = [],  
-  $cards = document.querySelector('.info-cards'),
-  $template = document.getElementById('template-info-card').content,
+  $cardContent = [], 
+  $cards = document.querySelector('.info-cards'), // conteiner gral
+  $template = document.getElementById('template-info-card').content, // template contenido
   $fragment = document.createDocumentFragment();
+
+
+  /////////////
+
+
+  let infoJson = './img_cards/info/info-cards.json';
+
+  async function loadCards(url){
+      try{
+        let res = await fetch(url),
+        json = await res.json()
+                
+        console.log(json);
+
+        for(let i=0; i<json.length; i++){
+          console.log(json[i]);
+          
+          $cardContent.push({
+          img :`${json[i].img}`, 
+          h1 : `${json[i].h1}`, 
+          titu1 : `${json[i].h1}`,
+          titu2 : `${json[i].titu2}`,
+          titu2txt : `${json[i].titu2text}`
+          }); 
+        }
+        
+      }catch(err){
+        console.log(err);
+      }
+    }
+  document.addEventListener('DOMContentLoaded', e => loadCards(infoJson))
+
+  ///////////////////
+
 
   function btn_i(value, index, array){
     i=index;
     $btns[i].setAttribute('index', i);
-
-    $cardContent.push({img :`./img_cards/info/${i}.jpg`, 
-    h1 : `MATA ALACRÁN x 150gr (polvo)`, titu1 : `Exclusiva formulación no tóxica para niños ni mascotas. Elimina y previene la presencia de alacranes en el hogar, industria, etc...`});    
-
   };
   $btns.forEach(btn_i);
+
+
 
   document.addEventListener('click', e=>{
     if(e.target.matches('.btn')){
@@ -337,6 +369,8 @@
       $template.querySelector('img').setAttribute('src', $cardContent[btnIndx].img);
       $template.querySelector('.info-header-h1').textContent = $cardContent[btnIndx].h1;
       $template.querySelector('.titulo-1').textContent = $cardContent[btnIndx].titu1;
+      $template.querySelector('.titu-2').textContent = $cardContent[btnIndx].titu2;
+      $template.querySelector('.titu-2-text').textContent = $cardContent[btnIndx].titu2txt;
 
       let $clone = document.importNode($template, true);
 

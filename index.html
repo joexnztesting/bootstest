@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>    
+  <title>Section Prod 1</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     html{
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -25,23 +25,88 @@
       margin: 0 auto;
       padding: 0;
     }
+    section{
+      font-family: 'Open Sans', sans-serif;
+    }
     /*  ***************************************  */
 
+    /*    SECTION 1   */
 
-
-    .cards{
-      background-color:rgb(210, 255, 255) ;
-      min-height: 250px;
-      width: 90%;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
+    /* .los-prod{
+      background-color: rgb(222, 252, 198);
+    } */
+    .titu-manten{ 
+      /* background-color: rgb(224, 191, 255); */
+      padding: 50px 10%;
+    }
+    .titu-manten p{
+      /* background-color: rgb(255, 218, 204); */
+      color: green;
+      font-size: 1.7rem; 
+      text-align: center;
+      padding-bottom: 16px;
+      border-bottom: 2px solid rgb(173, 209, 173) ;
+    }
+    .cards-container{
+      display:flex;
+      justify-content: center;
       align-items: center;
       flex-wrap: wrap;
     }
     .card{
-      border: 1px solid red;
-      display: inline-block;
+      background-color: rgb(248, 248, 248);
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      border: 4px solid rgb(255, 255, 255);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px 4px rgba(0, 0, 0, .2);
+      margin: 0 22px 44px;      /* overflow: hidden; */
+    }
+    .card img{
+      width: 70%;
+      box-shadow: 0px 16px 10px 8px rgba(196, 196, 196, 0.85);
+      margin-top: 15px;
+    }
+    .figcap{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px 15px 25px;
+      background-color: rgb(250, 250, 250);
+      border-top: 3px solid rgb(255, 255, 255);
+    }
+    .figcap p{
+      font-size: 1.15rem;  
+      text-align: center;
+    }
+    .btn{
+      border: 3px solid rgb(100, 208, 216);
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin-left: 15px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;  
+      justify-content: center;
+      color: rgb(1, 77, 177);
+      font-size: 1.15rem ;
+      line-height: 1.45rem;
+    }
+    /*  INFO CARD  */
+    .info-card-fondo{
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.4);
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       opacity: 0;
       animation-name: show-card;
       animation-duration: .5s;
@@ -54,87 +119,271 @@
         opacity: 1;
       }
     }
-
-    .card img{
-      height: 200px;
+    .info-card-container{
+      position: relative;
     }
-
-    .btns{
-      background-color: blanchedalmond;
+    .info-card-elem{ 
+      background-color: #fff;
+      font-family: 'Public Sans', sans-serif;
+      border: 3px solid rgb(152, 246, 253);
+      border-radius: 20px;
+      width: 250px;
+      height: 400px;
+      overflow: hidden;
+    }
+    .info-header{ 
+      border-bottom: 2px solid rgb(186, 250, 255);
+      margin: 0 20px;
+      background-color: #fff;
+      height: 35%;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 90%;
-      margin: 0 auto;
     }
-    .btn{
-      height: 40px;
-      width: 40px;
+    .info-header img{
+      border: 3px solid rgb(152, 246, 253);
+      width: 50%;
       border-radius: 50%;
-      background-color: brown;
-      margin: 15px 10px;
-      color: white;
-      text-align: center;
-      line-height: 20px;
-      font-size: .8rem;
     }
-</style>
+    .info-header-h1{
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      color: green;
+      padding: 0 10px;
+    }
+    .info-card-info{
+      height: 65%;
+      overflow-y: scroll;
+      padding: 10px 25px;
+    }
+    .titulo-1{
+      padding: 15px 10px;
+      font-size: 1.2rem;
+      color: green;
+    }
+    .info-section{
+      padding: 15px 10px;
+      font-size: 1.15rem;
+      border-top: 2px dotted rgb(211, 211, 211);
+    }
+    .titu-2{
+      color: green;
+      font-size: 1.25rem;
+      margin-bottom: 5px;
+    }
+    .xclose{
+      border: 2px solid rgb(255, 166, 64);
+      justify-content: center;
+      display: flex;
+      width: 30px;
+      height: 30px;
+      line-height: 24px;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      background-color: rgb(255, 36, 36);
+      color: #fff;
+      position: absolute;
+      right: -12px;
+      top: -15px;
+      cursor: pointer;
+      z-index: 3000;
+    }
+    .no-scroll{
+      height: 100%;
+      overflow: hidden;
+    }   
+    /*  FIN INFO CARD  */ 
+
+
+
+
+    /* ***********************  */
+
+    .separador{
+      width: 100%;
+      height: 80vh;
+      background-color: cornsilk;
+    }    
+
+
+  </style>
 </head>
-
-
-<body>  
+<body>
+<main>
   
-  <section class="cards">
-    <template id="template-card">
-      <figure class="card">
-        <img alt="#">
-        <figcaption class="cerrar"></figcaption>
-      </figure>
+  <!-- 
+      <div class="info-cards">
+        <template id="template-info-card">
+          <figure class="info-card">
+            <img alt="#">
+            <figcaption class="cerrar"></figcaption>
+          </figure>
+        </template>
+      </div>
+    -->
+
+
+  <div class="info-cards">
+    <template id="template-info-card">
+      <div class="info-card-fondo">
+        <div class="info-card-container">      
+          <div class="xclose">x</div>
+          <div class="info-card-elem">    
+            <div class="info-header">
+              <img alt="#">
+              <div class="info-header-h1"></div>            
+            </div>  
+            <div class="info-card-info">  
+              <div class="titulo-1"></div>  
+              <div class="info-section">
+                <div class="titu-2"></div>
+                <div class="titu-2-text"></div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
     </template>
+  </div>
+
+  <section id="productos" class="los-prod"> 
+
+    <div class="titu-manten"><p>" Mantenimiento de Hogar y Jardín "</p></div>       
+
+    <div class="cards-container">      
+      <div class="card">
+        <img src="./img_cards/0.png" alt="mata alacranes">
+        <div class="figcap">
+          <p>No Tóxico para personas</p>
+          <div class="btn">Más info</div>
+        </div>
+      </div>      
+      <div class="card">
+        <img src="./img_cards/1.png" alt="">
+        <div class="figcap">
+          <p>Para eliminar colonias</p>
+          <div class="btn">Más info</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./img_cards/2.png" alt="">
+        <div class="figcap">
+          <p>Para erradicar hormigueros</p>
+          <div class="btn">Más info</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./img_cards/3.png" alt="">
+        <div class="figcap">
+          <p>Mata todo tipo de insectos</p>
+          <div class="btn">Más info</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./img_cards/4.png" alt="">
+        <div class="figcap">
+          <p>Mantenimiento de cañerías</p>
+          <div class="btn">Más info</div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./img_cards/5.png" alt="">
+        <div class="figcap">
+          <p>Mantiene la higiene</p>
+          <div class="btn">Más info></div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./img_cards/6.png" alt="">
+        <div class="figcap">
+          <p>De amplio espectro</p>
+          <div class="btn">Más info</div>
+        </div>
+      </div>        
+    </div>  
   </section>
 
-  <section class="btns">
-    <div class="btn"></div>
-    <div class="btn"></div>
-    <div class="btn"></div>
-    <div class="btn"></div>
-    <div class="btn"></div>
-  </section>
-
+  <section class="separador"></section>
+</main> 
+  
 
 <script>
+  
+  
+  
   const $btns = document.querySelectorAll('.btn'),
   $cardContent = [],  
-  $cards = document.querySelector('.cards'),
-  $template = document.getElementById('template-card').content,
-  $fragment = document.createDocumentFragment(),
-  $cerrar = document.querySelector('.cerrar');
-
+  $cards = document.querySelector('.info-cards'),
+  $template = document.getElementById('template-info-card').content,
+  $fragment = document.createDocumentFragment();
 
   function btn_i(value, index, array){
     i=index;
-    $btns[i].setAttribute('index', i);    
-    $cardContent.push({title:`Img ${1+i}`, img :`./img/${i}.jpg`});
-    $btns[i].innerText = `Img 
-    ${1+i}`
-    ;
+    $btns[i].setAttribute('index', i);
+
+    $cardContent.push({img :`./img_cards/info/${i}.jpg`, 
+    h1 : `MATA ALACRÁN x 150gr (polvo)`, titu1 : `Exclusiva formulación no tóxica para niños ni mascotas. Elimina y previene la presencia de alacranes en el hogar, industria, etc...`});    
+
   };
   $btns.forEach(btn_i);
 
   document.addEventListener('click', e=>{
     if(e.target.matches('.btn')){
-      const btnIndx = e.target.getAttribute('index');      
+
+      const btnIndx = e.target.getAttribute('index');  
+
       $template.querySelector('img').setAttribute('src', $cardContent[btnIndx].img);
-      $template.querySelector('figcaption').textContent = $cardContent[btnIndx].title; 
+      $template.querySelector('.info-header-h1').textContent = $cardContent[btnIndx].h1;
+      $template.querySelector('.titulo-1').textContent = $cardContent[btnIndx].titu1;
+
       let $clone = document.importNode($template, true);
+
       $fragment.appendChild($clone); 
       $cards.appendChild($fragment); 
     }
-    if(e.target.matches('.cerrar')){
+    if(e.target.matches('.xclose')){
       $cards.removeChild($cards.lastElementChild);
     }
-  });   
-  
-</script>  
+    if(e.target.matches('.card')){
+      console.log('hola');
+    }
+  }); 
+
+
+
+
+  // const $btns = document.querySelectorAll('.btn'),
+  // $cardContent = [],  
+  // $cards = document.querySelector('.info-cards'),
+  // $template = document.getElementById('template-info-card').content,
+  // $fragment = document.createDocumentFragment();
+
+  // function btn_i(value, index, array){
+  //   i=index;
+  //   $btns[i].setAttribute('index', i);    
+  //   $cardContent.push({title:`Img ${1+i}`, img :`./img_cards/info/${i}.jpg`});
+  //   // $btns[i].innerText = `Img 
+  //   // ${1+i}`
+  //   // ;
+  // };
+  // $btns.forEach(btn_i);
+
+  // document.addEventListener('click', e=>{
+  //   if(e.target.matches('.btn')){
+  //     const btnIndx = e.target.getAttribute('index');      
+  //     $template.querySelector('img').setAttribute('src', $cardContent[btnIndx].img);
+  //     $template.querySelector('figcaption').textContent = $cardContent[btnIndx].title; 
+  //     let $clone = document.importNode($template, true);
+  //     $fragment.appendChild($clone); 
+  //     $cards.appendChild($fragment); 
+  //   }
+  //   if(e.target.matches('.cerrar')){
+  //     $cards.removeChild($cards.lastElementChild);
+  //   }
+  // }); 
+
+</script>
 </body>
 </html>

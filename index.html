@@ -119,11 +119,10 @@
     }
     .info-card-container{
       position: relative;
-      margin-top: -100vh;
+      margin-top: -200vh;
       animation-name: fade-card;
-      animation-delay: .2s;
-      animation-duration: .4s;
-      animation-timing-function: ease-in-out;
+      animation-duration: .5s;
+      animation-timing-function: ease-out;
       animation-iteration-count: 1;   
       animation-fill-mode: forwards;
     }
@@ -330,10 +329,6 @@
   $cards = document.querySelector('.info-cards'), // conteiner gral
   $template = document.getElementById('template-info-card').content, // template contenido
   $fragment = document.createDocumentFragment();
-
-
-  /////////////
-
 
 
   async function loadCards(url){

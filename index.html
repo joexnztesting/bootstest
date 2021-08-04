@@ -339,19 +339,16 @@
       }catch(err){
         console.log(err);
       }
+
+      function btn_i(value, index, array){
+        i=index;
+        $btns[i].setAttribute('index', i);
+      };
+      $btns.forEach(btn_i);
     }
   document.addEventListener('DOMContentLoaded', e => loadCards(infoJson))
 
   ///////////////////
-
-
-  function btn_i(value, index, array){
-    i=index;
-    $btns[i].setAttribute('index', i);
-  };
-  $btns.forEach(btn_i);
-
-
 
   document.addEventListener('click', e=>{
     if(e.target.matches('.btn')){
@@ -373,37 +370,6 @@
       $cards.removeChild($cards.lastElementChild);
     }
   }); 
-
-
-  // const $btns = document.querySelectorAll('.btn'),
-  // $cardContent = [],  
-  // $cards = document.querySelector('.info-cards'),
-  // $template = document.getElementById('template-info-card').content,
-  // $fragment = document.createDocumentFragment();
-
-  // function btn_i(value, index, array){
-  //   i=index;
-  //   $btns[i].setAttribute('index', i);    
-  //   $cardContent.push({title:`Img ${1+i}`, img :`./img_cards/info/${i}.jpg`});
-  //   // $btns[i].innerText = `Img 
-  //   // ${1+i}`
-  //   // ;
-  // };
-  // $btns.forEach(btn_i);
-
-  // document.addEventListener('click', e=>{
-  //   if(e.target.matches('.btn')){
-  //     const i = e.target.getAttribute('index');      
-  //     $template.querySelector('img').setAttribute('src', $cardContent[i].img);
-  //     $template.querySelector('figcaption').textContent = $cardContent[i].title; 
-  //     let $clone = document.importNode($template, true);
-  //     $fragment.appendChild($clone); 
-  //     $cards.appendChild($fragment); 
-  //   }
-  //   if(e.target.matches('.cerrar')){
-  //     $cards.removeChild($cards.lastElementChild);
-  //   }
-  // }); 
 
 </script>
 </body>

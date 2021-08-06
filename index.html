@@ -1,375 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Section Prod 1</title>
+  <title>Con Bootstrap</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./img/logo.svg">
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-    html{
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-    *,
-    *:before,
-    *:after{
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }    
-    body{
-      box-sizing: border-box; 
-      margin: 0 auto;
-      padding: 0;
-    }
-    section{
-      font-family: 'Open Sans', sans-serif;
-    }
-    /*  ***************************************  */ 
-
-    /* .los-prod{
-      background-color: rgb(222, 252, 198);
-    } */
-    .titu-manten{ 
-      /* background-color: rgb(224, 191, 255); */
-      padding: 50px 10%;
-    }
-    .titu-manten p{
-      /* background-color: rgb(255, 218, 204); */
-      color: green;
-      font-size: 1.7rem; 
-      text-align: center;
-      padding-bottom: 16px;
-      border-bottom: 2px solid rgb(173, 209, 173) ;
-    }
-    .cards-container{
-      display:flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .card{
-      background-color: rgb(248, 248, 248);
-      width: 280px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; 
-      border: 4px solid rgb(255, 255, 255);
-      border-radius: 10px;
-      box-shadow: 0 4px 10px 4px rgba(0, 0, 0, .2);
-      margin: 0 22px 44px;      /* overflow: hidden; */
-    }
-    .card img{
-      width: 70%;
-      box-shadow: 0px 16px 10px 8px rgba(196, 196, 196, 0.85);
-      margin-top: 15px;
-    }
-    .figcap{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px 15px 25px;
-      background-color: rgb(250, 250, 250);
-      border-top: 3px solid rgb(255, 255, 255);
-    }
-    .figcap p{
-      font-size: 1.15rem;  
-      text-align: center;
-    }
-    .btn{
-      border: 3px solid rgb(100, 208, 216);
-      background-color: white;
-      padding: 10px 15px;
-      border-radius: 10px;
-      margin-left: 15px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;  
-      justify-content: center;
-      color: rgb(1, 77, 177);
-      font-size: 1.15rem ;
-      line-height: 1.45rem;
-    }
-    /*  INFO CARD  */
-    .info-card-fondo{
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.4);
-      position: fixed;
-      top: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      animation-name: show-card;
-      animation-duration: .3s;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: 1;   
-      animation-fill-mode: forwards;
-    }
-    @keyframes show-card{
-      100%{   
-        opacity: 1;
-      }
-    }
-    .info-card-container{
-      position: relative;
-      margin-top: -200vh;
-      animation-name: fade-card;
-      animation-duration: .5s;
-      animation-timing-function: ease-out;
-      animation-iteration-count: 1;   
-      animation-fill-mode: forwards;
-    }
-    @keyframes fade-card{
-      100%{
-        margin-top: 0;
-      }
-    }
-    .info-card-elem{ 
-      background-color: #fff;
-      font-family: 'Public Sans', sans-serif;
-      border: 3px solid rgb(152, 246, 253);
-      border-radius: 20px;
-      width: 250px;
-      height: 400px;
-      overflow: hidden;
-    }
-    .info-header{ 
-      border-bottom: 2px solid rgb(186, 250, 255);
-      margin: 0 20px;
-      background-color: #fff;
-      height: 35%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .info-header img{
-      border: 3px solid rgb(152, 246, 253);
-      width: 50%;
-      border-radius: 50%;
-    }
-    .info-header-h1{
-      font-weight: bold;
-      text-align: center;
-      font-size: 1.1rem;
-      line-height: 1.6rem;
-      color: green;
-      padding: 0 10px;
-    }
-    .info-card-info{
-      height: 65%;
-      overflow-y: scroll;
-      padding: 10px 25px;
-    }
-    .titulo-1{
-      padding: 15px 10px;
-      font-size: 1.2rem;
-      color: green;
-    }
-    .info-section{
-      padding: 15px 10px;
-      font-size: 1rem;
-      line-height: 1.4rem;
-      border-top: 2px dotted rgb(211, 211, 211);
-    }
-    .titu-2{
-      color: green;
-      font-size: 1.25rem;
-      margin-bottom: 5px;
-    }
-    .xclose{
-      border: 2px solid rgb(255, 166, 64);
-      justify-content: center;
-      display: flex;
-      width: 30px;
-      height: 30px;
-      line-height: 24px;
-      font-size: 1.2rem;
-      border-radius: 50%;
-      background-color: rgb(255, 36, 36);
-      color: #fff;
-      position: absolute;
-      right: -12px;
-      top: -15px;
-      cursor: pointer;
-      z-index: 3000;
-    }
-    .no-scroll{
-      height: 100%;
-      overflow: hidden;
-    }   
-    /*  FIN INFO CARD  */ 
-
-
-
-
-    /* ***********************  */
-
-    .separador{
-      width: 100%;
-      height: 80vh;
-      background-color: cornsilk;
-    }    
-
-
   </style>
 </head>
 <body>
-<main>
 
-  
-  <section id="productos" class="los-prod"> 
+  <main class="container">
+
+    <div class="separador1"></div>
+    <div class="separador2"></div>
     
-    <div class="info-cards">
-      <template id="template-info-card">
-        <div class="info-card-fondo">
-          <div class="info-card-container">      
-            <div class="xclose">x</div>
-            <div class="info-card-elem">    
-              <div class="info-header">
-                <img alt="#">
-                <div class="info-header-h1"></div>            
-              </div>  
-              <div class="info-card-info">  
-                <div class="titulo-1"></div>  
-                <div class="info-section">
-                  <div class="titu-2"></div>
-                  <div class="titu-2-text"></div>
-                </div> 
-              </div>
+
+    <div class="row prod-huerta">
+
+      <div class="bq-semillas"><p>" Gran Variedad de Semillas "</p></div> 
+      
+      <!-- ********************************************************* -->
+      
+      <div class="carousl mx-auto">
+        
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+          
+          <div class="carousel-inner" >
+            <div class="carousel-item active">
+              <img src="./img/1.jpg" class="d-block w-100" alt="#">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/2.jpg" class="d-block w-100" alt="#">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/3.jpg" class="d-block w-100" alt="#">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/4.jpg" class="d-block w-100" alt="#">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/5.jpg" class="d-block w-100" alt="#">
             </div>
           </div>
+          <button class="carousel-control-prev carousl-ctrl-L" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next carousl-ctrl-R" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          
         </div>
-      </template>
+        
+      </div>
+      
+      <!-- ********************************************************* -->      
+
     </div>
 
-    <div class="titu-manten"><p>" Mantenimiento de Hogar y Jardín "</p></div>       
+    <div class="separador1"></div>
 
-    <div class="cards-container">      
-      <div class="card">
-        <img src="./img_cards/0.png" alt="mata alacranes">
-        <div class="figcap">
-          <p>No Tóxico para personas</p>
-          <div class="btn">Más info</div>
-        </div>
-      </div>      
-      <div class="card">
-        <img src="./img_cards/1.png" alt="">
-        <div class="figcap">
-          <p>Para eliminar colonias</p>
-          <div class="btn">Más info</div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./img_cards/2.png" alt="">
-        <div class="figcap">
-          <p>Para erradicar hormigueros</p>
-          <div class="btn">Más info</div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./img_cards/3.png" alt="">
-        <div class="figcap">
-          <p>Mata todo tipo de insectos</p>
-          <div class="btn">Más info</div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./img_cards/4.png" alt="">
-        <div class="figcap">
-          <p>Mantenimiento de cañerías</p>
-          <div class="btn">Más info</div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./img_cards/5.png" alt="">
-        <div class="figcap">
-          <p>Mantiene la higiene</p>
-          <div class="btn">Más info></div>
-        </div>
-      </div>
-      <div class="card">
-        <img src="./img_cards/6.png" alt="">
-        <div class="figcap">
-          <p>De amplio espectro</p>
-          <div class="btn">Más info</div>
-        </div>
-      </div>        
-    </div>  
-  </section>
 
-  <section class="separador"></section>
-</main> 
+  </main>
   
-
+<script src="./js/bootstrap.bundle.js"></script>
 <script>
-  
-  
-  
-  const $btns = document.querySelectorAll('.btn'),
-  $cardContent = [], 
-  infoJson = './img_cards/info/info-cards.json',
-  $cards = document.querySelector('.info-cards'), // conteiner gral
-  $template = document.getElementById('template-info-card').content, // template contenido
-  $fragment = document.createDocumentFragment();
-
-
-  async function loadCards(url){
-      try{
-        let res = await fetch(url),
-        json = await res.json()                
-        // console.log(json);
-        for(let i=0; i<json.length; i++){
-          // console.log(json[i]);          
-          $cardContent.push({
-          img :`${json[i].img}`, 
-          h1 : `${json[i].h1}`, 
-          titu1 : `${json[i].titulo}`,
-          titu2 : `${json[i].titu2}`,
-          titu2txt : `${json[i].titu2text}`
-          }); 
-        }
-        
-      }catch(err){
-        console.log(err);
-      }
-
-      function btn_i(value, index, array){
-        i=index;
-        $btns[i].setAttribute('index', i);
-      };
-      $btns.forEach(btn_i);
-    }
-  document.addEventListener('DOMContentLoaded', e => loadCards(infoJson))
-
-  ///////////////////
-
-  document.addEventListener('click', e=>{
-    if(e.target.matches('.btn')){
-
-      const i = e.target.getAttribute('index');  
-
-      $template.querySelector('img').setAttribute('src', $cardContent[i].img);
-      $template.querySelector('.info-header-h1').textContent = $cardContent[i].h1;
-      $template.querySelector('.titulo-1').textContent = $cardContent[i].titu1;
-      $template.querySelector('.titu-2').textContent = $cardContent[i].titu2;
-      $template.querySelector('.titu-2-text').textContent = $cardContent[i].titu2txt;
-
-      let $clone = document.importNode($template, true);
-
-      $fragment.appendChild($clone); 
-      $cards.appendChild($fragment); 
-    }
-    if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
-      $cards.removeChild($cards.lastElementChild);
-    }
-  }); 
 
 </script>
 </body>

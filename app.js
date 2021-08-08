@@ -1,8 +1,10 @@
 window.addEventListener('DOMContentLoaded',(e)=>{  
   // INICIADORES CAROUSEL
-  const $slide = document.querySelectorAll('.slide'),   
-  $lastSlide = document.querySelector('.slides-container').lastElementChild,
-  $firstSlide = document.querySelector('.slides-container').firstElementChild;
+  const d=document, n=navigator, ua=n.userAgent,
+  $slide = d.querySelectorAll('.slide'),   
+  $lastSlide = d.querySelector('.slides-container').lastElementChild,
+  $firstSlide = d.querySelector('.slides-container').firstElementChild;
+
   let i = 0;    
   $slide[i].classList.add('centrado');
   $slide[i].style.opacity = '1';
@@ -56,16 +58,92 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       $slide[i].classList.remove('center-to-left');
     };       
   };// FIN INICIADORES CAROUSEL  
+
+
+  function userDeviceInfo(){
+    isMobile = {
+        android:()=>ua.match(/android/i),
+            ios:()=>ua.match(/iphone|ipad|ipod/i),
+        windows:()=>ua.match(/windows phone/i)
+    },
+    isBrowser = {
+        chrome:()=>ua.match(/chrome/i),
+        safarai:()=>ua.match(/safarai/i),
+        firefox:()=>ua.match(/firefox/i),
+        opera:()=>ua.match(/opera|opera mini/i),
+        ie:()=>ua.match(/msie|iemobile/i),
+        edge:()=>ua.match(/edge/i),
+        any:function(){
+          return(
+            this.ie()||
+            this.edge()||
+            this.chrome()||
+            this.safarai()||
+            this.firefox()||
+            this.opera()
+          );
+        }
+    };
+
+    // Swipe Left / Right
+  var initialX = null; 
+  function startTouch(e) {
+    initialX = e.touches[0].clientX;
+  }; 
+  function moveTouch(e) {
+    if (initialX === null) {
+      return;
+    } 
+    var currentX = e.touches[0].clientX; 
+    var diffX = initialX - currentX; 
+    if (Math.abs(diffX)) {
+      if (diffX > 0) {
+        toLeft()  
+      }
+      if (diffX < 0) {
+        toRight()
+      }
+    } 
+    initialX = null;
+  };// FINSwipe Left / Right  
+
+  
+    if(isMobile.android() || isBrowser.any()){
+      d.addEventListener('click', (e)=>{ 
+        if(e.target.matches('.btn-carousel-l')){      
+          e.preventDefault();      
+          btnLeft()
+        }
+        if(e.target.matches('.btn-carousel-r')){      
+          e.preventDefault(); 
+          btnRight()
+        }
+      });
+    };
+    if(isMobile.ios()){
+      d.addEventListener('touchstart', (e)=>{
+        if(e.target.matches('.btn-carousel-l')){      
+          e.preventDefault();      
+          btnLeft()
+        }
+        if(e.target.matches('.btn-carousel-r')){      
+          e.preventDefault(); 
+          btnRight()
+        }
+      }, true);
+    };
+  }  
+  userDeviceInfo()
   //********************************************************************** 
-  document.addEventListener('click', e=>{  
-    // CAROUSEL
-    if(e.target.matches('.btn-carousel-l')){      
-      e.preventDefault();      
-      btnLeft()
-    }
-    if(e.target.matches('.btn-carousel-r')){      
-      e.preventDefault(); 
-      btnRight()
-    }// FIN CAROUSEL  
-  });      
+  // document.addEventListener('click', e=>{  
+  //   // CAROUSEL
+  //   if(e.target.matches('.btn-carousel-l')){      
+  //     e.preventDefault();      
+  //     btnLeft()
+  //   }
+  //   if(e.target.matches('.btn-carousel-r')){      
+  //     e.preventDefault(); 
+  //     btnRight()
+  //   }// FIN CAROUSEL  
+  // });      
 });

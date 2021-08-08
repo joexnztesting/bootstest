@@ -1,65 +1,13 @@
+
 window.addEventListener('DOMContentLoaded',(e)=>{  
+  
   // INICIADORES CAROUSEL
   const d=document, n=navigator, ua=n.userAgent,
+  $slidesContainer = d.querySelector('.slides-container'),
   $slide = d.querySelectorAll('.slide'),   
   $lastSlide = d.querySelector('.slides-container').lastElementChild,
   $firstSlide = d.querySelector('.slides-container').firstElementChild;
-
-  let i = 0;    
-  $slide[i].classList.add('centrado');
-  $slide[i].style.opacity = '1';
-    
-  function btnLeft(){
-    if($lastSlide.classList.contains('center-to-left')){
-      $lastSlide.classList.remove('center-to-left');
-      $lastSlide.style.opacity = '0';
-    };
-    if($slide[i-1]){
-      $slide[i-1].classList.remove('center-to-left')
-      $slide[i-1].style.opacity = '0';
-    };
-    if($slide[i].classList.contains('centrado')){        
-      $slide[i].classList.remove('centrado');
-      $slide[i].classList.remove('right-to-center');
-      $slide[i].classList.remove('left-to-center'); 
-      $slide[i].classList.add('center-to-left');        
-      i++;
-      if(i===$slide.length){
-        i=0;
-      };
-      $slide[i].style.opacity = '1';
-      $slide[i].classList.add('centrado');
-      $slide[i].classList.add('right-to-center');  
-      $slide[i].classList.remove('center-to-right');
-    };          
-  };
-
-  function btnRight(){
-    if($firstSlide.classList.contains('center-to-right')){
-      $firstSlide.classList.remove('center-to-right');
-      $firstSlide.style.opacity = '0';
-    };
-    if($slide[i+1]){
-      $slide[i+1].classList.remove('center-to-right');
-      $slide[i+1].style.opacity = '0';
-    };
-    if($slide[i].classList.contains('centrado')){        
-      $slide[i].classList.remove('centrado');
-      $slide[i].classList.remove('left-to-center');
-      $slide[i].classList.remove('right-to-center');
-      $slide[i].classList.add('center-to-right');
-      if(i===0){
-        i=$slide.length;
-      };
-      i--;        
-      $slide[i].style.opacity = '1';
-      $slide[i].classList.add('centrado');
-      $slide[i].classList.add('left-to-center');
-      $slide[i].classList.remove('center-to-left');
-    };       
-  };// FIN INICIADORES CAROUSEL  
-
-
+  
   function userDeviceInfo(){
     isMobile = {
         android:()=>ua.match(/android/i),
@@ -84,8 +32,68 @@ window.addEventListener('DOMContentLoaded',(e)=>{
           );
         }
     };
-
-    // Swipe Left / Right
+  }  
+  userDeviceInfo()
+  
+  // **************************************************
+  
+  let i = 0;    
+  $slide[i].classList.add('centrado');
+  $slide[i].style.opacity = '1';
+  
+  function btnLeft(){
+    if($lastSlide.classList.contains('center-to-left')){
+      $lastSlide.classList.remove('center-to-left');
+      $lastSlide.style.opacity = '0';
+    };
+    if($slide[i-1]){
+      $slide[i-1].classList.remove('center-to-left')
+      $slide[i-1].style.opacity = '0';
+    };
+    if($slide[i].classList.contains('centrado')){        
+      $slide[i].classList.remove('centrado');
+      $slide[i].classList.remove('right-to-center');
+      $slide[i].classList.remove('left-to-center'); 
+      $slide[i].classList.add('center-to-left');        
+      i++;
+      if(i===$slide.length){
+        i=0;
+      };
+      $slide[i].style.opacity = '1';
+      $slide[i].classList.add('centrado');
+      $slide[i].classList.add('right-to-center');  
+      $slide[i].classList.remove('center-to-right');
+    };          
+  };
+  
+  function btnRight(){
+    if($firstSlide.classList.contains('center-to-right')){
+      $firstSlide.classList.remove('center-to-right');
+      $firstSlide.style.opacity = '0';
+    };
+    if($slide[i+1]){
+      $slide[i+1].classList.remove('center-to-right');
+      $slide[i+1].style.opacity = '0';
+    };
+    if($slide[i].classList.contains('centrado')){        
+      $slide[i].classList.remove('centrado');
+      $slide[i].classList.remove('left-to-center');
+      $slide[i].classList.remove('right-to-center');
+      $slide[i].classList.add('center-to-right');
+      if(i===0){
+        i=$slide.length;
+      };
+      i--;        
+      $slide[i].style.opacity = '1';
+      $slide[i].classList.add('centrado');
+      $slide[i].classList.add('left-to-center');
+      $slide[i].classList.remove('center-to-left');
+    };       
+  };// FIN INICIADORES CAROUSEL  
+  
+  // **************************************************
+  
+  // Swipe Left / Right
   var initialX = null; 
   function startTouch(e) {
     initialX = e.touches[0].clientX;
@@ -98,52 +106,42 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     var diffX = initialX - currentX; 
     if (Math.abs(diffX)) {
       if (diffX > 0) {
-        toLeft()  
+        btnLeft()  
       }
       if (diffX < 0) {
-        toRight()
+        btnRight()
       }
     } 
     initialX = null;
-  };// FINSwipe Left / Right  
-
+  };// FINSwipe Left / Right 
   
-    if(isMobile.android() || isBrowser.any()){
-      d.addEventListener('click', (e)=>{ 
-        if(e.target.matches('.btn-carousel-l')){      
-          e.preventDefault();      
-          btnLeft()
-        }
-        if(e.target.matches('.btn-carousel-r')){      
-          e.preventDefault(); 
-          btnRight()
-        }
-      });
-    };
-    if(isMobile.ios()){
-      d.addEventListener('touchstart', (e)=>{
-        if(e.target.matches('.btn-carousel-l')){      
-          e.preventDefault();      
-          btnLeft()
-        }
-        if(e.target.matches('.btn-carousel-r')){      
-          e.preventDefault(); 
-          btnRight()
-        }
-      }, true);
-    };
-  }  
-  userDeviceInfo()
+  // **************************************************
+
+  if(isMobile.android() || isBrowser.any()){
+    d.addEventListener('click', (e)=>{
+      if(e.target.matches('.btn-carousel-l')){
+        btnLeft()
+      }
+      if(e.target.matches('.btn-carousel-r')){
+        btnRight()
+      }
+    });    
+    $slidesContainer.addEventListener("touchstart", startTouch, false);
+    $slidesContainer.addEventListener("touchmove", moveTouch, false);
+  }
+
+
   //********************************************************************** 
   // document.addEventListener('click', e=>{  
-  //   // CAROUSEL
-  //   if(e.target.matches('.btn-carousel-l')){      
-  //     e.preventDefault();      
-  //     btnLeft()
-  //   }
-  //   if(e.target.matches('.btn-carousel-r')){      
-  //     e.preventDefault(); 
-  //     btnRight()
-  //   }// FIN CAROUSEL  
-  // });      
+    //   // CAROUSEL
+    //   if(e.target.matches('.btn-carousel-l')){      
+      //     e.preventDefault();      
+      //     btnLeft()
+      //   }
+      //   if(e.target.matches('.btn-carousel-r')){      
+        //     e.preventDefault(); 
+        //     btnRight()
+        //   }// FIN CAROUSEL  
+        // });   
+  e.preventDefault();        
 });

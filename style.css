@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Coustard&family=Public+Sans:wght@400&display=swap');
+
+
+
+html{
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;   
+  scroll-behavior: smooth;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}    
+body{
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.15);
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*    HEADER    */
+.header-container{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+/* *****  SEPARADORES TITU  ***** */
+.separador{
+  position: sticky;
+  top: 0;
+  z-index: 1500;
+}
+.separador p{
+  font-family: 'Public Sans', sans-serif;
+  font-size: calc(1.35rem + 1vw);
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  padding: 0px 20px;
+}
+.separador span{
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+.titu-huerta{
+  background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
+  line-height: 50px;
+  width: 100%;
+}
+
+/* *********  CAROUSEL  ************  */
+
+.prod-huerta{
+  background-color: rgb(170, 255, 227); 
+  height: 90vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.carousel-container{
+  background-color: rgb(145, 220, 255);
+  padding: 20px 0px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 310px;
+}
+.btn-carousel-l{
+  /* height: 40px;
+  width: 40px;
+  border: 1px solid green;
+  border-radius: 50%; */
+  border: 1px solid rgb(255, 0, 0);
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+}
+.btn-carousel-r{
+  /* height: 40px;
+  width: 40px;
+  border: 1px solid green;
+  border-radius: 50%; */
+  border: 1px solid rgb(0, 110, 255);
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+}
+.carousel{  
+  /* background-color: khaki; */
+  position: relative;
+  overflow-x: hidden;
+}
+.slides-container{
+  background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+} 
+.slide{
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  padding: 10px;
+  height: 300px;
+  opacity: 0;
+}
+.slide img{
+  height: 100%;
+}
+
+/* ************************************************* */
+
+.center-to-left{
+  animation-name: center-to-left;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;  
+}
+@keyframes center-to-left{
+  100%{
+    transform: translateX(-100%);
+  }
+}  
+.center-to-right{
+  animation-name: center-to-right;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;  
+}
+@keyframes center-to-right{
+  100%{
+    transform: translateX(100%);
+  }
+}  
+.right-to-center{
+  animation-name: right-to-center;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;  
+}
+@keyframes right-to-center{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}  
+.left-to-center{
+  animation-name: left-to-center;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;  
+}
+@keyframes left-to-center{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}  
+
+
+/* ************************************************* */
+
+.bq-semillas{
+  text-align: center;
+  padding: 40px calc(10vw + 3vw);
+}
+.bq-semillas p{
+  font-family: 'Sansita Swashed', cursive;
+  color: green;
+  font-size: 1.7rem; 
+  line-height: 2.2rem;
+  border-bottom: 2px solid rgb(173, 209, 173) ;
+  padding-bottom: 16px;
+}
+
+
+
+
+.footer{
+  width: 100%;
+  padding: 2.5vh 0 2.5vh;
+  background: rgba(0, 56, 42, 0.98);
+  font-family: 'Public Sans', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  letter-spacing: .08rem;
+  text-align: center;
+  margin-bottom: 100vh;
+  /*border: 1px solid red;*/
+}

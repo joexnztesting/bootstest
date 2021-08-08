@@ -130,6 +130,19 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     $slidesContainer.addEventListener("touchmove", moveTouch, false);
   }
 
+  if(isMobile.ios()){
+    d.addEventListener('touchstart', (e)=>{
+      if(e.target.matches('.btn-carousel-l')){
+        btnLeft()
+      }
+      if(e.target.matches('.btn-carousel-r')){
+        btnRight()
+      }
+    }, true);    
+    $slidesContainer.addEventListener("touchstart", startTouch, false);
+    $slidesContainer.addEventListener("touchmove", moveTouch, false);
+  }
+
 
   //********************************************************************** 
   // document.addEventListener('click', e=>{  

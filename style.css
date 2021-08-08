@@ -20,10 +20,10 @@ body{
   overflow-x: hidden;
   box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.15);
 }
-img{
+/* img{
     max-width: 100%;
     height: auto;
-}
+} */
 
 /* *****  SEPARADORES TITU  ***** */
 .separador{
@@ -58,6 +58,18 @@ img{
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+.bq-semillas{
+  text-align: center;
+  padding: 40px calc(10vw + 3vw);
+}
+.bq-semillas p{
+  font-family: 'Sansita Swashed', cursive;
+  color: green;
+  font-size: 1.7rem; 
+  line-height: 2.2rem;
+  border-bottom: 2px solid rgb(173, 209, 173) ;
+  padding-bottom: 16px;
 }
 .carousel-container{
   background-color: rgb(145, 220, 255);
@@ -107,7 +119,6 @@ img{
 .slide img{
   height: 100%;
 }
-
 /* ************************************************* */
 
 .center-to-left{
@@ -168,15 +179,4 @@ img{
 
 /* ************************************************* */
 
-.bq-semillas{
-  text-align: center;
-  padding: 40px calc(10vw + 3vw);
-}
-.bq-semillas p{
-  font-family: 'Sansita Swashed', cursive;
-  color: green;
-  font-size: 1.7rem; 
-  line-height: 2.2rem;
-  border-bottom: 2px solid rgb(173, 209, 173) ;
-  padding-bottom: 16px;
-}
+

@@ -8,6 +8,8 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $lastSlide = d.querySelector('.slides-container').lastElementChild,
   $firstSlide = d.querySelector('.slides-container').firstElementChild;
   
+  // **************************************************
+
   function userDeviceInfo(){
     isMobile = {
         android:()=>ua.match(/android/i),
@@ -37,59 +39,153 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   
   // **************************************************
   
-  let i = 0;    
+  let i = 0;  
+
   $slide[i].classList.add('centrado');
-  $slide[i].style.opacity = '1';
+  $slide[i].style.zIndex = '100';
   
+  $lastSlide.classList.add('left-2-to-left');
+  $lastSlide.classList.add('on-left');
+  
+  // $lastSlide.previousElementSibling.classList.add('to-left-2');
+  
+  $slide[i].nextElementSibling.classList.add('center-to-right');
+  $slide[i].nextElementSibling.classList.add('on-right');
+
+  console.log(i);
+
   function btnLeft(){
-    if($lastSlide.classList.contains('center-to-left')){
-      $lastSlide.classList.remove('center-to-left');
-      $lastSlide.style.opacity = '0';
+    // if($lastSlide.classList.contains('center-to-left')){
+    //   $lastSlide.classList.remove('center-to-left');
+    //   $lastSlide.style.zIndex = '99';
+    // };
+    // if($slide[i-1]){
+    //   $slide[i-1].classList.remove('center-to-left')
+    //   $slide[i-1].style.zIndex = '99';
+    // };
+    // if($slide[i].classList.contains('centrado')){        
+    //   $slide[i].classList.remove('centrado');
+    //   $slide[i].classList.remove('right-to-center');
+    //   $slide[i].classList.remove('left-to-center'); 
+    //   $slide[i].classList.add('center-to-left');        
+    //   i++;
+    //   if(i===$slide.length){
+    //     i=0;
+    //   };
+    //   $slide[i].style.zIndex = '100';
+    //   $slide[i].classList.add('centrado');
+    //   $slide[i].classList.add('right-to-center');  
+    //   $slide[i].classList.remove('center-to-right');
+    // }; 
+    
+    //******************************************** */
+
+    // if(i===0){
+    //   if($slide[0].classList.contains('centrado')){
+    //     i=$slide.length-1;
+    //   }
+    //   if($slide[1].classList.contains('centrado')){
+    //     i=$slide.length;
+    //   }
+    // }; 
+    
+    
+    if(i===$slide.length-1){
+      i=-1;
     };
-    if($slide[i-1]){
-      $slide[i-1].classList.remove('center-to-left')
-      $slide[i-1].style.opacity = '0';
+    if(i===0){
+      if($slide[0].classList.contains('centrado')){
+        i++
+      }
     };
-    if($slide[i].classList.contains('centrado')){        
-      $slide[i].classList.remove('centrado');
-      $slide[i].classList.remove('right-to-center');
-      $slide[i].classList.remove('left-to-center'); 
-      $slide[i].classList.add('center-to-left');        
-      i++;
-      if(i===$slide.length){
-        i=0;
+    
+    $slide.forEach(slid=>{
+      if(slid.classList.contains('to-left-2')){
+        slid.classList.remove('to-left-2');
+        slid.style.zIndex = '99';
       };
-      $slide[i].style.opacity = '1';
-      $slide[i].classList.add('centrado');
-      $slide[i].classList.add('right-to-center');  
-      $slide[i].classList.remove('center-to-right');
-    };          
+      if(slid.classList.contains('on-left')){
+        slid.classList.remove('on-left');
+        slid.classList.remove('left-2-to-left');
+        slid.classList.remove('center-to-left');
+        slid.classList.add('to-left-2');
+      };        
+      if(slid.classList.contains('centrado')){
+        slid.classList.remove('centrado');
+        slid.classList.remove('right-to-center');
+        // slid.classList.remove('left-to-center');
+        slid.classList.add('on-left');
+        slid.classList.add('center-to-left');
+      }; 
+      if(slid.classList.contains('on-right')){
+        slid.classList.remove('on-right');
+        slid.classList.remove('right-2-to-right');
+        slid.classList.remove('center-to-right');
+        slid.classList.add('centrado');
+        slid.classList.add('right-to-center');
+        slid.style.zIndex = '100';  
+      };      
+    }); 
+    
+    i++;
+    $slide[i].classList.add('on-right');
+    $slide[i].classList.add('right-2-to-right');
+    $slide[i].style.zIndex = '100';     
+    // console.log(i);        
   };
+
+
   
   function btnRight(){
-    if($firstSlide.classList.contains('center-to-right')){
-      $firstSlide.classList.remove('center-to-right');
-      $firstSlide.style.opacity = '0';
-    };
-    if($slide[i+1]){
-      $slide[i+1].classList.remove('center-to-right');
-      $slide[i+1].style.opacity = '0';
-    };
-    if($slide[i].classList.contains('centrado')){        
-      $slide[i].classList.remove('centrado');
-      $slide[i].classList.remove('left-to-center');
-      $slide[i].classList.remove('right-to-center');
-      $slide[i].classList.add('center-to-right');
-      if(i===0){
+
+    if(i===0){
+      if($slide[0].classList.contains('centrado')){
+        i=$slide.length-1;
+      }
+      if($slide[1].classList.contains('centrado')){
         i=$slide.length;
+      }
+    };      
+    
+    $slide.forEach(slid=>{
+      if(slid.classList.contains('to-right-2')){
+        slid.classList.remove('to-right-2');
+        slid.style.zIndex = '99';
       };
-      i--;        
-      $slide[i].style.opacity = '1';
-      $slide[i].classList.add('centrado');
-      $slide[i].classList.add('left-to-center');
-      $slide[i].classList.remove('center-to-left');
-    };       
-  };// FIN INICIADORES CAROUSEL  
+      if(slid.classList.contains('on-right')){
+        slid.classList.remove('on-right');
+        slid.classList.remove('center-to-right');
+        slid.classList.remove('right-2-to-right');//*
+        slid.classList.add('to-right-2');
+      };      
+      if(slid.classList.contains('centrado')){
+        slid.classList.remove('centrado');
+        slid.classList.remove('left-to-center');
+        slid.classList.remove('right-to-center');//*
+        slid.classList.add('on-right');
+        slid.classList.add('center-to-right');
+      }; 
+      if(slid.classList.contains('on-left')){
+        slid.classList.remove('on-left');
+        slid.classList.remove('left-2-to-left');
+        slid.classList.remove('center-to-left');//*
+        slid.classList.add('centrado');
+        slid.classList.add('left-to-center');
+      };        
+      // if(slid.classList.contains('to-left-2')){
+      //   slid.classList.remove('to-left-2');
+      //   slid.classList.add('left-2-to-left');
+      //   slid.classList.add('on-left');
+      // };
+    }); 
+    
+    i--;
+    $slide[i].classList.add('on-left');
+    $slide[i].classList.add('left-2-to-left');
+    $slide[i].style.zIndex = '100';    
+    
+    console.log(i);
+  }; 
   
   // **************************************************
   
@@ -128,8 +224,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     });    
     $slidesContainer.addEventListener("touchstart", startTouch, false);
     $slidesContainer.addEventListener("touchmove", moveTouch, false);
-  }
-
+  };
   if(isMobile.ios()){
     d.addEventListener('touchstart', (e)=>{
       if(e.target.matches('.btn-carousel-l')){
@@ -141,20 +236,9 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     }, true);    
     $slidesContainer.addEventListener("touchstart", startTouch, false);
     $slidesContainer.addEventListener("touchmove", moveTouch, false);
-  }
-
-
+  };
+  
   //********************************************************************** 
-  // document.addEventListener('click', e=>{  
-    //   // CAROUSEL
-    //   if(e.target.matches('.btn-carousel-l')){      
-      //     e.preventDefault();      
-      //     btnLeft()
-      //   }
-      //   if(e.target.matches('.btn-carousel-r')){      
-        //     e.preventDefault(); 
-        //     btnRight()
-        //   }// FIN CAROUSEL  
-        // });   
+
   e.preventDefault();        
 });

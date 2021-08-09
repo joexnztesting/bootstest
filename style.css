@@ -51,7 +51,6 @@ body{
 /* *********  CAROUSEL  ************  */
 
 .prod-huerta{
-  /* background-color: rgb(170, 255, 227);  */
   height: 100vh; 
   display: flex;
   flex-direction: column;
@@ -73,33 +72,41 @@ body{
 }
 .carousel-container{
   background-color: rgb(145, 220, 255);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   width: 310px;
-  padding: 20px 0px;
+  padding: 15px 5px;
   border-radius: 15px;
+  /* overflow-x: hidden ; */
 }
 .btn-carousel-l{
   border: 1px solid rgb(255, 0, 0);
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
+  height: 44px;
+  width: 44px;
   text-align: center;
-  line-height: 45px;
+  line-height: 44px;
+  border-radius: 50%;
+  position: absolute;
+  top: 128px;
+  left: 0px;
+  z-index: 150;
 }
 .btn-carousel-r{
   border: 1px solid rgb(0, 110, 255);
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
+  height: 44px;
+  width: 44px;
   text-align: center;
-  line-height: 45px;
+  line-height: 44px;
+  border-radius: 50%;
+  position: absolute;
+  top: 128px;
+  right: 0px;
+  z-index: 150;
 }
-.carousel{  
-  /* background-color: khaki; */
+.carousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .slides-container{
   background-color: lightgreen;
@@ -114,13 +121,60 @@ body{
   position: absolute;
   padding: 10px;
   height: 300px;
-  opacity: 0;
+  z-index: 99;
 }
 .slide img{
   height: 100%;
 }
 /* ************************************************* */
 
+
+
+.to-left-2{
+  animation-name: to-left-2;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;  
+}
+@keyframes to-left-2{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(-200%);
+  }
+} 
+.left-2-to-left{
+  animation-name: left-2-to-left;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;  
+}
+@keyframes left-2-to-left{
+  0%{
+    transform: translateX(-200%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+} 
+.left-to-center{
+  animation-name: left-to-center;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;  
+}
+@keyframes left-to-center{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
 .center-to-left{
   animation-name: center-to-left;
   animation-duration: .5s;
@@ -159,22 +213,38 @@ body{
   100%{
     transform: translateX(0%);
   }
-}  
-.left-to-center{
-  animation-name: left-to-center;
+} 
+.right-2-to-right{
+  animation-name: right-2-to-right;
   animation-duration: .5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
 }
-@keyframes left-to-center{
+@keyframes right-2-to-right{
   0%{
-    transform: translateX(-100%);
+    transform: translateX(200%);
   }
   100%{
-    transform: translateX(0%);
+    transform: translateX(100%);
   }
 } 
+.to-right-2{
+  animation-name: to-right-2;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;  
+}
+@keyframes to-right-2{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(200%);
+  }
+} 
+
 
 
 /* ************************************************* */

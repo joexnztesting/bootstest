@@ -1,20 +1,19 @@
 
 window.addEventListener('DOMContentLoaded',(e)=>{  
   
-  // INICIADORES CAROUSEL
   const d=document, n=navigator, ua=n.userAgent,
   $slidesContainer = d.querySelector('.slides-container'),
-  $slide = d.querySelectorAll('.slide'),   
-  $lastSlide = d.querySelector('.slides-container').lastElementChild,
-  $firstSlide = d.querySelector('.slides-container').firstElementChild;
+  $slide = d.querySelectorAll('.slide'),
+  $btnL = d.querySelector('.btn-carousel-l'),
+  $btnR = d.querySelector('.btn-carousel-r'); 
+
   
-  // **************************************************
+  ////////////////////////////////////////////////////////////////////////////
 
   function userDeviceInfo(){
     isMobile = {
         android:()=>ua.match(/android/i),
-            ios:()=>ua.match(/iphone|ipad|ipod/i),
-        windows:()=>ua.match(/windows phone/i)
+            ios:()=>ua.match(/iphone|ipad|ipod/i)
     },
     isBrowser = {
         chrome:()=>ua.match(/chrome/i),
@@ -36,158 +35,102 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     };
   }  
   userDeviceInfo()
-  
-  // **************************************************
-  
-  let i = 0;  
 
-  $slide[i].classList.add('centrado');
-  $slide[i].style.zIndex = '100';
-  
-  $lastSlide.classList.add('left-2-to-left');
-  $lastSlide.classList.add('on-left');
-  
-  // $lastSlide.previousElementSibling.classList.add('to-left-2');
-  
-  $slide[i].nextElementSibling.classList.add('center-to-right');
-  $slide[i].nextElementSibling.classList.add('on-right');
+  ////////////////////////////////////////////////////////////////////////////
 
-  console.log(i);
+  let i_L = $slide.length-1, i_C = 0, i_R = 1;  
+  
+  $slide[i_C].style.opacity = '1';
+  
+  $slide[i_L].classList.add('center-to-left');
+  $slide[i_L].style.opacity = '1';
+  
+  $slide[i_R].classList.add('center-to-right');
+  $slide[i_R].style.opacity = '1';
+
+  ////////////////////////////////////////////////////////////////////////////
 
   function btnLeft(){
-    // if($lastSlide.classList.contains('center-to-left')){
-    //   $lastSlide.classList.remove('center-to-left');
-    //   $lastSlide.style.zIndex = '99';
-    // };
-    // if($slide[i-1]){
-    //   $slide[i-1].classList.remove('center-to-left')
-    //   $slide[i-1].style.zIndex = '99';
-    // };
-    // if($slide[i].classList.contains('centrado')){        
-    //   $slide[i].classList.remove('centrado');
-    //   $slide[i].classList.remove('right-to-center');
-    //   $slide[i].classList.remove('left-to-center'); 
-    //   $slide[i].classList.add('center-to-left');        
-    //   i++;
-    //   if(i===$slide.length){
-    //     i=0;
-    //   };
-    //   $slide[i].style.zIndex = '100';
-    //   $slide[i].classList.add('centrado');
-    //   $slide[i].classList.add('right-to-center');  
-    //   $slide[i].classList.remove('center-to-right');
-    // }; 
-    
-    //******************************************** */
-
-    // if(i===0){
-    //   if($slide[0].classList.contains('centrado')){
-    //     i=$slide.length-1;
-    //   }
-    //   if($slide[1].classList.contains('centrado')){
-    //     i=$slide.length;
-    //   }
-    // }; 
-    
-    
-    if(i===$slide.length-1){
-      i=-1;
-    };
-    if(i===0){
-      if($slide[0].classList.contains('centrado')){
-        i++
-      }
-    };
-    
     $slide.forEach(slid=>{
       if(slid.classList.contains('to-left-2')){
         slid.classList.remove('to-left-2');
-        slid.style.zIndex = '99';
-      };
-      if(slid.classList.contains('on-left')){
-        slid.classList.remove('on-left');
-        slid.classList.remove('left-2-to-left');
-        slid.classList.remove('center-to-left');
-        slid.classList.add('to-left-2');
-      };        
-      if(slid.classList.contains('centrado')){
-        slid.classList.remove('centrado');
-        slid.classList.remove('right-to-center');
-        // slid.classList.remove('left-to-center');
-        slid.classList.add('on-left');
-        slid.classList.add('center-to-left');
-      }; 
-      if(slid.classList.contains('on-right')){
-        slid.classList.remove('on-right');
-        slid.classList.remove('right-2-to-right');
-        slid.classList.remove('center-to-right');
-        slid.classList.add('centrado');
-        slid.classList.add('right-to-center');
-        slid.style.zIndex = '100';  
+        slid.style.opacity = '0';
       };      
-    }); 
-    
-    i++;
-    $slide[i].classList.add('on-right');
-    $slide[i].classList.add('right-2-to-right');
-    $slide[i].style.zIndex = '100';     
-    // console.log(i);        
-  };
+      if(slid.classList.contains('to-right-2')){
+        slid.classList.remove('to-right-2');
+      };      
+    });
+    //----------------------------------------------
+    $slide[i_R].classList.remove('center-to-right');
+    $slide[i_R].classList.remove('right-2-to-right');
+    $slide[i_R].classList.add('right-to-center');    
+    if(i_R===$slide.length-1){
+      i_R=-1;
+    };    
+    i_R++;    
+    $slide[i_R].classList.add('right-2-to-right');
+    $slide[i_R].style.opacity = '1';
+    //----------------------------------------------
+    $slide[i_C].classList.remove('left-to-center');
+    $slide[i_C].classList.remove('right-to-center');
+    $slide[i_C].classList.add('center-to-left');    
+    if(i_C===$slide.length-1){
+      i_C=-1;
+    };   
+    i_C++;
+    //----------------------------------------------
+    $slide[i_L].classList.remove('center-to-left');
+    $slide[i_L].classList.remove('left-2-to-left');
+    $slide[i_L].classList.add('to-left-2');    
+    if(i_L===$slide.length-1){
+      i_L=-1;
+    };
+    i_L++;
+    //----------------------------------------------
+  }; 
 
-
+  //--------------------------------------------------------------------------
   
-  function btnRight(){
-
-    if(i===0){
-      if($slide[0].classList.contains('centrado')){
-        i=$slide.length-1;
-      }
-      if($slide[1].classList.contains('centrado')){
-        i=$slide.length;
-      }
-    };      
-    
+  function btnRight(){    
     $slide.forEach(slid=>{
       if(slid.classList.contains('to-right-2')){
         slid.classList.remove('to-right-2');
-        slid.style.zIndex = '99';
+        slid.style.opacity = '0';
       };
-      if(slid.classList.contains('on-right')){
-        slid.classList.remove('on-right');
-        slid.classList.remove('center-to-right');
-        slid.classList.remove('right-2-to-right');//*
-        slid.classList.add('to-right-2');
+      if(slid.classList.contains('to-left-2')){
+        slid.classList.remove('to-left-2');
       };      
-      if(slid.classList.contains('centrado')){
-        slid.classList.remove('centrado');
-        slid.classList.remove('left-to-center');
-        slid.classList.remove('right-to-center');//*
-        slid.classList.add('on-right');
-        slid.classList.add('center-to-right');
-      }; 
-      if(slid.classList.contains('on-left')){
-        slid.classList.remove('on-left');
-        slid.classList.remove('left-2-to-left');
-        slid.classList.remove('center-to-left');//*
-        slid.classList.add('centrado');
-        slid.classList.add('left-to-center');
-      };        
-      // if(slid.classList.contains('to-left-2')){
-      //   slid.classList.remove('to-left-2');
-      //   slid.classList.add('left-2-to-left');
-      //   slid.classList.add('on-left');
-      // };
-    }); 
-    
-    i--;
-    $slide[i].classList.add('on-left');
-    $slide[i].classList.add('left-2-to-left');
-    $slide[i].style.zIndex = '100';    
-    
-    console.log(i);
-  }; 
+    });
+    //----------------------------------------------
+    $slide[i_L].classList.remove('left-2-to-left');
+    $slide[i_L].classList.remove('center-to-left');
+    $slide[i_L].classList.add('left-to-center');    
+    if(i_L===0){
+      i_L=$slide.length;
+    };
+    i_L--;    
+    $slide[i_L].classList.add('left-2-to-left');
+    $slide[i_L].style.opacity = '1';
+    //----------------------------------------------
+    $slide[i_C].classList.remove('left-to-center');
+    $slide[i_C].classList.remove('right-to-center');
+    $slide[i_C].classList.add('center-to-right');
+    if(i_C===0){
+      i_C=$slide.length;
+    };    
+    i_C--;
+    //----------------------------------------------
+    $slide[i_R].classList.remove('center-to-right');
+    $slide[i_R].classList.remove('right-2-to-right');
+    $slide[i_R].classList.add('to-right-2');    
+    if(i_R===0){
+      i_R=$slide.length;
+    };   
+    i_R--;
+    //----------------------------------------------
+  };
   
-  // **************************************************
+  ////////////////////////////////////////////////////////////////////////////
   
   // Swipe Left / Right
   var initialX = null; 
@@ -197,30 +140,38 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   function moveTouch(e) {
     if (initialX === null) {
       return;
-    } 
+    };
     var currentX = e.touches[0].clientX; 
     var diffX = initialX - currentX; 
     if (Math.abs(diffX)) {
       if (diffX > 0) {
         btnLeft()  
-      }
+      };
       if (diffX < 0) {
         btnRight()
-      }
-    } 
+      };
+    };
     initialX = null;
-  };// FINSwipe Left / Right 
+  };
   
-  // **************************************************
-
+  ////////////////////////////////////////////////////////////////////////////
+  
   if(isMobile.android() || isBrowser.any()){
     d.addEventListener('click', (e)=>{
       if(e.target.matches('.btn-carousel-l')){
-        btnLeft()
-      }
+        btnLeft();
+        e.target.classList.add('btn-crsl-on');
+        setTimeout(() => {
+          e.target.classList.remove('btn-crsl-on');
+        }, 500)
+      };
       if(e.target.matches('.btn-carousel-r')){
-        btnRight()
-      }
+        btnRight();
+        e.target.classList.add('btn-crsl-on');
+        setTimeout(() => {
+          e.target.classList.remove('btn-crsl-on');
+        }, 500)
+      };
     });    
     $slidesContainer.addEventListener("touchstart", startTouch, false);
     $slidesContainer.addEventListener("touchmove", moveTouch, false);
@@ -228,17 +179,17 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   if(isMobile.ios()){
     d.addEventListener('touchstart', (e)=>{
       if(e.target.matches('.btn-carousel-l')){
-        btnLeft()
-      }
+        btnLeft();
+      };
       if(e.target.matches('.btn-carousel-r')){
-        btnRight()
-      }
+        btnRight();
+      };
     }, true);    
     $slidesContainer.addEventListener("touchstart", startTouch, false);
     $slidesContainer.addEventListener("touchmove", moveTouch, false);
   };
-  
-  //********************************************************************** 
 
+  ////////////////////////////////////////////////////////////////////////////
+  
   e.preventDefault();        
 });

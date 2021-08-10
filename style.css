@@ -5,6 +5,7 @@ html{
   margin: 0;
   padding: 0;   
   scroll-behavior: smooth;
+  font-family: 'Public Sans', sans-serif;
 }
 *,
 *:before,
@@ -31,8 +32,7 @@ body{
   top: 0;
   z-index: 1500;
 }
-.separador p{
-  font-family: 'Public Sans', sans-serif;
+.separador p{  
   font-size: calc(1.35rem + 1vw);
   color: rgb(255, 255, 255);
   font-weight: bolder;
@@ -60,10 +60,9 @@ body{
 }
 .bq-semillas{
   text-align: center;
-  padding: 40px calc(10vw + 3vw);
+  padding: 40px;
 }
 .bq-semillas p{
-  font-family: 'Sansita Swashed', cursive;
   color: green;
   font-size: 1.7rem; 
   line-height: 2.2rem;
@@ -71,36 +70,46 @@ body{
   padding-bottom: 16px;
 }
 .carousel-container{
-  background-color: rgb(145, 220, 255);
+  background-color: rgb(252, 252, 252);
+  border: 3px solid rgb(220, 220, 220);
   width: 310px;
-  padding: 15px 5px;
   border-radius: 15px;
-  /* overflow-x: hidden ; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden ;
+}
+.btn-carousel-l,
+.btn-carousel-r{
+  background-color: rgb(173, 255, 228, .5);
+  border: 2px solid rgb(99, 232, 255, .5);
+  height: 44px;
+  width: 44px;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 50%;
+  position: absolute;
+  top: 148px;  
+  z-index: 150;
 }
 .btn-carousel-l{
-  border: 1px solid rgb(255, 0, 0);
-  height: 44px;
-  width: 44px;
-  text-align: center;
-  line-height: 44px;
-  border-radius: 50%;
-  position: absolute;
-  top: 128px;
-  left: 0px;
-  z-index: 150;
+  left: -50px;
 }
 .btn-carousel-r{
-  border: 1px solid rgb(0, 110, 255);
-  height: 44px;
-  width: 44px;
-  text-align: center;
-  line-height: 44px;
-  border-radius: 50%;
-  position: absolute;
-  top: 128px;
-  right: 0px;
-  z-index: 150;
+  right: -50px;
 }
+.btn-crsl-on{
+  animation-name: btn-crsl-on;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;   
+  /* animation-fill-mode: forwards; */
+}
+@keyframes btn-crsl-on{
+  100%{
+    background-color: rgb(255, 248, 147);
+  }
+} 
 .carousel{
   display: flex;
   justify-content: center;
@@ -109,22 +118,23 @@ body{
   /* overflow-x: hidden; */
 }
 .slides-container{
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   display: flex;
   justify-content: center;
   align-items: center;
   width: 200px;
-  height: 300px;
+  height: 340px;
 } 
 .slide{
-  background-color: rgb(255, 255, 255);
   position: absolute;
-  padding: 10px;
+  padding: 20px 15px;
   height: 300px;
-  z-index: 99;
+  opacity: 0;
+  /* z-index: 99; */
 }
 .slide img{
   height: 100%;
+  box-shadow: 0 5px 12px 0px rgb(146, 146, 146);
 }
 /* ************************************************* */
 

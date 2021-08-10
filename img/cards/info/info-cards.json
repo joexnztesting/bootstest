@@ -1,0 +1,65 @@
+[
+  {
+    "id" : 0,
+    "img" : "./img/cards/info/0.jpg",
+    "h1" : "MATA ALACRÁN x 150gr (polvo)",
+    "description" : "Exclusiva formulación no tóxica para niños ni mascotas.Elimina y previene la presencia de alacranes en el hogar, industria, etc...",
+    "modoDeUso" : "Espolvorear MATA ALACRAN sobre rejillas y rincones o espacios humedos y oscuros donde se alojan dichos insectos. Colocar también bajo puertas y espacios donde pueda ingresar el alacran. Como efecto residual mata también todo tipo de insecto rastrero que pase por dicho producto.",
+    "composition" : "Tierra de Diatomeas 100%",
+    "infoAnexa" : "Mata y seca las siguientes clases de alacranes:\r\nTityus Trivittatus Familia Buthiidae)T.\r\nBahiensis, T.\r\nConfluens T.\r\nTrivittatus Bothriurus bonariensis."
+  },
+  {
+    "id" : 1,
+    "img" : "./img/cards/info/1.jpg",
+    "h1" : "MATA CUCARA\r\nCHAS x 150gr (polvo)",
+    "description" : "Exclusiva formulación mata todo tipo de cucarachas. Elimina y erradica colonias de hogares e industrias",
+    "modoDeUso" : "Hacer una pasta y colocar en formas de bolitas, o en tapitas de gaseosas. Situar sobre un mueble, bajo mesada, alacenas, etc... Donde sea que note la presencia de cucarachas. Otra forma también es espolvorear sobre la zona en que se haya visto a los insectos.",
+    "composition" : "Ácido Bórico 40%\r\nTierra de Diatomeas 30%\r\nAtrayentes 30%",
+    "infoAnexa" : "Mata y seca las siguientes clases de cucarachas:\r\nCucaracha Americana,\r\nCucaracha Alemana,\r\nCucaracha Banda Café,\r\nCucarachas Orientales"
+  },
+  {
+    "id" : 2,
+    "img" : "./img/cards/info/2.jpg",
+    "h1" : "HORMI\r\nGUICIDA x 250gr (polvo)",
+    "description" : "Es un producto orgánico. Su envase tiene pico vertedor para poder colocar el producto dentro de los hormigueros. No se disuelva con las lluvias",
+    "modoDeUso" : "Hacer una pasta y colocar en formas de bolitas, o en tapitas de gaseosas. Situar sobre un mueble, bajo mesada, alacenas, etc... Donde sea que note la presencia de cucarachas. Otra forma también es espolvorear sobre la zona en que se haya visto a los insectos.",
+    "composition" : "Ácido Bórico 40%\r\nTierra de Diatomeas 30%\r\nAtrayentes 30%",
+    "infoAnexa" : "Mata y seca las siguientes clases de cucarachas:\r\nCucaracha Americana,\r\nCucaracha Alemana,\r\nCucaracha Banda Café,\r\nCucarachas Orientales"
+  },
+  {
+    "id" : 3,
+    "img" : "./img/cards/info/3.jpg",
+    "h1" : "HORMI\r\nGUICIDA x 250gr (polvo)",
+    "description" : "Exclusiva formulación mata todo tipo de cucarachas. Elimina y erradica colonias de hogares e industrias",
+    "modoDeUso" : "Hacer una pasta y colocar en formas de bolitas, o en tapitas de gaseosas. Situar sobre un mueble, bajo mesada, alacenas, etc... Donde sea que note la presencia de cucarachas. Otra forma también es espolvorear sobre la zona en que se haya visto a los insectos.",
+    "composition" : "Ácido Bórico 40%\r\nTierra de Diatomeas 30%\r\nAtrayentes 30%",
+    "infoAnexa" : "Mata y seca las siguientes clases de cucarachas:\r\nCucaracha Americana,\r\nCucaracha Alemana,\r\nCucaracha Banda Café,\r\nCucarachas Orientales"
+  },
+  {
+    "id" : 4,
+    "img" : "./img/cards/info/4.jpg",
+    "h1" : "HORMI\r\nGUICIDA x 250gr (polvo)",
+    "description" : "Exclusiva formulación mata todo tipo de cucarachas. Elimina y erradica colonias de hogares e industrias",
+    "modoDeUso" : "Hacer una pasta y colocar en formas de bolitas, o en tapitas de gaseosas. Situar sobre un mueble, bajo mesada, alacenas, etc... Donde sea que note la presencia de cucarachas. Otra forma también es espolvorear sobre la zona en que se haya visto a los insectos.",
+    "composition" : "Ácido Bórico 40%\r\nTierra de Diatomeas 30%\r\nAtrayentes 30%",
+    "infoAnexa" : "Mata y seca las siguientes clases de cucarachas:\r\nCucaracha Americana,\r\nCucaracha Alemana,\r\nCucaracha Banda Café,\r\nCucarachas Orientales"
+  },
+  {
+    "id" : 5,
+    "img" : "./img/cards/info/5.jpg",
+    "h1" : "HORMI\r\nGUICIDA x 250gr (polvo)",
+    "description" : "Es un producto orgánico. Su envase tiene pico vertedor para poder colocar el producto dentro de los hormigueros. No se disuelva con las lluvias",
+    "modoDeUso" : "Hacer una pasta y colocar en formas de bolitas, o en tapitas de gaseosas. Situar sobre un mueble, bajo mesada, alacenas, etc... Donde sea que note la presencia de cucarachas. Otra forma también es espolvorear sobre la zona en que se haya visto a los insectos.",
+    "composition" : "Ácido Bórico 40%\r\nTierra de Diatomeas 30%\r\nAtrayentes 30%",
+    "infoAnexa" : "Mata y seca las siguientes clases de cucarachas:\r\nCucaracha Americana,\r\nCucaracha Alemana,\r\nCucaracha Banda Café,\r\nCucarachas Orientales"
+  },
+  {
+    "id" : 6,
+    "img" : "./img/cards/info/6.jpg",
+    "h1" : "CUATER\r\nenvsase x 5 lts",
+    "description" : "Elimina COVID-19 de superficies",
+    "modoDeUso" : "Hacer una pasta y colocar en formas de bolitas, o en tapitas de gaseosas. Situar sobre un mueble, bajo mesada, alacenas, etc... Donde sea que note la presencia de cucarachas. Otra forma también es espolvorear sobre la zona en que se haya visto a los insectos.",
+    "composition" : "Amonio Cuaternario de 5° Generación",
+    "infoAnexa" : "Puede ser usado sobre cualquier superficie, es de amplio espectro"
+  }
+]  

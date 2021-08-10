@@ -2,10 +2,16 @@
 window.addEventListener('DOMContentLoaded',(e)=>{  
   
   const d=document, n=navigator, ua=n.userAgent,
+  // Cards
+  $btnsCard = document.querySelectorAll('.btn-card'),
+  $cardContent = [], 
+  infoJson = './img/cards/info/info-cards.json', // URL
+  $cards = document.querySelector('.info-cards'), // conteiner gral
+  $template = document.getElementById('info-card-template').content, 
+  $fragment = document.createDocumentFragment(),
+  // Carousel
   $slidesContainer = d.querySelector('.slides-container'),
-  $slide = d.querySelectorAll('.slide'),
-  $btnL = d.querySelector('.btn-carousel-l'),
-  $btnR = d.querySelector('.btn-carousel-r'); 
+  $slide = d.querySelectorAll('.slide');
 
   
   ////////////////////////////////////////////////////////////////////////////
@@ -40,15 +46,12 @@ window.addEventListener('DOMContentLoaded',(e)=>{
 
   let i_L = $slide.length-1, i_C = 0, i_R = 1;  
   
-  $slide[i_C].style.opacity = '1';
-  
+  $slide[i_C].style.opacity = '1';  
   $slide[i_L].classList.add('center-to-left');
-  $slide[i_L].style.opacity = '1';
-  
+  $slide[i_L].style.opacity = '1';  
   $slide[i_R].classList.add('center-to-right');
   $slide[i_R].style.opacity = '1';
 
-  ////////////////////////////////////////////////////////////////////////////
 
   function btnLeft(){
     $slide.forEach(slid=>{
@@ -133,7 +136,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   ////////////////////////////////////////////////////////////////////////////
   
   // Swipe Left / Right
-  var initialX = null; 
+  let initialX = null; 
   function startTouch(e) {
     initialX = e.touches[0].clientX;
   }; 
@@ -141,8 +144,8 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     if (initialX === null) {
       return;
     };
-    var currentX = e.touches[0].clientX; 
-    var diffX = initialX - currentX; 
+    let currentX = e.touches[0].clientX; 
+    let diffX = initialX - currentX; 
     if (Math.abs(diffX)) {
       if (diffX > 0) {
         btnLeft()  
@@ -156,40 +159,99 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   
   ////////////////////////////////////////////////////////////////////////////
   
+  function btnActive(btn){
+    btn.classList.add('btn-crsl-on');
+    setTimeout(() => {
+      btn.classList.remove('btn-crsl-on');
+    }, 200)
+  };
+
+  ////////////////////////////////////////////////////////////////////////////
+  
+  $slidesContainer.addEventListener("touchstart", startTouch, false);
+  $slidesContainer.addEventListener("touchmove", moveTouch, false);
+
   if(isMobile.android() || isBrowser.any()){
     d.addEventListener('click', (e)=>{
       if(e.target.matches('.btn-carousel-l')){
         btnLeft();
-        e.target.classList.add('btn-crsl-on');
-        setTimeout(() => {
-          e.target.classList.remove('btn-crsl-on');
-        }, 500)
+        btnActive(e.target);
       };
       if(e.target.matches('.btn-carousel-r')){
         btnRight();
-        e.target.classList.add('btn-crsl-on');
-        setTimeout(() => {
-          e.target.classList.remove('btn-crsl-on');
-        }, 500)
+        btnActive(e.target);
       };
     });    
-    $slidesContainer.addEventListener("touchstart", startTouch, false);
-    $slidesContainer.addEventListener("touchmove", moveTouch, false);
+    // $slidesContainer.addEventListener("touchstart", startTouch, false);
+    // $slidesContainer.addEventListener("touchmove", moveTouch, false);
   };
   if(isMobile.ios()){
     d.addEventListener('touchstart', (e)=>{
       if(e.target.matches('.btn-carousel-l')){
         btnLeft();
+        btnActive(e.target);
       };
       if(e.target.matches('.btn-carousel-r')){
         btnRight();
+        btnActive(e.target);
       };
     }, true);    
-    $slidesContainer.addEventListener("touchstart", startTouch, false);
-    $slidesContainer.addEventListener("touchmove", moveTouch, false);
   };
 
   ////////////////////////////////////////////////////////////////////////////
   
+  // CARDS ******
+  
+  async function loadCards(url){
+    try{
+      let res = await fetch(url),
+      json = await res.json()
+      for(let i=0; i<json.length; i++){         
+        $cardContent.push({
+          img :`${json[i].img}`, 
+          h1 : `${json[i].h1}`, 
+          description : `${json[i].description}`,
+          modoDeUso : `${json[i].modoDeUso}`,
+          composition : `${json[i].composition}`,
+          infoAnexa : `${json[i].infoAnexa}`
+        }); 
+      }        
+    }catch(err){
+      console.log(err);
+    }
+  }
+  loadCards(infoJson)
+  
+  // ***********************************************
+  
+  function btn_i(value, index, array){
+    i=index;
+    $btnsCard[i].setAttribute('index', i);
+  };  
+  $btnsCard.forEach(btn_i);  
+  
+  // ***********************************************
+  
+  document.addEventListener('click', e=>{
+    if(e.target.matches('.btn-card')){
+      const i = e.target.getAttribute('index'); 
+      $template.querySelector('img').setAttribute('src', $cardContent[i].img);
+      $template.querySelector('.info-card-h1').textContent = $cardContent[i].h1;
+      $template.querySelector('.description').textContent = $cardContent[i].description;
+      $template.querySelector('.modo-d-uso').textContent = $cardContent[i].modoDeUso;
+      $template.querySelector('.composition').textContent = $cardContent[i].composition;
+      $template.querySelector('.info-anexa').textContent = $cardContent[i].infoAnexa;
+      let $clone = document.importNode($template, true);
+      $fragment.appendChild($clone); 
+      $cards.appendChild($fragment); 
+    }
+    if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
+      $cards.removeChild($cards.lastElementChild);
+    }
+  }); 
+  
+  ////////////////////////////////////////////////////////////////////////////
+  
   e.preventDefault();        
 });
+

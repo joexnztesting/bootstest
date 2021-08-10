@@ -48,6 +48,170 @@ body{
   width: 100%;
 }
 
+/* .los-prod{
+  background-color: rgb(222, 252, 198);
+} */
+.cards-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card{
+  background-color: rgb(248, 248, 248);
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px 4px rgba(0, 0, 0, .2);
+  margin: 0 22px 44px;      /* overflow: hidden; */
+}
+.card img{
+  width: 70%;
+  box-shadow: 0px 16px 10px 8px rgba(196, 196, 196, 0.85);
+  margin-top: 15px;
+}
+.figcap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px 15px 25px;
+  background-color: rgb(250, 250, 250);
+  border-top: 3px solid rgb(255, 255, 255);
+}
+.figcap p{
+  font-size: 1.15rem;  
+  text-align: center;
+}
+.btn-card{
+  border: 3px solid rgb(100, 208, 216);
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-left: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  color: rgb(1, 77, 177);
+  font-size: 1.15rem ;
+  line-height: 1.45rem;
+}
+/*  INFO CARD  */
+.info-card-fondo{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation-name: show-card;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes show-card{
+  100%{   
+    opacity: 1;
+  }
+}
+.info-card-container{
+  position: relative;
+  margin-top: -200vh;
+  animation-name: fade-card;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes fade-card{
+  100%{
+    margin-top: 0;
+  }
+}
+.info-card-card{ 
+  background-color: #fff;
+  font-family: 'Public Sans', sans-serif;
+  border: 3px solid rgb(152, 246, 253);
+  border-radius: 20px;
+  width: 250px;
+  height: 400px;
+  overflow: hidden;
+}
+.info-card-header{ 
+  border-bottom: 2px solid rgb(186, 250, 255);
+  margin: 0 20px;
+  background-color: #fff;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info-card-header img{
+  border: 3px solid rgb(152, 246, 253);
+  width: 50%;
+  border-radius: 50%;
+}
+.info-card-h1{
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: green;
+  padding: 0 10px;
+}
+.info-card-info{
+  height: 65%;
+  overflow-y: scroll;
+  padding: 25px 3px 20px 20px;
+}
+.description{
+  padding: 0px 10px 25px 15px;
+  font-size: 1.2rem;
+  color: green;
+}
+.title{
+  border-top: 2px dotted rgb(211, 211, 211);
+  color: green;
+  font-size: 1.2rem;
+  padding: 20px 10px 4px;
+}
+.info-txt{
+  font-size: 1rem;
+  line-height: 1.4rem;
+  padding: 0px 15px 10px 10px;
+}
+.xclose{
+  border: 2px solid rgb(255, 166, 64);
+  justify-content: center;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  line-height: 24px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  background-color: rgb(255, 36, 36);
+  color: #fff;
+  position: absolute;
+  right: -12px;
+  top: -15px;
+  cursor: pointer;
+  z-index: 3000;
+}
+.no-scroll{
+  height: 100%;
+  overflow: hidden;
+}   
+/*  FIN INFO CARD  */ 
+
 /* *********  CAROUSEL  ************  */
 
 .prod-huerta{
@@ -58,11 +222,13 @@ body{
   align-items: center;
   overflow: hidden;
 }
-.bq-semillas{
+.bq-semillas,
+.bq-manten{
   text-align: center;
   padding: 40px;
 }
-.bq-semillas p{
+.bq-semillas p,
+.bq-manten p{
   color: green;
   font-size: 1.7rem; 
   line-height: 2.2rem;
@@ -100,14 +266,14 @@ body{
 }
 .btn-crsl-on{
   animation-name: btn-crsl-on;
-  animation-duration: .3s;
+  animation-duration: .2s;
   animation-timing-function: linear;
-  animation-iteration-count: 1;   
-  /* animation-fill-mode: forwards; */
+  animation-iteration-count: 1;
 }
 @keyframes btn-crsl-on{
-  100%{
-    background-color: rgb(255, 248, 147);
+  100%{    
+    background-color: rgb(119, 255, 210);
+    border: 2px solid rgb(71, 227, 255);
   }
 } 
 .carousel{
@@ -142,7 +308,7 @@ body{
 
 .to-left-2{
   animation-name: to-left-2;
-  animation-duration: .5s;
+  animation-duration: .7s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -157,7 +323,7 @@ body{
 } 
 .left-2-to-left{
   animation-name: left-2-to-left;
-  animation-duration: .5s;
+  animation-duration: .7s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -172,7 +338,7 @@ body{
 } 
 .left-to-center{
   animation-name: left-to-center;
-  animation-duration: .5s;
+  animation-duration: .7s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -187,7 +353,7 @@ body{
 }
 .center-to-left{
   animation-name: center-to-left;
-  animation-duration: .5s;
+  animation-duration: .7s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -199,7 +365,7 @@ body{
 }  
 .center-to-right{
   animation-name: center-to-right;
-  animation-duration: .5s;
+  animation-duration: .7s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -211,7 +377,7 @@ body{
 }  
 .right-to-center{
   animation-name: right-to-center;
-  animation-duration: .5s;
+  animation-duration: .7s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -226,7 +392,7 @@ body{
 } 
 .right-2-to-right{
   animation-name: right-2-to-right;
-  animation-duration: .5s;
+  animation-duration: .7s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -241,7 +407,7 @@ body{
 } 
 .to-right-2{
   animation-name: to-right-2;
-  animation-duration: .5s;
+  animation-duration: .7s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  

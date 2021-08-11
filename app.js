@@ -120,7 +120,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   
   // ***********************************************
   
-  document.addEventListener('click', e=>{
+  d.addEventListener('click', e=>{
     if(e.target.matches('.btn-card')){
       const i = e.target.getAttribute('index'); 
       $template.querySelector('img').setAttribute('src', $cardContent[i].img);
@@ -258,10 +258,14 @@ window.addEventListener('DOMContentLoaded',(e)=>{
         btnRight();
         btnActive(e.target);
       };
+      /*********** */
       if(e.target.matches('.slide img')){
         console.log('hola');
-        btnLeft();
       };
+      // if(e.target.matches('.card img')){
+      //   console.log('hola');
+      // };
+      /*********** */
     });    
     // $slidesContainer.addEventListener("touchstart", startTouch, false);
     // $slidesContainer.addEventListener("touchmove", moveTouch, false);

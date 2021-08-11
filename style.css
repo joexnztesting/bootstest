@@ -124,7 +124,7 @@ body{
   box-shadow: none;  
 }
 .nav-row-div:nth-child(2) .nav-row-item a{
-  color: rgb(53, 53, 53);
+  color: rgb(46, 46, 46);
   font-size: 1.3rem;
   font-weight: bold;
 }

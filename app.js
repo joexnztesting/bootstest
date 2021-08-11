@@ -48,6 +48,31 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   userDeviceInfo()
 
   ////////////////////////////////////////////////////////////////////////////
+  
+  // Swipe Left / Right
+  let initialX = null; 
+  const startTouch = (e)=>{
+    initialX = e.touches[0].clientX;
+  }; 
+  const moveTouch = (e)=>{
+    if (initialX === null) {
+      return;
+    };
+    let currentX = e.touches[0].clientX; 
+    let diffX = initialX - currentX; 
+    if (Math.abs(diffX)) {
+      if (diffX > 0) {
+        btnLeft()  
+      };
+      if (diffX < 0) {
+        btnRight()
+      };
+    };
+    initialX = null;
+  };
+
+  ////////////////////////////////////////////////////////////////////////////
+  
 
   const navPanelShow = ()=>{
     $panelFondo.classList.toggle('fondo-active');
@@ -57,6 +82,58 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       itm.classList.toggle('item')
     });
   }
+
+  ////////////////////////////////////////////////////////////////////////////
+  
+  // CARDS ******
+  
+  async function loadCards(url){
+    try{
+      let res = await fetch(url),
+      json = await res.json()
+      for(let i=0; i<json.length; i++){         
+        $cardContent.push({
+          img :`${json[i].img}`, 
+          h1 : `${json[i].h1}`, 
+          description : `${json[i].description}`,
+          modoDeUso : `${json[i].modoDeUso}`,
+          composition : `${json[i].composition}`,
+          infoAnexa : `${json[i].infoAnexa}`
+        }); 
+      }        
+    }catch(err){
+      console.log(err);
+    }
+  }
+  loadCards(infoJson)
+  
+  // ***********************************************
+  
+  const btn_i = (value, index, array)=>{
+    i=index;
+    $btnsCard[i].setAttribute('index', i);
+  };  
+  $btnsCard.forEach(btn_i);  
+  
+  // ***********************************************
+  
+  document.addEventListener('click', e=>{
+    if(e.target.matches('.btn-card')){
+      const i = e.target.getAttribute('index'); 
+      $template.querySelector('img').setAttribute('src', $cardContent[i].img);
+      $template.querySelector('.info-card-h1').textContent = $cardContent[i].h1;
+      $template.querySelector('.description').textContent = $cardContent[i].description;
+      $template.querySelector('.modo-d-uso').textContent = $cardContent[i].modoDeUso;
+      $template.querySelector('.composition').textContent = $cardContent[i].composition;
+      $template.querySelector('.info-anexa').textContent = $cardContent[i].infoAnexa;
+      let $clone = document.importNode($template, true);
+      $fragment.appendChild($clone); 
+      $cards.appendChild($fragment); 
+    }
+    if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
+      $cards.removeChild($cards.lastElementChild);
+    }
+  });   
 
   ////////////////////////////////////////////////////////////////////////////
 
@@ -147,31 +224,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     };   
     i_R--;
     //----------------------------------------------
-  };
-  
-  ////////////////////////////////////////////////////////////////////////////
-  
-  // Swipe Left / Right
-  let initialX = null; 
-  const startTouch = (e)=>{
-    initialX = e.touches[0].clientX;
-  }; 
-  const moveTouch = (e)=>{
-    if (initialX === null) {
-      return;
-    };
-    let currentX = e.touches[0].clientX; 
-    let diffX = initialX - currentX; 
-    if (Math.abs(diffX)) {
-      if (diffX > 0) {
-        btnLeft()  
-      };
-      if (diffX < 0) {
-        btnRight()
-      };
-    };
-    initialX = null;
-  };
+  };  
   
   ////////////////////////////////////////////////////////////////////////////
   
@@ -183,6 +236,8 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   };
 
   ////////////////////////////////////////////////////////////////////////////
+
+  // LLAMADORES
   
   $slidesContainer.addEventListener("touchstart", startTouch, false);
   $slidesContainer.addEventListener("touchmove", moveTouch, false);
@@ -219,58 +274,6 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       };
     }, true);    
   };
-
-  ////////////////////////////////////////////////////////////////////////////
-  
-  // CARDS ******
-  
-  async function loadCards(url){
-    try{
-      let res = await fetch(url),
-      json = await res.json()
-      for(let i=0; i<json.length; i++){         
-        $cardContent.push({
-          img :`${json[i].img}`, 
-          h1 : `${json[i].h1}`, 
-          description : `${json[i].description}`,
-          modoDeUso : `${json[i].modoDeUso}`,
-          composition : `${json[i].composition}`,
-          infoAnexa : `${json[i].infoAnexa}`
-        }); 
-      }        
-    }catch(err){
-      console.log(err);
-    }
-  }
-  loadCards(infoJson)
-  
-  // ***********************************************
-  
-  const btn_i = (value, index, array)=>{
-    i=index;
-    $btnsCard[i].setAttribute('index', i);
-  };  
-  $btnsCard.forEach(btn_i);  
-  
-  // ***********************************************
-  
-  document.addEventListener('click', e=>{
-    if(e.target.matches('.btn-card')){
-      const i = e.target.getAttribute('index'); 
-      $template.querySelector('img').setAttribute('src', $cardContent[i].img);
-      $template.querySelector('.info-card-h1').textContent = $cardContent[i].h1;
-      $template.querySelector('.description').textContent = $cardContent[i].description;
-      $template.querySelector('.modo-d-uso').textContent = $cardContent[i].modoDeUso;
-      $template.querySelector('.composition').textContent = $cardContent[i].composition;
-      $template.querySelector('.info-anexa').textContent = $cardContent[i].infoAnexa;
-      let $clone = document.importNode($template, true);
-      $fragment.appendChild($clone); 
-      $cards.appendChild($fragment); 
-    }
-    if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
-      $cards.removeChild($cards.lastElementChild);
-    }
-  }); 
   
   ////////////////////////////////////////////////////////////////////////////
   

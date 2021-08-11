@@ -35,15 +35,9 @@
     font-size: 1.35rem;
     line-height: 1.85rem;
     padding: 20px 15px; 
-  }  
-  .contacto-envios{
-    padding: 35px 0 0px;
   }
-  .row-icons{
-    padding: 35px 0;
-  }  
   .row-icons div{
-    width: 48px;
+    width: 52px;
   }
   .contacto-sumate{ 
     /*border: 1px solid blue;*/
@@ -51,8 +45,7 @@
     font-size: 1.5rem;
   }
   .footer{
-    padding: 2.5vh 0 3vh;
-    margin-bottom: 7vh;
+    padding: 2.5vh 0 12vh;
   }  
 }
 
@@ -66,13 +59,10 @@
     width: 80%; /**/
     font-size: 2rem;
     padding: 7vw; /**/
-  }  
-  .contacto-envios{
-    padding: 40px 0 0px;
-  }
+  } 
   .row-icons{
-    padding: 40px 0;
-  }  
+    width: 80%;
+  }
   .formu-container{ 
     height: 80vh;
   }

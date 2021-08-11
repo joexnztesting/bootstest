@@ -11,9 +11,9 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $btnsCard = document.querySelectorAll('.btn-card'),
   $cardContent = [], 
   infoJson = './img/cards/info/info-cards.json', // URL
-  $cards = document.querySelector('.info-cards'), // conteiner gral
-  $template = document.getElementById('info-card-template').content, 
-  $fragment = document.createDocumentFragment(),
+  $cards = d.querySelector('.info-cards'), // conteiner gral
+  $template = d.getElementById('info-card-template').content, 
+  $fragment = d.createDocumentFragment(),
   // Carousel
   $slidesContainer = d.querySelector('.slides-container'),
   $slide = d.querySelectorAll('.slide');
@@ -49,11 +49,14 @@ window.addEventListener('DOMContentLoaded',(e)=>{
 
   ////////////////////////////////////////////////////////////////////////////
   
-  // Swipe Left / Right
+  // TÁCTIL Swipe Left / Right
+
   let initialX = null; 
+
   const startTouch = (e)=>{
     initialX = e.touches[0].clientX;
-  }; 
+  };  
+
   const moveTouch = (e)=>{
     if (initialX === null) {
       return;
@@ -272,7 +275,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
         btnRight();
         btnActive(e.target);
       };
-    }, true);    
+    }, false);    
   };
   
   ////////////////////////////////////////////////////////////////////////////

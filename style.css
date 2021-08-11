@@ -192,6 +192,22 @@ body{
   background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgb(223, 24, 24) 40%, rgba(252,176,69,1) 95%);
   text-align: center;
 }
+
+.bq-semillas,
+.bq-manten,
+.bq-social-icons{
+  text-align: center;
+  padding: 50px 40px 40px;
+}
+.bq-semillas p,
+.bq-manten p,
+.bq-social-icons p{
+  color: green;
+  font-size: 1.7rem; 
+  line-height: 2.2rem;
+  border-bottom: 2px solid rgb(173, 209, 173) ;
+  padding-bottom: 16px;
+}
 /* *****  FIN SEPARADORES   ***** */
 
 /* *****  HEADER   ***** */
@@ -274,6 +290,7 @@ h1{
 }
 /* *****  FIN HEADER   ***** */
 
+
 /* *****  SECTION CARDS   ***** */
 .cards-container{
   display:flex;
@@ -327,10 +344,13 @@ h1{
   display: flex;
   flex-direction: column;  
   justify-content: center;
-  color: rgb(14, 14, 255);
-  font-size: 1.15rem ;
-  line-height: 1.45rem;
-  padding: 10px 15px;
+  align-items: center;
+  width: 90px;
+  color: rgb(14, 14, 255);  
+  font-size: 1.12rem ;
+  line-height: 1.4rem;
+  text-align: center;
+  padding: 8px 10px;
   border-radius: 10px;  
   cursor: pointer;
 }
@@ -455,21 +475,6 @@ h1{
   align-items: center;
   overflow: hidden;
   padding-bottom: 70px;
-}
-.bq-semillas,
-.bq-manten,
-.bq-social-icons{
-  text-align: center;
-  padding: 50px 40px 40px;
-}
-.bq-semillas p,
-.bq-manten p,
-.bq-social-icons p{
-  color: green;
-  font-size: 1.7rem; 
-  line-height: 2.2rem;
-  border-bottom: 2px solid rgb(173, 209, 173) ;
-  padding-bottom: 16px;
 }
 .carousel-container{
   background-color: rgb(252, 252, 252);

@@ -258,6 +258,10 @@ window.addEventListener('DOMContentLoaded',(e)=>{
         btnRight();
         btnActive(e.target);
       };
+      if(e.target.matches('.slide img')){
+        console.log('hola');
+        btnLeft();
+      };
     });    
     // $slidesContainer.addEventListener("touchstart", startTouch, false);
     // $slidesContainer.addEventListener("touchmove", moveTouch, false);

@@ -50,7 +50,6 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   ////////////////////////////////////////////////////////////////////////////
   
   // TÁCTIL Swipe Left / Right
-
   let initialX = null; 
 
   const startTouch = (e)=>{

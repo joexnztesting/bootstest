@@ -4,17 +4,56 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carousel</title>
+  <title>Biode</title>
+  <link rel="stylesheet" href="./form.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./breakpoints.css">
   <link rel="icon" href="./img/logo.svg">
 </head>
 
-<body class="container-princ"> 
-  
+<body>   
   <main>
-    
+
+    <div class="nav-container">
+      <div class="panel-fondo"></div>
+        <div class="panel">
+          <div class="panel-item"><a class="item" href="#huerta">huerta</a></div>
+          <div class="panel-item"><a class="item" href="#header">home</a></div>
+          <div class="panel-item"><a class="item" href="#huerta">huerta</a></div>
+          <div class="panel-item"><a class="item" href="#header">home</a></div>
+          <div class="panel-item"><a class="item" href="#huerta">huerta</a></div>
+        </div>
+    </div>
+    <div class="nav-row">
+      <div class="nav-row-item">
+        <a href="#ventas">Ventas</a>
+      </div>
+      <div class="nav-row-item">
+        <a href="#header">Biode</a>
+      </div>
+      <div class="nav-row-item">
+        <div class="btn-hamb">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>      
+    </div>
+    <!-- ------------------------------------------ --> 
+    <header id="header" class="header-container">      
+      <div class="header-img-container">
+        <img class="imagen-header" src="./img/header.jpg" alt="fondo header">
+        <div class="img-head"></div>
+      </div> 
+      <img class="logo" src="./img/logo.svg" alt="logo">
+      <h1>Productos de excelente calidad para el cuidado de tu Hogar y Jardín</h1>
+    </header>
     <!-- ------------------------------------------ -->    
-    <section id="productos" class="los-prod"> 
+    <div id="cards" class="separador sprdr-cards">
+      <p>Productos<span>~ Hogar & Jardín</span></p>
+    </div>    
+    <!-- ------------------------------------------ -->    
+    <section class="los-prod"> 
       
       <div class="info-cards">
         <template id="info-card-template">
@@ -98,11 +137,11 @@
       </div>  
     </section>    
     <!-- ------------------------------------------ -->    
-    <div class="separador titu-huerta">
+    <div id="huerta" class="separador sprdr-huerta">
       <p>Productos<span>~ Huerta ~</span></p>
     </div>    
     <!-- ------------------------------------------ -->
-    <section id="huerta" class="prod-huerta"> 
+    <section class="prod-huerta"> 
       <div class="bq-semillas">
         <p>" Gran Variedad de Semillas "</p>
       </div> 
@@ -131,10 +170,88 @@
       </div>            
     </section>
     <!-- ------------------------------------------ -->
-
+    <div id="acerca" class="separador sprdr-acerca">
+      <p>Acerca de Nosotros<span></span></p>
+    </div>
+    <!-- ------------------------------------------ -->
+    <section class="acerca">
+      <div class="marco">       
+        <div class="marco-plantas">
+          <p><i>         
+            Somos una empresa familiar que brinda alternativas accesibles y económicas, para el cuidado del hogar frente a plagas y también para el mantenimiento de la vivienda.<br>
+            Nuestra misión es que los productos, de excelente calidad, lleguen fácilmente al alcance de tu mano.
+          </i></p>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------------------------------ -->
+    <div id="ventas" class="separador sprdr-ventas">
+      <p>Ventas<span></span></p>
+    </div>
+    <!-- ------------------------------------------ -->
+    <section class="social-icons">      
+      <div class="bq-social-icons">
+        <p>" Hacemos envíos a todo el país "</p>
+      </div>      
+      <div class="row-icons">
+        <div>
+          <a href="https://api.whatsapp.com/send?phone=5493515118011" target="_blank">
+            <img src="./img/icon-social-wsp.svg" alt="icon-wsp">
+          </a>
+        </div>
+        <div>
+          <a href="https://www.instagram.com/biodeargentina/" target="_blank">
+            <img src="./img/icon-social-insta.svg" alt="icon-inst">
+          </a>
+        </div>
+        <div>
+          <a href="https://www.facebook.com/BIODE-437954180031617" target="_blank">
+            <img src="./img/icon-social-face.svg" alt="icon-face">
+          </a>
+        </div>
+        <div>
+          <a href="mailto:biode.argentina@gmail.com" target="_blank">
+            <img src="./img/icon-social-mail.svg" alt="icon-twt">
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------------------------------ -->
+    <div class="separador sprdr-contc">
+      <p>Contacto<span></span></p>
+    </div>
+    <!-- ------------------------------------------ -->
+    <section class="formu-container">
+      <div class="contacto-sumate">
+        <div>Te gustaría ser distribuidor y conseguir ingresos extras?</div>
+      </div>
+      <div class="formu">
+        <form class="contact-form">
+          <legend>Envíanos tu comentario</legend>      
+          <input class="formu-input" type="text" name="name" placeholder="Escribe tu nombre" title="El campo Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+      
+          <input class="formu-input" type="email" name="email" placeholder="Escribe tu correo electrónico" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>      
+          <textarea class="formu-input" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>          
+          <div class="btn-cont">
+            <input class="btn-formu" type="submit">
+          </div>      
+          <div class="contact-form-loader none">
+            <img src="./assets/rings.svg" alt="cargando">
+            <!-- https://samherbert.net/svg-loaders/ -->
+          </div>  
+          <div class="contact-form-response none">
+            <p>Los datos han sido enviados</p>
+          </div>
+        </form>    
+      </div>      
+    </section>
+    <!-- ------------------------------------------ -->
+    <div class="footer">
+      <div class="footer-text">Sitio Diseñado por Joel Riva</div>
+    </div>
   </main>
 
-
-<script src="app.js"></script>
+  <script src="form.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

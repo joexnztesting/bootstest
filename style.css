@@ -22,14 +22,131 @@ body{
   box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.15);
 }
 /* img{
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 } */
 
-/* *****  SEPARADORES TITU  ***** */
+
+/* *****  NAV   ***** */
+.nav-container{
+  position: fixed;
+  height: 90vh;
+  width: 100%;
+  overflow-x: hidden;
+  visibility: hidden;
+  z-index: 1600;
+}
+.panel-fondo{
+  position: fixed;
+  height: 90vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  transition: all .4s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1600;
+}
+.fondo-active{
+  opacity: 1;   
+  visibility: visible;
+}
+.panel{
+  background-color: rgb(206, 254, 255);
+  width: 60%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all .3s ease-out;
+  transform: translateX(-100%);
+  z-index: 1600;
+  visibility: visible;
+}
+.panel-active {
+  transform: translateX(0%);    
+}
+
+.panel-item{
+  margin: 25px 0;
+}
+.panel-item a{  
+  padding: 10px;
+  border: 2px solid rgb(123, 227, 235);
+  background-color: rgb(242, 251, 255);
+  border-radius: 3px;
+  font-size: 1.1rem;
+  color: rgb(0, 21, 141);
+  text-decoration: none;
+}
+.nav-row{
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  z-index: 1600;
+}
+.nav-row-item{
+  /* border: 1px solid red; */
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-row-item5:nth-child(1) a{
+  margin-left: 10px;
+}
+.nav-row a{
+  border: 2px solid rgb(123, 227, 235);
+  background-color: rgb(242, 251, 255);
+  font-size: 1.1rem;
+  color: rgb(0, 21, 141);
+  text-decoration: none;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+.btn-hamb{
+  border: 2px solid rgb(123, 227, 235);
+  background-color: rgb(242, 251, 255);
+  padding: 6px;
+  border-radius: 6px;
+}
+.btn-hamb .line{
+  background-color:rgb(0, 21, 141, .8);
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+.btn-hamb .line:nth-child(1) {
+  margin-top: 0;
+}
+.btn-hamb .line:nth-child(3) {
+  margin-bottom: 0;
+}
+.btn-hamb.isactive .line:nth-child(2) {
+  opacity: 0;
+  visibility: hidden;
+}
+.btn-hamb.isactive .line:nth-child(1) {
+  transform: translateY(8px) translateX(0px) rotate(45deg);
+}
+.btn-hamb.isactive .line:nth-child(3) {
+  transform: translateY(-8px) translateX(0px) rotate(-45deg);
+}
+/* *****  FIN NAV   ***** */
+
+/* *****  SEPARADORES   ***** */
 .separador{
   position: sticky;
-  top: 0;
+  line-height: 50px;
+  top: 0px;
   z-index: 1500;
 }
 .separador p{  
@@ -42,15 +159,103 @@ body{
   font-size: 1.1rem;
   margin-left: 10px;
 }
-.titu-huerta{
+.sprdr-cards{
+  background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);   
+}
+.sprdr-huerta{
   background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
-  line-height: 50px;
-  width: 100%;
+}
+.sprdr-acerca{  
+  background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%);
+  text-align: center; 
+}
+.sprdr-ventas, .sprdr-contc{
+  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgb(223, 24, 24) 40%, rgba(252,176,69,1) 95%);
+  text-align: center;
+}
+/* *****  FIN SEPARADORES   ***** */
+
+/* *****  HEADER   ***** */
+.header-container{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.header-img-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagen-header{
+  transform: scale(1.42);
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+}
+.img-head{
+  position: absolute;
 }
 
-/* .los-prod{
-  background-color: rgb(222, 252, 198);
-} */
+.logo{ 
+  position: -webkit-absolute;
+  position: -moz-absolute;
+  position: -o-absolute;
+  position: -ms-absolute;  
+  position: absolute;
+  top: 15vh; 
+  height: 20vh;
+  opacity: 0;
+  animation-name: logo-in;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes logo-in{
+  100%{   
+    opacity: 1;
+  }
+}
+
+h1{  
+  position: absolute;
+  top: 40vh;
+  width: 80%;
+  padding: 7vw;
+  font-family: 'Public Sans', sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: 1.55rem;
+  letter-spacing: .12rem;
+  text-shadow: 0 2px 2px #000;
+  background: linear-gradient(45deg, rgba(0,201,43,.55) 0%, rgb(29, 163, 253,.55) 100%);
+  box-shadow: 
+  inset 0px 6px 6px -4px rgb(131, 255, 245),
+  inset -7px 0px 10px -6px rgb(131, 255, 245),
+  inset 0px -7px 10px -6px rgb(131, 255, 245),
+  inset 7px 0px 10px -6px  rgb(131, 255, 245);
+  border-radius: 10px;  
+  transform: translateX(-100vw);
+  animation-name: texto-in;
+  animation-delay: 0s;
+  animation-duration: .6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;
+}
+@keyframes texto-in{
+  100%{
+    transform: translateX(0);   
+  }
+}
+/* *****  FIN HEADER   ***** */
+
+/* *****  SECTION CARDS   ***** */
 .cards-container{
   display:flex;
   justify-content: center;
@@ -108,6 +313,7 @@ body{
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
+  z-index: 2000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,25 +416,27 @@ body{
   height: 100%;
   overflow: hidden;
 }   
-/*  FIN INFO CARD  */ 
+/* *****  FIN SECTION CARDS   ***** */
 
-/* *********  CAROUSEL  ************  */
-
+/* *********  SECTION CAROUSEL  ************  */
 .prod-huerta{
-  height: 100vh; 
+  /* height: 100vh;  */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding-bottom: 70px;
 }
 .bq-semillas,
-.bq-manten{
+.bq-manten,
+.bq-social-icons{
   text-align: center;
-  padding: 40px;
+  padding: 50px 40px 40px;
 }
 .bq-semillas p,
-.bq-manten p{
+.bq-manten p,
+.bq-social-icons p{
   color: green;
   font-size: 1.7rem; 
   line-height: 2.2rem;
@@ -237,7 +445,7 @@ body{
 }
 .carousel-container{
   background-color: rgb(252, 252, 252);
-  border: 3px solid rgb(220, 220, 220);
+  border: 3px solid rgb(99, 232, 255, .5);
   width: 310px;
   border-radius: 15px;
   display: flex;
@@ -300,12 +508,10 @@ body{
 }
 .slide img{
   height: 100%;
+  width: auto;
   box-shadow: 0 5px 12px 0px rgb(146, 146, 146);
 }
-/* ************************************************* */
-
-
-
+/* ---- ANIMATIONS ---- */
 .to-left-2{
   animation-name: to-left-2;
   animation-duration: .7s;
@@ -420,9 +626,85 @@ body{
     transform: translateX(200%);
   }
 } 
+/* *********  FIN SECTION CAROUSEL  ************  */
+
+/* *********  SECTION ACERCA  ************  */
+.acerca{
+  background-image: url("./img/fondo_acerca.jpg");  
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marco{
+  background-color: rgb(255, 255, 255);
+  border: 5px solid rgb(255, 201, 23);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 94%;
+  padding: 10vw 7vw;
+  margin: 30vh 0;
+  border-top-left-radius: 35px;
+  border-bottom-right-radius: 35px;  
+}
+.marco-plantas p{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(53, 53, 53);
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+  padding: 20px 15px; 
+  border-top: 2px solid rgba(255, 201, 23, 0.733);
+  border-bottom: 2px solid rgba(255, 201, 23, 0.733);
+}
+/* *********  FIN SECTION ACERCA  ************  */
+
+/* *********  SECTION VENTAS y CONTACTO  ************  */
+.social-icons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row-icons{ /*border: 1px solid red;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0 0 50px;
+}
+.row-icons div{
+  width: 44px;
+}
+.row-icons div img{
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2),
+  inset 0px 0px 10px 1px  rgb(255, 255, 255);  
+  padding: 6px;
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+/* ********* FIN SECTION VENTAS y CONTACTO  ************  */
+
+.footer{
+  width: 100%;
+  padding: 2.5vh 0 2.5vh;
+  background: rgba(0, 56, 42, 0.98);
+  font-family: 'Public Sans', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  letter-spacing: .08rem;
+  text-align: center;
+  margin-bottom: 9vh;
+  /*border: 1px solid red;*/
+}
+/* ********* FIN  ************  */
 
 
 
-/* ************************************************* */
 
 

@@ -2,6 +2,11 @@
 window.addEventListener('DOMContentLoaded',(e)=>{  
   
   const d=document, n=navigator, ua=n.userAgent,
+  // Nav
+  $panelFondo = d.querySelector('.panel-fondo'),
+  $navPanel = d.querySelector('.panel'),
+  $btnHamb = d.querySelector('.btn-hamb'),
+  $navRowItem = d.querySelectorAll('.nav-row-item a'),
   // Cards
   $btnsCard = document.querySelectorAll('.btn-card'),
   $cardContent = [], 
@@ -16,7 +21,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   
   ////////////////////////////////////////////////////////////////////////////
 
-  function userDeviceInfo(){
+  const userDeviceInfo = ()=>{
     isMobile = {
         android:()=>ua.match(/android/i),
             ios:()=>ua.match(/iphone|ipad|ipod/i)
@@ -44,6 +49,17 @@ window.addEventListener('DOMContentLoaded',(e)=>{
 
   ////////////////////////////////////////////////////////////////////////////
 
+  const navPanelShow = ()=>{
+    $panelFondo.classList.toggle('fondo-active');
+    $navPanel.classList.toggle('panel-active');
+    $btnHamb.classList.toggle('isactive');
+    $navRowItem.forEach((itm)=>{
+      itm.classList.toggle('item')
+    });
+  }
+
+  ////////////////////////////////////////////////////////////////////////////
+
   let i_L = $slide.length-1, i_C = 0, i_R = 1;  
   
   $slide[i_C].style.opacity = '1';  
@@ -53,7 +69,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $slide[i_R].style.opacity = '1';
 
 
-  function btnLeft(){
+  const btnLeft = ()=>{
     $slide.forEach(slid=>{
       if(slid.classList.contains('to-left-2')){
         slid.classList.remove('to-left-2');
@@ -94,7 +110,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
 
   //--------------------------------------------------------------------------
   
-  function btnRight(){    
+  const btnRight = ()=>{    
     $slide.forEach(slid=>{
       if(slid.classList.contains('to-right-2')){
         slid.classList.remove('to-right-2');
@@ -137,10 +153,10 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   
   // Swipe Left / Right
   let initialX = null; 
-  function startTouch(e) {
+  const startTouch = (e)=>{
     initialX = e.touches[0].clientX;
   }; 
-  function moveTouch(e) {
+  const moveTouch = (e)=>{
     if (initialX === null) {
       return;
     };
@@ -159,7 +175,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   
   ////////////////////////////////////////////////////////////////////////////
   
-  function btnActive(btn){
+  const btnActive = (btn)=>{
     btn.classList.add('btn-crsl-on');
     setTimeout(() => {
       btn.classList.remove('btn-crsl-on');
@@ -173,6 +189,9 @@ window.addEventListener('DOMContentLoaded',(e)=>{
 
   if(isMobile.android() || isBrowser.any()){
     d.addEventListener('click', (e)=>{
+      if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
+        navPanelShow();
+      };
       if(e.target.matches('.btn-carousel-l')){
         btnLeft();
         btnActive(e.target);
@@ -187,6 +206,9 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   };
   if(isMobile.ios()){
     d.addEventListener('touchstart', (e)=>{
+      if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
+        navPanelShow();
+      };
       if(e.target.matches('.btn-carousel-l')){
         btnLeft();
         btnActive(e.target);
@@ -224,7 +246,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   
   // ***********************************************
   
-  function btn_i(value, index, array){
+  const btn_i = (value, index, array)=>{
     i=index;
     $btnsCard[i].setAttribute('index', i);
   };  

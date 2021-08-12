@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $btnHamb = d.querySelector('.btn-hamb'),
   $navRowItem = d.querySelectorAll('.nav-row-item a'),
   // Cards
+  $imgCard = document.querySelectorAll('.card img'),
   $btnsCard = document.querySelectorAll('.btn-card'),
   $cardContent = [], 
   infoJson = './img/cards/info/info-cards.json', // URL
@@ -111,16 +112,22 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   
   // ***********************************************
   
+  const card_i = (value, index, array)=>{
+    i=index;
+    $imgCard[i].setAttribute('index', i);
+  };  
+  $imgCard.forEach(card_i); 
+  
   const btn_i = (value, index, array)=>{
     i=index;
     $btnsCard[i].setAttribute('index', i);
   };  
-  $btnsCard.forEach(btn_i);  
+  $btnsCard.forEach(btn_i); 
   
   // ***********************************************
   
   d.addEventListener('click', e=>{
-    if(e.target.matches('.btn-card')){
+    if(e.target.matches('.btn-card') || e.target.matches('.card img')){
       const i = e.target.getAttribute('index'); 
       $template.querySelector('img').setAttribute('src', $cardContent[i].img);
       $template.querySelector('.info-card-h1').textContent = $cardContent[i].h1;
@@ -257,14 +264,6 @@ window.addEventListener('DOMContentLoaded',(e)=>{
         btnRight();
         btnActive(e.target);
       };
-      /*********** */
-      if(e.target.matches('.slide img')){
-        console.log('hola');
-      };
-      // if(e.target.matches('.card img')){
-      //   console.log('hola');
-      // };
-      /*********** */
     });    
     // $slidesContainer.addEventListener("touchstart", startTouch, false);
     // $slidesContainer.addEventListener("touchmove", moveTouch, false);

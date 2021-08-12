@@ -8,11 +8,11 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $btnHamb = d.querySelector('.btn-hamb'),
   $navRowItem = d.querySelectorAll('.nav-row-item a'),
   // Cards
-  $imgCard = document.querySelectorAll('.card img'),
+  $imgsCard = document.querySelectorAll('.card img'),
   $btnsCard = document.querySelectorAll('.btn-card'),
-  $cardContent = [], 
-  infoJson = './img/cards/info/info-cards.json', // URL
-  $cards = d.querySelector('.info-cards'), // conteiner gral
+  infoJson = './img/cards/info/info-cards.json',
+  $infoCardsArray = [], 
+  $templateContainer = d.querySelector('.template-container'),
   $template = d.getElementById('info-card-template').content, 
   $fragment = d.createDocumentFragment(),
   // Carousel
@@ -95,7 +95,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       let res = await fetch(url),
       json = await res.json()
       for(let i=0; i<json.length; i++){         
-        $cardContent.push({
+        $infoCardsArray.push({
           img :`${json[i].img}`, 
           h1 : `${json[i].h1}`, 
           description : `${json[i].description}`,
@@ -114,9 +114,9 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   
   const card_i = (value, index, array)=>{
     i=index;
-    $imgCard[i].setAttribute('index', i);
+    $imgsCard[i].setAttribute('index', i);
   };  
-  $imgCard.forEach(card_i); 
+  $imgsCard.forEach(card_i); 
   
   const btn_i = (value, index, array)=>{
     i=index;
@@ -129,18 +129,18 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   d.addEventListener('click', e=>{
     if(e.target.matches('.btn-card') || e.target.matches('.card img')){
       const i = e.target.getAttribute('index'); 
-      $template.querySelector('img').setAttribute('src', $cardContent[i].img);
-      $template.querySelector('.info-card-h1').textContent = $cardContent[i].h1;
-      $template.querySelector('.description').textContent = $cardContent[i].description;
-      $template.querySelector('.modo-d-uso').textContent = $cardContent[i].modoDeUso;
-      $template.querySelector('.composition').textContent = $cardContent[i].composition;
-      $template.querySelector('.info-anexa').textContent = $cardContent[i].infoAnexa;
+      $template.querySelector('img').setAttribute('src', $infoCardsArray[i].img);
+      $template.querySelector('.info-card-h1').textContent = $infoCardsArray[i].h1;
+      $template.querySelector('.description').textContent = $infoCardsArray[i].description;
+      $template.querySelector('.modo-d-uso').textContent = $infoCardsArray[i].modoDeUso;
+      $template.querySelector('.composition').textContent = $infoCardsArray[i].composition;
+      $template.querySelector('.info-anexa').textContent = $infoCardsArray[i].infoAnexa;
       let $clone = document.importNode($template, true);
       $fragment.appendChild($clone); 
-      $cards.appendChild($fragment); 
+      $templateContainer.appendChild($fragment); 
     }
     if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
-      $cards.removeChild($cards.lastElementChild);
+      $templateContainer.removeChild($templateContainer.lastElementChild);
     }
   });   
 

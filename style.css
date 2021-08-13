@@ -201,10 +201,10 @@ body{
 .bq-semillas p,
 .bq-manten p,
 .bq-social-icons p{
-  color: green;
+  color: rgb(5, 153, 5);
   font-size: 1.7rem; 
   line-height: 2.2rem;
-  border-bottom: 2px solid rgb(173, 209, 173) ;
+  border-bottom: 2px solid rgb(113, 194, 113);
   padding-bottom: 16px;
 }
 /* *****  FIN SEPARADORES   ***** */
@@ -303,7 +303,8 @@ h1{
   flex-direction: column;
   justify-content: center;
   align-items: center; 
-  border: 3px solid rgb(185, 238, 235);
+  border: 3px solid rgb(113, 194, 113);
+  /* border: 3px solid rgb(185, 238, 235); */
   border-radius: 10px;
   width: 280px;
   margin: 0 22px 44px;      
@@ -314,6 +315,7 @@ h1{
   width: 70%;
   box-shadow: 0px 16px 10px 8px rgba(196, 196, 196, 0.85);
   margin-top: 15px;
+  cursor: pointer;
 }
 .figcap{
   display: flex;
@@ -322,7 +324,7 @@ h1{
   align-items: center;
   padding: 15px 20px 15px 25px;
   background-color: rgb(250, 250, 250);
-  border-top: 2px solid rgb(185, 238, 235);
+  border-top: 2px solid rgb(113, 194, 113);
 }
 .figcap p{
   font-size: 1.15rem;  
@@ -477,7 +479,7 @@ h1{
 }
 .carousel-container{
   background-color: rgb(252, 252, 252);
-  border: 3px solid rgb(185, 238, 235);
+  border: 3px solid rgb(113, 194, 113);
   width: 310px;
   border-radius: 15px;
   display: flex;
@@ -487,8 +489,8 @@ h1{
 }
 .btn-carousel-l,
 .btn-carousel-r{
-  background-color: rgb(173, 255, 228, .5);
-  border: 2px solid rgb(99, 232, 255, .5);
+  background-color: rgba(169, 228, 169, 0.5);
+  border: 2px solid rgb(113, 194, 113);
   height: 44px;
   width: 44px;
   text-align: center;
@@ -512,8 +514,8 @@ h1{
 }
 @keyframes btn-crsl-on{
   100%{    
-    background-color: rgb(119, 255, 210);
-    border: 2px solid rgb(71, 227, 255);
+    background-color: rgba(83, 241, 83, .5);
+    border: 2px solid rgb(17, 238, 17);
   }
 } 
 .carousel{

@@ -177,18 +177,22 @@ body{
   letter-spacing: 0.0090rem;
   margin-left: 10px;
 }
-.sprdr-cards{
+.sprdr-cards,
+.sprdr-huerta,
+.sprdr-acerca,
+.sprdr-ventas,
+.sprdr-contc{
   background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);   
 }
-.sprdr-huerta{
+/* .sprdr-huerta{
   background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
-}
+} */
 .sprdr-acerca{  
-  background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%);
+  /* background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%); */
   text-align: center; 
 }
 .sprdr-ventas, .sprdr-contc{
-  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgb(223, 24, 24) 40%, rgba(252,176,69,1) 95%);
+  /* background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgb(223, 24, 24) 40%, rgba(252,176,69,1) 95%); */
   text-align: center;
 }
 
@@ -541,6 +545,14 @@ h1{
   height: 100%;
   width: auto;
   box-shadow: 0 5px 12px 0px rgb(146, 146, 146);
+  cursor: pointer;
+}
+.btn-semll-container{
+  background-color: blue;
+  padding: 3px;
+}
+.btn-semll{
+  background-color: aqua;
 }
 /* ---- ANIMATIONS ---- */
 .to-left-2{

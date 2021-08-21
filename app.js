@@ -7,7 +7,9 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $navPanel = d.querySelector('.panel'),
   $btnHamb = d.querySelector('.btn-hamb'),
   $navRowItem = d.querySelectorAll('.nav-row-item a'),
-  $body = d.querySelector('body'), 
+  
+  // $body = d.querySelector('body'), 
+
   // Cards
   $imgsCard = document.querySelectorAll('.card img'),
   $btnsCard = document.querySelectorAll('.btn-card'),
@@ -20,7 +22,6 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $slidesContainer = d.querySelector('.slides-container'),
   $slide = d.querySelectorAll('.slide');
 
-  console.log($body);
   
   ////////////////////////////////////////////////////////////////////////////
 
@@ -144,12 +145,14 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       $fragment.appendChild($clone); 
       $templateContainer.appendChild($fragment); 
 
-      $body.classList.add('bckg-no-scroll');
+      // $body.classList.add('bckg-no-scroll');
+      d.body.style.overflow = "hidden";
     }
     if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
       $templateContainer.removeChild($templateContainer.lastElementChild);
 
-      $body.classList.remove('bckg-no-scroll');
+      // $body.classList.remove('bckg-no-scroll');
+      d.body.style.overflow = "visible";
     }
   });   
 

@@ -60,6 +60,41 @@
     font-size: 2rem;
     padding: 7vw; /**/
   } 
+
+  .carousel-container{
+    width: 340px;
+  }
+  .btn-carousel-l,
+  .btn-carousel-r{
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    top: 148px;/**/
+  }
+  .btn-carousel-l{
+    left: -50px;
+  }
+  .btn-carousel-r{
+    right: -50px;
+  }
+  .slides-container{
+    width: 230px;
+    height: 370px;
+  } 
+  .slide{
+    padding: 35px 15px 65px;
+  }
+  .btn-semll-container{
+    padding: 2px;
+    border-radius: 16px;
+    margin-top: -33px;
+  }
+  .btn-semll{
+    font-size: 1.2rem;
+    padding: 10px 16px;
+    border-radius: 14px;
+  }
+
   .row-icons{
     width: 80%;
   }

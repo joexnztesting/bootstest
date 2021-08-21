@@ -15,18 +15,21 @@
   background-repeat: no-repeat;
 }
 
-.contacto-sumate{ /*border: 1px solid blue;*/
+.contacto-sumate{ 
+  /*border: 1px solid blue;*/
   padding: 20px 40px;  
   text-align: center;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1.4rem;
   background-color: rgb(255, 255, 255, .75);
   border-radius: 6px;
 }
 
-/* .formu{
+/* 
+.formu{
   border: 1px solid green;
-} */
+}
+*/
+
 .contact-form legend,
 .contact-form-response{
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -41,8 +44,8 @@
   /*border: 1px solid green;*/
 }
 .contact-form{
-  --form-ok-color: #4caf50;
-  --form-error-color: #f44336;
+  /* --form-ok-color: #4caf50;
+  --form-error-color: #f44336; */
   margin-left: auto;
   margin-right: auto;
   width: 90%;
@@ -91,17 +94,17 @@ color: #000;
 }
 
 .contact-form [required]:valid{
-border: thin solid var(--form-ok-color);
+border: thin solid blue;
 }
 
 .contact-form [required]:invalid{
-border: thin solid var(--form-error-color);
+border: 1px solid rgb(142, 201, 255);
 }
 
 .contact-form-error{
 margin-top: -1rem;
 font-size: 80%;
-background-color: var(--form-error-color);
+background-color: red;
 color: #fff;
 transition: all 800ms ease;
 }
@@ -127,13 +130,9 @@ display: none;
 }
 
 
-
+/* 
 @media (min-width: 350px) {
-  .contacto-sumate2{
-    padding: 20px 0 5px;
-    font-size: 1.45rem;
-  }
-  
+    
   .contact-form legend,
   .contact-form-response{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -188,7 +187,7 @@ display: none;
 }
 
 
-/* HTML con MARGEN  */
+ HTML con MARGEN  
 
 @media (min-width: 992px) {
 }
@@ -204,5 +203,5 @@ display: none;
 
 @media (min-width: 1600px) {
 }
-
+ */
 

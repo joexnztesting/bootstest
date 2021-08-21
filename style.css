@@ -305,13 +305,12 @@ h1{
   flex-wrap: wrap;
 }
 .card{
-  background-color: rgb(248, 248, 248);
+  background-color: rgb(249, 255, 249);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; 
   border: 3px solid rgb(113, 194, 113);
-  /* border: 3px solid rgb(185, 238, 235); */
   border-radius: 10px;
   width: 280px;
   margin: 0 22px 44px;      
@@ -486,7 +485,7 @@ h1{
   padding-bottom: 70px;
 }
 .carousel-container{
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(252, 255, 252);
   border: 3px solid rgb(113, 194, 113);
   width: 310px;
   border-radius: 15px;
@@ -537,18 +536,20 @@ h1{
   justify-content: center;
   align-items: center;
   width: 200px;
-  height: 340px;
+  height: 320px;
 } 
 .slide{
   position: absolute;
-  padding: 20px 15px 30px;
-  height: 300px;
+  padding: 30px 15px 55px;
+  height: 100%;
   opacity: 0;
 }
 .slide img{
+  border: 2px solid rgb(255, 133, 111);
   height: 100%;
   width: auto;
-  box-shadow: 0 5px 12px 0px rgb(146, 146, 146);
+  border-radius: 8px;
+  box-shadow: 0 5px 10px -2px rgb(146, 146, 146, .6);
   cursor: pointer;
 }
 .btn-semll-container{
@@ -558,8 +559,9 @@ h1{
   align-items: center;
   padding: 2px;
   border-radius: 16px;
-  margin-top: -22px;
+  margin-top: -27px;
   box-shadow: 0 1px 3px 1px rgb(210, 210, 210);
+  overflow: hidden;
 }
 .btn-semll{
   background-color: rgb(255, 255, 255);
@@ -723,13 +725,15 @@ h1{
 }
 /* *********  FIN SECTION ACERCA  ************  */
 
+
 /* *********  SECTION VENTAS y CONTACTO  ************  */
 .social-icons{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.row-icons{ /*border: 1px solid red;*/
+.row-icons{ 
+  /*border: 1px solid red;*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -737,17 +741,29 @@ h1{
   padding: 0 0 50px;
 }
 .row-icons div{
+  background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
+  padding: 2px;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px 1px rgb(210, 210, 210);
+}
+.row-icons div a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .row-icons div img{
+  background-color: #fff;
   max-width: 100%;
   height: auto;
   padding: 6px;
   border-radius: 50%;
-  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2),
-  inset 0px 0px 10px 1px  rgb(255, 255, 255);  
 }
 /* ********* FIN SECTION VENTAS y CONTACTO  ************  */
+
 
 .footer{
   width: 100%;

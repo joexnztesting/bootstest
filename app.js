@@ -135,6 +135,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   // ***********************************************
   
   d.addEventListener('click', e=>{
+    
     if(e.target.matches('.btn-card') || e.target.matches('.card img')){
       const i = e.target.getAttribute('index'); 
       $template.querySelector('img').setAttribute('src', $infoCardsArray[i].img);
@@ -146,20 +147,16 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       let $clone = document.importNode($template, true);
       $fragment.appendChild($clone); 
       $templateContainer.appendChild($fragment); 
-<<<<<<< HEAD
 
       document.body.style.overflow = 'hidden';
     }
+
     if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
       $templateContainer.removeChild($templateContainer.lastElementChild);
 
       document.body.style.overflow = 'visible';
-=======
     }
-    if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
-      $templateContainer.removeChild($templateContainer.lastElementChild);
->>>>>>> de61cb707de08008e85d02c1a79c3f15a8f38a77
-    }
+
   });   
 
   ////////////////////////////////////////////////////////////////////////////

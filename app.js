@@ -120,6 +120,12 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   };  
   $imgsCard.forEach(card_i); 
   
+  const card_i = (value, index, array)=>{
+    i=index;
+    $imgsCard[i].setAttribute('index', i);
+  };  
+  $imgsCard.forEach(card_i); 
+  
   const btn_i = (value, index, array)=>{
     i=index;
     $btnsCard[i].setAttribute('index', i);
@@ -140,6 +146,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       let $clone = document.importNode($template, true);
       $fragment.appendChild($clone); 
       $templateContainer.appendChild($fragment); 
+<<<<<<< HEAD
 
       document.body.style.overflow = 'hidden';
     }
@@ -147,6 +154,11 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       $templateContainer.removeChild($templateContainer.lastElementChild);
 
       document.body.style.overflow = 'visible';
+=======
+    }
+    if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
+      $templateContainer.removeChild($templateContainer.lastElementChild);
+>>>>>>> de61cb707de08008e85d02c1a79c3f15a8f38a77
     }
   });   
 

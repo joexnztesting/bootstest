@@ -30,9 +30,15 @@
     "id" : 3,
     "img" : "./img/cards/info/3.jpg",
     "h1" : "CIPER\r\nMETRINA\r\nInsecticida general",
+<<<<<<< HEAD
     "description" : "Diferentes presentaciones: Spray x 500cc (listo para usar); Envase x 1lt (rinde 5lt); Envase por 5lt (rinde 20lt)",
     "modoDeUso" : "Este producto debe usarse con cuidado ya que es levemente tóxico para humanos y mascotas. Está diseñado para eliminar todo tipo de plagas, ya sea Alacranes, Cucarachas, Arañas, Hormigas, etc...",
     "composition" : "Cipermetrina",
+=======
+    "description" : "...",
+    "modoDeUso" : "...",
+    "composition" : "...",
+>>>>>>> de61cb707de08008e85d02c1a79c3f15a8f38a77
     "infoAnexa" : "..."
   },
   {
@@ -40,16 +46,26 @@
     "img" : "./img/cards/info/4.jpg",
     "h1" : "'1° PASO'\r\nlisto para usar",
     "description" : "DESTAPACAÑERÍAS\r\n• Granulado: 12u. x 300 gr c/u \r\n • Líquido: 10u. x 1lt. c/u",
+<<<<<<< HEAD
     "modoDeUso" : "Aplique preferentemente a ultima hora de la noche cuando ya no se use la cañeria o desague. Coloque primero medio litro de agua hirviendo dentro de la cañeria o desague a tratar, luego el contenido de media bolsa de destapacañerias 1 er paso, seguidamente vuelva a echar sobre el granulado otro medio litro de agua hirviendo hasta que se disuelva. El producto sigue funcionando aun después de ser aplicado ya que sus componentes siguen absorviendo las grasas, jabones y otras materias organicas lo que hace que su cañeria quede completamente limpia. En caso de ser necesario repetir el procedimiento anterior al dia siguiente. El contenido de la caja sirve para 2 aplicaciones.",
     "composition" : "Soda Cáustica + Carbón Activado",
     "infoAnexa" : "El color negro del producto se debe a uno de sus componentes, todos sus componentes se disuleven y limpian con agua, en caso de que quedaran restos del producto se pueden limpiar fácilmente con esponja. Es un producto formulado tanto para uso industrial como domiciliario, deben tomarse las precauciones para su empleo: UTILIZAR GUANTES Y EVITAR SALPICADURAS – PRODUCTO FUERTEMENTE ALCALINO - ¡CUIDADO CON LOS OJOS! EN CASO DE CONTACTO CON LA PIEL O LA VISTA, ENJUAGAR CON ABUNDANTE AGUA CORRIENTE. CONSULTAR AL MÉDICO O AL OFTALMÓLOGO EN SU CASO."
+=======
+    "modoDeUso" : "...",
+    "composition" : "Soda Cáustica + Carbón Activado",
+    "infoAnexa" : "..."
+>>>>>>> de61cb707de08008e85d02c1a79c3f15a8f38a77
   },
   {
     "id" : 5,
     "img" : "./img/cards/info/5.jpg",
     "h1" : "AQUÍ NO\r\nspray x 500cc",
     "description" : "Es un producto para mejorar conductas higiénicas de perros y gatos",
+<<<<<<< HEAD
     "modoDeUso" : "Aplicar en las zonas donde no queremos que los animales realicen sus necesidades higiénicas",
+=======
+    "modoDeUso" : "...",
+>>>>>>> de61cb707de08008e85d02c1a79c3f15a8f38a77
     "composition" : "...",
     "infoAnexa" : "..."
   },

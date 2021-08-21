@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $navPanel = d.querySelector('.panel'),
   $btnHamb = d.querySelector('.btn-hamb'),
   $navRowItem = d.querySelectorAll('.nav-row-item a'),
+  $body = d.querySelector('body'), 
   // Cards
   $imgsCard = document.querySelectorAll('.card img'),
   $btnsCard = document.querySelectorAll('.btn-card'),
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $slidesContainer = d.querySelector('.slides-container'),
   $slide = d.querySelectorAll('.slide');
 
+  console.log($body);
   
   ////////////////////////////////////////////////////////////////////////////
 
@@ -84,6 +86,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     $navRowItem.forEach((itm)=>{
       itm.classList.toggle('item')
     });
+    // $body.classList.toggle('bckg-no-scroll');
   }
 
   ////////////////////////////////////////////////////////////////////////////
@@ -120,12 +123,6 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   };  
   $imgsCard.forEach(card_i); 
   
-  const card_i = (value, index, array)=>{
-    i=index;
-    $imgsCard[i].setAttribute('index', i);
-  };  
-  $imgsCard.forEach(card_i); 
-  
   const btn_i = (value, index, array)=>{
     i=index;
     $btnsCard[i].setAttribute('index', i);
@@ -147,12 +144,12 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       $fragment.appendChild($clone); 
       $templateContainer.appendChild($fragment); 
 
-      document.body.style.overflow = 'hidden';
+      $body.classList.add('bckg-no-scroll');
     }
     if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
       $templateContainer.removeChild($templateContainer.lastElementChild);
 
-      document.body.style.overflow = 'visible';
+      $body.classList.remove('bckg-no-scroll');
     }
   });   
 

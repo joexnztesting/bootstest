@@ -172,26 +172,50 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     //----------------------------------------------
     $slide[i_R].classList.remove('center-to-right', 'right-2-to-right');
     $slide[i_R].classList.add('right-to-center');    
+    $slide[i_C].classList.remove('left-to-center', 'right-to-center');
+    $slide[i_C].classList.add('center-to-left');    
+    $slide[i_L].classList.remove('center-to-left', 'left-2-to-left');
+    $slide[i_L].classList.add('to-left-2');    
     if(i_R===$slide.length-1){
       i_R=-1;
     };    
-    i_R++;    
-    $slide[i_R].classList.add('right-2-to-right');
-    $slide[i_R].style.opacity = '1';
-    //----------------------------------------------
-    $slide[i_C].classList.remove('left-to-center', 'right-to-center');
-    $slide[i_C].classList.add('center-to-left');    
     if(i_C===$slide.length-1){
       i_C=-1;
     };   
-    i_C++;
-    //----------------------------------------------
-    $slide[i_L].classList.remove('center-to-left', 'left-2-to-left');
-    $slide[i_L].classList.add('to-left-2');    
     if(i_L===$slide.length-1){
       i_L=-1;
     };
+    i_R++;    
+    i_C++;
     i_L++;
+    $slide[i_R].classList.add('right-2-to-right');
+    $slide[i_R].style.opacity = '1';
+    //----------------------------------------------
+    // $slide[i_R].classList.remove('center-to-right');
+    // $slide[i_R].classList.remove('right-2-to-right');
+    // $slide[i_R].classList.add('right-to-center');    
+    // if(i_R===$slide.length-1){
+    //   i_R=-1;
+    // };    
+    // i_R++;    
+    // $slide[i_R].classList.add('right-2-to-right');
+    // $slide[i_R].style.opacity = '1';
+    // //----------------------------------------------
+    // $slide[i_C].classList.remove('left-to-center');
+    // $slide[i_C].classList.remove('right-to-center');
+    // $slide[i_C].classList.add('center-to-left');    
+    // if(i_C===$slide.length-1){
+    //   i_C=-1;
+    // };   
+    // i_C++;
+    // //----------------------------------------------
+    // $slide[i_L].classList.remove('center-to-left');
+    // $slide[i_L].classList.remove('left-2-to-left');
+    // $slide[i_L].classList.add('to-left-2');    
+    // if(i_L===$slide.length-1){
+    //   i_L=-1;
+    // };
+    // i_L++;
     //----------------------------------------------
   }; 
 
@@ -210,26 +234,50 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     //----------------------------------------------
     $slide[i_L].classList.remove('center-to-left', 'left-2-to-left');
     $slide[i_L].classList.add('left-to-center');    
+    $slide[i_C].classList.remove('left-to-center', 'right-to-center');
+    $slide[i_C].classList.add('center-to-right');
+    $slide[i_R].classList.remove('center-to-right', 'right-2-to-right');
+    $slide[i_R].classList.add('to-right-2');    
     if(i_L===0){
       i_L=$slide.length;
     };
-    i_L--;    
-    $slide[i_L].classList.add('left-2-to-left');
-    $slide[i_L].style.opacity = '1';
-    //----------------------------------------------
-    $slide[i_C].classList.remove('left-to-center', 'right-to-center');
-    $slide[i_C].classList.add('center-to-right');
     if(i_C===0){
       i_C=$slide.length;
     };    
-    i_C--;
-    //----------------------------------------------
-    $slide[i_R].classList.remove('center-to-right', 'right-2-to-right');
-    $slide[i_R].classList.add('to-right-2');    
     if(i_R===0){
       i_R=$slide.length;
     };   
+    i_L--;    
+    i_C--;
     i_R--;
+    $slide[i_L].classList.add('left-2-to-left');
+    $slide[i_L].style.opacity = '1';
+    //----------------------------------------------
+    // $slide[i_L].classList.remove('left-2-to-left');
+    // $slide[i_L].classList.remove('center-to-left');
+    // $slide[i_L].classList.add('left-to-center');    
+    // if(i_L===0){
+    //   i_L=$slide.length;
+    // };
+    // i_L--;    
+    // $slide[i_L].classList.add('left-2-to-left');
+    // $slide[i_L].style.opacity = '1';
+    // //----------------------------------------------
+    // $slide[i_C].classList.remove('left-to-center');
+    // $slide[i_C].classList.remove('right-to-center');
+    // $slide[i_C].classList.add('center-to-right');
+    // if(i_C===0){
+    //   i_C=$slide.length;
+    // };    
+    // i_C--;
+    // //----------------------------------------------
+    // $slide[i_R].classList.remove('center-to-right');
+    // $slide[i_R].classList.remove('right-2-to-right');
+    // $slide[i_R].classList.add('to-right-2');    
+    // if(i_R===0){
+    //   i_R=$slide.length;
+    // };   
+    // i_R--;
     //----------------------------------------------
   };  
   

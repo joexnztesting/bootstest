@@ -187,15 +187,10 @@ body{
 .sprdr-contc{
   background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);   
 }
-/* .sprdr-huerta{
-  background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);
-} */
-.sprdr-acerca{  
-  /* background: linear-gradient(45deg, rgba(0,201,43,1) 0%, rgb(29, 163, 253) 100%); */
+.sprdr-acerca{
   text-align: center; 
 }
 .sprdr-ventas, .sprdr-contc{
-  /* background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgb(223, 24, 24) 40%, rgba(252,176,69,1) 95%); */
   text-align: center;
 }
 
@@ -496,16 +491,20 @@ h1{
 }
 .btn-carousel-l,
 .btn-carousel-r{
-  background-color: rgba(169, 228, 169, 0.5);
-  border: 2px solid rgb(113, 194, 113);
+  background-color: rgba(105, 187, 105, 0.85);
   height: 44px;
   width: 44px;
   text-align: center;
   line-height: 44px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 148px;  
   z-index: 150;
+  overflow: hidden;
+  box-shadow: 0 5px 10px -2px rgb(146, 146, 146, .6);
 }
 .btn-carousel-l{
   left: -50px;
@@ -513,16 +512,21 @@ h1{
 .btn-carousel-r{
   right: -50px;
 }
+.btn-carousel-l svg,
+.btn-carousel-r svg{
+  height: 28px;
+  fill: rgb(210, 255, 212);
+  cursor: pointer;
+}
 .btn-crsl-on{
   animation-name: btn-crsl-on;
   animation-duration: .2s;
-  animation-timing-function: linear;
+  animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
 }
 @keyframes btn-crsl-on{
-  100%{    
-    background-color: rgba(83, 241, 83, .5);
-    border: 2px solid rgb(17, 238, 17);
+  100%{
+    height: 24px;
   }
 } 
 .carousel{
@@ -550,7 +554,7 @@ h1{
   width: auto;
   border-radius: 8px;
   box-shadow: 0 5px 10px -2px rgb(146, 146, 146, .6);
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .btn-semll-container{
   background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
@@ -575,7 +579,7 @@ h1{
 /* ---- ANIMATIONS ---- */
 .to-left-2{
   animation-name: to-left-2;
-  animation-duration: .7s;
+  animation-duration: .6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -590,7 +594,7 @@ h1{
 } 
 .left-2-to-left{
   animation-name: left-2-to-left;
-  animation-duration: .7s;
+  animation-duration: .6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -605,7 +609,7 @@ h1{
 } 
 .left-to-center{
   animation-name: left-to-center;
-  animation-duration: .7s;
+  animation-duration: .6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -620,7 +624,7 @@ h1{
 }
 .center-to-left{
   animation-name: center-to-left;
-  animation-duration: .7s;
+  animation-duration: .6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -632,7 +636,7 @@ h1{
 }  
 .center-to-right{
   animation-name: center-to-right;
-  animation-duration: .7s;
+  animation-duration: .6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -644,7 +648,7 @@ h1{
 }  
 .right-to-center{
   animation-name: right-to-center;
-  animation-duration: .7s;
+  animation-duration: .6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -659,7 +663,7 @@ h1{
 } 
 .right-2-to-right{
   animation-name: right-2-to-right;
-  animation-duration: .7s;
+  animation-duration: .6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
@@ -674,7 +678,7 @@ h1{
 } 
 .to-right-2{
   animation-name: to-right-2;
-  animation-duration: .7s;
+  animation-duration: .6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  

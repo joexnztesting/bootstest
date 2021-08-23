@@ -261,15 +261,18 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       $listaSemCont.classList.remove('ver-lista');
       setTimeout(() => {
         elm.innerHTML = `Ver Lista</br>Completa`;
+        btnSmll.style.top = '468px'
       }, 250);
+      $slidesContainer.scrollIntoView(); 
     };    
     if($listaSemCont.classList.contains('list-cont-hidden')){
       $listaSemCont.classList.add('ver-lista');
       $listaSemCont.classList.remove('list-cont-hidden');
       setTimeout(() => {
-        elm.innerHTML = 'Cerrar Lista';
+        elm.innerHTML = `Cerrar Lista`;
+        btnSmll.style.top = '480px'
       }, 250); 
-      elm.scrollIntoView();   
+      elm.scrollIntoView(); 
     };
   };
 

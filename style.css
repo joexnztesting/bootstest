@@ -109,6 +109,7 @@ img{
   position: fixed;
   bottom: 0;
   height: 10vh;
+  min-height: 40px;
   width: 100%;
   box-shadow: 0px -7px 14px -2px rgb(225, 225, 225, .7);
   z-index: 1600;
@@ -206,12 +207,12 @@ img{
 .sprdr-contc{
   background: linear-gradient(37deg, rgba(10,0,187,1) 0%, rgba(58,121,251,1) 31%, rgba(247,0,255,1) 100%);   
 }
-.sprdr-acerca{
+/* .sprdr-acerca{
   text-align: center; 
 }
 .sprdr-ventas, .sprdr-contc{
   text-align: center;
-}
+} */
 
 .bq-semillas,
 .bq-manten,

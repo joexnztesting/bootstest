@@ -275,10 +275,13 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       elm.scrollIntoView(); 
     };
   };
-
+  
   ////////////////////////////////////////////////////////////////////////////
-
-  // LLAMADORES  .nav-row-item
+  
+  // LLAMADORES 
+  
+  $slidesContainer.addEventListener("touchstart", startTouch, false); // **
+  $slidesContainer.addEventListener("touchmove", moveTouch, false);  // **
   
   if(isMobile.android() || isBrowser.any()){
     d.addEventListener('click', (e)=>{
@@ -306,8 +309,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       };
       // SEMILLAS LISTA
       if(e.target.matches('.btn-semll')){
-        verListaSemll(e.target);        
-        // window.scrollTo(0, 100);    
+        verListaSemll(e.target); // window.scrollTo(0, 100);    
       };
     });    
     // **
@@ -341,8 +343,6 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     // **
   };
 
-  $slidesContainer.addEventListener("touchstart", startTouch, false); // **
-  $slidesContainer.addEventListener("touchmove", moveTouch, false);  // **
   
   ////////////////////////////////////////////////////////////////////////////
   

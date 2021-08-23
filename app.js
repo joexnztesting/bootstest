@@ -202,8 +202,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       i_L=-1;
     };
     i_L++;
-    //----------------------------------------------
-    btnOn(d.querySelector('.btn-crsl-l'));
+    //----------------------------------------------    
   }; 
 
   //--------------------------------------------------------------------------
@@ -241,8 +240,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       i_R=$slide.length;
     };   
     i_R--;
-    //----------------------------------------------
-    btnOn(d.querySelector('.btn-crsl-r'));
+    //----------------------------------------------    
   };    
 
   ////////////////////////////////////////////////////////////////////////////
@@ -285,60 +283,40 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   
   if(isMobile.android() || isBrowser.any()){
     d.addEventListener('click', (e)=>{
-      // NAV
+      // nav *****
       if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
         navPanelShow();      
       };
-      // CARDS
+      // cards *****
       if(e.target.matches('.btn-card') || e.target.matches('.card img')){
         showCardInfo(e.target)
         if(e.target.classList.contains('btn-card')){
-          const btnCrd = e.target.parentElement;
-          btnOn(btnCrd);
+          btnOn(e.target.parentElement);
         }
       };
       if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
         hideCardInfo()
       };
-      // CAROUSEL
+      // carousel *****
       if(e.target.matches('.btn-crsl-l *')){
         btnLeft();
+        btnOn(d.querySelector('.btn-crsl-l'));
       };
       if(e.target.matches('.btn-crsl-r *')){
         btnRight();
+        btnOn(d.querySelector('.btn-crsl-r'));
       };
-      // SEMILLAS LISTA
+      // semillas lista *****
       if(e.target.matches('.btn-semll')){
         verListaSemll(e.target); // window.scrollTo(0, 100);    
       };
     });    
     // **
   };
-
+  //**************************************************** */
   if(isMobile.ios()){
     d.addEventListener('touchstart', (e)=>{
-      // NAV
-      if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
-        navPanelShow();
-      };
-      // CARDS
-      if(e.target.matches('.btn-card') || e.target.matches('.card img')){
-        showCardInfo(e.target)
-      };
-      if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
-        hideCardInfo()
-      };
-      // CAROUSEL
-      if(e.target.matches('.btn-crsl-l *')){
-        btnLeft();
-      };
-      if(e.target.matches('.btn-crsl-r *')){
-        btnRight();
-      };
-      // SEMILLAS LISTA
-      if(e.target.matches('.btn-semll')){
-        verListaSemll(e.target);        
-      };
+
     }, false);    
     // **
   };

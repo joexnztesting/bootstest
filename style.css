@@ -1,14 +1,14 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap');
 
 html{
   box-sizing: border-box; 
   margin: 0;
   padding: 0;   
   scroll-behavior: smooth;
-  /* font-family: 'Karla', sans-serif; */
   font-family: 'Jost', sans-serif;
+  /* font-family: 'Karla', sans-serif; */
 }
 *,
 *:before,
@@ -109,8 +109,7 @@ img{
   justify-content:space-between;
   position: fixed;
   bottom: 0;
-  height: 10vh;
-  min-height: 40px;
+  height: 50px;
   width: 100%;
   box-shadow: 0px -7px 14px -2px rgb(225, 225, 225, .7);
   z-index: 1600;
@@ -350,7 +349,7 @@ h1{
   border-top: 2px solid rgb(113, 194, 113);
 }
 .figcap p{
-  font-size: 1.15rem;  
+  font-size: 1.2rem;
   text-align: center;
 }
 .btn-card-border{
@@ -371,7 +370,8 @@ h1{
   align-items: center;
   width: 90px;
   color: rgb(14, 14, 255);  
-  font-size: 1.12rem ;
+  font-size: 1.1rem;
+  font-weight: 500;
   line-height: 1.4rem;
   text-align: center;
   padding: 8px 10px;
@@ -630,20 +630,20 @@ tr:last-child td{
   }
   30%{ 
     height: 100%;      
-    padding: 10vh 0;
+    padding: 20px 0;
   }
   70%{
     height: 100%;
-    padding: 10vh 0;
+    padding: 20px 0;
     opacity: 1;
     visibility: visible;
   }
   100%{
     height: 100%;
-    padding: 10vh 0;
+    padding: 20px 0;
     opacity: 1;
     visibility: visible;
-    margin-top: -5vh;
+    margin-top: -35px;
   }
 }
 .cerrar-lista{
@@ -657,7 +657,7 @@ tr:last-child td{
   0%{
     background-color: rgb(230, 230, 230);
     height: 100%;
-    padding: 8vh 0;
+    padding: 50px 0;
     opacity: 1;
     visibility: visible;
     margin-top: -5vh;
@@ -817,15 +817,15 @@ tr:last-child td{
   justify-content: center;
   align-items: center;
   width: 94%;
-  padding: 10vw 7vw;
+  padding: 25px 20px;
   margin: 30vh 0;
   border-top-left-radius: 35px;
   border-bottom-right-radius: 35px;  
 }
 .marco-plantas p{
   color: rgb(53, 53, 53);
-  font-size: 1.3rem;
-  line-height: 1.4rem;
+  font-size: 1.5rem;
+  line-height: 1.65rem;
   padding: 20px 15px; 
   border-top: 2px solid rgba(255, 201, 23, 0.733);
   border-bottom: 2px solid rgba(255, 201, 23, 0.733);
@@ -874,14 +874,11 @@ tr:last-child td{
 
 .footer{
   width: 100%;
-  padding: 2.5vh 0 14.5vh;
-  background: rgba(0, 56, 42, 0.98);
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
-  letter-spacing: .08rem;
+  padding: 2.5vh 0 13vh;
+  background: rgba(255, 234, 50, 0.8);
+  color: rgb(0, 24, 236);
+  font-size: 1.3rem;
   text-align: center;
-  /* margin-bottom: 12vh; */
-  /*border: 1px solid red;*/
 }
 /* ********* FIN  ************  */
 

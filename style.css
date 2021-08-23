@@ -72,13 +72,13 @@ img{
   visibility: visible;
 }
 .panel{
-  background-color: rgb(206, 254, 255);
+  background-color: rgb(242, 255, 255);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 60%;
+  width: 70%;
   height: 90vh;
   transition: all .3s ease-out;
   transform: translateX(-100%);
@@ -95,11 +95,12 @@ img{
 .panel-item a{  
   background-color: rgb(242, 251, 255);
   border: 2px solid rgb(123, 227, 235);
-  padding: 10px;
-  border-radius: 3px;
+  padding: 8px 12px;
+  border-radius: 10px;
   font-size: 1.1rem;
   color: rgb(0, 21, 141);
   text-decoration: none;
+  box-shadow: 0 1px 3px 1px rgb(210, 210, 210);
 }
 .nav-row{
   background-color: rgb(255, 255, 255);
@@ -135,11 +136,12 @@ img{
 }
 .nav-row a{
   background-color: rgb(255, 255, 255);
-  font-size: 1.1rem;
   color: rgb(14, 14, 255);
-  text-decoration: none;
-  padding: 4px 6px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0px 6px;
   border-radius: 6px;
+  text-decoration: none;
 }
 .nav-row-div:nth-child(2) .nav-row-item{
   background: none;
@@ -147,7 +149,7 @@ img{
 }
 .nav-row-div:nth-child(2) .nav-row-item a{
   color: rgb(46, 46, 46);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 .btn-hamb{
@@ -189,14 +191,14 @@ img{
   z-index: 1500; */
 }
 .separador p{  
-  font-size: 1.4rem;
+  font-size: 1.55rem;
   font-weight: 500;
   padding: 0px 20px;
   color: rgb(255, 255, 255);
   letter-spacing: 0.001rem;
 }
 .separador span{
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   letter-spacing: 0.0090rem;
   margin-left: 10px;
 }
@@ -262,8 +264,8 @@ img{
   position: -o-absolute;
   position: -ms-absolute;  
   position: absolute;
-  top: 15vh; 
-  height: 20vh;
+  top: 12vh; 
+  height: 22vh;
   opacity: 0;
   animation-name: logo-in;
   animation-duration: 1.2s;
@@ -279,17 +281,17 @@ img{
 
 h1{  
   position: absolute;
-  top: 38vh;
+  top: 37vh;
   width: 80%;
   padding: 5vw 7vw;
   color: #fff;
   text-align: center;
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   letter-spacing: .12rem;
   font-weight: 500;
-  line-height: 1.85rem;
+  line-height: 1.95rem;
   text-shadow: 0 2px 2px #000;
-  background: linear-gradient(45deg, rgba(6, 173, 43, 0.55) 0%, rgba(18, 141, 223, 0.65) 100%);
+  background: linear-gradient(45deg, rgba(4, 146, 35, 0.65) 0%, rgba(12, 129, 207, 0.65) 100%);
   box-shadow: 
   inset 0px 6px 6px -4px rgb(131, 255, 245),
   inset -7px 0px 10px -6px rgb(131, 255, 245),

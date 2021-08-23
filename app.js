@@ -16,8 +16,9 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $template = d.getElementById('info-card-template').content, 
   $fragment = d.createDocumentFragment(),
   // Carousel
-  $slidesContainer = d.querySelector('.slides-container'),
-  $slide = d.querySelectorAll('.slide');
+  $slidesContainer = d.querySelector('.slides-cntr'),
+  $slide = d.querySelectorAll('.slide'),
+  $listaSemCont = d.querySelector('.lista-semll-cntr');
 
   
   ////////////////////////////////////////////////////////////////////////////
@@ -49,33 +50,18 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   userDeviceInfo()
 
   ////////////////////////////////////////////////////////////////////////////
-  
-  // TÁCTIL Swipe Left / Right
-  let initialX = null; 
 
-  const startTouch = (e)=>{
-    initialX = e.touches[0].clientX;
-  };  
+  // PARA TODOS LOS BTN ******
 
-  const moveTouch = (e)=>{
-    if (initialX === null) {
-      return;
-    };
-    let currentX = e.touches[0].clientX; 
-    let diffX = initialX - currentX; 
-    if (Math.abs(diffX)) {
-      if (diffX > 0) {
-        btnLeft()  
-      };
-      if (diffX < 0) {
-        btnRight()
-      };
-    };
-    initialX = null;
-  };
-
+  const btnOn = (btn)=>{
+    btn.classList.add('btn-on');
+    setTimeout(() => {
+      btn.classList.remove('btn-on');
+    }, 200)
+  }
   ////////////////////////////////////////////////////////////////////////////
   
+  // PANEL NAV ******
 
   const navPanelShow = ()=>{
     $panelFondo.classList.toggle('fondo-active');
@@ -88,8 +74,33 @@ window.addEventListener('DOMContentLoaded',(e)=>{
 
   ////////////////////////////////////////////////////////////////////////////
   
-  // CARDS ******
+    // TÁCTIL CARDS Swipe Left / Right
+    let initialX = null;
+    const startTouch = (e)=> initialX = e.touches[0].clientX;  
+    const moveTouch = (e)=>{
+      if (initialX === null) {
+        return;
+      };
+      let currentX = e.touches[0].clientX; 
+      let diffX = initialX - currentX; 
+      if (Math.abs(diffX)) {
+        if (diffX > 0) {
+          btnLeft()  
+        };
+        if (diffX < 0) {
+          btnRight()
+        };
+      };
+      initialX = null;
+    };
   
+  ////////////////////////////////////////////////////////////////////////////
+
+  // CARDS ******
+
+  // ***********************************************
+  // Poblar Array de cards-info
+
   async function loadCards(url){
     try{
       let res = await fetch(url),
@@ -111,53 +122,52 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   loadCards(infoJson)
   
   // ***********************************************
-
-  // Asignar índice a cada img y btn
+  // Asignar índice a img y btn de c/card
   
-  const card_i = (value, index, array)=>{
+  const card_img_i = (value, index, array)=>{
     i=index;
     $imgsCard[i].setAttribute('index', i);
   };  
-  $imgsCard.forEach(card_i); 
-  
-  const btn_i = (value, index, array)=>{
+  $imgsCard.forEach(card_img_i);  
+
+  const card_btn_i = (value, index, array)=>{
     i=index;
     $btnsCard[i].setAttribute('index', i);
   };  
-  $btnsCard.forEach(btn_i); 
-  
+  $btnsCard.forEach(card_btn_i);   
+
   // ***********************************************
-  
-  d.addEventListener('click', e=>{
-    if(e.target.matches('.btn-card') || e.target.matches('.card img')){
-      const i = e.target.getAttribute('index'); 
-      $template.querySelector('img').setAttribute('src', $infoCardsArray[i].img);
-      $template.querySelector('.info-card-h1').textContent = $infoCardsArray[i].h1;
-      $template.querySelector('.description').textContent = $infoCardsArray[i].description;
-      $template.querySelector('.modo-d-uso').textContent = $infoCardsArray[i].modoDeUso;
-      $template.querySelector('.composition').textContent = $infoCardsArray[i].composition;
-      $template.querySelector('.info-anexa').textContent = $infoCardsArray[i].infoAnexa;
-      let $clone = document.importNode($template, true);
-      $fragment.appendChild($clone); 
-      $templateContainer.appendChild($fragment); 
-      d.body.style.overflow = "hidden";
-    }
-    if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
-      $templateContainer.removeChild($templateContainer.lastElementChild);
-      d.body.style.overflow = "visible";
-    }
-  });   
+  // mostrar info 
+
+  const showCardInfo = (elem)=>{
+    const i = elem.getAttribute('index'); 
+    $template.querySelector('img').setAttribute('src', $infoCardsArray[i].img);
+    $template.querySelector('.info-card-h1').textContent = $infoCardsArray[i].h1;
+    $template.querySelector('.description').textContent = $infoCardsArray[i].description;
+    $template.querySelector('.modo-d-uso').textContent = $infoCardsArray[i].modoDeUso;
+    $template.querySelector('.composition').textContent = $infoCardsArray[i].composition;
+    $template.querySelector('.info-anexa').textContent = $infoCardsArray[i].infoAnexa;
+    let $clone = document.importNode($template, true);
+    $fragment.appendChild($clone); 
+    $templateContainer.appendChild($fragment); 
+    d.body.style.overflow = "hidden";    
+  }
+  const hideCardInfo = ()=>{
+    $templateContainer.removeChild($templateContainer.lastElementChild);
+    d.body.style.overflow = "visible";
+  }   
 
   ////////////////////////////////////////////////////////////////////////////
 
-  let i_L=$slide.length-1, i_C=0, i_R=1;  
-  
+  // CAROUSEL ******
+
+  let i_L=$slide.length-1, i_C=0, i_R=1;
+
   $slide[i_C].style.opacity = '1';  
   $slide[i_L].classList.add('center-to-left');
   $slide[i_L].style.opacity = '1';  
   $slide[i_R].classList.add('center-to-right');
   $slide[i_R].style.opacity = '1';
-
 
   const btnLeft = ()=>{
     $slide.forEach(slid=>{
@@ -193,11 +203,12 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     };
     i_L++;
     //----------------------------------------------
+    btnOn(d.querySelector('.btn-crsl-l'));
   }; 
 
   //--------------------------------------------------------------------------
   
-  const btnRight = ()=>{    
+  const btnRight = ()=>{   
     $slide.forEach(slid=>{
       if(slid.classList.contains('to-right-2')){
         slid.classList.remove('to-right-2');
@@ -231,56 +242,104 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     };   
     i_R--;
     //----------------------------------------------
-  };  
-  
+    btnOn(d.querySelector('.btn-crsl-r'));
+  };    
+
   ////////////////////////////////////////////////////////////////////////////
-  
-  const btnActive = (btn)=>{
-    btn.classList.add('btn-crsl-on');
-    setTimeout(() => {
-      btn.classList.remove('btn-crsl-on');
-    }, 200)
+
+  // SEMILLAS LISTA ******
+
+  const verListaSemll = (elm)=>{
+    const btnSmll = elm.parentElement;
+    btnOn(btnSmll);
+    if($listaSemCont.classList.contains('cerrar-lista')){
+      $listaSemCont.classList.remove('cerrar-lista');
+      $listaSemCont.classList.add('list-cont-hidden');
+    };
+    if($listaSemCont.classList.contains('ver-lista')){
+      $listaSemCont.classList.add('cerrar-lista');
+      $listaSemCont.classList.remove('ver-lista');
+      setTimeout(() => {
+        elm.innerHTML = `Ver Lista</br>Completa`;
+      }, 250);
+    };    
+    if($listaSemCont.classList.contains('list-cont-hidden')){
+      $listaSemCont.classList.add('ver-lista');
+      $listaSemCont.classList.remove('list-cont-hidden');
+      setTimeout(() => {
+        elm.innerHTML = 'Cerrar Lista';
+      }, 250); 
+      elm.scrollIntoView();     
+    };
   };
 
   ////////////////////////////////////////////////////////////////////////////
 
-  // LLAMADORES
+  // LLAMADORES  .nav-row-item
   
-  $slidesContainer.addEventListener("touchstart", startTouch, false);
-  $slidesContainer.addEventListener("touchmove", moveTouch, false);
-
   if(isMobile.android() || isBrowser.any()){
     d.addEventListener('click', (e)=>{
+      // NAV
       if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
-        navPanelShow();
+        navPanelShow();      
       };
-      if(e.target.matches('.btn-carousel-l *')){
+      // CARDS
+      if(e.target.matches('.btn-card') || e.target.matches('.card img')){
+        showCardInfo(e.target)
+        if(e.target.classList.contains('btn-card')){
+          const btnCrd = e.target.parentElement;
+          btnOn(btnCrd);
+        }
+      };
+      if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
+        hideCardInfo()
+      };
+      // CAROUSEL
+      if(e.target.matches('.btn-crsl-l *')){
         btnLeft();
-        btnActive(e.target);
       };
-      if(e.target.matches('.btn-carousel-r *')){
+      if(e.target.matches('.btn-crsl-r *')){
         btnRight();
-        btnActive(e.target);
+      };
+      // SEMILLAS LISTA
+      if(e.target.matches('.btn-semll')){
+        verListaSemll(e.target);        
+        // window.scrollTo(0, 100);    
       };
     });    
-    // $slidesContainer.addEventListener("touchstart", startTouch, false);
-    // $slidesContainer.addEventListener("touchmove", moveTouch, false);
+    // **
   };
+
   if(isMobile.ios()){
     d.addEventListener('touchstart', (e)=>{
+      // NAV
       if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
         navPanelShow();
       };
-      if(e.target.matches('.btn-carousel-l')){
-        btnLeft();
-        btnActive(e.target);
+      // CARDS
+      if(e.target.matches('.btn-card') || e.target.matches('.card img')){
+        showCardInfo(e.target)
       };
-      if(e.target.matches('.btn-carousel-r')){
+      if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
+        hideCardInfo()
+      };
+      // CAROUSEL
+      if(e.target.matches('.btn-crsl-l *')){
+        btnLeft();
+      };
+      if(e.target.matches('.btn-crsl-r *')){
         btnRight();
-        btnActive(e.target);
+      };
+      // SEMILLAS LISTA
+      if(e.target.matches('.btn-semll')){
+        verListaSemll(e.target);        
       };
     }, false);    
+    // **
   };
+
+  $slidesContainer.addEventListener("touchstart", startTouch, false); // **
+  $slidesContainer.addEventListener("touchmove", moveTouch, false);  // **
   
   ////////////////////////////////////////////////////////////////////////////
   

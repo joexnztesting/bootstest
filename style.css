@@ -12,6 +12,7 @@ html{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }    
 body{
   box-sizing: border-box; 
@@ -20,13 +21,27 @@ body{
   overflow-x: hidden;
   box-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.15);
 }
+img{
+  height: 100%;
+}
+/* ----- extras ----- */
+.btn-on{
+  animation-name: btn-on;
+  animation-duration: .2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+@keyframes btn-on{
+  100%{
+    transform: scale(1.1);
+  }
+} 
+
 .bckg-no-scroll{
   overflow: hidden;
-}  
-/* img{
-  max-width: 100%;
-  height: auto;
-} */
+} 
+
+/* ------------------- */
 
 
 /* *****  NAV   ***** */
@@ -219,8 +234,7 @@ body{
   align-items: center;
   height: 92vh;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .header-img-container{
   display: flex;
@@ -263,7 +277,6 @@ h1{
   top: 40vh;
   width: 80%;
   padding: 7vw;
-  font-family: 'Public Sans', sans-serif;
   color: #fff;
   text-align: center;
   font-size: 1.55rem;
@@ -381,7 +394,6 @@ h1{
 }
 .info-card-container{
   position: relative;
-  /* margin-top: -200vh; */
   margin-top: -70vh;
   animation-name: fade-card;
   animation-duration: .5s;
@@ -404,17 +416,17 @@ h1{
   overflow: hidden;
 }
 .info-card-header{ 
-  border-bottom: 2px solid rgb(184, 255, 251);
-  margin: 0 20px;
   background-color: #fff;
+  margin: 0 20px;
   height: 35%;
+  padding: 15px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 2px solid rgb(184, 255, 251);
 }
 .info-card-header img{
   border: 3px solid rgb(184, 255, 251);
-  width: 50%;
   border-radius: 50%;
 }
 .info-card-h1{
@@ -471,7 +483,6 @@ h1{
 
 /* *********  SECTION CAROUSEL  ************  */
 .prod-huerta{
-  /* height: 100vh;  */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -479,7 +490,7 @@ h1{
   overflow: hidden;
   padding-bottom: 70px;
 }
-.carousel-container{
+.carousel-cntr{
   background-color: rgb(252, 255, 252);
   border: 3px solid rgb(113, 194, 113);
   width: 310px;
@@ -489,53 +500,38 @@ h1{
   align-items: center;
   overflow: hidden ;
 }
-.btn-carousel-l,
-.btn-carousel-r{
-  background-color: rgba(105, 187, 105, 0.85);
+
+.btn-crsl-cntr{
+  position: absolute;
   height: 44px;
   width: 44px;
-  text-align: center;
-  line-height: 44px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 148px;  
-  z-index: 150;
-  overflow: hidden;
   box-shadow: 0 5px 10px -2px rgb(146, 146, 146, .6);
 }
-.btn-carousel-l{
-  left: -50px;
-}
-.btn-carousel-r{
-  right: -50px;
-}
-.btn-carousel-l svg,
-.btn-carousel-r svg{
-  height: 28px;
+.btn-crsl-cntr svg{
   fill: rgb(210, 255, 212);
+  background-color: rgba(105, 187, 105, 0.85);
+  height: 100%;
+  padding: 6px;
+  border-radius: 50%;
   cursor: pointer;
 }
-.btn-crsl-on{
-  animation-name: btn-crsl-on;
-  animation-duration: .2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
+.btn-crsl-l{
+  left: -50px;
 }
-@keyframes btn-crsl-on{
-  100%{
-    height: 24px;
-  }
-} 
+.btn-crsl-r{
+  right: -50px;
+}
 .carousel{
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.slides-container{
+.slides-cntr{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -544,7 +540,7 @@ h1{
 } 
 .slide{
   position: absolute;
-  padding: 30px 15px 55px;
+  padding: 35px 15px 65px;
   height: 100%;
   opacity: 0;
 }
@@ -556,14 +552,15 @@ h1{
   box-shadow: 0 5px 10px -2px rgb(146, 146, 146, .6);
   /* cursor: pointer; */
 }
-.btn-semll-container{
+.btn-semll-cntr{
   background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  position: absolute;
+  margin-bottom: -325px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2px;
   border-radius: 16px;
-  margin-top: -27px;
   box-shadow: 0 1px 3px 1px rgb(210, 210, 210);
   overflow: hidden;
 }
@@ -576,7 +573,104 @@ h1{
   text-align: center;
   cursor: pointer;
 }
-/* ---- ANIMATIONS ---- */
+.lista-semll-cntr{
+  background-color: rgb(238, 238, 238);
+  height: 0vh; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.lista-semll{
+  background-color: #fff;
+  width: 90%;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid rgb(102, 102, 255);
+}
+
+table, th, td {
+  border-collapse: collapse;
+  height: 100%;
+  width: 100%;
+}
+th, td {
+  border-bottom: 1px solid blue;
+  border-right: 1px solid blue;
+  padding: 15px;
+}
+tr th:last-child,
+tr td:last-child{
+  border-right: none;
+}
+tr:last-child td{
+  border-bottom: none;
+}
+
+.ver-lista{
+  animation-name: ver-lista;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;  
+}
+@keyframes ver-lista{
+  0%{
+  }
+  30%{ 
+    height: 100%;      
+    padding: 10vh 0;
+  }
+  70%{
+    height: 100%;
+    padding: 10vh 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  100%{
+    height: 100%;
+    padding: 10vh 0;
+    opacity: 1;
+    visibility: visible;
+    margin-top: -5vh;
+  }
+}
+.cerrar-lista{
+  animation-name: cerrar-lista;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;   
+  animation-fill-mode: forwards;  
+}
+@keyframes cerrar-lista{
+  0%{
+    background-color: rgb(230, 230, 230);
+    height: 100%;
+    padding: 8vh 0;
+    opacity: 1;
+    visibility: visible;
+    margin-top: -5vh;
+  }
+  20%{
+    background-color: #fff;
+    opacity: .3;
+  }
+  60%{
+    margin-top: 15vh;
+  }
+  80%{
+    height: 0;
+  }
+  100%{
+    margin-top: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ---- ANIMATIONS CAROUSEL ---- */
 .to-left-2{
   animation-name: to-left-2;
   animation-duration: .6s;

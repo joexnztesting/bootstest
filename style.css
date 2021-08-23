@@ -189,7 +189,7 @@ img{
 }
 .separador p{  
   font-size: 1.4rem;
-  font-weight: bolder;
+  font-weight: 500;
   padding: 0px 20px;
   color: rgb(255, 255, 255);
   letter-spacing: 0.001rem;
@@ -278,15 +278,17 @@ img{
 
 h1{  
   position: absolute;
-  top: 40vh;
+  top: 38vh;
   width: 80%;
-  padding: 7vw;
+  padding: 5vw 7vw;
   color: #fff;
   text-align: center;
-  font-size: 1.55rem;
+  font-size: 1.75rem;
   letter-spacing: .12rem;
+  font-weight: 500;
+  line-height: 1.85rem;
   text-shadow: 0 2px 2px #000;
-  background: linear-gradient(45deg, rgba(0,201,43,.55) 0%, rgb(29, 163, 253,.55) 100%);
+  background: linear-gradient(45deg, rgba(6, 173, 43, 0.55) 0%, rgba(18, 141, 223, 0.65) 100%);
   box-shadow: 
   inset 0px 6px 6px -4px rgb(131, 255, 245),
   inset -7px 0px 10px -6px rgb(131, 255, 245),
@@ -370,7 +372,7 @@ h1{
   line-height: 1.4rem;
   text-align: center;
   padding: 8px 10px;
-  border-radius: 10px;  
+  border-radius: 12px;  
   cursor: pointer;
 }
 /*  INFO CARD  */
@@ -790,6 +792,7 @@ tr:last-child td{
   }
 } 
 /* *********  FIN SECTION CAROUSEL  ************  */
+
 
 /* *********  SECTION ACERCA  ************  */
 .acerca{

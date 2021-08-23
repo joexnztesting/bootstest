@@ -487,6 +487,7 @@ h1{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   overflow: hidden;
   padding-bottom: 70px;
 }
@@ -498,7 +499,7 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden ;
+  overflow-x: hidden ;
 }
 
 .btn-crsl-cntr{
@@ -555,18 +556,13 @@ h1{
 .btn-semll-cntr{
   background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
   position: absolute;
-  /* -webkit-
-  -moz-
-  -o-
-  -ms- */
-  margin-bottom: -325px;
+  margin-bottom: -320px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2px;
   border-radius: 16px;
   box-shadow: 0 1px 3px 1px rgb(210, 210, 210);
-  overflow: hidden;
 }
 .btn-semll{
   background-color: rgb(255, 255, 255);

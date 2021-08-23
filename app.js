@@ -269,7 +269,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       setTimeout(() => {
         elm.innerHTML = 'Cerrar Lista';
       }, 250); 
-      elm.scrollIntoView();     
+      elm.scrollIntoView();   
     };
   };
 

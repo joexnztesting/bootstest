@@ -16,23 +16,36 @@
     transform: scale(1.65); 
   }
   .logo{
-    top: 20vh; 
-    height: 19vh;
+    top: 15vh; 
+    height: 22vh;
   }
   h1{ 
     /*  color: red; */
-    top: 44vh;
+    top: 42vh;
     width: 80%; /**/
-    font-size: 1.8rem;
-    padding: 7vw; /**/
+    font-size: 2rem;
+    line-height: 2.3rem;    
   }
+  .separador{
+    line-height: 55px;
+  }
+  .separador p{  
+    font-size: 1.65rem;
+    letter-spacing: 0.05rem;
+  }
+  .separador span{
+    font-size: 1.3rem;
+    letter-spacing: 0.005rem;
+  }
+
+
   .marco{
-    width: 85%;
-    padding: 10vw 7vw;
-    margin: 20vh 0 20vh;
+    width: 88%;
+    padding: 25px;
+    margin: 12vh 0 15vh;
   }
   .marco-plantas p{
-    font-size: 1.35rem;
+    font-size: 1.55rem;
     line-height: 1.85rem;
     padding: 20px 15px; 
   }
@@ -41,24 +54,24 @@
   }
   .contacto-sumate{ 
     /*border: 1px solid blue;*/
-    padding: 30px 20px 10px;
-    font-size: 1.5rem;
+    padding: 30px 30px 10px;
+    /* font-size: 1.5rem; */
   }
   .footer{
-    padding: 2.5vh 0 12vh;
+    padding: 2.5vh 0 11vh;
   }  
 }
 
 /* Only for J7*/
 @media (min-width: 370px) {
-  .imagen-header{
+  /* .imagen-header{
     transform: scale(1.8); 
   }
   h1{
     top: 43vh;
-    width: 80%; /**/
+    width: 80%; 
     font-size: 2rem;
-    padding: 7vw; /**/
+    padding: 7vw; 
   } 
 
   .carousel-container{
@@ -69,7 +82,7 @@
     height: 50px;
     width: 50px;
     line-height: 50px;
-    top: 148px;/**/
+    top: 148px;
   }
   .btn-carousel-l{
     left: -50px;
@@ -100,7 +113,7 @@
   }
   .formu-container{ 
     height: 80vh;
-  }
+  } */
 }
 /* Only for J7*/
 
@@ -201,7 +214,8 @@
   html,
   .nav-container,
   .panel-fondo,
-  .nav-row{
+  .nav-row,
+  .info-card-fondo{
     width: calc(100% - 20vw);
     margin: 0 auto;
     
@@ -213,7 +227,8 @@
   html,
   .nav-container,
   .panel-fondo,
-  .nav-row{
+  .nav-row,
+  .info-card-fondo{
     width: calc(100% - 25vw);
   }
 }
@@ -223,7 +238,8 @@
   html,
   .nav-container,
   .panel-fondo,
-  .nav-row{
+  .nav-row,
+  .info-card-fondo{
     width: calc(100% - 30vw);
   }
   .img-head{

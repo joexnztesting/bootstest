@@ -350,6 +350,7 @@ h1{
 }
 .figcap p{
   font-size: 1.2rem;
+  line-height: 1.5rem;
   text-align: center;
 }
 .btn-card-border{
@@ -370,11 +371,11 @@ h1{
   align-items: center;
   width: 90px;
   color: rgb(14, 14, 255);  
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  line-height: 1.4rem;
+  line-height: 1.35rem;
   text-align: center;
-  padding: 8px 10px;
+  padding: 9px;
   border-radius: 12px;  
   cursor: pointer;
 }
@@ -501,7 +502,7 @@ h1{
 }
 .carousel-cntr{
   background-color: rgb(252, 255, 252);
-  border: 3px solid rgb(113, 194, 113);
+  border: 2px solid rgb(113, 194, 113);
   width: 310px;
   border-radius: 15px;
   display: flex;
@@ -564,8 +565,7 @@ h1{
 .btn-semll-cntr{
   background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
   position: absolute;
-  /* margin-bottom: -320px; */
-  top: 468px;
+  top: 473px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -575,8 +575,10 @@ h1{
 }
 .btn-semll{
   background-color: rgb(255, 255, 255);
-  font-size: 1.12rem;
   color: rgb(14, 14, 255);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.35rem;
   padding: 6px 12px;
   border-radius: 14px;
   text-align: center;
@@ -825,7 +827,7 @@ tr:last-child td{
 .marco-plantas p{
   color: rgb(53, 53, 53);
   font-size: 1.5rem;
-  line-height: 1.65rem;
+  line-height: 1.75rem;
   padding: 20px 15px; 
   border-top: 2px solid rgba(255, 201, 23, 0.733);
   border-bottom: 2px solid rgba(255, 201, 23, 0.733);

@@ -16,16 +16,17 @@
     transform: scale(1.65); 
   }
   .logo{
-    top: 15vh; 
+    top: 13vh; 
     height: 22vh;
   }
   h1{ 
     /*  color: red; */
-    top: 42vh;
-    width: 80%; /**/
-    font-size: 2rem;
-    line-height: 2.3rem;    
+    top: 38vh;
+    width: 82%; /**/
+    font-size: 2.3rem;
+    line-height: 2.5rem;    
   }
+  
   .separador{
     line-height: 55px;
   }
@@ -38,6 +39,10 @@
     letter-spacing: 0.005rem;
   }
 
+  .info-card-card{
+    width: 300px;
+    height: 500px;
+  }
 
   .marco{
     width: 88%;
@@ -54,7 +59,7 @@
   }
   .contacto-sumate{ 
     /*border: 1px solid blue;*/
-    padding: 30px 30px 10px;
+    padding: 30px 35px 10px;
     /* font-size: 1.5rem; */
   }
   .footer{
@@ -62,66 +67,12 @@
   }  
 }
 
-/* Only for J7*/
-@media (min-width: 370px) {
-  /* .imagen-header{
-    transform: scale(1.8); 
-  }
-  h1{
-    top: 43vh;
-    width: 80%; 
-    font-size: 2rem;
-    padding: 7vw; 
-  } 
-
-  .carousel-container{
-    width: 340px;
-  }
-  .btn-carousel-l,
-  .btn-carousel-r{
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    top: 148px;
-  }
-  .btn-carousel-l{
-    left: -50px;
-  }
-  .btn-carousel-r{
-    right: -50px;
-  }
-  .slides-container{
-    width: 230px;
-    height: 370px;
-  } 
-  .slide{
-    padding: 35px 15px 65px;
-  }
-  .btn-semll-container{
-    padding: 2px;
-    border-radius: 16px;
-    margin-top: -33px;
-  }
-  .btn-semll{
-    font-size: 1.2rem;
-    padding: 10px 16px;
-    border-radius: 14px;
-  }
-
-  .row-icons{
-    width: 80%;
-  }
-  .formu-container{ 
-    height: 80vh;
-  } */
-}
-/* Only for J7*/
 
 
 @media (min-width: 520px) {
   
   .panel{
-    width: 40%;
+    width: 50%;
   }
   .imagen-header{
     opacity: 0;
@@ -137,18 +88,49 @@
     background-repeat: no-repeat;
   }
   .logo{
-    top: calc(20vh + 2vw); 
+    top: 17vh; 
     height: 200px;
   }
-  h1{  /* color: blue;  */
-    top: calc(44vh + 3vw);
+  h1{ 
+    top: 43vh;
     width: 450px;
-    font-size: 2.7rem;
+    font-size: 3rem;
+    line-height: 3.3rem;
     padding: 2.2rem 2.4rem;
   }
-  .los-prod{
-    padding: 0 0 65px;
+
+  .separador{
+    line-height: 60px;
   }
+  .separador p{  
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0px 50px;
+  }
+  .separador span{
+    font-size: 1.5rem;
+    letter-spacing: 0.03rem;
+  }
+
+  .los-prod{
+    padding-bottom: 50px;
+  }
+
+  .bq-manten{
+    width: 550px;
+    margin: 0 auto;
+  }
+  .bq-semillas,
+  .bq-manten,
+  .bq-social-icons{
+    padding: 60px 55px 60px;
+  }
+  .bq-semillas p,
+  .bq-manten p,
+  .bq-social-icons p{
+    font-size: 2rem;
+  }
+
   .cards{
     display:flex;
     flex-direction: row;
@@ -156,29 +138,65 @@
     align-items: center; 
     flex-wrap: wrap;   
   }
+  .figcap p{
+    font-size: 1.35rem;
+  }
+  .btn-card{ 
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.35rem;
+    padding: 9px 5px;
+  }
+
+  .info-card-card{
+    width: 450px;
+    height: 600px;
+  }
+
+
+  .carousel-cntr{
+    width: 430px;
+  }
+  .slides-cntr{
+    height: 400px;
+  } 
+  .slide{
+    padding: 35px 20px 65px;
+  }
+  .btn-crsl-l{
+    left: -205px;
+
+  }
+  .btn-crsl-r{
+    right: -205px;
+  }
+
+
   .marco{
     width: 450px;
     padding: 50px 30px;
-    margin: 18vh 0;
+    margin: 14vh 0;
   }
   .marco-plantas p{
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
     padding: 25px 30px; 
   }
+
   .row-icons{
-    padding: 50px 0;
-    width: 350px;
+    padding: 0px 0 65px;
+    width: 400px;
   }
   .row-icons div{
-    width: 50px;
+    width: 60px;
   } 
+
   .contacto-sumate{ 
     /*border: 1px solid red;*/
     width: 400px;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     padding: 20px 40px;
-    margin-bottom: 10px;
+    margin: 60px 0  10px;
   }
   .contact-form legend,
   .contact-form-response{
@@ -193,19 +211,19 @@
   .btn-cont{
     height: 40px;
     padding: 3px;
-    margin: 40px auto 0px;
+    margin: 50px auto 40px;
   }
   .btn-formu{
     height: 34px;
   }
 }
 
-
-@media (min-width: 768px) {
-  .marco-plantas p{
-    font-size: 1.6rem;
-  } 
+.footer{
+  background: rgba(0, 11, 168, 0.8);
+  color: rgb(248, 252, 41);
+  font-size: 1.2rem;
 }
+
 
 
 /* HTML con MARGEN  */

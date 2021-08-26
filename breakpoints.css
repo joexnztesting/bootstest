@@ -1,48 +1,85 @@
 
 
 @media (min-width: 350px) {
-  .nav-container,
+  /* .nav-container,
   .panel-fondo,
   .panel{
-    height: 92vh;
+    height: calc(100vh - 50px);
   }
   .nav-row{
-    height: 8vh;
+    height: 50px;
   }
   .header-container{
-    height: 93.5vh;
-  }
+    height: calc(100vh - 50px);
+  } 
+  */
   .imagen-header{
-    transform: scale(1.65); 
+    transform: scale(1.7); 
   }
   .logo{
-    top: 13vh; 
-    height: 22vh;
-  }
-  h1{ 
-    /*  color: red; */
-    top: 38vh;
-    width: 82%; /**/
+    top: 11vh; 
+    height: 150px;
+  }  
+  h1{
+    top: 36vh;
+    width: 85%; 
     font-size: 2.3rem;
-    line-height: 2.5rem;    
+    line-height: 2.65rem;
+    padding: 20px 25px;    
   }
   
   .separador{
     line-height: 55px;
+    letter-spacing: 0.04rem;
   }
   .separador p{  
     font-size: 1.65rem;
-    letter-spacing: 0.05rem;
   }
   .separador span{
     font-size: 1.3rem;
-    letter-spacing: 0.005rem;
+  }
+
+  .card{
+    width: 265px;
   }
 
   .info-card-card{
     width: 300px;
     height: 500px;
   }
+  .info-card-header img{
+    height: 95%;
+  }
+  .info-card-h1{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  .description,
+  .title{
+    font-size: 1.4rem;
+  }
+  .info-txt{
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+
+
+  .carousel-cntr{
+    width: 340px;
+  }
+  .slides-cntr{
+    height: 400px;
+  } 
+  .slide{
+    padding: 40px 17px 55px;
+  }
+  .btn-crsl-l{
+    left: -163px;
+  }
+  .btn-crsl-r{
+    right: -163px;
+  }  
+
 
   .marco{
     width: 88%;
@@ -51,22 +88,76 @@
   }
   .marco-plantas p{
     font-size: 1.55rem;
-    line-height: 1.85rem;
+    line-height: 2rem;
     padding: 20px 15px; 
+  }
+
+  .row-icons{
+    width: 80%;
   }
   .row-icons div{
     width: 52px;
   }
-  .contacto-sumate{ 
-    /*border: 1px solid blue;*/
+  .contacto-sumate{
     padding: 30px 35px 10px;
-    /* font-size: 1.5rem; */
-  }
+  } 
+
   .footer{
-    padding: 2.5vh 0 11vh;
-  }  
+    padding: 2.5vh 0 11vh;    
+  }
+  .footer-text{
+    font-size: 1.1rem;
+  }
+
 }
 
+/* j7 */
+@media (min-width: 370px) {
+  .imagen-header{
+    transform: scale(1.8); 
+  }
+  .logo{
+    top: 13vh; 
+    height: 160px;
+  }
+  h1{
+    top: 39vh;
+  }
+
+  .separador{
+    line-height: 63px;
+  }
+  .separador p{  
+    font-size: 1.72rem;
+  }
+  .separador span{
+    font-size: 1.37rem;
+  }
+
+  .card{
+    width: 270px;
+  }
+
+  .info-card-card{
+    width: 300px;
+    height: 550px;
+  }
+  .info-card-header{
+    height: 33%;
+  }
+  .info-card-h1{
+    font-size: 1.25rem;
+    line-height: 1.6rem;
+  }
+  .info-card-info{
+    height: 67%;
+  }
+  
+  .footer{
+    padding: 2.5vh 0 10.5vh;    
+  }
+}
+/* fin j7 */
 
 
 @media (min-width: 520px) {

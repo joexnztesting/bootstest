@@ -632,17 +632,17 @@ tr:last-child td{
   }
   30%{ 
     height: 100%;      
-    padding: 20px 0;
+    padding: 20px 0 30px;
   }
   70%{
     height: 100%;
-    padding: 20px 0;
+    padding: 20px 0 30px;
     opacity: 1;
     visibility: visible;
   }
   100%{
     height: 100%;
-    padding: 20px 0;
+    padding: 20px 0 30px;
     opacity: 1;
     visibility: visible;
     margin-top: -70px;

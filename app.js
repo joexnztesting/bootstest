@@ -259,18 +259,19 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       $listaSemCont.classList.remove('ver-lista');
       setTimeout(() => {
         elm.innerHTML = `Ver Lista</br>Completa`;
-        btnSmll.style.top = '85%'
+        d.querySelector('.btn-semll-border').style.top = '0px';
       }, 250);
-      $slidesContainer.scrollIntoView(); 
+      // d.querySelector('.btn-semll-cntr').style.marginBottom = '40px';
+      d.querySelector('.prod-huerta').scrollIntoView(); 
     };    
     if($listaSemCont.classList.contains('list-cont-hidden')){
       $listaSemCont.classList.add('ver-lista');
       $listaSemCont.classList.remove('list-cont-hidden');
       setTimeout(() => {
         elm.innerHTML = `Cerrar Lista`;
-        btnSmll.style.top = '86%'
+        d.querySelector('.btn-semll-border').style.top = '13px';
       }, 250); 
-      elm.scrollIntoView(); 
+      d.querySelector('.btn-semll-cntr').scrollIntoView();
     };
   };
   

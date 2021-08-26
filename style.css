@@ -217,7 +217,7 @@ img{
 .bq-manten,
 .bq-social-icons{
   text-align: center;
-  padding: 50px 55px 40px;
+  padding: 40px 55px;
 }
 .bq-semillas p,
 .bq-manten p,
@@ -337,7 +337,7 @@ h1{
 .card img{
   width: 73%;
   box-shadow: 0px 16px 10px 8px rgba(196, 196, 196, 0.85);
-  margin-top: 15px;
+  margin-top: 25px;
   cursor: pointer;
 }
 .figcap{
@@ -499,13 +499,13 @@ h1{
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-bottom: 70px;
-  margin-bottom: 40px;
+  padding-top: 15px;
+  margin-top: -15px;
 }
 .carousel-cntr{
   background-color: rgb(250, 255, 250);
   border: 3px solid rgb(113, 194, 113, .5);
-  width: 310px;
+  width: 300px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -532,10 +532,10 @@ h1{
   cursor: pointer;
 }
 .btn-crsl-l{
-  left: -150px;
+  left: -145px;
 }
 .btn-crsl-r{
-  right: -150px;
+  right: -145px;
 }
 .carousel{
   display: flex;
@@ -547,11 +547,11 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;  
-  height: 390px;
+  height: 370px;  
 } 
 .slide{
   position: absolute;
-  padding: 40px 18px 50px;
+  padding: 45px 15px 55px;
   height: 100%;
   opacity: 0;
 }
@@ -563,9 +563,18 @@ h1{
   box-shadow: 0 5px 10px -2px rgb(146, 146, 146, .6);
 }
 .btn-semll-cntr{
+  /* background-color: rgba(127, 255, 212, 0.432); */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+  margin: -32px 0 0px;
+}
+.btn-semll-border{
   background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
   position: absolute;
-  top: 85%;
+  top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -579,7 +588,7 @@ h1{
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.35rem;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 14px;
   text-align: center;
   cursor: pointer;
@@ -645,7 +654,7 @@ tr:last-child td{
     padding: 20px 0 30px;
     opacity: 1;
     visibility: visible;
-    margin-top: -70px;
+    margin-top: -60px;
   }
 }
 .cerrar-lista{

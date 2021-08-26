@@ -38,7 +38,7 @@
     font-size: 1.3rem;
   }
   .card{
-    width: 265px;
+    width: 270px;
   }
   .info-card-card{
     width: 300px;
@@ -60,19 +60,23 @@
     line-height: 1.8rem;
   }
   .carousel-cntr{
-    width: 340px;
+    width: 330px;
   }
   .slides-cntr{
     height: 400px;
   } 
   .slide{
-    padding: 40px 17px 55px;
+    padding: 40px 15px 55px;
   }
   .btn-crsl-l{
-    left: -163px;
+    left: -160px;
   }
   .btn-crsl-r{
-    right: -163px;
+    right: -160px;
+  }
+  tr th:first-child,
+  tr td:first-child{
+    width: 60%;
   }
   .marco{
     width: 88%;
@@ -98,7 +102,7 @@
   }
   .footer-text{
     font-size: 1.1rem;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.03rem;
   }
 }
 
@@ -184,25 +188,23 @@
     font-size: 1.5rem;
     letter-spacing: 0.03rem;
   }
-  .los-prod{
+  .prod-cards{
     padding-bottom: 20px;
   }
   .cards-container{
     margin-bottom: 0px;
   }
-  .bq-manten{
-    width: 550px;
-    margin: 0 auto;
-  }
   .bq-semillas,
   .bq-manten,
   .bq-social-icons{
+    width: 560px;
+    margin: 0 auto;
     padding: 60px 55px 60px;
   }
   .bq-semillas p,
   .bq-manten p,
   .bq-social-icons p{
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   .cards{
     display:flex;
@@ -225,7 +227,7 @@
     height: 600px;
   }
   .carousel-cntr{
-    width: 430px;
+    width: 460px;
   }
   .slides-cntr{
     height: 400px;
@@ -234,10 +236,10 @@
     padding: 35px 20px 65px;
   }
   .btn-crsl-l{
-    left: -205px;
+    left: -215px;
   }
   .btn-crsl-r{
-    right: -205px;
+    right: -215px;
   }
 
   .lista-semll{

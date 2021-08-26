@@ -26,8 +26,7 @@
     font-size: 2.3rem;
     line-height: 2.65rem;
     padding: 20px 25px;    
-  }
-  
+  }  
   .separador{
     line-height: 55px;
     letter-spacing: 0.04rem;
@@ -38,11 +37,9 @@
   .separador span{
     font-size: 1.3rem;
   }
-
   .card{
     width: 265px;
   }
-
   .info-card-card{
     width: 300px;
     height: 500px;
@@ -62,8 +59,6 @@
     font-size: 1.3rem;
     line-height: 1.8rem;
   }
-
-
   .carousel-cntr{
     width: 340px;
   }
@@ -78,9 +73,7 @@
   }
   .btn-crsl-r{
     right: -163px;
-  }  
-
-
+  }
   .marco{
     width: 88%;
     padding: 25px;
@@ -91,7 +84,6 @@
     line-height: 2rem;
     padding: 20px 15px; 
   }
-
   .row-icons{
     width: 80%;
   }
@@ -101,17 +93,16 @@
   .contacto-sumate{
     padding: 30px 35px 10px;
   } 
-
   .footer{
-    padding: 2.5vh 0 11vh;    
+    padding: 15px 0 75px;    
   }
   .footer-text{
     font-size: 1.1rem;
+    letter-spacing: 0.04rem;
   }
-
 }
 
-/* j7 */
+
 @media (min-width: 370px) {
   .imagen-header{
     transform: scale(1.8); 
@@ -123,7 +114,6 @@
   h1{
     top: 39vh;
   }
-
   .separador{
     line-height: 63px;
   }
@@ -133,11 +123,9 @@
   .separador span{
     font-size: 1.37rem;
   }
-
   .card{
     width: 270px;
   }
-
   .info-card-card{
     width: 300px;
     height: 550px;
@@ -150,14 +138,9 @@
     line-height: 1.6rem;
   }
   .info-card-info{
-    height: 67%;
-  }
-  
-  .footer{
-    padding: 2.5vh 0 10.5vh;    
-  }
+    height: 67%;    
+  }  
 }
-/* fin j7 */
 
 
 @media (min-width: 520px) {
@@ -189,7 +172,6 @@
     line-height: 3.3rem;
     padding: 2.2rem 2.4rem;
   }
-
   .separador{
     line-height: 60px;
   }
@@ -202,11 +184,12 @@
     font-size: 1.5rem;
     letter-spacing: 0.03rem;
   }
-
   .los-prod{
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
-
+  .cards-container{
+    margin-bottom: 0px;
+  }
   .bq-manten{
     width: 550px;
     margin: 0 auto;
@@ -221,7 +204,6 @@
   .bq-social-icons p{
     font-size: 2rem;
   }
-
   .cards{
     display:flex;
     flex-direction: row;
@@ -238,13 +220,10 @@
     line-height: 1.35rem;
     padding: 9px 5px;
   }
-
   .info-card-card{
     width: 450px;
     height: 600px;
   }
-
-
   .carousel-cntr{
     width: 430px;
   }
@@ -256,12 +235,18 @@
   }
   .btn-crsl-l{
     left: -205px;
-
   }
   .btn-crsl-r{
     right: -205px;
   }
 
+  .lista-semll{
+    width: 70%;
+  }
+  tr th:first-child,
+  tr td:first-child{
+    width: 55%;
+  }
 
   .marco{
     width: 450px;
@@ -273,7 +258,6 @@
     line-height: 2.2rem;
     padding: 25px 30px; 
   }
-
   .row-icons{
     padding: 0px 0 65px;
     width: 400px;
@@ -281,7 +265,6 @@
   .row-icons div{
     width: 60px;
   } 
-
   .contacto-sumate{ 
     /*border: 1px solid red;*/
     width: 400px;
@@ -302,14 +285,15 @@
   .btn-cont{
     height: 40px;
     padding: 3px;
-    margin: 50px auto 40px;
+    margin: 50px auto;
   }
   .btn-formu{
     height: 34px;
   }
-}
-.footer{
-  font-size: 1rem;
+  .footer-text{
+    font-size: 1.2rem;
+    letter-spacing: 0.06rem;
+  }
 }
 
 
@@ -323,11 +307,7 @@
   .nav-row,
   .info-card-fondo{
     width: calc(100% - 20vw);
-    margin: 0 auto;
-    
-  }
-  .footer{
-    font-size: 1.2rem;
+    margin: 0 auto;    
   }
 }
 

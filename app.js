@@ -308,7 +308,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       };
       // semillas lista *****
       if(e.target.matches('.btn-semll')){
-        verListaSemll(e.target); // window.scrollTo(0, 100);    
+        verListaSemll(e.target);   
       };
     });    
     // **
@@ -316,7 +316,33 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   //**************************************************** */
   if(isMobile.ios()){
     d.addEventListener('touchstart', (e)=>{
-
+      // nav *****
+      if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
+        navPanelShow();      
+      };
+      // cards *****
+      if(e.target.matches('.btn-card') || e.target.matches('.card img')){
+        showCardInfo(e.target)
+        if(e.target.classList.contains('btn-card')){
+          btnOn(e.target.parentElement);
+        }
+      };
+      if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
+        hideCardInfo()
+      };
+      // carousel *****
+      if(e.target.matches('.btn-crsl-l *')){
+        btnLeft();
+        btnOn(d.querySelector('.btn-crsl-l'));
+      };
+      if(e.target.matches('.btn-crsl-r *')){
+        btnRight();
+        btnOn(d.querySelector('.btn-crsl-r'));
+      };
+      // semillas lista *****
+      if(e.target.matches('.btn-semll')){
+        verListaSemll(e.target);  
+      };
     }, false);    
     // **
   };

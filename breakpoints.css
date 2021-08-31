@@ -1,18 +1,6 @@
 
 
 @media (min-width: 350px) {
-  /* .nav-container,
-  .panel-fondo,
-  .panel{
-    height: calc(100vh - 50px);
-  }
-  .nav-row{
-    height: 50px;
-  }
-  .header-container{
-    height: calc(100vh - 50px);
-  } 
-  */
   .imagen-header{
     transform: scale(1.7); 
   }
@@ -36,14 +24,11 @@
   }
   .separador span{
     font-size: 1.3rem;
-  }
-  .card{
-    width: 270px;
-  }
-  .info-card-card{
+  }  
+  /* .info-card-card{
     width: 300px;
     height: 500px;
-  }
+  } */
   .info-card-header img{
     height: 95%;
   }
@@ -127,13 +112,6 @@
   .separador span{
     font-size: 1.37rem;
   }
-  .card{
-    width: 270px;
-  }
-  .info-card-card{
-    width: 300px;
-    height: 550px;
-  }
   .info-card-header{
     height: 33%;
   }
@@ -158,7 +136,7 @@
   }
   .img-head{ 
     /* border: 1px solid yellowgreen; */
-    height: 93.5vh;
+    height: calc(100vh - 50px);
     width: 100%;
     background-image: url("./img/header_desk.jpg");  
     background-size: cover;
@@ -194,6 +172,9 @@
   .cards-container{
     margin-bottom: 0px;
   }
+  .card{
+    width: 270px;
+  }
   .bq-semillas,
   .bq-manten,
   .bq-social-icons{
@@ -223,11 +204,12 @@
     padding: 9px 5px;
   }
   .info-card-card{
-    width: 450px;
-    height: 600px;
+    width: 500px;
+    height: 700px;
   }
+
   .carousel-cntr{
-    width: 460px;
+    width: 730px;
   }
   .slides-cntr{
     height: 400px;
@@ -236,10 +218,10 @@
     padding: 35px 20px 65px;
   }
   .btn-crsl-l{
-    left: -215px;
+    left: -355px;
   }
   .btn-crsl-r{
-    right: -215px;
+    right: -355px;
   }
 
   .lista-semll{

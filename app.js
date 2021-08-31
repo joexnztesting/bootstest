@@ -261,7 +261,6 @@ window.addEventListener('DOMContentLoaded',(e)=>{
         elm.innerHTML = `Ver Lista</br>Completa`;
         d.querySelector('.btn-semll-border').style.top = '0px';
       }, 250);
-      // d.querySelector('.btn-semll-cntr').style.marginBottom = '40px';
       d.querySelector('.prod-huerta').scrollIntoView(); 
     };    
     if($listaSemCont.classList.contains('list-cont-hidden')){

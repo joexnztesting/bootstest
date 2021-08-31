@@ -9,10 +9,10 @@
     height: 150px;
   }  
   h1{
-    top: 36vh;
+    top: 38vh;
     width: 85%; 
     font-size: 2.3rem;
-    line-height: 2.65rem;
+    line-height: 2.5rem;
     padding: 20px 25px;    
   }  
   .separador{
@@ -24,11 +24,8 @@
   }
   .separador span{
     font-size: 1.3rem;
-  }  
-  /* .info-card-card{
-    width: 300px;
-    height: 500px;
-  } */
+  } 
+  
   .info-card-header img{
     height: 95%;
   }
@@ -148,8 +145,8 @@
     height: 200px;
   }
   h1{ 
-    top: 43vh;
-    width: 450px;
+    top: 44vh;
+    width: 500px;
     font-size: 3rem;
     line-height: 3.3rem;
     padding: 2.2rem 2.4rem;
@@ -209,19 +206,30 @@
   }
 
   .carousel-cntr{
-    width: 730px;
+    width: 820px;
   }
   .slides-cntr{
-    height: 400px;
+    height: 450px;
   } 
   .slide{
-    padding: 35px 20px 65px;
+    padding: 45px 25px 75px;
+  }
+  .btn-crsl-cntr{
+    height: 50px;
+    width: 50px;
   }
   .btn-crsl-l{
-    left: -355px;
+    left: -400px;
   }
   .btn-crsl-r{
-    right: -355px;
+    right: -400px;
+  }
+
+  .btn-semll{
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    padding: 10px 20px;
   }
 
   .lista-semll{
@@ -233,7 +241,7 @@
   }
 
   .marco{
-    width: 450px;
+    width: 650px;
     padding: 50px 30px;
     margin: 14vh 0;
   }

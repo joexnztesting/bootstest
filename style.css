@@ -90,18 +90,16 @@ img{
   transform: translateX(0%);    
 }
 .panel-item{
-  margin: 25px 0;
-  width: 80%;
+  width: 100%;
+  padding: 25px;
 }
 .panel-item a{  
   background-color: rgb(242, 251, 255);
-  border: 2px solid rgb(123, 227, 235);
-  padding: 8px 12px;
+  border: 2px solid rgb(106, 241, 88);
+  padding: 8px 20px;
   border-radius: 5px;
-  font-size: 1.1rem;
-  color: rgb(0, 21, 141);
-  text-decoration: none;
-  box-shadow: 0 1px 3px 1px rgb(210, 210, 210);
+  font-size: 1.2rem;
+  color: rgb(14, 14, 255);
 }
 
 .nav-row{
@@ -692,8 +690,8 @@ tr:last-child td{
 /* ---- ANIMATIONS CAROUSEL ---- */
 .to-left-2{
   animation-name: to-left-2;
-  animation-duration: .6s;
-  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
 }
@@ -707,8 +705,8 @@ tr:last-child td{
 } 
 .left-2-to-left{
   animation-name: left-2-to-left;
-  animation-duration: .6s;
-  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
 }
@@ -722,8 +720,8 @@ tr:last-child td{
 } 
 .left-to-center{
   animation-name: left-to-center;
-  animation-duration: .6s;
-  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
 }
@@ -737,8 +735,8 @@ tr:last-child td{
 }
 .center-to-left{
   animation-name: center-to-left;
-  animation-duration: .6s;
-  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
 }
@@ -749,8 +747,8 @@ tr:last-child td{
 }  
 .center-to-right{
   animation-name: center-to-right;
-  animation-duration: .6s;
-  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
 }
@@ -761,8 +759,8 @@ tr:last-child td{
 }  
 .right-to-center{
   animation-name: right-to-center;
-  animation-duration: .6s;
-  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
 }
@@ -776,8 +774,8 @@ tr:last-child td{
 } 
 .right-2-to-right{
   animation-name: right-2-to-right;
-  animation-duration: .6s;
-  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
 }
@@ -791,8 +789,8 @@ tr:last-child td{
 } 
 .to-right-2{
   animation-name: to-right-2;
-  animation-duration: .6s;
-  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
   animation-iteration-count: 1;   
   animation-fill-mode: forwards;  
 }

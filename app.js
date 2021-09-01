@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $navPanel = d.querySelector('.panel'),
   $btnHamb = d.querySelector('.btn-hamb'),
   $navRowItem = d.querySelectorAll('.nav-row-item a'),
+  $main = d.querySelector('main'),
   // Cards
   $imgsCard = document.querySelectorAll('.card img'),
   $btnsCard = document.querySelectorAll('.btn-card'),
@@ -70,6 +71,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     $navRowItem.forEach((itm)=>{
       itm.classList.toggle('item')
     });
+    $main.classList.toggle('filtro-blur');
   }
 
   ////////////////////////////////////////////////////////////////////////////
@@ -149,7 +151,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
     $template.querySelector('.info-anexa').textContent = $infoCardsArray[i].infoAnexa;
     let $clone = document.importNode($template, true);
     $fragment.appendChild($clone); 
-    $templateContainer.appendChild($fragment); 
+    $templateContainer.appendChild($fragment);
     d.body.style.overflow = "hidden";    
   }
   const hideCardInfo = ()=>{
@@ -276,11 +278,8 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   
   ////////////////////////////////////////////////////////////////////////////
   
-  // LLAMADORES 
-  
-  $slidesContainer.addEventListener("touchstart", startTouch, false); // **
-  $slidesContainer.addEventListener("touchmove", moveTouch, false);  // **
-  
+  // LLAMADORES   
+   
   if(isMobile.android() || isBrowser.any()){
     d.addEventListener('click', (e)=>{
       // nav *****
@@ -310,8 +309,7 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       if(e.target.matches('.btn-semll')){
         verListaSemll(e.target);   
       };
-    });    
-    // **
+    });
   };
   //**************************************************** */
   if(isMobile.ios()){
@@ -343,9 +341,12 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       if(e.target.matches('.btn-semll')){
         verListaSemll(e.target);  
       };
-    }, false);    
-    // **
+    }, false);
   };
+
+  // touch del carousel
+  $slidesContainer.addEventListener("touchstart", startTouch, false); 
+  $slidesContainer.addEventListener("touchmove", moveTouch, false);  
 
   
   ////////////////////////////////////////////////////////////////////////////

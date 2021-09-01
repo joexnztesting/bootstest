@@ -67,7 +67,10 @@ img{
 }
 .fondo-active{
   opacity: 1;   
-  visibility: visible;
+  visibility: visible;  
+}
+.filtro-blur{
+  filter: blur(3px);
 }
 .panel{
   background-image: url("./img/fondo_panel.jpg");  
@@ -79,7 +82,7 @@ img{
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 70%;
+  width: 77%;
   height: calc(100vh - 50px);
   transition: all .3s ease-out;
   transform: translateX(-100%);
@@ -91,7 +94,7 @@ img{
 }
 .panel-item{
   width: 100%;
-  padding: 25px;
+  padding: 25px 35px;
 }
 .panel-item a{  
   background-color: rgb(242, 251, 255);
@@ -100,6 +103,7 @@ img{
   border-radius: 5px;
   font-size: 1.2rem;
   color: rgb(14, 14, 255);
+  text-decoration-thickness: 1px;
 }
 
 .nav-row{

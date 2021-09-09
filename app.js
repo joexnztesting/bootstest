@@ -9,13 +9,21 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   $navRowItem = d.querySelectorAll('.nav-row-item a'),
   $main = d.querySelector('main'),
   // Cards
+  CardsJson = './img/cards/cards.json',
+  $cardsArray = [], 
+  $templateCardsCntnr = d.querySelector('.template-cards-container'),
+  $templateCards = d.getElementById('cards-template').content, 
+  $fragmentCards = d.createDocumentFragment(),
+
   $imgsCard = document.querySelectorAll('.card img'),
   $btnsCard = document.querySelectorAll('.btn-card'),
-  infoJson = './img/cards/info/info-cards.json',
+
+  CardsInfoJson = './img/cards/info/info-cards.json',
   $infoCardsArray = [], 
-  $templateContainer = d.querySelector('.template-container'),
-  $template = d.getElementById('info-card-template').content, 
-  $fragment = d.createDocumentFragment(),
+  $templateInfoCntnr = d.querySelector('.template-info-container'),
+  $templateInfo = d.getElementById('info-card-template').content, 
+  $fragmentInfo = d.createDocumentFragment(),
+
   // Carousel
   $slidesContainer = d.querySelector('.slides-cntr'),
   $slide = d.querySelectorAll('.slide'),
@@ -101,9 +109,35 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   // CARDS ******
 
   // ***********************************************
-  // Poblar Array de cards-info
 
+
+  // Poblar Array de cards
   async function loadCards(url){
+    try{
+      let res = await fetch(url),
+      json = await res.json()
+      for(let i=0; i<json.length; i++){         
+        $cardsArray.push({
+          img :`${json[i].img}`, 
+          texto : `${json[i].texto}`
+        }); 
+      }
+      $cardsArray.forEach(el=>{
+        $templateCards.querySelector('img').setAttribute('src', el.img);
+        $templateCards.querySelector('.texto').textContent = el.texto;        
+        let $cloneCard = document.importNode($templateCards, true);
+        $fragmentCards.appendChild($cloneCard); 
+        $templateCardsCntnr.appendChild($fragmentCards);
+      });
+    }catch(err){
+      console.log(err);
+    }
+  }
+  loadCards(CardsJson)
+
+
+  // Poblar Array de cards-info
+  async function loadCardsInfo(url){
     try{
       let res = await fetch(url),
       json = await res.json()
@@ -116,46 +150,84 @@ window.addEventListener('DOMContentLoaded',(e)=>{
           composition : `${json[i].composition}`,
           infoAnexa : `${json[i].infoAnexa}`
         }); 
-      }        
+      } 
+      
+
+      // $infoCardsArray.forEach(el=>{     
+
+      //   d.addEventListener('click', (e)=>{
+
+      //     if(e.target.matches('.btn-card') || e.target.matches('.card img')){
+
+      //       console.log();
+
+      //       $templateInfo.querySelector('img').setAttribute('src', el.img);
+      //       $templateInfo.querySelector('.info-card-h1').textContent = el.h1;
+      //       $templateInfo.querySelector('.description').textContent = el.description;
+      //       $templateInfo.querySelector('.modo-d-uso').textContent = el.modoDeUso;
+      //       $templateInfo.querySelector('.composition').textContent = el.composition;
+      //       $templateInfo.querySelector('.info-anexa').textContent = el.infoAnexa;
+      //       let $cloneInfo = document.importNode($templateInfo, true);
+      //       $fragmentInfo.appendChild($cloneInfo); 
+      //       $templateInfoCntnr.appendChild($fragmentInfo);
+      //       d.body.style.overflow = "hidden";    
+            
+      //       if(e.target.classList.contains('btn-card')){
+      //         btnOn(e.target.parentElement);
+      //       }        
+            
+      //     };
+
+
+      //     if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
+      //       $templateInfoCntnr.removeChild($templateInfoCntnr.lastElementChild);
+      //       d.body.style.overflow = "visible";
+      //     };
+      //   });
+
+      // });
+  
+      
+      
     }catch(err){
       console.log(err);
     }
   }
-  loadCards(infoJson)
+  loadCardsInfo(CardsInfoJson)
   
-  // ***********************************************
-  // Asignar índice a img y btn de c/card
+  // // ***********************************************
+  // // Asignar índice a img y btn de c/card
   
   const card_img_i = (value, index, array)=>{
     i=index;
-    $imgsCard[i].setAttribute('index', i);
+    $imgsCard[i].setAttribute('index', i);    
   };  
-  $imgsCard.forEach(card_img_i);  
-
+  $imgsCard.forEach(card_img_i);    
   const card_btn_i = (value, index, array)=>{
     i=index;
     $btnsCard[i].setAttribute('index', i);
   };  
   $btnsCard.forEach(card_btn_i);   
 
-  // ***********************************************
-  // mostrar info 
+  // // ***********************************************
 
+  // mostrar info ***********
   const showCardInfo = (elem)=>{
     const i = elem.getAttribute('index'); 
-    $template.querySelector('img').setAttribute('src', $infoCardsArray[i].img);
-    $template.querySelector('.info-card-h1').textContent = $infoCardsArray[i].h1;
-    $template.querySelector('.description').textContent = $infoCardsArray[i].description;
-    $template.querySelector('.modo-d-uso').textContent = $infoCardsArray[i].modoDeUso;
-    $template.querySelector('.composition').textContent = $infoCardsArray[i].composition;
-    $template.querySelector('.info-anexa').textContent = $infoCardsArray[i].infoAnexa;
-    let $clone = document.importNode($template, true);
-    $fragment.appendChild($clone); 
-    $templateContainer.appendChild($fragment);
+
+    $templateInfo.querySelector('img').setAttribute('src', $infoCardsArray[i].img);
+    $templateInfo.querySelector('.info-card-h1').textContent = $infoCardsArray[i].h1;
+    $templateInfo.querySelector('.description').textContent = $infoCardsArray[i].description;
+    $templateInfo.querySelector('.modo-d-uso').textContent = $infoCardsArray[i].modoDeUso;
+    $templateInfo.querySelector('.composition').textContent = $infoCardsArray[i].composition;
+    $templateInfo.querySelector('.info-anexa').textContent = $infoCardsArray[i].infoAnexa;
+    let $cloneInfo = document.importNode($templateInfo, true);
+    $fragmentInfo.appendChild($cloneInfo); 
+    $templateInfoCntnr.appendChild($fragmentInfo);
     d.body.style.overflow = "hidden";    
   }
   const hideCardInfo = ()=>{
-    $templateContainer.removeChild($templateContainer.lastElementChild);
+    $templateInfoCntnr.removeChild($templateInfoCntnr.lastElementChild);
     d.body.style.overflow = "visible";
   }   
 
@@ -278,15 +350,16 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   
   ////////////////////////////////////////////////////////////////////////////
   
-  // LLAMADORES   
+  // LLAMADORES    
    
   if(isMobile.android() || isBrowser.any()){
+
     d.addEventListener('click', (e)=>{
       // nav *****
       if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
         navPanelShow();      
       };
-      // cards *****
+      // cards Info *****
       if(e.target.matches('.btn-card') || e.target.matches('.card img')){
         showCardInfo(e.target)
         if(e.target.classList.contains('btn-card')){

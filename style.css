@@ -314,7 +314,7 @@ h1{
 
 
 /* *****  SECTION CARDS   ***** */
-.cards-container{
+.template-cards-container{
   display:flex;
   justify-content: center;
   align-items: center;

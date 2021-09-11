@@ -48,20 +48,20 @@ img{
 
 /* *****  NAV   ***** */
 .nav-container{
+  visibility: hidden;
   position: fixed;
   height: calc(100vh - 50px);
   width: 100%;
   overflow: hidden;
-  visibility: hidden;
   z-index: 1600;
 }
 .panel-fondo{
+  visibility: hidden;
   background-color: rgba(27, 27, 27, 0.4);
   position: fixed;
   height: calc(100vh - 50px);
   width: 100%;
   opacity: 0;
-  visibility: hidden;
   transition: all .4s ease-in-out;
   z-index: 1600;
 }
@@ -73,7 +73,6 @@ img{
   filter: blur(3px);
 }
 .panel{
-  background-image: url("./img/fondo_panel.jpg");  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -86,17 +85,18 @@ img{
   height: calc(100vh - 50px);
   transition: all .3s ease-out;
   transform: translateX(-100%);
-  visibility: visible;
   z-index: 1600;
 }
 .panel-active {
+  visibility: visible;
   transform: translateX(0%);    
 }
 .panel-item{
+  visibility: hidden;
   width: 100%;
   padding: 25px 35px;
 }
-.panel-item a{  
+.panel-item a{
   background-color: rgb(242, 251, 255);
   border: 2px solid rgb(106, 241, 88);
   padding: 8px 20px;
@@ -105,7 +105,6 @@ img{
   color: rgb(14, 14, 255);
   text-decoration-thickness: 1px;
 }
-
 .nav-row{
   background-color: rgb(255, 255, 255);
   display: flex;

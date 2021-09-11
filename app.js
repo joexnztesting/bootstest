@@ -2,24 +2,21 @@
 window.addEventListener('DOMContentLoaded',(e)=>{  
   
   const d=document, n=navigator, ua=n.userAgent,
+
   // Nav
   $panelFondo = d.querySelector('.panel-fondo'),
   $navPanel = d.querySelector('.panel'),
+  $navPanelitems = d.querySelectorAll('.panel-item'),
   $btnHamb = d.querySelector('.btn-hamb'),
   $navRowItem = d.querySelectorAll('.nav-row-item a'),
-  $main = d.querySelector('main'),
+  // $main = d.querySelector('main'),
+
   // Cards
   CardsJson = './img/cards/cards.json',
-  $cardsArray = [], 
   $templateCardsCntnr = d.querySelector('.template-cards-container'),
   $templateCards = d.getElementById('cards-template').content, 
   $fragmentCards = d.createDocumentFragment(),
-
-  $imgsCard = document.querySelectorAll('.card img'),
-  $btnsCard = document.querySelectorAll('.btn-card'),
-
   CardsInfoJson = './img/cards/info/info-cards.json',
-  $infoCardsArray = [], 
   $templateInfoCntnr = d.querySelector('.template-info-container'),
   $templateInfo = d.getElementById('info-card-template').content, 
   $fragmentInfo = d.createDocumentFragment(),
@@ -71,15 +68,19 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   ////////////////////////////////////////////////////////////////////////////
   
   // PANEL NAV ******
-
+  
   const navPanelShow = ()=>{
+    $navPanel.style.backgroundImage= "url('./img/fondo_panel.jpg')";    
+    $navPanelitems.forEach((elm)=>{
+      elm.style.visibility = "visible";
+    });    
     $panelFondo.classList.toggle('fondo-active');
     $navPanel.classList.toggle('panel-active');
     $btnHamb.classList.toggle('isactive');
     $navRowItem.forEach((itm)=>{
       itm.classList.toggle('item')
     });
-    $main.classList.toggle('filtro-blur');
+    // $main.classList.toggle('filtro-blur');
   }
 
   ////////////////////////////////////////////////////////////////////////////
@@ -115,19 +116,13 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   async function loadCards(url){
     try{
       let res = await fetch(url),
-      json = await res.json()
-      for(let i=0; i<json.length; i++){         
-        $cardsArray.push({
-          img :`${json[i].img}`, 
-          texto : `${json[i].texto}`
-        }); 
-      }
-      $cardsArray.forEach(el=>{
+      json = await res.json();
+      json.forEach(el=>{
         $templateCards.querySelector('img').setAttribute('src', el.img);
         $templateCards.querySelector('.texto').textContent = el.texto;        
         let $cloneCard = document.importNode($templateCards, true);
         $fragmentCards.appendChild($cloneCard); 
-        $templateCardsCntnr.appendChild($fragmentCards);
+        $templateCardsCntnr.appendChild($fragmentCards);        
       });
     }catch(err){
       console.log(err);
@@ -140,96 +135,50 @@ window.addEventListener('DOMContentLoaded',(e)=>{
   async function loadCardsInfo(url){
     try{
       let res = await fetch(url),
-      json = await res.json()
-      for(let i=0; i<json.length; i++){         
-        $infoCardsArray.push({
-          img :`${json[i].img}`, 
-          h1 : `${json[i].h1}`, 
-          description : `${json[i].description}`,
-          modoDeUso : `${json[i].modoDeUso}`,
-          composition : `${json[i].composition}`,
-          infoAnexa : `${json[i].infoAnexa}`
-        }); 
-      } 
+      json = await res.json();  
       
-
-      // $infoCardsArray.forEach(el=>{     
-
-      //   d.addEventListener('click', (e)=>{
-
-      //     if(e.target.matches('.btn-card') || e.target.matches('.card img')){
-
-      //       console.log();
-
-      //       $templateInfo.querySelector('img').setAttribute('src', el.img);
-      //       $templateInfo.querySelector('.info-card-h1').textContent = el.h1;
-      //       $templateInfo.querySelector('.description').textContent = el.description;
-      //       $templateInfo.querySelector('.modo-d-uso').textContent = el.modoDeUso;
-      //       $templateInfo.querySelector('.composition').textContent = el.composition;
-      //       $templateInfo.querySelector('.info-anexa').textContent = el.infoAnexa;
-      //       let $cloneInfo = document.importNode($templateInfo, true);
-      //       $fragmentInfo.appendChild($cloneInfo); 
-      //       $templateInfoCntnr.appendChild($fragmentInfo);
-      //       d.body.style.overflow = "hidden";    
-            
-      //       if(e.target.classList.contains('btn-card')){
-      //         btnOn(e.target.parentElement);
-      //       }        
-            
-      //     };
-
-
-      //     if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
-      //       $templateInfoCntnr.removeChild($templateInfoCntnr.lastElementChild);
-      //       d.body.style.overflow = "visible";
-      //     };
-      //   });
-
-      // });
-  
+      const $imgsCard = document.querySelectorAll('.card img'),
+      $btnsCard = document.querySelectorAll('.btn-card');
+      for(let i=0; i<json.length; i++){       
+        $imgsCard[i].setAttribute('index', i);
+        $btnsCard[i].setAttribute('index', i);
+      }
       
-      
+      const showCardInfo = (el)=>{
+        const i = el.getAttribute('index');
+        $templateInfo.querySelector('img').setAttribute('src', json[i].img);
+        $templateInfo.querySelector('.info-card-h1').textContent = json[i].h1;
+        $templateInfo.querySelector('.description').textContent = json[i].description;
+        $templateInfo.querySelector('.modo-d-uso').textContent = json[i].modoDeUso;
+        $templateInfo.querySelector('.composition').textContent = json[i].composition;
+        $templateInfo.querySelector('.info-anexa').textContent = json[i].infoAnexa;
+        let $cloneInfo = document.importNode($templateInfo, true);
+        $fragmentInfo.appendChild($cloneInfo); 
+        $templateInfoCntnr.appendChild($fragmentInfo);
+        d.body.style.overflow = "hidden";    
+      }
+      const hideCardInfo = ()=>{
+        $templateInfoCntnr.removeChild($templateInfoCntnr.lastElementChild);
+        d.body.style.overflow = "visible";
+      }
+
+      d.addEventListener('click', (e)=>{
+        if(e.target.matches('.btn-card') || e.target.matches('.card img')){
+          showCardInfo(e.target)
+          if(e.target.classList.contains('btn-card')){
+            btnOn(e.target.parentElement);
+          }
+        };
+        if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
+          hideCardInfo()
+        };
+      });      
     }catch(err){
       console.log(err);
     }
   }
   loadCardsInfo(CardsInfoJson)
-  
-  // // ***********************************************
-  // // Asignar índice a img y btn de c/card
-  
-  const card_img_i = (value, index, array)=>{
-    i=index;
-    $imgsCard[i].setAttribute('index', i);    
-  };  
-  $imgsCard.forEach(card_img_i);    
-  const card_btn_i = (value, index, array)=>{
-    i=index;
-    $btnsCard[i].setAttribute('index', i);
-  };  
-  $btnsCard.forEach(card_btn_i);   
 
-  // // ***********************************************
-
-  // mostrar info ***********
-  const showCardInfo = (elem)=>{
-    const i = elem.getAttribute('index'); 
-
-    $templateInfo.querySelector('img').setAttribute('src', $infoCardsArray[i].img);
-    $templateInfo.querySelector('.info-card-h1').textContent = $infoCardsArray[i].h1;
-    $templateInfo.querySelector('.description').textContent = $infoCardsArray[i].description;
-    $templateInfo.querySelector('.modo-d-uso').textContent = $infoCardsArray[i].modoDeUso;
-    $templateInfo.querySelector('.composition').textContent = $infoCardsArray[i].composition;
-    $templateInfo.querySelector('.info-anexa').textContent = $infoCardsArray[i].infoAnexa;
-    let $cloneInfo = document.importNode($templateInfo, true);
-    $fragmentInfo.appendChild($cloneInfo); 
-    $templateInfoCntnr.appendChild($fragmentInfo);
-    d.body.style.overflow = "hidden";    
-  }
-  const hideCardInfo = ()=>{
-    $templateInfoCntnr.removeChild($templateInfoCntnr.lastElementChild);
-    d.body.style.overflow = "visible";
-  }   
 
   ////////////////////////////////////////////////////////////////////////////
 
@@ -359,16 +308,6 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
         navPanelShow();      
       };
-      // cards Info *****
-      if(e.target.matches('.btn-card') || e.target.matches('.card img')){
-        showCardInfo(e.target)
-        if(e.target.classList.contains('btn-card')){
-          btnOn(e.target.parentElement);
-        }
-      };
-      if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
-        hideCardInfo()
-      };
       // carousel *****
       if(e.target.matches('.btn-crsl-l *')){
         btnLeft();
@@ -390,16 +329,6 @@ window.addEventListener('DOMContentLoaded',(e)=>{
       // nav *****
       if(e.target.matches('.btn-hamb') || e.target.matches('.btn-hamb *') || e.target.matches('.item') || e.target.matches('.panel-fondo')){
         navPanelShow();      
-      };
-      // cards *****
-      if(e.target.matches('.btn-card') || e.target.matches('.card img')){
-        showCardInfo(e.target)
-        if(e.target.classList.contains('btn-card')){
-          btnOn(e.target.parentElement);
-        }
-      };
-      if(e.target.matches('.xclose')||e.target.matches('.info-card-fondo')){
-        hideCardInfo()
       };
       // carousel *****
       if(e.target.matches('.btn-crsl-l *')){

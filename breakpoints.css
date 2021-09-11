@@ -13,7 +13,7 @@
     width: 85%; 
     font-size: 2.3rem;
     line-height: 2.5rem;
-    padding: 20px 25px;    
+    padding: 20px 25px;   
   }  
   .separador{
     line-height: 55px;
@@ -141,7 +141,6 @@
     visibility: hidden;
   }
   .img-head{ 
-    /* border: 1px solid yellowgreen; */
     height: calc(100vh - 50px);
     width: 100%;
     background-image: url("./img/header_desk.jpg");  
@@ -149,17 +148,20 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
   .logo{
-    top: 17vh; 
-    height: 200px;
+    top: 14vh; 
+    height: 25vh;
   }
   h1{ 
     top: 44vh;
-    width: 500px;
-    font-size: 3rem;
-    line-height: 3.3rem;
+    width: 70vh;
+    min-width: 500px;
+    font-size:6.5vh;
+    line-height: 7.5vh;
     padding: 2.2rem 2.4rem;
   }
+
   .separador{
     line-height: 60px;
   }
@@ -215,7 +217,8 @@
   }
 
   .carousel-cntr{
-    width: 820px;
+    width: 98%;
+    max-width: 820px;
   }
   .slides-cntr{
     height: 450px;
@@ -266,8 +269,7 @@
   .row-icons div{
     width: 60px;
   } 
-  .contacto-sumate{ 
-    /*border: 1px solid red;*/
+  .contacto-sumate{
     width: 400px;
     font-size: 1.9rem;
     padding: 20px 40px;
@@ -296,7 +298,6 @@
     letter-spacing: 0.06rem;
   }
 }
-
 
 
 /* HTML con MARGEN  */

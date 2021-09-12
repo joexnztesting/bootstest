@@ -1,0 +1,454 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face{
+    src: url("../fuentes/JosefinSlab-Regular.ttf");
+    font-family: 'JosefinSlab-Regular';
+}
+@font-face{
+    src: url("../fuentes/GeorgiaItalic.ttf");
+    font-family: 'GeorgiaItalic';
+}
+
+body{
+    font-family: 'JosefinSlab-Regular' !important ;
+}
+.fondo{
+    background: url("../img/fondo2a.jpg") no-repeat;
+    background-size: cover;
+    position: fixed;
+    z-index: -100;
+}
+
+a:hover{text-decoration: none !important}
+
+/* WAYPOINT */
+.pruebaWayp,.pruebaWaypB,.pruebaWaypC,.pruebaWaypM,.pruebaWayp1,.pruebaWayp2,.pruebaWayp3,.pruebaWayp4{
+    opacity: 0;
+}
+
+
+/* HEADER */
+
+/* BOTONS HREF */
+
+.row_btn{
+    padding: 40px 0
+}
+.btnsSecc1{
+    font-family: 'GeorgiaItalic';
+    font-size: 1.4em;
+    line-height: 1em;
+    letter-spacing: .05em;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px 1px hsla(0,0%,0%,.30);
+    background: hsla(0,0%,100%,1.0);
+}
+.btnsMarginBtm{
+    margin-bottom: 30px;
+}
+.btnsSecc3{
+    margin: 20px !important;
+}
+.btnsSecc1 a{
+    color: rgba(0,42,87,.85);
+}
+.icon{
+    padding-right: 0 !important;
+}
+.btnsSecc1:hover{
+    box-shadow: 0 2px 3px 0 hsla(0,0%,0%,.40);
+    text-decoration: none !important;
+    bottom: -1px;
+}
+
+/* HEADER PRINCIPAL*/
+
+.rowHeaderHome{
+    background: url( "../img/Michele-Durazzi_header_x400dpi.jpg")no-repeat center top;
+    background-size:cover;
+    height: 37em;
+    text-align: center;
+    color: #fff;
+}
+.rowHeaderHomePag2{
+    height: 32em;
+}
+
+.infoPrinc a.tel:hover, a.tel:link, a.tel:visited{
+    text-decoration:none;
+    color: #fff;
+    font-size: 1.8em;
+    letter-spacing: .05em;
+    border: 2px solid rgba(18, 102, 122,1.0);
+    border-radius: 20px;    
+    padding: 10px 15px;
+    background: rgba(19, 46, 105,1.00);
+    box-shadow:inset 0 0 1px 1px  rgba(18, 102, 122,.65);
+}
+
+
+/* HEADER TEXTO 1 */
+.txt{
+    background: hsla(0,0%,100%,1.00);
+    padding: 20px 10px !important ;
+    box-sizing: border-box !important ;
+    box-shadow: 0 4px 6px 0 hsla(0,0%,20%,.35);
+    border-radius: 5px;
+    margin: 60px 0;
+}
+.txt p{
+    font-family: 'GeorgiaItalic';
+    margin: 20px;
+    font-size: 1.4em;
+    letter-spacing: .04em;
+    line-height: 1.5em;
+    color: rgba(0,42,87,.85) !important;
+    border-top: 1px solid hsla(211,70%,24%,0.40);
+    border-bottom: 1px solid hsla(211,70%,24%,0.40);
+    padding: 40px 0 20px;
+    text-align: left;
+    position: relative;
+}
+.txtObrSoc{
+    margin: 8% 2% !important ;
+}
+.txtObrSoc p{
+    font-size: 1em !important;
+    padding: 15px 10px !important;
+    margin: 0 !important;
+}
+.circleComillas{
+    position: absolute;
+    top: -26px;
+    left: 15px;
+    width: 55px;
+    height: 55px;
+    background: white;
+    border: 1px solid hsla(211,70%,24%,0.40);
+    border-radius: 100%;
+    text-align: center;
+}
+.comillas{
+    position: absolute;
+    top: 35px;
+    left: 00px;
+    font-size: 4em;
+    color: hsla(211,70%,24%,0.40);
+}
+.circleComillasFin{
+    position: absolute;
+    bottom: -26px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background: white;
+    border: 1px solid hsla(211,70%,24%,0.40);
+    border-radius: 100%;
+    text-align: center;
+}
+.comillasFin{
+    position: absolute;
+    bottom: -8px;
+    left: 4px;
+    font-size: 4em;
+    color: hsla(211,70%,24%,0.40);
+}
+
+/* NAV */
+.rowNav{
+    background: #fff;
+    box-shadow: 0 4px 10px 5px hsla(0,0%,0%,.10);
+    padding: 10px 0;
+    /*border-radius: 0 0 20px 20px;*/
+}
+.navSpanIconLines{
+    background: rgba(0,42,87,.5);
+    padding-bottom: 3px;
+    width: 100%;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+.navSpanIconLines:last-child{
+    margin-bottom: 0;
+}
+.rowNav .p{
+    color:  rgba(0,42,87,.85);
+    font-size: 1.35em;
+}
+/*.navWspHref{
+    padding: 0px 0;
+}*/
+ul .nav-item{
+    background: #fff;
+}
+
+.nav-link{
+    font-size: 1.1em;
+    line-height: 2.5em;
+    color: hsla(0,0%,0%,.90) !important;
+    border-bottom: 1px solid hsla(0,0%,0%,.30);
+    margin: 2% 3% 0 5%;
+}
+.navUl ul li:last-child{
+    padding-bottom: 15%;
+}
+
+/* MEDIOS DE CONTACTO  */
+.contImg{
+     background: url(../img/11.jpg) no-repeat top center ;
+     background-size: cover;
+     padding: 26em 0 0;
+ }
+.social_icon{
+    background: hsla(0,0%,100%,0.35);
+    border-radius: 100%;
+    padding: 6px !important;
+    width: 100% !important;
+    margin-bottom: 30px !important;
+    box-shadow: 2px 3px 2px  hsla(0,0%,0%,.4);
+}
+.social_icon:hover{
+    background: hsla(0,0%,80%,0.40);
+}
+.contImg p{
+    font-size: 2.2em;
+    color: white;
+    padding: 0;
+    margin-bottom: 5%;
+    text-align: center;
+    text-shadow: -1px 2px 1px hsla(0,0%,0%,.65);
+}
+
+/* MAPA */
+#contMap .row:first-child{
+    height: 10.5rem;
+    background: url("../img/10-1.jpg") no-repeat bottom center;
+    background-size: cover;
+}
+#contMap .row:last-child{
+    height: 28.5rem;
+    background: url("../img/10-2.jpg") no-repeat top center;
+    background-size: cover;
+}
+
+#contMap a{
+    color: hsla(186, 0%, 100%,1.0);
+    margin: 200px auto !important;
+    height: 65px;
+    padding: 0px 20px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 65px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 2px 0 hsla(0,0%,0%,0.50);
+    background: hsla(186,43%,40%,1.00);
+    border: 2px solid hsla(1, 90%, 60%,.75);
+}
+#contMap a:hover{
+    bottom: -1px;
+    box-shadow: 1px 1px 1px 0 hsla(0,0%,0%,0.50);
+    text-decoration: none;
+}
+
+/*  TEXTO SPINOZA  */
+.txtSPINOZA{
+    margin: 150px 0 !important;
+}
+.txtSPINOZA p:first-child{
+    border-top: 1px solid hsla(211,70%,24%,0.40);
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.txtSPINOZA p:last-child{
+    border-top: 0;
+    border-bottom: 1px solid hsla(211,70%,24%,0.40);
+    padding: 0 0 7%;
+    text-align: right;
+}
+
+/* SEPARADORES */
+.sep{
+    background: rgba(14,37,87,1.00);
+    color: white;
+    text-align: center;
+    padding: 1.4em 0;
+}
+.sep .h4{
+    margin-bottom: 0 !important;
+    line-height: 1.5em;
+    letter-spacing: .01em;
+}
+.h4obrasSociales{ /* btn */ 
+    border: 2px solid rgba(18, 102, 122,1.0);
+    border-radius: 20px;
+    color: white;
+    margin-top: 5px;
+    padding: 10px;
+    background: rgba(19, 46, 105,1.00); 
+    box-shadow:inset 0 -1px 3px 1px  rgba(18, 102, 122,.60);
+}
+.h4obrasSociales:hover, .h5obrasSociales:link{
+    text-decoration: none;
+    color: white;
+   /* box-shadow: 1px 1px 1px 0 hsla(0,0%,0%,1.0)*/
+}
+.cntObrFondo{
+    background: url("../img/fondo2a.jpg");
+}
+
+/*  FOOTERs */
+
+.rowResumen{
+    background: rgba(14,37,87,1.00);
+    padding: 8% 2% 5%;
+}
+.rowResumen .h3{
+    /*color:  white !important;
+    text-shadow: white 0px 0px 10px;*/
+}
+.rowResumen div,.rowResumen a,.rowResumen a:hover,.rowResumen ul li{
+    color: rgba(139,167,224,1.00);
+    margin-bottom: 4%;
+    text-decoration: none;
+}
+.rowResumen p span{
+    font-size: .6em;
+    margin-left: 5px !important ;
+}
+.rowResumen .mdContctFooter, .rowResumen .mdContctFooter:hover{
+    margin-bottom: 0;
+}
+
+.footFoot{
+    background: white;
+    color: rgba(14,37,87,1.00);
+    text-align: center;
+    padding: 15px 0;
+    line-height: 1.25rem;
+}
+.footFoot .h5{
+    margin-bottom: 0 !important;
+}
+
+
+/*****************************************************************************************/
+
+
+@media (min-width: 480px) /* sm */ {
+    .rowHeaderHome{
+        height: 45em !important;
+    }    
+    .rowHeaderHomePag2{
+    height: 36em !important;
+    }
+    .contImg{
+        padding-bottom: : 30em;
+    }
+}
+
+
+@media (min-width: 768px) /* md */ {
+    
+    .rowHeaderHome h1{ /*color: cyan;*/
+        font-size: 3.2em;
+        line-height: 1.1em;
+    }
+    .rowHeaderHome h3{
+        font-size: 1.55em;
+    }
+    .rowHeaderHome h5{
+        font-size: 1.1em;
+    }
+    .txt p{
+        font-size: 1.5em;
+        line-height: 1.14em;
+    }
+   
+    .contImg{
+        padding: 35em 0 0;
+    }
+    .rowNav .p{
+    color:  rgba(0,42,87,.85);
+    font-size: 1.5em;
+}
+
+}
+
+@media (min-width: 992px) /* lg */ {
+    .rowHeaderHome{
+        height: 41.5em;
+        margin: 35px 0 0;
+    }
+    .rowHeaderHomePag2{
+        height: 39em !important;
+    }
+
+    .contImg{
+        padding: 40em 0 0;
+    }
+
+    .rowResumen{
+        background: rgba(14,37,87,1.00);
+        padding: 5% 2% 3%;
+    }
+    .rowResumen p,.rowResumen a,.rowResumen a:hover,.rowResumen ul li{
+        color: rgba(139,167,224,1.00);
+        margin-bottom: 2.5%;
+        text-decoration: none;
+    }
+    .rowResumen p span{
+        font-size: .6em;
+        margin-left: 5px !important ;
+    }
+    .rowResumen .mdContctFooter, .rowResumen .mdContctFooter:hover{
+        margin-bottom: 0;
+    }
+    .footFoot{
+    background: rgba(14,37,87,1.00);
+    color: white;
+    }
+}
+
+@media (min-width: 1200px) /* xl */ {
+    .row_btn{
+        padding-bottom: 35px;
+    }
+    .rowHeaderHome{
+        height: 46em;
+        margin: 45px 0 0;
+    }
+    .rowHeaderHomePag2 {
+        height: 52em !important;
+        margin: 0 !important;
+    }
+
+    .rowHeaderHome h1{ /*color: yellow;*/
+        font-size: 3.5em;
+        line-height: 1.1em;
+    }
+    .rowHeaderHome h3{
+        font-size: 1.62em;
+    }
+    .rowHeaderHome a{
+        font-size: 2.2em !important ;
+    }
+    .contImg{
+        padding: 36em 0 0;
+    }   
+
+}
+
+@media (min-width: 1600px) /* xl */ {
+    container-md{
+        width: 100% !important;
+    }
+    
+}
+
+
+
+

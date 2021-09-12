@@ -1,350 +1,356 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biode</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./breakpoints.css">
-  <link rel="icon" href="./img/logo.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet">   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <title>Atención Psicoanalítica</title>
+    <!-- a esto lo tuve que cargar en local para que ande -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/appJs.js"></script>
 </head>
 
-<body>   
-  <div class="nav-container">
-    <div class="panel-fondo"></div>
-      <div class="panel">
-        <div class="panel-item"><a class="item" href="#">Inicio</a></div>
-        <div class="panel-item"><a class="item" href="#hogar">Hogar y Jardín</a></div>
-        <div class="panel-item"><a class="item" href="#huerta">Huerta en Casa</a></div>
-        <div class="panel-item"><a class="item" href="#ventas">Ventas y Contacto</a></div>
-        <div class="panel-item"><a class="item" href="#sumate">Sumate</a></div>
-      </div>
-  </div>
-  <div class="nav-row">
-    <div class="nav-row-div">
-      <div class="nav-row-item">
-        <a href="#ventas">Ventas</a>
-      </div>
-    </div>
-    <div class="nav-row-div">
-      <div class="nav-row-item">
-        <a href="#header">Biode</a>
-      </div>
-    </div>
-    <div class="nav-row-div">
-      <div class="nav-row-item">
-        <div class="btn-hamb">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </div>
-    </div>      
-  </div>
-  <!-- ------------------------------------------ -->
-  <main>
-    <header id="header" class="header-container">      
-      <div class="header-img-container">
-        <img class="imagen-header" src="./img/header.jpg" alt="fondo header">
-        <div class="img-head"></div>
-      </div> 
-      <img class="logo" src="./img/logo.svg" alt="logo">
-      <h1>Productos de excelente calidad para el cuidado de tu hogar y jardín</h1>
-    </header>
-    <!-- ------------------------------------------ -->    
-    <div id="hogar" class="separador sprdr-cards">
-      <p>Productos<span>~ Hogar & Jardín</span></p>
-    </div>    
-    <!-- ------------------------------------------ -->   
-    <div class="bq-manten">
-      <p>" Mantenimiento y Prevención "</p>
-    </div>   
-    <!-- ------------------------------------------ -->   
-    <section class="prod-cards"> 
+<body>
 
-      <div class="template-cards-container">
-        <template id="cards-template">
-          <div class="card">
-            <img alt="#">
-            <div class="figcap">
-              <p class="texto"></p>
-              <div class="btn-card-border">
-                <div class="btn-card">Ver</br>más info</div>
-              </div>
-            </div>
-          </div> 
-        </template>
-      </div>
+<div class="container-fluid fondo vh-100"></div>
 
-      <div class="template-info-container">
-        <template id="info-card-template">
-          <div class="info-card-fondo">
-            <div class="info-card-container">      
-              <div class="info-card-card">    
-                <div class="info-card-header">
-                  <img alt="#">
-                  <div class="info-card-h1"></div>            
-                </div>  
-                <div class="info-card-info">  
-                  <div class="description"></div>
-                  <div class="title">Modo de Uso:</div>
-                  <div class="info-txt modo-d-uso"></div>
-                  <div class="title">Composición:</div>
-                  <div class="info-txt composition"></div>
-                  <div class="title">Info Anexa:</div>
-                  <div class="info-txt info-anexa"></div>
+<div class="container-sm">
+<div class="row align-items-center">
+        <div class="d-none d-xl-block col-xl-3">
+            <div class="row row_btn  justify-content-center align-items-center">
+                <div class="pruebaWaypB col-10 btnsSecc1 btnsMarginBtm">
+                    <a class="row align-items-center justify-content-center" href="perfil_profesional.html">
+                        <img  class="col-3 icon" src="img/PerfilProf.svg" alt="img">
+                        <div class="col-9">Perfil Profesional</div>
+                    </a>
                 </div>
-              </div>
-              <div class="xclose">x</div>
+                <div class="pruebaWaypB col-10 btnsSecc1 btnsMarginBtm">
+                    <a class="row align-items-center justify-content-center" href="modalidad_de_trabajo.html">
+                        <img  class="col-3 icon" src="img/ModldTrab.svg" alt="img">
+                        <div class="col-9">Modalidad de Trabajo</div>
+                    </a>
+                </div>
+                <div class="pruebaWaypB col-10 btnsSecc1 btnsMarginBtm">
+                    <a class="row align-items-center justify-content-center" href="atencion.html">
+                        <img  class="col-3 icon" src="img/Atencion.svg" alt="img">
+                        <div class="col-9">Atención</div>
+                    </a>
+                </div>
+                <div class="pruebaWaypB col-10 btnsSecc1">
+                    <a class="row align-items-center justify-content-center" href="motivos_de_consulta.html">
+                        <img  class="col-3 icon" src="img/MotvConslt.svg" alt="img">
+                        <div class="col-9">Motivos de Consulta</div>
+                    </a>
+                </div>
             </div>
-          </div>
-        </template>
-      </div>           
-  
-      <!-- <div class="cards-container">      
-        <div class="card">
-          <img src="./img/cards/0.png" alt="mata alacranes">
-          <div class="figcap">
-            <p>No Tóxico para personas</p>
-            <div class="btn-card-border">
-              <div class="btn-card">Ver</br>más info</div>
-            </div>
-          </div>
-        </div>      
-        <div class="card">
-          <img src="./img/cards/1.png" alt="">
-          <div class="figcap">
-            <p>Producto para eliminar colonias</p>
-            <div class="btn-card-border">
-              <div class="btn-card">Ver</br>más info</div>
-            </div>
-          </div>
         </div>
-        <div class="card">
-          <img src="./img/cards/2.png" alt="">
-          <div class="figcap">
-            <p>Para erradicar hormigueros</p>
-            <div class="btn-card-border">
-              <div class="btn-card">Ver</br>más info</div>
+    <div class="col col-md-7 col-xl-5">
+        <div class="row rowHeaderHome justify-content-center align-items-end"  id="#">
+            <div class="col col-md-8">
+                <div class="row rowInfo justify-content-center">
+                    <div class="col-12" style="padding: 0px !important;">
+                        <h1>José Rodríguez Amieva</h1>
+                    </div>
+                    <div class="col-10" >
+                        <h3 class="d-md-inline">Lic. en Psicología</h3>
+                    </div>
+                    <div class="col-8">
+                        <h5>M.P. 11707</h5>
+                    </div>
+                    <div class="col-12" style=" margin: 20px 0 30px;">         
+                        <h5><a href="tel:+5493516591788" class="tel">351-6591788</a></h5>         
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="card">
-          <img src="./img/cards/3.png" alt="">
-          <div class="figcap">
-            <p>Mata todo tipo de insectos</p>
-            <div class="btn-card-border">
-              <div class="btn-card">Ver</br>más info</div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./img/cards/4.png" alt="">
-          <div class="figcap">
-            <p>Mantenimiento de<br>cañerías</p>
-            <div class="btn-card-border">
-              <div class="btn-card">Ver</br>más info</div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./img/cards/6.png" alt="">
-          <div class="figcap">
-            <p>Desinfectante de amplio espectro</p>
-            <div class="btn-card-border">
-              <div class="btn-card">Ver</br>más info</div>
-            </div>
-          </div>
-        </div>        
-        <div class="card">
-          <img src="./img/cards/5.png" alt="">
-          <div class="figcap">
-            <p>Mantiene la higiene por zonas</p>
-            <div class="btn-card-border">
-              <div class="btn-card">Ver</br>más info</div>
-            </div>
-          </div>
-        </div>
-      </div>   -->
-
-    </section>    
-    <!-- ------------------------------------------ -->    
-    <div id="huerta" class="separador sprdr-huerta">
-      <p>Productos<span>~ Huerta</span></p>
-    </div>    
-    <!-- ------------------------------------------ -->
-    <div class="bq-semillas">
-      <p>" Gran Variedad de Semillas "</p>
-    </div>
-    <!-- ------------------------------------------ -->
-    <section class="prod-huerta">        
-      <div class="carousel-cntr">
-        <div class="carousel">
-          <div class="slides-cntr">
-            <div class="slide">
-              <img src="./img/carousel/acelga.jpg" alt="#">
-            </div>
-            <div class="slide">
-              <img src="./img/carousel/sandia.jpg" alt="#">
-            </div>
-            <div class="slide">
-              <img src="./img/carousel/calabacin.jpg" alt="#">
-            </div>
-            <div class="slide">
-              <img src="./img/carousel/tomate.jpg" alt="#">
-            </div>
-            <div class="slide">
-              <img src="./img/carousel/lastSlide.jpg" alt="#">
-            </div>           
-          </div>
-          <div class="btn-crsl-cntr btn-crsl-l">
-            <svg width="28mm" height="24mm" viewBox="0 0 2800 2400">
-              <path d="M0 1197l0 3 0 0 0 0 0 0 0 3 0 2 0 0 0 2 0 1 0 0 0 3 0 0c3,35 17,68 43,95 2,2 4,4 6,6l1044 1044c58,58 154,58 212,0 58,-58 58,-154 0,-212l-794 -794 2138 0c83,0 150,-67 150,-150l0 0c0,-83 -67,-150 -150,-150l-2138 0 794 -794c58,-58 58,-154 0,-212 -58,-58 -154,-58 -212,0l-1044 1044c-2,2 -4,4 -6,6 -26,26 -41,60 -43,95l0 0 0 3 0 0 0 1 0 2 0 0 0 2z"/>
-            </svg>
-          </div>
-          <div class="btn-crsl-cntr btn-crsl-r">
-            <svg class="btn-carousel-r" width="28mm" height="24mm" viewBox="0 0 2800 2400">
-              <path d="M2800 1197l0 3 0 0 0 0 0 0 0 3 0 2 0 0 0 2 0 1 0 0 0 3 0 0c-3,35 -17,68 -43,95 -2,2 -4,4 -6,6l-1044 1044c-58,58 -154,58 -212,0 -58,-58 -58,-154 0,-212l794 -794 -2138 0c-83,0 -150,-67 -150,-150l0 0c0,-83 67,-150 150,-150l2138 0 -794 -794c-58,-58 -58,-154 0,-212 58,-58 154,-58 212,0l1044 1044c2,2 4,4 6,6 26,26 41,60 43,95l0 0 0 3 0 0 0 1 0 2 0 0 0 2z"/>             
-            </svg>
-          </div>    
-        </div>
-      </div>  
-    </section>
-    <div class="btn-semll-cntr">
-      <div class="btn-semll-border">
-        <div class="btn-semll">Ver Lista</br>Completa</div>          
-      </div>
     </div>
 
-    <div id="lista" class="lista-semll-cntr list-cont-hidden">
-      <div class="lista-semll">
-        <table>
-          <tr><th>Semilla</th><th>Época de Siembra</th></tr>
+    <div class="d-none d-md-block col-md-5 col-xl-4" style="padding:0">
+        <div class="pruebaWaypC row justify-content-center">
+            <div class="col-10 col-sm-9 txt">
+                <p><span class="circleComillas"><span class="comillas">“</span></span>La particularidad del espacio es su apertura para los pacientes. La idea es poder conversar para encontrar junto a cada uno su modo y ritmo de atención según sus posibilidades, acordando con flexibilidad para que pueda iniciar y continuar su tratamiento.</p>
+            </div>
+        </div>
+    </div>
 
-          <tr><td>Acelga Penca Verde</td><td>Todo el año</td></tr>
-          <tr><td>Achicoria</td><td>Todo el año</td></tr>
-          <tr><td>Arveja</td><td>Otoño - Invierno</td></tr>
-          <tr><td>Berenjena</td><td>Primavera - Verano</td></tr>
-          <tr><td>Calabaza Waltham (Calabacín)</td><td>Primavera - Verano</td></tr>
-          <tr><td>Cebolla Colorada</td><td>Otoño - Invierno</td></tr>
-          <tr><td>Cebolla Valencianita</td><td>Otoño - Invierno</td></tr>
-          <tr><td>Cilantro</td><td>Primavera - Verano</td></tr>
-          <tr><td>Espinaca Matador</td><td>Todo el año</td></tr>
-          <tr><td>Lechuga Batavia</td><td>Todo el año</td></tr>
-          <tr><td>Lechuga Criolla</td><td>Primavera - Verano</td></tr>
-          <tr><td>Melón Honey</td><td>Primavera - Verano</td></tr>
-          <tr><td>Pepino Poinsett</td><td>Primavera - Verano</td></tr>
-          <tr><td>Peregil</td><td>Todo el año</td></tr>
-          <tr><td>Pimiento Chile Serrano</td><td>Primavera - Verano</td></tr>
-          <tr><td>Pimiento Fyuco</td><td>Primavera - Verano</td></tr>
-          <tr><td>Puerro</td><td>Todo el año</td></tr>
-          <tr><td>Rabanito</td><td>Todo el año</td></tr>
-          <tr><td>Remolacha Earley</td><td>Todo el año</td></tr>
-          <tr><td>Repollo</td><td>Septiembre - Diciembre // Febrero - Abril</td></tr>
-          <tr><td>Rúcula</td><td>Todo el año</td></tr>
-          <tr><td>Sandía Jubilee</td><td>Primavera - Verano</td></tr>
-          <tr><td>Tomate Platense</td><td>Primavera - Verano</td></tr>
-          <tr><td>Tomate Rio Grande (Perita)</td><td>Febrero - Abril</td></tr>
-          <tr><td>Zanahoria Chantenay</td><td>Todo el año</td></tr>
-          <tr><td>Zapallito Redondo</td><td>Verano</td></tr>
-          <tr><td>Zapallo Gris Plomo</td><td>Primavera - Verano</td></tr>
-          <tr><td>Zucchini</td><td>Primavera - Verano</td></tr>
-          
-        </table>
-      </div>
-    </div>
-    <!-- ------------------------------------------ -->
-    <div id="acerca" class="separador sprdr-acerca">
-      <p>Acerca de Nosotros<span></span></p>
-    </div>
-    <!-- ------------------------------------------ -->
-    <section class="acerca">
-      <div class="marco">       
-        <div class="marco-plantas">
-          <p>        
-            Somos una empresa familiar que brinda alternativas accesibles y económicas, para el cuidado del hogar frente a plagas y también para el mantenimiento de la vivienda.<br>
-            Nuestra misión es que los productos, de excelente calidad, lleguen fácilmente al alcance de tu mano.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- ------------------------------------------ -->
-    <div id="ventas" class="separador sprdr-ventas">
-      <p>Ventas<span>~ Medios de Contacto</span></p>
-    </div>
-    <!-- ------------------------------------------ -->
-    <div class="bq-social-icons">
-      <p>" Hacemos envíos a todo el país "</p>
-    </div>      
-    <!-- ------------------------------------------ -->
-    <section class="social-icons">      
-      <div class="row-icons">
-        <div>
-          <a href="https://api.whatsapp.com/send?phone=5493515118011" target="_blank">
-            <img src="./img/icon-social-wsp.svg" alt="icon-wsp">
-          </a>
-        </div>
-        <div>
-          <a href="https://www.instagram.com/biodeargentina/" target="_blank">
-            <img src="./img/icon-social-insta.svg" alt="icon-inst">
-          </a>
-        </div>
-        <div>
-          <a href="https://www.facebook.com/BIODE-437954180031617" target="_blank">
-            <img src="./img/icon-social-face.svg" alt="icon-face">
-          </a>
-        </div>
-        <div>
-          <a href="mailto:biode.argentina@gmail.com" target="_blank">
-            <img src="./img/icon-social-mail.svg" alt="icon-twt">
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- ------------------------------------------ -->
-    <div id="sumate" class="separador sprdr-contc">
-      <p>Sumate<span>~ Trabajemos juntos</span></p>
-    </div>
-    <!-- ------------------------------------------ -->
-    <section class="formu-container">
-      <div class="contacto-sumate">
-        <div>¿Te gustaría ser distribuidor y conseguir ingresos extras?</div>
-      </div>
-      <div class="formu">
-        <form class="contact-form">
-          <legend>Envíanos tu comentario</legend>      
-          <input class="formu-input" type="text" name="name" placeholder="Escribe tu nombre" title="El campo Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
-      
-          <input class="formu-input" type="email" name="email" placeholder="Escribe tu correo electrónico" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>      
-          <textarea class="formu-input" name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>          
-          <div class="btn-cont">
-            <input class="btn-formu" type="submit">
-          </div>      
-          <div class="contact-form-loader none">
-            <!-- 
-            <img src="./assets/rings.svg" alt="cargando">
-            -->
-            <!-- https://samherbert.net/svg-loaders/ -->
-          </div>  
-          <div class="contact-form-response none">
-            <p>Los datos han sido enviados</p>
-          </div>
-        </form>    
-      </div>      
-    </section>
-    <!-- ------------------------------------------ -->
-    <div class="footer">
-      <div class="footer-text">Diseño by Joel Riva ~ 
-        <a href="mailto:jr0402352@gmail.com" target="_blank">
-          jr0402352@gmail.com
-        </a>
-      </div>
-    </div>
-  </main>
+</div>
+</div>
 
-  <script src="form.js"></script>
-  <script src="app.js"></script>
-  
+<!-- NAV -->
+<div class="container-md sticky-top" style="padding: 0"> <!-- -->
+    <div class="row rowNav align-items-center" style="margin: 0;"> <!-- -->
+
+        <div class="col-2" style="padding-right: 0px;padding-left: 2px;">
+            <div class="row justify-content-center">
+                <div class="col-2" style="cursor: pointer;padding: 10px 22px; border:2px solid hsla(192,0%,92%,.85); border-radius: 6px;box-shadow: 0px 2px 3px 1px hsla(192,0%,96%,1.00); " data-toggle="collapse" data-target="#contenidoDelMenuCollapsable" aria-controls="contenidoDelMenuCollapsable" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="row">
+                        <div class="col navSpanIconLines"></div>
+                        <div class="col navSpanIconLines"></div>
+                        <div class="col navSpanIconLines"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-8 text-center" style="padding: 0 "><a class="p" href="index.html">Atención Psicoanalítica</a></div>
+
+        <div class="col-2" style="padding-left: 0px;padding-right: 2px">
+            <div class="row justify-content-center" style="margin: 0">
+                <div class="col" style="cursor: pointer;padding: 4px 8px; border:2px solid hsla(192,0%,92%,.85); border-radius:100%;box-shadow: 0px 2px 3px 1px hsla(192,0%,95%,1.00);max-width: 50px">
+                    <a class="navWspHref" href="https://api.whatsapp.com/send?phone=5493516591788" target="_blank" ><img width="100%" height="38px" src="img/social_icon_wsp.svg" alt="tbnwsp"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="collapse navbar-collapse navUl" id="contenidoDelMenuCollapsable">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" data-toggle="collapse" data-target="#contenidoDelMenuCollapsable">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target="#contenidoDelMenuCollapsable">
+                <a class="nav-link" href="perfil_profesional.html">Perfil profesional</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target="#contenidoDelMenuCollapsable">
+                <a class="nav-link" href="modalidad_de_trabajo.html">Modalidad de trabajo</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target="#contenidoDelMenuCollapsable">
+                <a class="nav-link" href="atencion.html">Atención</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target="#contenidoDelMenuCollapsable">
+                <a class="nav-link" href="motivos_de_consulta.html">Motivos de consulta</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target="#contenidoDelMenuCollapsable">
+                <a class="nav-link" href="#anclaObrasSociales">Obras Sociales</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target="#contenidoDelMenuCollapsable">
+                <a class="nav-link" href="#anclaMapa">Ubicación</a>
+            </li>
+            <li class="nav-item" data-toggle="collapse" data-target="#contenidoDelMenuCollapsable">
+                <a class="nav-link" href="#medContct">Medios de Contacto</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- FIN NAV -->
+
+<div class="container-md">
+    <div class="row justify-content-center" style="background: url(img/fondo2a.jpg);">
+        <div class="col-9 col-md-12 col-lg-10 d-xl-none">
+
+            <div class="row row_btn justify-content-center align-items-center">
+
+                <div class="pruebaWayp col-12 col-sm-9 col-md-5 btnsSecc1 btnsSecc3">
+                    <a class="row align-items-center justify-content-center" href="perfil_profesional.html">
+                        <img  class="col-3 icon" src="img/PerfilProf.svg" alt="img">
+                        <div class="col-9">Perfil Profesional</div>
+                    </a>
+                </div>
+                <div class="pruebaWayp col-12 col-sm-9 col-md-5 btnsSecc1 btnsSecc3">
+                    <a class="row align-items-center justify-content-center" href="modalidad_de_trabajo.html">
+                        <img  class="col-3 icon" src="img/ModldTrab.svg" alt="img">
+                        <div class="col-9">Modalidad de Trabajo</div>
+                    </a>
+                </div>
+                <div class="pruebaWayp col-12 col-sm-9 col-md-5 btnsSecc1 btnsSecc3">
+                    <a class="row align-items-center justify-content-center" href="atencion.html">
+                        <img  class="col-3 icon" src="img/Atencion.svg" alt="img">
+                        <div class="col-9">Atención</div>
+                    </a>
+                </div>
+                <div class="pruebaWayp col-12 col-sm-9 col-md-5 btnsSecc1 btnsSecc3" id="anclaObrasSociales">
+                    <a class="row align-items-center justify-content-center" href="motivos_de_consulta.html">
+                        <img  class="col-3 icon" src="img/MotvConslt.svg" alt="img">
+                        <div class="col-9">Motivos de Consulta</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-md d-none d-lg-block d-xl-none" id="separadorLocacion">
+    <div class="row sep">
+        <div class="col-12 h4">Independencia 644 - 2° "D"<br>Córdoba, Argentina</div>
+    </div>
+</div>
+
+<div class="container-md">
+    <div class="row align-items-center justify-content-center">
+
+        <div class="col-12 col-lg-5 d-none d-lg-block">
+            <div class="row justify-content-center align-content-center">
+                <div class="col-10 txt" >
+                    <p><span class="circleComillas"><span class="comillas">“</span></span>Mi consultorio es un espacio confortable donde los pacientes pueden sentirse contenidos para contar las situaciones que los preocupan o causan malestar. Se encuentra ubicado en Nueva Córdoba, en el reconocido Edificio de Especialidades Médicas.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- MEDIOS DE CONTACTO -->  
+        <div class="col-12 col-lg-7 contImg" id="medContct">
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-7">
+                    <div class="row">
+                        <a class="col-3" href="https://api.whatsapp.com/send?phone=5493516591788" target="_blank" >
+                            <img class="pruebaWayp1 social_icon" src="img/social_icon_wsp.svg" alt="img">
+                        </a>
+                        <a class="col-3" href="https://api.whatsapp.com/send?phone=5493516591788" target="_blank">
+                            <img class="pruebaWayp2 social_icon" src="img/social_icon_insta.svg" alt="img">
+                        </a>
+                        <a class="col-3" href="https://m.facebook.com/joserodriguezamievapsi/" target="_blank" >
+                            <img class="pruebaWayp3 social_icon" src="img/social_icon_face.svg" alt="img">
+                        </a>
+                        <a class="col-3" href="mailto:jmrodriguezamieva@gmail.com" target="_blank" >
+                            <img class="pruebaWayp4 social_icon" src="img/social_icon_mail.svg" alt="img">
+                        </a>
+                        <p class="col-12 h3">Medios de Contacto</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- FIN MEDIOS DE CONTACTO -->         
+    </div>
+</div>
+
+<div class="container-md d-md-none">
+    <div class="row justify-content-center">
+        <div class="col-10 col-sm-9 txt">
+            <p><span class="circleComillas"><span class="comillas">“</span></span>La particularidad del espacio es su apertura para los pacientes. La idea es poder conversar para encontrar junto a cada uno su modo y ritmo de atención según sus posibilidades, acordando con flexibilidad para que pueda iniciar y continuar su tratamiento.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-md d-lg-none" id="separadorLocacion">
+    <div class="row sep">
+        <div class="col-12 h4">Independencia 644 - 2° "D"<br>Córdoba, Argentina</div>
+    </div>
+</div>
+
+<div class="container-md">
+    <div class="row align-items-center justify-content-center">
+        <!-- MAPA -->
+        <div class="col col-lg-5" style="padding: 0">
+            <div class="container-fluid" id="contMap">
+                <div class="row justify-content-center">
+                    <a class="pruebaWaypM" id="btnMap" data-toggle="collapse" href="#mapCollapse" role="button" aria-expanded="false" aria-controls="mapCollapse">Ver Mapa</a>
+                </div>
+                <div class="row">
+                    <iframe class="col-12 collapse" id="mapCollapse"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.6409905787596!2d-64.1897504845621!3d-31.42401600376608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28f611e6b69%3A0x1f088dd4496818a0!2sIndependencia%20644%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1583695068059!5m2!1ses!2sar" width="600" height="400" style="border:0; padding: 0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div><!-- FIN MAPA -->
+
+        <!-- SEPARADOR "OBRAS SOCIALES" (1) -->
+        <div class="container-md d-lg-none">
+            <div class="row sep justify-content-center">
+                <a href="#contTxtObrSoc1" id="obrasSocialesBtn" class="col-8 col-sm-4 col-lg-3 h4 h4obrasSociales"  data-toggle="collapse" role="button" aria-expanded="false" aria-controls="contTxtObrSoc1">Obras Sociales con las que trabajo</a>
+            </div>
+        </div>
+        <div class="container collapse cntObrFondo" id="contTxtObrSoc1">
+            <div class="row  justify-content-center">
+                <div class="col-5 txt txtObrSoc">
+                <p>ACA SALUD<br>ASOCIACIÓN MUTUAL DE TAXI<br>BOREAL SALUD<br>CAJA DE ABOGADOS<br>CENTRO ASISTENCIAL<br>CONSEJO PROFESIONAL DE CIENCIAS ECONÓMICAS<br>DASUTEN<br>FEDERADA SALUD<br>IOSFA<br>JERÁRQUICOS SALUD<br><br>
+                </p>
+            </div>
+                <div class="col-5 txt txtObrSoc">
+                    <p>LUIS PASTEUR<br>O.S.P.I.A<br>OPDEA OSADEF – ASTF<br>OSJERA<br>OSPE<br>OSPE- HOSPITAL PRIVADO<br>OSPECOR<br>PAMI<br>VETERANOS DE GUERRA<br>PODER JUDICIAL DE LA NACION<br>PREVENCIÓN SALUD<br>RAS
+                    </p>
+                </div>
+            </div>
+            <div class="container-fluid">
+               <div class="row sep" style="border-radius: 20px 0;">
+            	   <div class="col-12 h4">Honorarios de acuerdo a precios establecidos por el Colegio de Psicólogos.</div>
+               </div>
+            </div>
+            
+        </div>
+        <!-- FIN SEPARADOR "OBRAS SOCIALES" (1) -->
+
+        <!-- TEXTO SPINOZA -->
+        <div class="col-12 col-lg-7">
+            <div class="row justify-content-center align-content-center">
+                <div class="col-10 txt txtSPINOZA">
+                    <p><span class="circleComillas"><span class="comillas">“</span></span>...La actividad más importante que un ser humano puede lograr es aprender para entender, porque entender es ser libre...</p>
+                    <p>Baruch Spinoza</p>
+                </div>
+            </div>
+        </div><!-- FIN TEXTO SPINOZA -->
+    </div>
+</div>
+
+
+<!-- SEPARADOR "OBRAS SOCIALES" (2) -->
+        <div class="container-md d-none d-lg-block">
+            <div class="row sep justify-content-center">
+                <a href="#contTxtObrSoc2" id="obrasSocialesBtn" class="col-8 col-sm-4 col-lg-3 h4 h4obrasSociales"  data-toggle="collapse" role="button" aria-expanded="false" aria-controls="contTxtObrSoc2">Obras Sociales con las que trabajo</a>
+            </div>
+        </div>
+        <div class="container collapse cntObrFondo" id="contTxtObrSoc2">
+            <div class="row  justify-content-center">
+                <div class="col-5 txt txtObrSoc">
+                <p>ACA SALUD<br>ASOCIACIÓN MUTUAL DE TAXI<br>BOREAL SALUD<br>CAJA DE ABOGADOS<br>CENTRO ASISTENCIAL<br>CONSEJO PROFESIONAL DE CIENCIAS ECONÓMICAS<br>DASUTEN<br>FEDERADA SALUD<br>IOSFA<br>JERÁRQUICOS SALUD<br><br>
+                </p>
+            </div>
+                <div class="col-5 txt txtObrSoc">
+                    <p>LUIS PASTEUR<br>O.S.P.I.A<br>OPDEA OSADEF – ASTF<br>OSJERA<br>OSPE<br>OSPE- HOSPITAL PRIVADO<br>OSPECOR<br>PAMI<br>VETERANOS DE GUERRA<br>PODER JUDICIAL DE LA NACION<br>PREVENCIÓN SALUD<br>RAS
+                    </p>
+                </div>
+            </div>
+            <div class="container-fluid">
+               <div class="row sep" style="border-radius: 20px 0;">
+            	   <div class="col-12 h4">Honorarios de acuerdo a precios establecidos por el Colegio de Psicólogos.</div>
+               </div>
+            </div>
+            
+        </div>
+<!-- SEPARADOR "OBRAS SOCIALES" (2) -->
+
+<div class="container-md d-lg-none">
+    <div class="row rowResumen">
+        <div class="col-12 h3 ">José Rodríguez Amieva</div>
+        <div class="col-12 h4">Licenciado en Psicología <span>M.P. 11707</span></div>
+        <div class="col-12 h5" href="#">Independencia 644 - 2° "D" ~ Córdoba, Argentina</div>
+        <ul>
+            <li><a class="col-12 h5" href="perfil__profesional.html">Perfil Profesional</a></li>
+            <li><a class="col-12 h5" href="modalidad_de_trabajo.html">Modalidad de Trabajo</a></li>
+            <li><a class="col-12 h5" href="atencion.html">Atención</a></li>
+            <li><a class="col-12 h5" href="motivos_de_consulta.html">Motivos de Consulta</a></li>
+            <li><a class="col-12 h5" href="#obrSocls">Obras Sociales con las que trabajo</a></li>
+        </ul>
+        <a class="col-12 h5" href="tel:+5493516591788">Cel: +54 9 351 6591788</a>
+        <a class="col-12 h5 mdContctFooter" href="mailto:jmrodriguezamieva@gmail.com">jmrodriguezamieva@gmail.com</a>
+    </div>
+</div>
+
+<div class="container-md d-none d-lg-block">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-12">
+            <div class="row justify-content-center align-content-center" style="margin: 80px 0">
+                <div class="col-10 txt">
+                  <p>
+                      <span class="d-block h3">José Rodríguez Amieva</span>
+                      <span class="d-block h4">Licenciado en Psicología ~<span> M.P. 11707</span></span>
+                      <span class="d-block h4">Independencia 644 - 2° "D" ~ Córdoba, Argentina</span>
+                      <a class="col-12 h4" style="color: rgba(0,42,87,.85)" href="tel:+5493516591788">Cel: +54 9 351 6591788</a>
+                      <a class="col-12 h4 d-block" style="color: rgba(0,42,87,.85)" href="mailto:jmrodriguezamieva@gmail.com">jmrodriguezamieva@gmail.com</a>
+                    <span class="circleComillasFin"><span class="comillasFin">”</span></span>
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="container-md footFoot justify-content-center">
+    <div class="col h5">Rivadeneira Joel, Diseño & Desarrollo ~ Artwork Michele Durazzi</div>
+</footer>
+
+<!--
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
